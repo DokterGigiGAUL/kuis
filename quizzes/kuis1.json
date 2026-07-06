@@ -6,30 +6,38 @@
   "timeLimit": 600,
   "questions": [
     {
-      "id": 1,
       "image": "assets/images/q1.jpg",
-      "question": "Apakah diagnosis yang paling tepat berdasarkan gambaran klinis berikut?",
-      "choices": [
+      "q": "Pasien wanita 45 tahun datang dengan keluhan bercak putih tebal di mukosa bukal kiri, tidak bisa dikerok, sudah 3 bulan, tanpa rasa nyeri. Riwayat merokok 15 tahun. Diagnosis kerja yang paling tepat adalah?",
+      "options": [
+        "Lichen planus oral tipe retikular",
         "Leukoplakia",
-        "Oral Lichen Planus",
-        "Pseudomembranous Candidiasis",
-        "Frictional Keratosis"
+        "Candidiasis pseudomembranosa",
+        "Lupus eritematosus diskoid"
       ],
-      "answer": 0,
-      "explanation": "Lesi putih yang tidak dapat dihapus dan tidak dapat diklasifikasikan sebagai penyakit lain mengarah pada diagnosis Leukoplakia."
+      "answer": 1,
+      "explanation": "Leukoplakia didefinisikan sebagai bercak/plak putih yang tidak dapat dikerok dan tidak dapat diklasifikasikan sebagai kelainan lain, sering dikaitkan dengan kebiasaan merokok dan berpotensi pra-kanker. Candidiasis pseudomembranosa biasanya bisa dikerok, sedangkan lichen planus retikular khas berbentuk striae Wickham bilateral."
     },
     {
-      "id": 2,
-      "image": "assets/images/q2.jpg",
-      "question": "Apakah diagnosis yang paling tepat berdasarkan gambaran klinis berikut?",
-      "choices": [
-        "Mucocele",
-        "Traumatic Ulcer",
-        "Recurrent Aphthous Stomatitis",
-        "Squamous Cell Carcinoma"
+      "q": "Gambaran klinis khas Oral Lichen Planus tipe retikular adalah?",
+      "options": [
+        "Plak putih homogen tunggal di dorsum lidah",
+        "Garis-garis putih saling beranyam (striae Wickham) bilateral pada mukosa bukal",
+        "Ulser tunggal dengan tepi indurasi",
+        "Vesikel berkelompok yang mudah pecah"
       ],
-      "answer": 2,
-      "explanation": "Recurrent Aphthous Stomatitis biasanya berupa ulkus dangkal berbatas tegas dengan dasar kekuningan dan halo eritem."
+      "answer": 1,
+      "explanation": "Lichen planus retikular memiliki gambaran patognomonik berupa striae Wickham (garis-garis putih keratotik yang saling beranyam) yang umumnya simetris/bilateral pada mukosa bukal."
+    },
+    {
+      "q": "Seorang pasien mengonsumsi nifedipine untuk hipertensi dan datang dengan pembesaran gingiva generalisata, konsistensi padat kenyal, tidak mudah berdarah. Kondisi ini disebut?",
+      "options": [
+        "Gingivitis marginalis kronis",
+        "Drug-induced gingival enlargement",
+        "Epulis fibromatosa",
+        "Granuloma piogenik"
+      ],
+      "answer": 1,
+      "explanation": "Nifedipine (golongan calcium channel blocker) merupakan salah satu obat yang dikenal menyebabkan drug-induced gingival enlargement, bersama fenitoin dan siklosporin, akibat akumulasi jaringan ikat fibrosa pada gingiva."
     }
   ]
 }
