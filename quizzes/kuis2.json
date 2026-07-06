@@ -1,0 +1,86 @@
+{
+  "id": "kuis2",
+  "title": "Kuis 2",
+  "description": "Tebak Diagnosis Penyakit Mulut",
+  "thumbnail": "assets/images/IMG_4020.jpeg",
+  "timeLimit": 600,
+  "questions": [
+    {
+      "image": "assets/images/IMG_4020.jpeg",
+      "q": "Pasien wanita 45 tahun datang dengan keluhan bercak putih tebal di mukosa bukal kiri, tidak bisa dikerok, sudah 3 bulan, tanpa rasa nyeri. Riwayat merokok 15 tahun. Diagnosis kerja yang paling tepat adalah?",
+      "options": [
+        "Lichen planus oral tipe retikular",
+        "Leukoplakia",
+        "Candidiasis pseudomembranosa",
+        "Lupus eritematosus diskoid"
+      ],
+      "answer": 1,
+      "explanation": "Leukoplakia didefinisikan sebagai bercak/plak putih yang tidak dapat dikerok dan tidak dapat diklasifikasikan sebagai kelainan lain, sering dikaitkan dengan kebiasaan merokok dan berpotensi pra-kanker. Candidiasis pseudomembranosa biasanya bisa dikerok, sedangkan lichen planus retikular khas berbentuk striae Wickham bilateral."
+    },
+    {
+      "q": "Gambaran klinis khas Oral Lichen Planus tipe retikular adalah?",
+      "options": [
+        "Plak putih homogen tunggal di dorsum lidah",
+        "Garis-garis putih saling beranyam (striae Wickham) bilateral pada mukosa bukal",
+        "Ulser tunggal dengan tepi indurasi",
+        "Vesikel berkelompok yang mudah pecah"
+      ],
+      "answer": 1,
+      "explanation": "Lichen planus retikular memiliki gambaran patognomonik berupa striae Wickham (garis-garis putih keratotik yang saling beranyam) yang umumnya simetris/bilateral pada mukosa bukal."
+    },
+    {
+      "q": "Seorang pasien mengonsumsi nifedipine untuk hipertensi dan datang dengan pembesaran gingiva generalisata, konsistensi padat kenyal, tidak mudah berdarah. Kondisi ini disebut?",
+      "options": [
+        "Gingivitis marginalis kronis",
+        "Drug-induced gingival enlargement",
+        "Epulis fibromatosa",
+        "Granuloma piogenik"
+      ],
+      "answer": 1,
+      "explanation": "Nifedipine (golongan calcium channel blocker) merupakan salah satu obat yang dikenal menyebabkan drug-induced gingival enlargement, bersama fenitoin dan siklosporin, akibat akumulasi jaringan ikat fibrosa pada gingiva."
+    },
+    {
+      "q": "Lesi mukokel pada mukosa labial bawah paling sering disebabkan oleh?",
+      "options": ["Infeksi virus Coxsackie", "Trauma mekanis pada duktus kelenjar saliva minor", "Reaksi alergi terhadap bahan restorasi", "Defisiensi vitamin B12"],
+      "answer": 1,
+      "explanation": "Mukokel terjadi akibat trauma/ruptur duktus kelenjar saliva minor sehingga mukus tertumpuk di jaringan ikat sekitarnya (extravasation mucocele), paling sering pada mukosa labial bawah karena area tersebut rentan tergigit."
+    },
+    {
+      "q": "Pasien onkologi yang menjalani kemoterapi mengeluh nyeri pada mukosa mulut, tampak eritema difus dan ulserasi multipel pada mukosa non-keratin. Kondisi ini adalah?",
+      "options": ["Oral mucositis", "Oral lichenoid reaction", "Stomatitis aftosa rekuren", "Pemfigus vulgaris"],
+      "answer": 0,
+      "explanation": "Oral mucositis adalah inflamasi dan ulserasi mukosa mulut yang merupakan efek samping umum kemoterapi/radioterapi, akibat efek sitotoksik langsung terhadap sel epitel mukosa yang berproliferasi cepat."
+    },
+    {
+      "q": "Glositis atrofik yang disertai permukaan lidah licin, mengkilap, dan kemerahan paling sering berkaitan dengan defisiensi?",
+      "options": ["Vitamin C", "Zat besi, vitamin B12, atau asam folat", "Vitamin D", "Vitamin K"],
+      "answer": 1,
+      "explanation": "Glositis atrofik (anemic glossitis) berhubungan dengan defisiensi nutrisi hematinik seperti zat besi, vitamin B12, dan asam folat, yang menyebabkan atrofi papila filiformis sehingga lidah tampak licin dan eritematosa."
+    },
+    {        
+      "image": "assets/images/IMG_4020.jpeg",
+      "q": "Noma (cancrum oris) merupakan penyakit infeksi gangren orofasial yang progresif, paling sering terjadi pada populasi dengan faktor risiko utama?",
+      "options": ["Obesitas dan diabetes terkontrol baik", "Malnutrisi berat dan imunosupresi pada anak di area endemik", "Konsumsi alkohol kronis pada dewasa", "Riwayat trauma maksilofasial"],
+      "answer": 1,
+      "explanation": "Noma berkaitan erat dengan malnutrisi berat, imunosupresi (termasuk infeksi seperti campak/HIV), kebersihan mulut buruk, dan kondisi sosioekonomi rendah, paling banyak menyerang anak-anak di wilayah endemik."
+    },
+    {
+      "q": "Lesi fibroma iritasi (irritation fibroma) pada mukosa mulut secara histopatologis merupakan?",
+      "options": ["Neoplasma ganas jaringan ikat", "Hiperplasia jaringan ikat fibrosa reaktif akibat iritasi kronis", "Tumor kelenjar saliva minor", "Lesi vaskular kongenital"],
+      "answer": 1,
+      "explanation": "Fibroma iritasi adalah lesi reaktif (bukan neoplasma sejati) berupa hiperplasia jaringan ikat fibrosa sebagai respons terhadap trauma/iritasi kronis berulang, seperti gigitan pipi atau iritasi gigi tiruan."
+    },
+    {
+      "q": "Angioedema pada regio orofasial yang muncul mendadak dan disertai sesak napas merupakan kondisi kegawatdaruratan karena risiko utama?",
+      "options": ["Perdarahan masif intraoral", "Obstruksi jalan napas akibat pembengkakan laring/faring", "Penyebaran infeksi ke ruang fasial dalam", "Syok anafilaktik akibat reaksi obat semata"],
+      "answer": 1,
+      "explanation": "Angioedema yang melibatkan lidah, faring, atau laring dapat menyebabkan obstruksi jalan napas akut yang mengancam jiwa, sehingga memerlukan penanganan kegawatdaruratan segera termasuk proteksi jalan napas."
+    },
+    {
+      "q": "Granuloma piogenik pada gingiva sering dikaitkan dengan perubahan hormonal, sehingga sering dijumpai pada kondisi?",
+      "options": ["Hipotiroidisme", "Kehamilan (pregnancy tumor/epulis gravidarum)", "Menopause", "Pubertas pada laki-laki"],
+      "answer": 1,
+      "explanation": "Granuloma piogenik yang muncul pada gingiva ibu hamil disebut epulis gravidarum atau pregnancy tumor, dipengaruhi oleh perubahan hormonal yang memperberat respons inflamasi terhadap iritan lokal seperti plak."
+     }
+   ]
+}
