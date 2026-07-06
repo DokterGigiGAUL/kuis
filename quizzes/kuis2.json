@@ -2,11 +2,10 @@
   "id": "kuis2",
   "title": "Kuis 2",
   "description": "Tebak Diagnosis Penyakit Mulut",
-  "thumbnail": "assets/images/IMG_4020.jpeg",
+  "thumbnail": "assets/images/IMG_3879.jpeg",
   "timeLimit": 600,
   "questions": [
     {
-      "image": "assets/images/IMG_4020.jpeg",
       "q": "Pasien wanita 45 tahun datang dengan keluhan bercak putih tebal di mukosa bukal kiri, tidak bisa dikerok, sudah 3 bulan, tanpa rasa nyeri. Riwayat merokok 15 tahun. Diagnosis kerja yang paling tepat adalah?",
       "options": [
         "Lichen planus oral tipe retikular",
@@ -18,6 +17,7 @@
       "explanation": "Leukoplakia didefinisikan sebagai bercak/plak putih yang tidak dapat dikerok dan tidak dapat diklasifikasikan sebagai kelainan lain, sering dikaitkan dengan kebiasaan merokok dan berpotensi pra-kanker. Candidiasis pseudomembranosa biasanya bisa dikerok, sedangkan lichen planus retikular khas berbentuk striae Wickham bilateral."
     },
     {
+      "image": "assets/images/IMG_3879.jpeg",
       "q": "Gambaran klinis khas Oral Lichen Planus tipe retikular adalah?",
       "options": [
         "Plak putih homogen tunggal di dorsum lidah",
