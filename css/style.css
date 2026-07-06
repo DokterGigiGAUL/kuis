@@ -130,16 +130,16 @@ body {
     }
 
     .quiz-title {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .quiz-description {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .quiz-info {
-        flex-direction: column;
-        gap: 5px;
+        display: flex;
+        justify-content: space-between;
     }
 }
     .quiz-header{
