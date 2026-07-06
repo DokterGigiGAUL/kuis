@@ -1,0 +1,119 @@
+{
+  "id": "kuis3",
+  "title": "Kuis 3",
+  "description": "Tebak Diagnosis Penyakit Mulut",
+  "thumbnail": "assets/images/IMG_3994.jpeg",
+  "timeLimit": 600,
+  "questions": [
+    {
+      "q": "Seorang pria 58 tahun, perokok berat selama 35 tahun, datang dengan keluhan ulkus pada tepi lateral lidah yang tidak sembuh selama 8 minggu. Lesi tidak nyeri, memiliki tepi meninggi dan indurasi saat dipalpasi. Diagnosis kerja yang paling tepat adalah?",
+      "options": [
+        "Ulkus traumatik kronis",
+        "Karsinoma sel skuamosa oral",
+        "Stomatitis aftosa mayor",
+        "Tuberkulosis oral"
+      ],
+      "answer": 1,
+      "explanation": "Ulkus yang menetap lebih dari 2 minggu, terutama pada tepi lateral lidah dengan tepi meninggi dan indurasi, merupakan gambaran khas karsinoma sel skuamosa oral. Riwayat merokok merupakan faktor risiko utama sehingga lesi harus segera dilakukan biopsi."
+    },
+    {
+      "q": "Pasien wanita 23 tahun mengeluhkan lidah tampak berpeta dengan bercak merah tidak beraturan yang dikelilingi batas putih tipis. Lokasi lesi berubah-ubah dari waktu ke waktu dan kadang terasa perih saat makan makanan pedas. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Median rhomboid glossitis",
+        "Geographic tongue (Benign migratory glossitis)",
+        "Atrophic glossitis",
+        "Oral lichen planus"
+      ],
+      "answer": 1,
+      "explanation": "Geographic tongue ditandai area depapilasi eritematosa dengan batas putih serpiginosa yang berpindah lokasi dari waktu ke waktu. Kondisi ini bersifat jinak dan umumnya hanya memerlukan edukasi serta terapi simptomatik bila diperlukan."
+    },
+    {
+      "q": "Seorang pria 42 tahun memiliki benjolan lunak berwarna kebiruan pada dasar mulut sebelah kiri yang perlahan membesar. Lesi tampak fluktuatif dan tidak nyeri. Diagnosis yang paling tepat adalah?",
+      "options": [
+        "Ranula",
+        "Hemangioma",
+        "Fibroma iritasi",
+        "Lipoma"
+      ],
+      "answer": 0,
+      "explanation": "Ranula merupakan mukokel yang berasal dari kelenjar sublingual sehingga muncul sebagai pembengkakan lunak, translusen atau kebiruan di dasar mulut. Lesi dapat membesar secara perlahan akibat akumulasi mukus."
+    },
+    {
+      "q": "Pasien laki-laki 40 tahun datang dengan keluhan bibir bawah sering pecah-pecah, terasa kasar, disertai area putih keabu-abuan dan atrofi vermilion. Pasien bekerja sebagai petani sejak muda. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Cheilitis glandularis",
+        "Actinic cheilitis",
+        "Angular cheilitis",
+        "Herpes labialis"
+      ],
+      "answer": 1,
+      "explanation": "Actinic cheilitis merupakan lesi prakanker akibat paparan sinar ultraviolet kronis, terutama pada bibir bawah. Gambaran klinis berupa atrofi, kekeringan, sisik, dan hilangnya batas vermilion sehingga memerlukan pemantauan atau biopsi bila dicurigai displasia."
+    },
+    {
+      "q": "Pasien wanita 30 tahun datang dengan bercak cokelat difus pada mukosa bukal, gingiva, dan lidah. Pasien juga mengeluhkan mudah lelah, berat badan menurun, dan tekanan darah rendah. Diagnosis sistemik yang paling mungkin berkaitan dengan manifestasi oral tersebut adalah?",
+      "options": [
+        "Sindrom Cushing",
+        "Penyakit Addison",
+        "Hipertiroidisme",
+        "Diabetes melitus"
+      ],
+      "answer": 1,
+      "explanation": "Hiperpigmentasi mukosa mulut merupakan salah satu manifestasi awal penyakit Addison akibat peningkatan produksi ACTH yang juga meningkatkan MSH sehingga merangsang pembentukan melanin."
+    },
+    {
+      "q": "Seorang anak laki-laki berusia 8 tahun memiliki pembengkakan gingiva berbentuk kubah berwarna kebiruan tepat di atas gigi permanen yang akan erupsi. Anak tidak mengeluhkan nyeri. Diagnosis yang paling tepat adalah?",
+      "options": [
+        "Granuloma piogenik",
+        "Kista erupsi (eruption cyst)",
+        "Abses periodontal",
+        "Epulis kongenital"
+      ],
+      "answer": 1,
+      "explanation": "Kista erupsi terjadi akibat akumulasi cairan atau darah di atas mahkota gigi yang sedang erupsi. Lesi tampak sebagai pembengkakan lunak berwarna kebiruan pada mukosa alveolar dan umumnya sembuh setelah gigi erupsi."
+    },
+    {
+      "q": "Pasien wanita 37 tahun mengeluh benjolan kecil pada mukosa bukal yang bertangkai, permukaannya menyerupai bunga kol, berwarna sama dengan mukosa sekitar, dan tidak nyeri. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Papilloma skuamosa",
+        "Fibroma iritasi",
+        "Condyloma acuminatum",
+        "Verrucous carcinoma"
+      ],
+      "answer": 0,
+      "explanation": "Papilloma skuamosa merupakan proliferasi epitel jinak yang sering berhubungan dengan HPV risiko rendah (terutama tipe 6 dan 11). Lesi khas berbentuk papiler atau menyerupai bunga kol dengan ukuran kecil."
+    },
+    {
+      "q": "Pasien mengeluh rasa nyeri hebat saat makan. Pemeriksaan menunjukkan ulkus besar berdiameter sekitar 2,5 cm pada mukosa labial, bertahan lebih dari tiga minggu dan mulai meninggalkan jaringan parut saat sembuh. Diagnosis yang paling tepat adalah?",
+      "options": [
+        "Stomatitis aftosa rekuren tipe minor",
+        "Stomatitis aftosa rekuren tipe mayor",
+        "Ulkus eosinofilik",
+        "Ulkus traumatik"
+      ],
+      "answer": 1,
+      "explanation": "SAR tipe mayor memiliki ukuran lebih dari 1 cm, berlangsung berminggu-minggu, sangat nyeri, dan dapat sembuh dengan meninggalkan jaringan parut. Kondisi ini lebih berat dibandingkan tipe minor."
+    },
+    {
+      "q": "Seorang pria 61 tahun datang dengan pembesaran bilateral kelenjar parotis yang tidak nyeri. Tidak ditemukan tanda infeksi. Pasien memiliki riwayat konsumsi alkohol kronis dan malnutrisi. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Parotitis bakterialis akut",
+        "Sialadenosis",
+        "Sialolitiasis",
+        "Adenoma pleomorfik"
+      ],
+      "answer": 1,
+      "explanation": "Sialadenosis adalah pembesaran noninflamasi dan nonneoplastik kelenjar saliva, terutama parotis, yang sering berkaitan dengan gangguan metabolik, malnutrisi, alkoholisme kronis, atau kelainan endokrin."
+    },
+    {
+      "q": "Pasien laki-laki 48 tahun datang dengan bercak putih difus pada mukosa bukal kanan tepat di sepanjang garis oklusal. Lesi tampak berjumbai, tidak dapat dikerok, dan pasien mengaku sering menggigit pipinya saat bekerja. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Linea alba",
+        "Morsicatio buccarum",
+        "Leukoplakia",
+        "White sponge nevus"
+      ],
+      "answer": 1,
+      "explanation": "Morsicatio buccarum merupakan perubahan keratotik akibat kebiasaan menggigit mukosa pipi secara kronis. Lesi tampak putih berjumbai dengan permukaan tidak rata dan biasanya ditemukan pada area yang mudah tergigit."
+    }
+  ]
+}
