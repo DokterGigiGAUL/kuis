@@ -60,21 +60,21 @@ function renderQuestion() {
     progress.style.width =
         ((index + 1) / quiz.questions.length) * 100 + "%";
 
-if(q.image){
+if (q.image) {
 
     image.src = q.image;
     image.style.display = "block";
 
-}else{
+} else {
 
     image.style.display = "none";
 
 }
-    question.textContent = q.question;
+question.textContent = q.q;
 
     choices.innerHTML = "";
 
-    q.choices.forEach((item, i) => {
+q.options.forEach((item, i) => {
 
         const div = document.createElement("div");
 
