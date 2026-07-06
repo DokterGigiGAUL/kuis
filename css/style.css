@@ -372,3 +372,21 @@ body {
     background:#1d4ed8;
 }
 
+.status{
+    display:inline-block;
+    margin:16px 0;
+    padding:8px 14px;
+    border-radius:8px;
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
+}
+
+.status-correct{
+    background:#16a34a;
+}
+
+.status-wrong{
+    background:#dc2626;
+}
+
