@@ -1,19 +1,21 @@
 let timerInterval = null;
-let timeRemaining = 600;
+let remainingTime = 0;
+
+const timerElement = document.getElementById("timer");
 
 function startTimer(seconds) {
 
-    timeRemaining = seconds;
+    remainingTime = seconds;
 
     updateTimer();
 
     timerInterval = setInterval(() => {
 
-        timeRemaining--;
+        remainingTime--;
 
         updateTimer();
 
-        if (timeRemaining <= 0) {
+        if (remainingTime <= 0) {
 
             clearInterval(timerInterval);
 
@@ -25,24 +27,28 @@ function startTimer(seconds) {
 
 }
 
-function updateTimer() {
-
-    const minute = Math.floor(timeRemaining / 60);
-    const second = timeRemaining % 60;
-
-    document.getElementById("timer").textContent =
-        `${String(minute).padStart(2, "0")}:${String(second).padStart(2, "0")}`;
-
-}
-
 function stopTimer() {
 
-    clearInterval(timerInterval);
+    if (timerInterval) {
+
+        clearInterval(timerInterval);
+
+    }
 
 }
 
-function getRemainingTime() {
+function updateTimer() {
 
-    return timeRemaining;
+    const minutes = Math.floor(remainingTime / 60);
+    const seconds = remainingTime % 60;
+
+    timerElement.textContent =
+        `${pad(minutes)}:${pad(seconds)}`;
+
+}
+
+function pad(number) {
+
+    return number.toString().padStart(2, "0");
 
 }
