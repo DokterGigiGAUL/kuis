@@ -17,13 +17,11 @@ async function init() {
 
             const response = await fetch(file);
 
-            if (!response.ok) continue;
+if (!response.ok) {
 
-            const quiz = await response.json();
+    throw new Error("Quiz file not found");
 
-            createCard(quiz);
-
-        } catch (err) {
+} catch (err) {
 
             console.error(file, err);
 
