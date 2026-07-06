@@ -141,7 +141,7 @@ body {
         flex-direction: column;
         gap: 5px;
     }
-
+}
     .quiz-header{
     background:#2563eb;
     color:white;
@@ -371,4 +371,4 @@ body {
 .home-btn:hover{
     background:#1d4ed8;
 }
-}
+
