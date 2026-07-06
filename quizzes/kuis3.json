@@ -1,7 +1,7 @@
 {
-  "id": "kuis4",
-  "title": "Kuis 4",
-  "description": "Tebak Diagnosis Penyakit Mulut",
+  "id": "kuis3",
+  "title": "Kuis 3",
+  "description": "Tebak Diagnosis",
   "thumbnail": "assets/images/IMG_3994.jpeg",
   "timeLimit": 600,
   "questions": [
