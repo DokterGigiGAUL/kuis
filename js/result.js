@@ -32,8 +32,10 @@ quiz.questions.forEach((q, index) => {
 
     card.className = "review-card";
 
-    const userAnswer =
-        session.answers[index];
+    const answerText =
+    userAnswer === undefined
+        ? "Tidak dijawab"
+        : q.choices[userAnswer];
 
     const correct =
         userAnswer === q.answer;
@@ -57,13 +59,15 @@ quiz.questions.forEach((q, index) => {
 
         <p>
 
-            <strong>Jawaban Anda :</strong>
+    <strong>Jawaban Anda :</strong>
 
-            ${userAnswer !== undefined
-                ? q.choices[userAnswer]
-                : "-"}
+    ${
+        userAnswer !== undefined
+            ? q.choices[userAnswer]
+            : "Tidak dijawab"
+    }
 
-        </p>
+</p>
 
         <p>
 
