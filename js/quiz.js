@@ -60,7 +60,16 @@ function renderQuestion() {
     progress.style.width =
         ((index + 1) / quiz.questions.length) * 100 + "%";
 
+if(q.image){
+
     image.src = q.image;
+    image.style.display = "block";
+
+}else{
+
+    image.style.display = "none";
+
+}
     question.textContent = q.question;
 
     choices.innerHTML = "";
