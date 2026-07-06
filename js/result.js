@@ -49,13 +49,15 @@ quiz.questions.forEach((q, index) => {
     </p>
     
     <div class="status ${correct ? "status-correct" : "status-wrong"}">
-        ${correct ? "✔ Benar" : "✖ Salah"}
+        ${correct ? "Benar" : "Salah"}
     </div>
     
-    <p>
-        <strong>Jawaban Benar :</strong>
-        ${q.options[q.answer]}
-    </p>
+    ${!correct ? `
+<p>
+    <strong>Jawaban Benar :</strong>
+    ${q.options[q.answer]}
+</p>
+` : ""}
     
     <div class="explanation">
         <strong>Pembahasan</strong><br><br>
