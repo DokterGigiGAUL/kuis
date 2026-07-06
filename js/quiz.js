@@ -147,11 +147,13 @@ nextBtn.onclick = () => {
 
 };
 
-backBtn.onclick = () => {
+backBtn.onclick = ()=>{
 
-    if (confirm("Keluar dari kuis?")) {
+    if(confirm("Keluar dari kuis?")){
 
-        window.location.href = "index.html";
+        stopTimer();
+
+        window.location.href="index.html";
 
     }
 
