@@ -34,30 +34,34 @@ quiz.questions.forEach((q, index) => {
             : "Tidak dijawab";
 
     card.innerHTML = `
-        <h3>Soal ${index + 1}</h3>
 
-        ${q.image ? `<img src="${q.image}" class="review-image">` : ""}
-
-        <p class="review-question">${q.q}</p>
-
-        <p>
-            <strong>Jawaban Anda :</strong>
-            ${answerText}
-        </p>
-
-        <p>
-            <strong>Jawaban Benar :</strong>
-            ${q.options[q.answer]}
-        </p>
-
-        <p class="${correct ? "correct" : "wrong"}">
-            ${correct ? "✔ Benar" : "✖ Salah"}
-        </p>
-
-        <div class="explanation">
-            ${q.explanation}
-        </div>
-    `;
+    <h3>Soal ${index + 1}</h3>
+    
+    ${q.image ? `<img src="${q.image}" class="review-image">` : ""}
+    
+    <p class="review-question">
+        ${q.q}
+    </p>
+    
+    <p>
+        <strong>Jawaban Anda :</strong>
+        ${answerText}
+    </p>
+    
+    <div class="status ${correct ? "status-correct" : "status-wrong"}">
+        ${correct ? "✔ Benar" : "✖ Salah"}
+    </div>
+    
+    <p>
+        <strong>Jawaban Benar :</strong>
+        ${q.options[q.answer]}
+    </p>
+    
+    <div class="explanation">
+        <strong>Pembahasan</strong><br><br>
+        ${q.explanation}
+    </div>
+`;
 
     reviewList.appendChild(card);
 
