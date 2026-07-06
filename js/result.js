@@ -53,7 +53,7 @@ quiz.questions.forEach((q, index) => {
 
         <p class="review-question">
 
-            ${q.question}
+             ${q.q}
 
         </p>
 
@@ -63,7 +63,7 @@ quiz.questions.forEach((q, index) => {
 
     ${
         userAnswer !== undefined
-            ? q.choices[userAnswer]
+            q.options[userAnswer]
             : "Tidak dijawab"
     }
 
@@ -73,7 +73,7 @@ quiz.questions.forEach((q, index) => {
 
             <strong>Jawaban Benar :</strong>
 
-            ${q.choices[q.answer]}
+            ${q.oprions[q.answer]}
 
         </p>
 
