@@ -57,7 +57,8 @@
       "answer": 1,
       "explanation": "Glositis atrofik (anemic glossitis) berhubungan dengan defisiensi nutrisi hematinik seperti zat besi, vitamin B12, dan asam folat, yang menyebabkan atrofi papila filiformis sehingga lidah tampak licin dan eritematosa."
     },
-    {
+    {        
+      "image": "assets/images/IMG_4020.jpeg",
       "q": "Noma (cancrum oris) merupakan penyakit infeksi gangren orofasial yang progresif, paling sering terjadi pada populasi dengan faktor risiko utama?",
       "options": ["Obesitas dan diabetes terkontrol baik", "Malnutrisi berat dan imunosupresi pada anak di area endemik", "Konsumsi alkohol kronis pada dewasa", "Riwayat trauma maksilofasial"],
       "answer": 1,
