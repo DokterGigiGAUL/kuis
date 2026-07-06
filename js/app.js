@@ -1,7 +1,7 @@
 const quizFiles = [
-    "quizzes/kuis1.json",
-    "quizzes/kuis2.json",
-    "quizzes/kuis3.json"
+    "kuis1",
+    "kuis2",
+    "kuis3"
 ];
 
 const quizList = document.getElementById("quiz-list");
@@ -11,19 +11,21 @@ init();
 
 async function init() {
 
-    for (const file of quizFiles) {
+    for (const id of quizFiles) {
 
         try {
 
-            const response = await fetch(file);
+            const response = await fetch(`quizzes/${id}.json`);
 
-if (!response.ok) {
+            if (!response.ok) continue;
 
-    throw new Error("Quiz file not found");
+            const quiz = await response.json();
 
-} catch (err) {
+            createCard(quiz);
 
-            console.error(file, err);
+        } catch (e) {
+
+            console.error(e);
 
         }
 
@@ -36,25 +38,23 @@ function createCard(quiz) {
     const clone = template.content.cloneNode(true);
 
     clone.querySelector(".quiz-thumbnail").src = quiz.thumbnail;
-    clone.querySelector(".quiz-thumbnail").alt = quiz.title;
-
     clone.querySelector(".quiz-title").textContent = quiz.title;
     clone.querySelector(".quiz-description").textContent = quiz.description;
 
     const button = clone.querySelector(".start-btn");
 
-    if (isQuizFinished(quiz.id)) {
+    if (Storage.isFinished(quiz.id)) {
 
-        button.textContent = "🔒 Sudah Dikerjakan";
+        button.textContent = "Sudah Dikerjakan";
         button.disabled = true;
 
     } else {
 
-        button.addEventListener("click", () => {
+        button.onclick = () => {
 
             window.location.href = `quiz.html?id=${quiz.id}`;
 
-        });
+        };
 
     }
 
