@@ -6,7 +6,6 @@
   "timeLimit": 600,
   "questions": [
     {
-      "image": "assets/images/IMG_4020.jpeg",
       "q": "Pasien wanita 45 tahun datang dengan keluhan bercak putih tebal di mukosa bukal kiri, tidak bisa dikerok, sudah 3 bulan, tanpa rasa nyeri. Riwayat merokok 15 tahun. Diagnosis kerja yang paling tepat adalah?",
       "options": [
         "Lichen planus oral tipe retikular",
@@ -58,7 +57,6 @@
       "explanation": "Glositis atrofik (anemic glossitis) berhubungan dengan defisiensi nutrisi hematinik seperti zat besi, vitamin B12, dan asam folat, yang menyebabkan atrofi papila filiformis sehingga lidah tampak licin dan eritematosa."
     },
     {        
-      "image": "assets/images/IMG_4020.jpeg",
       "q": "Noma (cancrum oris) merupakan penyakit infeksi gangren orofasial yang progresif, paling sering terjadi pada populasi dengan faktor risiko utama?",
       "options": ["Obesitas dan diabetes terkontrol baik", "Malnutrisi berat dan imunosupresi pada anak di area endemik", "Konsumsi alkohol kronis pada dewasa", "Riwayat trauma maksilofasial"],
       "answer": 1,
