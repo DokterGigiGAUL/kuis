@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
+    --shadow: 0 8px 24px rgba(0, 0, 0, .08);
+    --radius: 18px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.header p {
+    opacity: .9;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.quiz-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.quiz-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: .25s;
+}
+
+.quiz-card:hover {
+    transform: translateY(-4px);
+}
+
+.quiz-thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.quiz-content {
+    padding: 15px;
+}
+
+.quiz-title {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.quiz-description {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.start-btn {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.start-btn:hover {
+    background: var(--primary-dark);
+}
+
+.start-btn:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    .quiz-grid {
+        gap: 14px;
+    }
+
+    .quiz-thumbnail {
+        height: 120px;
+    }
+
+    .quiz-title {
+        font-size: 16px;
+    }
+
+    .quiz-description {
+        font-size: 13px;
+    }
+
+    .quiz-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+}
