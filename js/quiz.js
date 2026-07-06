@@ -1,16 +1,15 @@
 const params = new URLSearchParams(window.location.search);
 const quizId = params.get("id");
 
-let quizData = null;
-let currentQuestion = 0;
-let answers = [];
+let quiz = null;
+let session = null;
 
-const quizTitle = document.getElementById("quizTitle");
-const questionCounter = document.getElementById("questionCounter");
-const progressBar = document.getElementById("progressBar");
-const questionImage = document.getElementById("questionImage");
-const questionText = document.getElementById("questionText");
-const choicesContainer = document.getElementById("choices");
+const title = document.getElementById("quizTitle");
+const counter = document.getElementById("questionCounter");
+const image = document.getElementById("questionImage");
+const question = document.getElementById("questionText");
+const choices = document.getElementById("choices");
+const progress = document.getElementById("progressBar");
 
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
@@ -20,128 +19,116 @@ init();
 
 async function init() {
 
-    if (!quizId) {
-
-        location.href = "index.html";
-        return;
-
-    }
-
-    if (isQuizFinished(quizId)) {
-
-        alert("Kuis ini sudah dikerjakan.");
-        location.href = "index.html";
-        return;
-
-    }
-
     const response = await fetch(`quizzes/${quizId}.json`);
-    quizData = await response.json();
+    quiz = await response.json();
 
-    quizTitle.textContent = quizData.title;
+    if (Storage.isFinished(quiz.id)) {
 
-    const saved = loadProgress(quizId);
-
-    if (saved) {
-
-        currentQuestion = saved.currentQuestion || 0;
-        answers = saved.answers || [];
-
-    } else {
-
-        answers = new Array(quizData.questions.length).fill(null);
+        alert("Kuis sudah pernah dikerjakan.");
+        window.location.href = "index.html";
+        return;
 
     }
 
-    showQuestion();
-    startTimer(quizData.timeLimit, autoSubmit);
+    session = Storage.get(quiz.id);
+
+    if (!session) {
+
+        session = Storage.create(
+            quiz.id,
+            quiz.timeLimit
+        );
+
+    }
+
+    title.textContent = quiz.title;
+
+    startTimer(Storage.remainingTime(quiz.id));
+
+    renderQuestion();
 
 }
 
-function showQuestion() {
+function renderQuestion() {
 
-    const q = quizData.questions[currentQuestion];
+    const index = session.currentQuestion;
+    const q = quiz.questions[index];
 
-    questionCounter.textContent =
-        `Soal ${currentQuestion + 1} dari ${quizData.questions.length}`;
+    counter.textContent =
+        `Soal ${index + 1} dari ${quiz.questions.length}`;
 
-    progressBar.style.width =
-        `${((currentQuestion + 1) / quizData.questions.length) * 100}%`;
+    progress.style.width =
+        ((index + 1) / quiz.questions.length) * 100 + "%";
 
-    questionImage.src = q.image;
-    questionText.textContent = q.question;
+    image.src = q.image;
+    question.textContent = q.question;
 
-    choicesContainer.innerHTML = "";
+    choices.innerHTML = "";
 
-    q.choices.forEach((choice, index) => {
+    q.choices.forEach((item, i) => {
 
         const div = document.createElement("div");
-        div.className = "choice";
-        div.textContent = choice;
 
-        if (answers[currentQuestion] === index) {
+        div.className = "choice";
+        div.textContent = item;
+
+        if (session.answers[index] === i) {
 
             div.classList.add("selected");
 
         }
 
-        div.addEventListener("click", () => selectChoice(index));
+        div.onclick = () => {
 
-        choicesContainer.appendChild(div);
+            session.answers[index] = i;
+
+            Storage.save(quiz.id, session);
+
+            renderQuestion();
+
+        };
+
+        choices.appendChild(div);
 
     });
 
-    prevBtn.disabled = currentQuestion === 0;
+    prevBtn.disabled = index === 0;
 
-    nextBtn.textContent =
-        currentQuestion === quizData.questions.length - 1
-            ? "Selesai"
-            : "Selanjutnya";
+    if (index === quiz.questions.length - 1) {
 
-}
+        nextBtn.textContent = "Selesai";
 
-function selectChoice(index) {
+    } else {
 
-    answers[currentQuestion] = index;
-
-    saveProgress(quizId, {
-        currentQuestion,
-        answers
-    });
-
-    showQuestion();
-
-}
-
-prevBtn.addEventListener("click", () => {
-
-    if (currentQuestion > 0) {
-
-        currentQuestion--;
-
-        saveProgress(quizId, {
-            currentQuestion,
-            answers
-        });
-
-        showQuestion();
+        nextBtn.textContent = "Selanjutnya";
 
     }
 
-});
+}
 
-nextBtn.addEventListener("click", () => {
+prevBtn.onclick = () => {
 
-    if (currentQuestion < quizData.questions.length - 1) {
+    if (session.currentQuestion > 0) {
 
-        currentQuestion++;
+        session.currentQuestion--;
 
-        saveProgress(quizId, {
-            currentQuestion,
-            answers
-        });
+        Storage.save(quiz.id, session);
 
-        showQuestion();
+        renderQuestion();
+
+    }
+
+};
+
+nextBtn.onclick = () => {
+
+    if (session.currentQuestion < quiz.questions.length - 1) {
+
+        session.currentQuestion++;
+
+        Storage.save(quiz.id, session);
+
+        renderQuestion();
 
     } else {
 
@@ -149,41 +136,49 @@ nextBtn.addEventListener("click", () => {
 
     }
 
-});
+};
 
-backBtn.addEventListener("click", () => {
+backBtn.onclick = () => {
 
-    if (confirm("Keluar dari kuis? Waktu tetap berjalan.")) {
+    if (confirm("Keluar dari kuis?")) {
 
-        location.href = "index.html";
+        window.location.href = "index.html";
 
     }
 
-});
-
-function autoSubmit() {
-
-    alert("Waktu habis. Kuis akan dikirim otomatis.");
-    submitQuiz();
-
-}
+};
 
 function submitQuiz() {
 
-    const result = {
-        quizId,
-        answers,
-        submittedAt: Date.now()
-    };
+    stopTimer();
 
-    sessionStorage.setItem(
-        "quizResult",
-        JSON.stringify(result)
+    let score = 0;
+
+    quiz.questions.forEach((q, i) => {
+
+        if (session.answers[i] === q.answer) {
+
+            score++;
+
+        }
+
+    });
+
+    session.score = score;
+
+    Storage.finish(
+        quiz.id,
+        score
     );
 
-    finishQuiz(quizId);
-    clearProgress(quizId);
+    sessionStorage.setItem(
+        "result",
+        JSON.stringify({
+            quiz: quiz,
+            session: session
+        })
+    );
 
-    location.href = "result.html";
+    window.location.href = "result.html";
 
 }
