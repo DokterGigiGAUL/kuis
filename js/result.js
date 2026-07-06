@@ -1,12 +1,14 @@
-const data = JSON.parse(
-    sessionStorage.getItem("result")
-);
+const raw =
+sessionStorage.getItem("result");
 
-if (!data) {
+if(!raw){
 
-    window.location.href = "index.html";
+    location.href="index.html";
 
 }
+
+const data =
+JSON.parse(raw);
 
 const quiz = data.quiz;
 const session = data.session;
