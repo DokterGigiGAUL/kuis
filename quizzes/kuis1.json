@@ -1,0 +1,35 @@
+{
+  "id": "kuis1",
+  "title": "Kuis 1",
+  "description": "Tebak Diagnosis Penyakit Mulut",
+  "thumbnail": "assets/images/thumb-kuis1.jpg",
+  "timeLimit": 600,
+  "questions": [
+    {
+      "id": 1,
+      "image": "assets/images/q1.jpg",
+      "question": "Apakah diagnosis yang paling tepat berdasarkan gambaran klinis berikut?",
+      "choices": [
+        "Leukoplakia",
+        "Oral Lichen Planus",
+        "Pseudomembranous Candidiasis",
+        "Frictional Keratosis"
+      ],
+      "answer": 0,
+      "explanation": "Lesi putih yang tidak dapat dihapus dan tidak dapat diklasifikasikan sebagai penyakit lain mengarah pada diagnosis Leukoplakia."
+    },
+    {
+      "id": 2,
+      "image": "assets/images/q2.jpg",
+      "question": "Apakah diagnosis yang paling tepat berdasarkan gambaran klinis berikut?",
+      "choices": [
+        "Mucocele",
+        "Traumatic Ulcer",
+        "Recurrent Aphthous Stomatitis",
+        "Squamous Cell Carcinoma"
+      ],
+      "answer": 2,
+      "explanation": "Recurrent Aphthous Stomatitis biasanya berupa ulkus dangkal berbatas tegas dengan dasar kekuningan dan halo eritem."
+    }
+  ]
+}
