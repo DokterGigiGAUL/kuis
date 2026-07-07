@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komik</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/comic.css">
+</head>
+<body>
+
+<main class="comic-page">
+
+  <h1 id="comic-title"></h1>
+
+  <img
+    id="comic-image"
+    class="comic-image"
+    src=""
+    alt=""
+  >
+
+  <div class="comic-navigation">
+    <button id="prev-comic">Sebelumnya</button>
+    <button id="next-comic">Berikutnya</button>
+  </div>
+
+  <div class="comic-actions">
+    <button id="comic-list-button">Daftar Komik</button>
+
+    <a href="index.html">
+      <button>Kembali ke Beranda</button>
+    </a>
+  </div>
+
+</main>
+
+<div id="comic-modal" class="comic-modal">
+  <div class="comic-modal-content">
+
+    <h2>Daftar Komik</h2>
+
+    <div id="comic-list"></div>
+
+    <button id="close-modal">Tutup</button>
+
+  </div>
+</div>
+
+<script src="js/comics-data.js"></script>
+<script src="js/comic.js"></script>
+
+</body>
+</html>
