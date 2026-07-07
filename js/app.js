@@ -63,33 +63,31 @@ function createCard(quiz) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const comicsContainer = document.getElementById("comics-container");
+    const comicsContainer = document.getElementById("comics-container");
 
-  if (comicsContainer) {
-    comicsContainer.innerHTML = comics
-      .map(
-        (comic) => `
-          <article class="comic-card">
+    if (!comicsContainer) return;
+
+    comicsContainer.innerHTML = comics.map(comic => `
+        <article class="comic-card">
+
             <img
-              src="${comic.thumb}"
-              alt="${comic.title}"
-              class="comic-thumb"
-              loading="lazy"
-            >
+                src="${comic.thumb}"
+                alt="${comic.title}"
+                class="comic-thumb"
+                loading="lazy">
 
             <div class="comic-content">
-              <h3 class="comic-title">${comic.title}</h3>
 
-              <button
-                href="komik.html?id=${comic.id}"
-                class="start-btn"
-              >
-                Baca Komik
-              </button>
+                <h3 class="comic-title">${comic.title}</h3>
+
+                <button
+                    class="start-btn comic-btn"
+                    onclick="location.href='komik.html?id=${comic.id}'">
+                    Baca Komik
+                </button>
+
             </div>
-          </article>
-        `
-      )
-      .join("");
-  }
+
+        </article>
+    `).join("");
 });
