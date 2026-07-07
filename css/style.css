@@ -507,4 +507,9 @@ body {
   .comics-grid::-webkit-scrollbar {
     height: 8px;
   }
+
+  .comic-card {
+  flex: 0 0 180px;
+  scroll-snap-align: start;
+}
 }
