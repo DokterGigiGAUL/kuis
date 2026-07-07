@@ -240,6 +240,7 @@ body {
     padding:15px;
     cursor:pointer;
     transition:.2s;
+    font-size: 13px;
 }
 
 .choice:hover{
