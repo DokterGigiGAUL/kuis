@@ -1,7 +1,7 @@
 {
   "id": "kuis3",
   "title": "Kuis 3",
-  "description": "Tebak Diagnosis",
+  "description": "Apa Diagnosisnya?",
   "thumbnail": "assets/images/IMG_3994.jpeg",
   "timeLimit": 600,
   "questions": [
