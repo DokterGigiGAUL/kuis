@@ -80,12 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="comic-content">
               <h3 class="comic-title">${comic.title}</h3>
 
-              <a
+              <button
                 href="komik.html?id=${comic.id}"
                 class="start-btn"
               >
                 Baca Komik
-              </a>
+              </button>
             </div>
           </article>
         `
