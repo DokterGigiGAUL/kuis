@@ -399,3 +399,44 @@ body {
     background:#dc2626;
 }
 
+/* ==========================
+   Tablet & Desktop
+========================== */
+
+@media (min-width:768px){
+
+    .quiz-grid{
+
+        display:flex;
+        gap:24px;
+
+        overflow-x:auto;
+        overflow-y:hidden;
+
+        scroll-behavior:smooth;
+
+        padding-bottom:10px;
+    }
+
+    .quiz-card{
+
+        flex:0 0 calc((100% - 24px) / 2.25);
+
+    }
+
+}
+
+/* Scrollbar */
+
+.quiz-grid::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.quiz-grid::-webkit-scrollbar-thumb{
+
+    background:#c7c7c7;
+    border-radius:10px;
+
+}
