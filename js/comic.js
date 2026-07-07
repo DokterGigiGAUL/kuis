@@ -1,0 +1,61 @@
+const params = new URLSearchParams(window.location.search);
+const comicId = parseInt(params.get("id")) || 1;
+
+const currentIndex = comics.findIndex(comic => comic.id === comicId);
+const currentComic = comics[currentIndex];
+
+const title = document.getElementById("comic-title");
+const image = document.getElementById("comic-image");
+
+title.textContent = currentComic.title;
+image.src = currentComic.image;
+image.alt = currentComic.title;
+
+const prevButton = document.getElementById("prev-comic");
+const nextButton = document.getElementById("next-comic");
+
+prevButton.disabled = currentIndex === 0;
+nextButton.disabled = currentIndex === comics.length - 1;
+
+prevButton.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    window.location.href = `komik.html?id=${comics[currentIndex - 1].id}`;
+  }
+});
+
+nextButton.addEventListener("click", () => {
+  if (currentIndex < comics.length - 1) {
+    window.location.href = `komik.html?id=${comics[currentIndex + 1].id}`;
+  }
+});
+
+const modal = document.getElementById("comic-modal");
+const list = document.getElementById("comic-list");
+
+list.innerHTML = comics
+  .map(
+    comic => `
+      <a href="komik.html?id=${comic.id}">
+        ${comic.title}
+      </a>
+    `
+  )
+  .join("");
+
+document
+  .getElementById("comic-list-button")
+  .addEventListener("click", () => {
+    modal.classList.add("show");
+  });
+
+document
+  .getElementById("close-modal")
+  .addEventListener("click", () => {
+    modal.classList.remove("show");
+  });
+
+modal.addEventListener("click", e => {
+  if (e.target === modal) {
+    modal.classList.remove("show");
+  }
+});
