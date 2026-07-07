@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
               <a
                 href="komik.html?id=${comic.id}"
-                class="btn-primary"
+                class="start-btn"
               >
                 Baca Komik
               </a>
