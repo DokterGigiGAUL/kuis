@@ -61,3 +61,35 @@ function createCard(quiz) {
     quizList.appendChild(clone);
 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const comicsContainer = document.getElementById("comics-container");
+
+  if (comicsContainer) {
+    comicsContainer.innerHTML = comics
+      .map(
+        (comic) => `
+          <article class="comic-card">
+            <img
+              src="${comic.thumb}"
+              alt="${comic.title}"
+              class="comic-thumb"
+              loading="lazy"
+            >
+
+            <div class="comic-content">
+              <h3 class="comic-title">${comic.title}</h3>
+
+              <a
+                href="komik.html?id=${comic.id}"
+                class="comic-button"
+              >
+                Baca Komik
+              </a>
+            </div>
+          </article>
+        `
+      )
+      .join("");
+  }
+});
