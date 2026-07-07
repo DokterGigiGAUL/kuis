@@ -452,25 +452,12 @@ body {
 ========================== */
 
 .comics-grid{
-    display:flex;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
     gap:18px;
-    overflow-x:auto;
-    overflow-y:hidden;
-    scroll-behavior:smooth;
-    padding-bottom:10px;
-}
-
-.comics-grid::-webkit-scrollbar{
-    height:8px;
-}
-
-.comics-grid::-webkit-scrollbar-thumb{
-    background:#c7c7c7;
-    border-radius:10px;
 }
 
 .comic-card{
-    flex:0 0 calc((100% - 18px) / 2.25);
     display:flex;
     flex-direction:column;
     background:#fff;
@@ -481,7 +468,7 @@ body {
 
 .comic-thumb{
     width:100%;
-    aspect-ratio:1 / 1;
+    aspect-ratio:1/1;
     object-fit:cover;
     display:block;
 }
@@ -501,16 +488,32 @@ body {
 }
 
 .comic-button{
-    width:100%;
     margin-top:auto;
 }
 
-.comic-button button,
 .comic-button .start-btn{
     width:100%;
 }
 
 @media (min-width:768px){
+
+    .comics-grid{
+        display:flex;
+        gap:24px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        scroll-behavior:smooth;
+        padding-bottom:10px;
+    }
+
+    .comics-grid::-webkit-scrollbar{
+        height:8px;
+    }
+
+    .comics-grid::-webkit-scrollbar-thumb{
+        background:#c7c7c7;
+        border-radius:10px;
+    }
 
     .comic-card{
         flex:0 0 calc((100% - 24px) / 2.25);
