@@ -9,7 +9,7 @@ const comics = [
     id: 2,
     title: "Pentingnya Mengganti Gigi Hilang dengan Gigi Tiruan",
     thumb: "assets/comics/komik2/IMG_1966.jpeg",
-    image: "assets/comics/komik1/IMG_1964.webp"
+    image: "assets/comics/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png"
   },
   {
     id: 3,
