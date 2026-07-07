@@ -3,7 +3,7 @@ const comics = [
     id: 1,
     title: "Sariawan Bukan Akibat Infeksi Jamur",
     thumb: "assets/comics/komik1/IMG_1966.jpeg",
-    image: "assets/comics/komik1/IMG_1964.webp"
+    image: "assets/comics/komik1/IMG_1877.jpeg"
   },
   {
     id: 2,
