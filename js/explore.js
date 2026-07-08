@@ -1,3 +1,15 @@
+const quizFiles = [
+    "kuis1",
+    "kuis2",
+    "kuis3",
+    "kuis4",
+    "kuis5",
+    "kuis6",
+    "kuis7",
+    "kuis8",
+    "kuis9"
+];
+
 const params =
     new URLSearchParams(location.search);
 
@@ -35,7 +47,7 @@ if (tab === "comic") {
 async function showQuiz() {
 
     pageTitle.textContent =
-        "Sitemap";
+        "Semua Kuis";
 
     quizSection.style.display = "grid";
     comicSection.style.display = "none";
