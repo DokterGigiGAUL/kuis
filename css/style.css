@@ -420,7 +420,7 @@ body {
 
     .quiz-card{
 
-        flex:0 0 calc((100% - 24px) / 2.25);
+        flex:0 0 calc((100% - 24px) / 3.25);
 
     }
 
@@ -538,7 +538,7 @@ body {
     }
 
     .comic-card{
-        flex:0 0 calc((100% - 24px) / 2.25);
+        flex:0 0 calc((100% - 24px) / 3.25);
     }
 
     .comic-title{
