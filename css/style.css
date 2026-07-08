@@ -44,8 +44,19 @@ body {
     margin-bottom: 16px;
 }
 
-.container {
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
 
+.section-header a{
+    color:var(--primary);
+    font-weight:600;
+    text-decoration:none;
+}
+.container {
     margin: auto;
     padding: 20px;
 }
