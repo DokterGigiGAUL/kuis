@@ -1,7 +1,13 @@
 const quizFiles = [
     "kuis1",
     "kuis2",
-    "kuis3"
+    "kuis3",
+    "kuis4",
+    "kuis5",
+    "kuis6",
+    "kuis7",
+    "kuis8",
+    "kuis9"
 ];
 
 const quizList = document.getElementById("quiz-list");
