@@ -15,7 +15,7 @@ async function init() {
 
         try {
 
-            const response = await fetch(`quizzes/${id}.json`);
+            const response = await fetch(`assets/quizzes/${id}.json`);
 
             if (!response.ok) continue;
 
