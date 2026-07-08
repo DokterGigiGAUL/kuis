@@ -69,41 +69,41 @@ function createCard(quiz) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const comicsContainer = document.getElementById("comics-container");
+
+    const comicsContainer =
+        document.getElementById("comics-container");
 
     if (!comicsContainer) return;
 
-    comicsContainer.innerHTML = comics.map(comic => `
-        <article class="comic-card">
+    const template =
+        document.getElementById("comic-card-template");
 
-<div class="comic-cover">
+    comics.forEach(comic => {
 
-    <img
-        src="${comic.thumb}"
-        alt="${comic.title}"
-        class="comic-thumb"
-        loading="lazy">
+        const card =
+            template.content.cloneNode(true);
 
-    <div class="comic-overlay">
-        <div class="comic-episode">
-            EPISODE #${String(comic.id).padStart(3,"0")}
-        </div>
+        card.querySelector(".comic-thumb").src =
+            comic.thumb;
 
-        <h3 class="comic-title">${comic.title}</h3>
-    </div>
+        card.querySelector(".comic-thumb").alt =
+            comic.title;
 
-</div>
+        card.querySelector(".comic-title").textContent =
+            comic.title;
 
-<div class="comic-content">
+        card.querySelector(".comic-episode").textContent =
+            `EPISODE #${String(comic.id).padStart(3,"0")}`;
 
-    <button
-        class="start-btn comic-btn"
-        onclick="location.href='komik.html?id=${comic.id}'">
-        Baca Komik
-    </button>
+        card.querySelector(".comic-btn").onclick = () => {
 
-</div>
+            location.href =
+                `komik.html?id=${comic.id}`;
 
-        </article>
-    `).join("");
+        };
+
+        comicsContainer.appendChild(card);
+
+    });
+
 });
