@@ -577,3 +577,24 @@ body {
     background:#2563eb;
     color:#fff;
 }
+
+.section-link{
+
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:8px 14px;
+    background:#fff;
+    color:var(--primary);
+    border:1px solid var(--primary);
+    border-radius:999px;
+    text-decoration:none;
+    font-size:.9rem;
+    font-weight:600;
+    transition:.2s;
+}
+
+.section-link:hover{
+    background:var(--primary);
+    color:#fff;
+}
