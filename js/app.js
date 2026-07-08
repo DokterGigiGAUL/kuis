@@ -70,23 +70,33 @@ document.addEventListener("DOMContentLoaded", () => {
     comicsContainer.innerHTML = comics.map(comic => `
         <article class="comic-card">
 
-            <img
-                src="${comic.thumb}"
-                alt="${comic.title}"
-                class="comic-thumb"
-                loading="lazy">
+<div class="comic-cover">
 
-            <div class="comic-content">
+    <img
+        src="${comic.thumb}"
+        alt="${comic.title}"
+        class="comic-thumb"
+        loading="lazy">
 
-                <h3 class="comic-title">${comic.title}</h3>
+    <div class="comic-overlay">
+        <div class="comic-episode">
+            EPISODE #${String(comic.id).padStart(3,"0")}
+        </div>
 
-                <button
-                    class="start-btn comic-btn"
-                    onclick="location.href='komik.html?id=${comic.id}'">
-                    Baca Komik
-                </button>
+        <h3 class="comic-title">${comic.title}</h3>
+    </div>
 
-            </div>
+</div>
+
+<div class="comic-content">
+
+    <button
+        class="start-btn comic-btn"
+        onclick="location.href='komik.html?id=${comic.id}'">
+        Baca Komik
+    </button>
+
+</div>
 
         </article>
     `).join("");
