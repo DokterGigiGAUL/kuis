@@ -19,7 +19,7 @@ init();
 
 async function init() {
 
-    const response = await fetch(`quizzes/${quizId}.json`);
+    const response = await fetch(`assets/quizzes/${quizId}.json`);
     quiz = await response.json();
 
     if (Storage.isFinished(quiz.id)) {
