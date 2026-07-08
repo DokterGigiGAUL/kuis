@@ -530,6 +530,12 @@ body {
 
 @media (min-width:768px){
 
+    .card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+    margin-top:24px;
+}
     .comics-grid{
         display:flex;
         gap:24px;
@@ -598,4 +604,17 @@ body {
 .section-link:hover{
     background:var(--primary);
     color:#fff;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:18px;
+    margin-top:24px;
+}
+
+.card-grid .quiz-card,
+.card-grid .comic-card{
+    width:100%;
+    margin:0;
 }
