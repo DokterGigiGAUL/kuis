@@ -107,3 +107,9 @@ for (const id of quizFiles.slice(0, 4)) {
     });
 
 });
+
+document.getElementById("quizExplore").textContent =
+`${quizFiles.length} Kuis Lainnya →`;
+
+document.getElementById("comicExplore").textContent =
+`${comics.length} Episode Lainnya →`;
