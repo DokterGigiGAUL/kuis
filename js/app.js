@@ -45,7 +45,8 @@ async function init() {
     }
 
     quizExplore.textContent =
-    `${quizFiles.length} Kuis Lainnya →`;
+//    `${quizFiles.length} Kuis Lainnya →`;
+      `Kuis Lainnya →`;
 
 }
 
@@ -117,6 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     comicExplore.textContent =
-        `${comics.length} Episode Lainnya →`;
+//      `${comics.length} Episode Lainnya →`;
+        `Kuis Lainnya →`;
 
 });
