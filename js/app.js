@@ -17,25 +17,25 @@ init();
 
 async function init() {
 
-    for (const id of quizFiles) {
+for (const id of quizFiles.slice(0, 4)) {
 
-        try {
+    try {
 
-            const response = await fetch(`assets/quizzes/${id}.json`);
+        const response = await fetch(`assets/quizzes/${id}.json`);
 
-            if (!response.ok) continue;
+        if (!response.ok) continue;
 
-            const quiz = await response.json();
+        const quiz = await response.json();
 
-            createCard(quiz);
+        createCard(quiz);
 
-        } catch (e) {
+    } catch (e) {
 
-            console.error(e);
-
-        }
+        console.error(e);
 
     }
+
+  }
 
 }
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const template =
         document.getElementById("comic-card-template");
 
-    comics.forEach(comic => {
+for (const id of quizFiles.slice(0, 4)) {
 
         const card =
             template.content.cloneNode(true);
