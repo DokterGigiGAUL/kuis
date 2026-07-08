@@ -114,5 +114,6 @@ for (const id of quizFiles.slice(0, 4)) {
         comicsContainer.appendChild(card);
 
     });
-
+comicExplore.textContent =
+`${comics.length} Episode Lainnya →`;
 });
