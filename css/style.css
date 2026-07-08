@@ -615,7 +615,7 @@ body {
 
 .card-grid{
     display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns:repeat(2, 1fr);
     gap:18px;
     margin-top:24px;
 }
@@ -645,7 +645,7 @@ body {
     background:transparent;
     font-size:21px;
     font-weight:bold;
-    color:var(--primary);
+    color:#eef4ff;
     cursor:pointer;
     box-shadow:0 2px 8px rgba(0,0,0,.08);
     flex-shrink:0;
@@ -653,6 +653,7 @@ body {
 
 .back-btn:hover{
     background:#eef4ff;
+    color:var(--primary);
 }
 
 .explore-header h1{
