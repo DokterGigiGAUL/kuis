@@ -556,3 +556,24 @@ body {
     font-size:24px;
     }
 }
+
+.explore-tabs{
+    display:flex;
+    gap:12px;
+    margin:24px 0;
+}
+
+.tab-btn{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#ececec;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.tab-btn.active{
+    background:#2563eb;
+    color:#fff;
+}
