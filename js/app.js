@@ -12,30 +12,39 @@ const quizFiles = [
 
 const quizList = document.getElementById("quiz-list");
 const template = document.getElementById("quiz-card-template");
+const quizExplore =
+    document.getElementById("quizExplore");
+const comicExplore =
+    document.getElementById("comicExplore");
 
 init();
 
 async function init() {
 
-for (const id of quizFiles.slice(0, 4)) {
+    for (const id of quizFiles.slice(0,4)) {
 
-    try {
+        try {
 
-        const response = await fetch(`assets/quizzes/${id}.json`);
+            const response =
+            await fetch(`assets/quizzes/${id}.json`);
 
-        if (!response.ok) continue;
+            if (!response.ok) continue;
 
-        const quiz = await response.json();
+            const quiz =
+            await response.json();
 
-        createCard(quiz);
+            createCard(quiz);
 
-    } catch (e) {
+        } catch (e) {
 
-        console.error(e);
+            console.error(e);
+
+        }
 
     }
 
-  }
+    quizExplore.textContent =
+    `${quizFiles.length} Kuis Lainnya →`;
 
 }
 
@@ -107,9 +116,3 @@ for (const id of quizFiles.slice(0, 4)) {
     });
 
 });
-
-document.getElementById("quizExplore").textContent =
-`${quizFiles.length} Kuis Lainnya →`;
-
-document.getElementById("comicExplore").textContent =
-`${comics.length} Episode Lainnya →`;
