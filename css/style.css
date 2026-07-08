@@ -482,7 +482,7 @@ body {
     left:0;
     right:0;
     bottom:0;
-    padding:18px;
+    padding:0 18px;
     background:linear-gradient(
         to top,
         rgba(255, 255, 255,.85) 0%,
