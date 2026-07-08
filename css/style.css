@@ -485,14 +485,14 @@ body {
     padding:18px;
     background:linear-gradient(
         to top,
-        rgba(0,0,0,.85) 0%,
-        rgba(0,0,0,.45) 45%,
-        rgba(0,0,0,0) 100%
+        rgba(255, 255, 255,.85) 0%,
+        rgba(255, 255, 255,.45) 45%,
+        rgba(255, 255, 255,0) 100%
     );
 }
 
 .comic-episode{
-    color:#fff;
+    color:#000;
     font-size:11px;
     font-weight:700;
     letter-spacing:.15em;
@@ -502,11 +502,11 @@ body {
 
 .comic-title{
     margin:0;
-    color:#fff;
+    color:#000;
     font-size:16px;
     font-weight:700;
     line-height:1.25;
-    text-shadow:0 2px 8px rgba(0,0,0,.35);
+    text-shadow:0 2px 8px rgba(255,255,255,.35);
 }
 
 .comic-content{
