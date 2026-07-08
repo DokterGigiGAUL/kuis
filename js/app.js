@@ -119,6 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     comicExplore.textContent =
 //      `${comics.length} Episode Lainnya →`;
-        `Kuis Lainnya →`;
+        `Episode Lainnya →`;
 
 });
