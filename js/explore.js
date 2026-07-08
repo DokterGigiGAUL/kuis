@@ -35,7 +35,7 @@ if (tab === "comic") {
 async function showQuiz() {
 
     pageTitle.textContent =
-        "Semua Kuis";
+        "Sitemap";
 
     quizSection.style.display = "grid";
     comicSection.style.display = "none";
