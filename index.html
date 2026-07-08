@@ -65,22 +65,39 @@
 
 <template id="comic-card-template">
 
-    <div class="comic-card">
+<article class="comic-card">
 
-        <img class="comic-thumbnail">
+    <div class="comic-cover">
 
-        <div class="comic-content">
-            <h2 class="comic-title"></h2>
-            <p class="comic-description"></p>
-            <button class="comic-btn">
-                Baca Komik
-            </button>
+        <img
+            class="comic-thumb"
+            loading="lazy"
+            alt="Thumbnail Komik">
+
+        <div class="comic-overlay">
+
+            <div class="comic-episode"></div>
+
+            <h3 class="comic-title"></h3>
 
         </div>
+
     </div>
 
-</template>
+    <div class="comic-content">
 
+        <button
+            class="start-btn comic-btn">
+
+            Baca Komik
+
+        </button>
+
+    </div>
+
+</article>
+
+</template>
     
 <script src="js/storage.js"></script>
 <script src="js/app.js"></script>
