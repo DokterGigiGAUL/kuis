@@ -12,12 +12,13 @@ const quizFiles = [
 
 const quizList = document.getElementById("quiz-list");
 const template = document.getElementById("quiz-card-template");
+
+init();
+
 const quizExplore =
     document.getElementById("quizExplore");
 const comicExplore =
     document.getElementById("comicExplore");
-
-init();
 
 async function init() {
 
@@ -87,35 +88,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const template =
         document.getElementById("comic-card-template");
 
-comics
-.slice(0,4)
-.forEach(comic => {
+    for (const comic of comics.slice(0,4)) {
 
-    const card =
-        template.content.cloneNode(true);
+        const card =
+            template.content.cloneNode(true);
 
-    card.querySelector(".comic-thumb").src =
-        comic.thumb;
+        card.querySelector(".comic-thumb").src =
+            comic.thumb;
 
-    card.querySelector(".comic-thumb").alt =
-        comic.title;
+        card.querySelector(".comic-thumb").alt =
+            comic.title;
 
-    card.querySelector(".comic-title").textContent =
-        comic.title;
+        card.querySelector(".comic-title").textContent =
+            comic.title;
 
-    card.querySelector(".comic-episode").textContent =
-        `EPISODE #${String(comic.id).padStart(3,"0")}`;
+        card.querySelector(".comic-episode").textContent =
+            `EPISODE #${String(comic.id).padStart(3,"0")}`;
 
-    card.querySelector(".comic-btn").onclick = () => {
+        card.querySelector(".comic-btn").onclick = () => {
 
-        location.href =
-            `komik.html?id=${comic.id}`;
+            location.href =
+                `komik.html?id=${comic.id}`;
 
-    };
+        };
 
-    comicsContainer.appendChild(card);
+        comicsContainer.appendChild(card);
+
+    }
+
+    comicExplore.textContent =
+        `${comics.length} Episode Lainnya →`;
 
 });
-
-comicExplore.textContent =
-`${comics.length} Episode Lainnya →`;
