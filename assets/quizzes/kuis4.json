@@ -1,7 +1,7 @@
 {
   "id": "kuis4",
   "title": "Kuis 4",
-  "description": "Tebak Diagnosis Penyakit Mulut",
+  "description": "Apa Diagnosisnya?",
   "thumbnail": "assets/images/IMG_4167.jpeg",
   "timeLimit": 600,
   "questions": [
