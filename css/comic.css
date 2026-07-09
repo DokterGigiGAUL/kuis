@@ -25,13 +25,25 @@
   flex-wrap: wrap;
 }
 
-.comic-navigation button,
+.comic-navigation button {
+    padding: 15px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 8px;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 15px;
+}
+
 .comic-actions button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size:15px;
+    padding: 15px;
+    border: 1px solid var(--primary);
+    color: #ffffff;
+    border-radius: 8px;
+    background-color: var(--primary);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .comic-modal {
