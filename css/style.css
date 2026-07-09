@@ -638,22 +638,17 @@ body {
     background:var(--primary);}
 
 .back-btn{
-    width:21px;
-    height:21px;
+    width:24px;
+    height:24px;
     border:none;
     border-radius:50%;
     background:transparent;
     font-size:21px;
     font-weight:bold;
-    color:#eef4ff;
+    color:#eeffff;
     cursor:pointer;
     box-shadow:0 2px 8px rgba(0,0,0,.08);
     flex-shrink:0;
-}
-
-.back-btn:hover{
-    background:#eef4ff;
-    color:var(--primary);
 }
 
 .explore-header h1{
