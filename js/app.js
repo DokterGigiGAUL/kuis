@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.querySelector(".comic-episode").textContent =
             `EPISODE #${String(comic.id).padStart(3,"0")}`;
 
-        card.querySelector(".comic-btn").onclick = () => {
+        card.querySelector(".start-btn").onclick = () => {
 
             location.href =
                 `komik.html?id=${comic.id}`;
