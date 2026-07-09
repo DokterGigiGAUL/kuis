@@ -130,6 +130,23 @@ body {
     background: var(--primary-dark);
 }
 
+.start-btn2 {
+    width: 100%;
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    background: #ffffff;
+    color: var(--primary);
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.start-btn2:hover {
+    background: #f0f0f0;
+}
+
 .start-btn:disabled {
     background: #bdbdbd;
     cursor: not-allowed;
