@@ -23,12 +23,17 @@ const quizSection =
 const comicSection =
     document.getElementById("comics-container");
 
+const ttsSection =
+    document.getElementById("tts-container");
 
 const quizTab =
     document.getElementById("quizTab");
 
 const comicTab =
     document.getElementById("comicTab");
+
+const ttsTab =
+    document.getElementById("ttsTab");
 
 const pageTitle =
     document.getElementById("pageTitle");
@@ -37,6 +42,10 @@ const pageTitle =
 if (tab === "comic") {
 
     showComic();
+
+} else if (tab === "tts") {
+
+    showTTS();
 
 } else {
 
@@ -156,6 +165,54 @@ function showComic() {
 
 }
 
+function showTTS() {
+
+    pageTitle.textContent =
+        "Semua TTS";
+
+    quizSection.style.display = "none";
+    comicSection.style.display = "none";
+    ttsSection.style.display = "grid";
+
+    quizTab.classList.remove("active");
+    comicTab.classList.remove("active");
+    ttsTab.classList.add("active");
+
+    const template =
+        document.getElementById("tts-card-template");
+
+    ttsSection.innerHTML = "";
+
+    ttsList.forEach(tts => {
+
+        const card =
+            template.content.cloneNode(true);
+
+        card.querySelector(".tts-thumb").src =
+            tts.thumb;
+
+        card.querySelector(".tts-title").textContent =
+            tts.title;
+
+        card.querySelector(".tts-description").textContent =
+            tts.description;
+
+        card.querySelector(".tts-soal").textContent =
+            `${tts.soal} Soal`;
+
+        card.querySelector(".tts-btn").onclick = () => {
+
+            location.href =
+                `assets/tts/tts${tts.id}.html`;
+
+        };
+
+        ttsSection.appendChild(card);
+
+    });
+
+}
+
 quizTab.onclick = () => {
 
     history.replaceState(
@@ -180,4 +237,14 @@ comicTab.onclick = () => {
 
 };
 
+ttsTab.onclick = () => {
 
+    history.replaceState(
+        {},
+        "",
+        "explore.html?tab=tts"
+    );
+
+    showTTS();
+
+};
