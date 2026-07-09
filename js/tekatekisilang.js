@@ -1,4 +1,3 @@
-<script>
 // ---------- Data soal (koordinat relatif, sudah diverifikasi konsisten) ----------
 const words = [
   { id:'email',  number:1, dir:'down',   row:0, col:1, answer:'EMAIL',  label:'EMAIL',
@@ -212,4 +211,3 @@ document.getElementById('resetBtn').addEventListener('click', ()=>{
   statusEl.className = '';
   if(words.length) selectWord(words[0].id, true);
 });
-</script>
