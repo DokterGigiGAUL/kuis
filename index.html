@@ -56,6 +56,23 @@
     <!-- Card komik akan dibuat oleh JavaScript -->
   </div>
 </section>
+
+<!-- =========================
+
+     TEKA-TEKI SILANG
+
+========================= -->
+
+<section class="section">
+    <div class="section-header">
+        <h2>Teka-Teki Silang</h2>
+        <a href="tts-list.html" id="ttsExplore">
+            TTS Lainnya →
+        </a>
+    </div>
+    <div id="tts-container" class="cards-container"></div>
+</section>
+    
 </main>
 
 <!-- Template Card -->
@@ -105,6 +122,28 @@
     </div>
 </article>
     
+</template>
+
+<!-- Template Card TTS -->
+
+<template id="tts-card-template">
+    <div class="tts-card">
+        <img
+            class="tts-thumb"
+            src=""
+            alt="Thumbnail TTS"
+        >
+
+        <div class="tts-content">
+            <h3 class="tts-title"></h3>
+            <p class="tts-description"></p>
+            <p class="tts-soal"></p>
+            <button class="tts-btn">
+                Isi TTS
+            </button>
+        </div>
+    </div>
+
 </template>
     
 <script src="js/storage.js"></script>
