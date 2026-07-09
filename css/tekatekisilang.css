@@ -9,6 +9,7 @@
     --cell-active:#f1f1f1;
     --caries:#C2452F;        /* dental-chart "red" = decay/error */
     --caries-bg:#FBE4DD;
+    --restoration:#008000;
     --amber:#B98418;
   }
   *{box-sizing:border-box;}
