@@ -546,7 +546,16 @@ body {
 }
 
 .comic-btn{
-    width:100%;
+    width: 100%;
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    background: #ffffff;
+    color: var(--primary);
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
 }
 
 @media (min-width:768px){
