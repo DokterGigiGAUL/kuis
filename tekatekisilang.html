@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rekam Silang — TTS Kedokteran Gigi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Inter:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2F7F5;
+    --card:#FFFFFF;
+    --ink:#173A3E;
+    --ink-soft:#4C6B6E;
+    --line:#C9DEDA;
+    --grid-line:#1F4448;
+    --cell:#FFFFFF;
+    --cell-active:#E4F2EF;
+    --restoration:#1F6F79;   /* dental-chart "blue" = completed work */
+    --restoration-bg:#DDEEEC;
+    --caries:#C2452F;        /* dental-chart "red" = decay/error */
+    --caries-bg:#FBE4DD;
+    --amber:#B98418;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(31,68,72,0.07) 1px, transparent 0);
+    background-size: 22px 22px;
+    color:var(--ink);
+    padding:24px 14px 60px;
+    min-height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .wrap{max-width:900px; margin:0 auto;}
+
+  /* ---- record-card header ---- */
+  .chart-card{
+    background:var(--card);
+    border:1.5px solid var(--line);
+    border-radius:10px;
+    box-shadow:0 1px 0 rgba(23,58,62,0.05);
+    overflow:hidden;
+    margin-bottom:22px;
+  }
+  .chart-head{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:12px;
+    padding:16px 20px;
+    border-bottom:1.5px dashed var(--line);
+    flex-wrap:wrap;
+  }
+  .chart-head h1{
+    font-size:1.35rem;
+    margin:0;
+    letter-spacing:0.01em;
+  }
+  .chart-head p{
+    margin:2px 0 0;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+  .fields{
+    padding:0px 20px;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+  .fields span b{color:var(--ink);}
+
+  /* ---- layout ---- */
+  .board{
+    display:grid;
+    grid-template-columns: minmax(0,1.15fr) minmax(0,1fr);
+    gap:20px;
+    align-items:start;
+  }
+  @media (max-width:720px){
+    .board{grid-template-columns:1fr;}
+  }
+
+  .paneltts{
+    padding:18px;
+    overflow-x:auto;
+  }
+  
+  .panel{
+    background:var(--card);
+    border:1.5px solid var(--line);
+    border-radius:10px;
+    padding:18px;
+    overflow-x:auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .panel h2{
+    font-size:0.95rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    margin:0 0 12px;
+    color:var(--ink-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+
+  /* ---- grid ---- */
+  #grid{
+    display:grid;
+    gap:3px;
+    width:max-content;
+    max-width:100%;
+    margin:0 auto;
+    background:var(--grid-line);
+    padding:3px;
+    border-radius:6px;
+  }
+  .cell{
+    position:relative;
+    width:38px; height:38px;
+    background:var(--cell);
+  }
+  .cell.blank{background:transparent;}
+  .cell input{
+    width:100%; height:100%;
+    border:none; outline:none;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+    font-size:1.05rem;
+    color:var(--ink);
+    background:transparent;
+    text-transform:uppercase;
+    border-radius:2px;
+  }
+  .cell input:focus{background:var(--cell-active);}
+  .cell.highlight input{background:var(--cell-active);}
+  .cell .num{
+    position:absolute; top:1px; left:2px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.55rem;
+    color:var(--ink-soft);
+    pointer-events:none;
+  }
+  .cell.correct input{
+    background:var(--restoration-bg);
+    color:var(--restoration);
+  }
+  .cell.correct::after{
+    content:"";
+    position:absolute; bottom:2px; right:2px;
+    width:6px; height:6px; border-radius:50%;
+    background:var(--restoration);
+  }
+  .cell.incorrect input{
+    background:var(--caries-bg);
+    color:var(--caries);
+  }
+  .cell.incorrect::after{
+    content:"";
+    position:absolute; bottom:2px; right:2px;
+    width:6px; height:6px; border-radius:50%;
+    background:var(--caries);
+  }
+  @media (max-width:420px){
+    .cell{width:32px;height:32px;}
+    .cell input{font-size:0.9rem;}
+  }
+
+  /* ---- clues ---- */
+  .clue-group{margin-bottom:16px;}
+  .clue-group:last-child{margin-bottom:0;}
+  .clue-group h3{
+    font-size:0.85rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--ink-soft);
+    margin:0 0 6px;
+  }
+  .clue{
+    display:flex; gap:9px;
+    padding:8px 8px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:0.87rem;
+    line-height:1.35;
+    border:1px solid transparent;
+  }
+  .clue:hover{background:var(--paper);}
+  .clue.active{
+    background:var(--restoration-bg);
+    border-color:var(--restoration);
+  }
+  .clue .badge{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:700;
+    font-size:0.78rem;
+    color:var(--restoration);
+    min-width:16px;
+  }
+
+  /* ---- controls ---- */
+  .controls{
+    display:flex; gap:10px; margin-top:16px; flex-wrap:wrap; justify-content: space-between; 
+  }
+  button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size:0.85rem;
+    padding:9px 16px;
+    border-radius:7px;
+    border:1.5px solid var(--ink);
+    background:var(--ink);
+    color:var(--paper);
+    cursor:pointer;
+    transition:transform .08s ease, opacity .15s ease;
+  }
+  button.secondary{
+    background:transparent;
+    color:var(--ink);
+  }
+  button:active{transform:scale(0.97);}
+
+  #status{
+    margin-top:14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    min-height:1.2em;
+  }
+  #status.ok{color:var(--restoration);}
+  #status.pending{color:var(--amber);}
+  #status.bad{color:var(--caries);}
+
+  .legend{
+    display:flex; gap:16px; flex-wrap:wrap;
+    margin-top:14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+  }
+  .legend span{display:flex; align-items:center; gap:5px;}
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
+  .dot.blue{background:var(--restoration);}
+  .dot.red{background:var(--caries);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="chart-card">
+    <div class="chart-head">
+      <div>
+        <h1>TTS Kedokteran Gigi</h1>
+      </div>
+    </div>
+    <div class="fields">
+      <p><b>SOAL: 5</b></p>
+      <p>Klik kotak atau daftar pertanyaan untuk mulai.</p>
+    </div>
+  </div>
+
+  <div class="board">
+    <div class="paneltts">
+      <div id="grid"></div>
+
+    </div>
+
+    <div class="panel">
+      <h2>Soal</h2>
+      <div id="clues"></div>
+      <div class="controls">
+        <button id="checkBtn">Periksa Jawaban</button>
+        <button id="resetBtn" class="secondary">Reset</button>
+      </div>
+      <div id="status"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ---------- Data soal (koordinat relatif, sudah diverifikasi konsisten) ----------
+const words = [
+  { id:'email',  number:1, dir:'down',   row:0, col:1, answer:'EMAIL',  label:'EMAIL',
+    clue:'Lapisan terluar mahkota gigi, jaringan terkeras di tubuh manusia.' },
+  { id:'gusi',   number:2, dir:'down',   row:0, col:5, answer:'GUSI',   label:'GUSI',
+    clue:'Jaringan lunak kemerahan yang mengelilingi leher gigi.' },
+  { id:'gigi',   number:3, dir:'down',   row:1, col:3, answer:'GIGI',   label:'GIGI',
+    clue:'Organ keras di rongga mulut yang berfungsi untuk mengunyah.' },
+  { id:'karies', number:4, dir:'across', row:2, col:0, answer:'KARIES', label:'KARIES',
+    clue:'Kerusakan jaringan keras gigi akibat aktivitas bakteri; awam menyebutnya gigi berlubang.' },
+  { id:'itp',    number:5, dir:'across', row:3, col:5, answer:'ITP',    label:'ITP',
+    clue:'Singkatan dari Idiopathic Thrombocytopenic Purpura.' },
+];
+
+// ---------- Bangun peta sel dari data kata ----------
+const cellMap = {}; // "r,c" -> {letter, numbers:[], words:[]}
+let maxRow = 0, maxCol = 0;
+
+words.forEach(w=>{
+  for(let i=0;i<w.answer.length;i++){
+    const r = w.row + (w.dir==='down' ? i : 0);
+    const c = w.col + (w.dir==='across' ? i : 0);
+    const key = r+','+c;
+    if(!cellMap[key]) cellMap[key] = { letter:w.answer[i], words:[] };
+    cellMap[key].words.push({ id:w.id, dir:w.dir, index:i });
+    if(i===0){
+      cellMap[key].number = w.number;
+    }
+    maxRow = Math.max(maxRow, r);
+    maxCol = Math.max(maxCol, c);
+  }
+});
+
+// ---------- Render grid ----------
+const gridEl = document.getElementById('grid');
+gridEl.style.gridTemplateColumns = `repeat(${maxCol+1}, 38px)`;
+gridEl.style.gridTemplateRows = `repeat(${maxRow+1}, 38px)`;
+
+const inputs = {}; // key -> input element
+
+for(let r=0;r<=maxRow;r++){
+  for(let c=0;c<=maxCol;c++){
+    const key = r+','+c;
+    const data = cellMap[key];
+    const cellDiv = document.createElement('div');
+    if(!data){
+      cellDiv.className = 'cell blank';
+    } else {
+      cellDiv.className = 'cell';
+      if(data.number){
+        const num = document.createElement('span');
+        num.className = 'num';
+        num.textContent = data.number;
+        cellDiv.appendChild(num);
+      }
+      const input = document.createElement('input');
+      input.maxLength = 1;
+      input.autocomplete = 'off';
+      input.dataset.key = key;
+      cellDiv.appendChild(input);
+      inputs[key] = input;
+    }
+    gridEl.appendChild(cellDiv);
+  }
+}
+
+// ---------- Render daftar pertanyaan ----------
+const cluesEl = document.getElementById('clues');
+const groups = { across: words.filter(w=>w.dir==='across'), down: words.filter(w=>w.dir==='down') };
+
+function buildClueGroup(title, list){
+  const wrap = document.createElement('div');
+  wrap.className = 'clue-group';
+  const h = document.createElement('h3');
+  h.textContent = title;
+  wrap.appendChild(h);
+  list.forEach(w=>{
+    const row = document.createElement('div');
+    row.className = 'clue';
+    row.dataset.word = w.id;
+    row.innerHTML = `<span class="badge">${w.number}</span><span>${w.clue} <em style="color:var(--ink-soft); font-style:normal;">(${w.answer.length} huruf)</em></span>`;
+    row.addEventListener('click', ()=> selectWord(w.id));
+    wrap.appendChild(row);
+  });
+  return wrap;
+}
+cluesEl.appendChild(buildClueGroup('Mendatar', groups.across));
+cluesEl.appendChild(buildClueGroup('Menurun', groups.down));
+
+// ---------- Interaksi ----------
+let currentWordId = null;
+
+function wordCells(id){
+  const w = words.find(x=>x.id===id);
+  const cells = [];
+  for(let i=0;i<w.answer.length;i++){
+    const r = w.row + (w.dir==='down' ? i : 0);
+    const c = w.col + (w.dir==='across' ? i : 0);
+    cells.push(r+','+c);
+  }
+  return cells;
+}
+
+function clearHighlights(){
+  document.querySelectorAll('.cell.highlight').forEach(el=>el.classList.remove('highlight'));
+  document.querySelectorAll('.clue.active').forEach(el=>el.classList.remove('active'));
+}
+
+function selectWord(id, focusFirst=true){
+  clearHighlights();
+  currentWordId = id;
+  wordCells(id).forEach(key=>{
+    inputs[key].closest('.cell').classList.add('highlight');
+  });
+  const clueRow = document.querySelector(`.clue[data-word="${id}"]`);
+  if(clueRow) clueRow.classList.add('active');
+  if(focusFirst){
+    const firstEmpty = wordCells(id).find(k=>!inputs[k].value) || wordCells(id)[0];
+    inputs[firstEmpty].focus();
+  }
+}
+
+// klik sel: pilih kata (toggle arah hanya jika kotak YANG SAMA diklik dua kali berturut-turut)
+let lastClickedKey = null;
+Object.keys(inputs).forEach(key=>{
+  const input = inputs[key];
+  input.addEventListener('click', ()=>{
+    const data = cellMap[key];
+    let wid;
+    if(data.words.length>1){
+      const belongsToCurrent = data.words.some(w=>w.id===currentWordId);
+      if(key === lastClickedKey && belongsToCurrent){
+        wid = data.words.find(w=>w.id!==currentWordId).id; // toggle ke arah lain
+      } else if(belongsToCurrent){
+        wid = currentWordId; // tetap di kata yang sama, jangan lompat
+      } else {
+        wid = data.words[0].id;
+      }
+    } else {
+      wid = data.words[0].id;
+    }
+    lastClickedKey = key;
+    selectWord(wid, false);
+  });
+
+  input.addEventListener('input', (e)=>{
+    let v = e.target.value.toUpperCase().replace(/[^A-Z]/g,'');
+    e.target.value = v.slice(-1);
+    input.closest('.cell').classList.remove('correct','incorrect');
+    if(v && currentWordId){
+      const cells = wordCells(currentWordId);
+      const idx = cells.indexOf(key);
+      if(idx > -1 && idx < cells.length-1){
+        inputs[cells[idx+1]].focus();
+      }
+    }
+  });
+
+  input.addEventListener('keydown', (e)=>{
+    if(e.key === 'Backspace' && !input.value && currentWordId){
+      const cells = wordCells(currentWordId);
+      const idx = cells.indexOf(key);
+      if(idx > 0) inputs[cells[idx-1]].focus();
+    }
+  });
+});
+
+// pilih kata pertama secara default
+if(words.length) selectWord(words[0].id, false);
+
+// ---------- Periksa jawaban ----------
+const statusEl = document.getElementById('status');
+
+document.getElementById('checkBtn').addEventListener('click', ()=>{
+  let filled = 0, correct = 0, total = 0;
+  Object.keys(inputs).forEach(key=>{
+    total++;
+    const input = inputs[key];
+    const cellDiv = input.closest('.cell');
+    cellDiv.classList.remove('correct','incorrect');
+    const val = input.value.trim();
+    if(val){
+      filled++;
+      if(val === cellMap[key].letter){
+        correct++;
+        cellDiv.classList.add('correct');
+      } else {
+        cellDiv.classList.add('incorrect');
+      }
+    }
+  });
+
+  if(correct === total){
+    statusEl.className = 'ok';
+    statusEl.textContent = '✓ Rekam medis lengkap — semua jawaban benar!';
+  } else if(filled < total){
+    statusEl.className = 'pending';
+    statusEl.textContent = `Baru terisi ${filled}/${total} kotak. Lanjutkan pemeriksaan.`;
+  } else {
+    statusEl.className = 'bad';
+    statusEl.textContent = `Ditemukan ${filled-correct} jawaban perlu dikoreksi (ditandai merah).`;
+  }
+});
+
+document.getElementById('resetBtn').addEventListener('click', ()=>{
+  Object.values(inputs).forEach(input=>{
+    input.value = '';
+    input.closest('.cell').classList.remove('correct','incorrect');
+  });
+  statusEl.textContent = '';
+  statusEl.className = '';
+  if(words.length) selectWord(words[0].id, true);
+});
+</script>
+</body>
+</html>
