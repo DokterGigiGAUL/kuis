@@ -167,7 +167,7 @@ function loadTTS() {
         card.querySelector(".tts-btn").onclick = () => {
 
             location.href =
-                `tts.html?id=${tts.id}`;
+                `assets/tts/tts${tts.id}.html`;
 
         };
 
