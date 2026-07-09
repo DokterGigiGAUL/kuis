@@ -11,30 +11,37 @@ const quizFiles = [
 ];
 
 const quizList = document.getElementById("quiz-list");
-const template = document.getElementById("quiz-card-template");
+const quizTemplate = document.getElementById("quiz-card-template");
 
-init();
+const comicsContainer = document.getElementById("comics-container");
+const comicTemplate = document.getElementById("comic-card-template");
 
-const quizExplore =
-    document.getElementById("quizExplore");
-const comicExplore =
-    document.getElementById("comicExplore");
+const ttsContainer = document.getElementById("tts-container");
+const ttsTemplate = document.getElementById("tts-card-template");
 
-async function init() {
+const quizExplore = document.getElementById("quizExplore");
+const comicExplore = document.getElementById("comicExplore");
+const ttsExplore = document.getElementById("ttsExplore");
 
-    for (const id of quizFiles.slice(0,4)) {
+loadQuiz();
+loadComics();
+loadTTS();
+
+async function loadQuiz() {
+
+    for (const id of quizFiles.slice(0, 4)) {
 
         try {
 
             const response =
-            await fetch(`assets/quizzes/${id}.json`);
+                await fetch(`assets/quizzes/${id}.json`);
 
             if (!response.ok) continue;
 
             const quiz =
-            await response.json();
+                await response.json();
 
-            createCard(quiz);
+            createQuizCard(quiz);
 
         } catch (e) {
 
@@ -44,32 +51,45 @@ async function init() {
 
     }
 
-    quizExplore.textContent =
-//    `${quizFiles.length} Kuis Lainnya →`;
-      `Kuis Lainnya →`;
+    if (quizExplore) {
+
+        quizExplore.textContent =
+            "Kuis Lainnya →";
+
+    }
 
 }
 
-function createCard(quiz) {
+function createQuizCard(quiz) {
 
-    const clone = template.content.cloneNode(true);
+    const clone =
+        quizTemplate.content.cloneNode(true);
 
-    clone.querySelector(".quiz-thumbnail").src = quiz.thumbnail;
-    clone.querySelector(".quiz-title").textContent = quiz.title;
-    clone.querySelector(".quiz-description").textContent = quiz.description;
+    clone.querySelector(".quiz-thumbnail").src =
+        quiz.thumbnail;
 
-    const button = clone.querySelector(".start-btn");
+    clone.querySelector(".quiz-title").textContent =
+        quiz.title;
+
+    clone.querySelector(".quiz-description").textContent =
+        quiz.description;
+
+    const button =
+        clone.querySelector(".start-btn");
 
     if (Storage.isFinished(quiz.id)) {
 
-        button.textContent = "Sudah Dikerjakan";
+        button.textContent =
+            "Sudah Dikerjakan";
+
         button.disabled = true;
 
     } else {
 
         button.onclick = () => {
 
-            window.location.href = `quiz.html?id=${quiz.id}`;
+            location.href =
+                `quiz.html?id=${quiz.id}`;
 
         };
 
@@ -79,20 +99,14 @@ function createCard(quiz) {
 
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    const comicsContainer =
-        document.getElementById("comics-container");
+function loadComics() {
 
     if (!comicsContainer) return;
 
-    const template =
-        document.getElementById("comic-card-template");
-
-    for (const comic of comics.slice(0,4)) {
+    for (const comic of comics.slice(0, 4)) {
 
         const card =
-            template.content.cloneNode(true);
+            comicTemplate.content.cloneNode(true);
 
         card.querySelector(".comic-thumb").src =
             comic.thumb;
@@ -104,9 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
             comic.title;
 
         card.querySelector(".comic-episode").textContent =
-            `EPISODE #${String(comic.id).padStart(3,"0")}`;
+            `EPISODE #${String(comic.id).padStart(3, "0")}`;
 
-        card.querySelector(".start-btn").onclick = () => {
+        card.querySelector(".comic-btn").onclick = () => {
 
             location.href =
                 `komik.html?id=${comic.id}`;
@@ -117,10 +131,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    comicExplore.textContent =
-//      `${comics.length} Episode Lainnya →`;
-        `Episode Lainnya →`;
+    if (comicExplore) {
 
-});
+        comicExplore.textContent =
+            "Episode Lainnya →";
 
+    }
 
+}
+
+function loadTTS() {
+
+    if (!ttsContainer) return;
+
+    for (const tts of ttsList.slice(0, 4)) {
+
+        const card =
+            ttsTemplate.content.cloneNode(true);
+
+        card.querySelector(".tts-thumb").src =
+            tts.thumb;
+
+        card.querySelector(".tts-thumb").alt =
+            tts.title;
+
+        card.querySelector(".tts-title").textContent =
+            tts.title;
+
+        card.querySelector(".tts-description").textContent =
+            tts.description;
+
+        card.querySelector(".tts-soal").textContent =
+            `${tts.soal} Soal`;
+
+        card.querySelector(".tts-btn").onclick = () => {
+
+            location.href =
+                `tts.html?id=${tts.id}`;
+
+        };
+
+        ttsContainer.appendChild(card);
+
+    }
+
+    if (ttsExplore) {
+
+        ttsExplore.textContent =
+            "TTS Lainnya →";
+
+    }
+
+}
