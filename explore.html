@@ -51,6 +51,12 @@
             class="tab-btn">
             Komik
         </button>
+
+        <button
+    id="ttsTab"
+    class="tab-btn">
+    TTS
+       </button>
     </div>
 
     <section
@@ -64,6 +70,10 @@
         class="card-grid">
     </section>
 
+    <section
+    id="tts-container"
+    class="card-grid">
+    </section>
 </main>
 
 <!-- TEMPLATE QUIZ -->
@@ -115,9 +125,40 @@
 </article>
     
 </template>
+
+<template id="tts-card-template">
+
+<div class="tts-card">
+
+    <img
+        class="tts-thumb"
+        loading="lazy"
+        alt="Thumbnail TTS">
+
+    <div class="tts-content">
+
+        <h3 class="tts-title"></h3>
+
+        <p class="tts-description"></p>
+
+        <p class="tts-soal"></p>
+
+        <button class="tts-btn">
+
+            Isi TTS
+
+        </button>
+
+    </div>
+
+</div>
+
+</template>
     
+
 <script src="js/storage.js"></script>
 <script src="js/comics-data.js"></script>
+<script src="js/tts.js"></script>
 <script src="js/explore.js"></script>
 
 </body>
