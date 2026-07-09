@@ -4,7 +4,7 @@ const ttsList = [
         id: 1,
         title: "TTS #1",
         description: "Teka-teki silang seputar penyakit mulut dengan soal yang dipilih secara acak.",
-        soal: 20,
+        soal: 18,
         thumb: "assets/images/tts/tts-1.svg"
     },
 
@@ -12,7 +12,7 @@ const ttsList = [
         id: 2,
         title: "TTS #2",
         description: "Teka-teki silang seputar penyakit mulut dengan soal yang dipilih secara acak.",
-        soal: 25,
+        soal: 10,
         thumb: "assets/images/tts/IMG_4206.webp"
     },
 
