@@ -5,7 +5,7 @@ const ttsList = [
         title: "TTS #1",
         description: "Teka-teki silang seputar penyakit mulut dengan soal yang dipilih secara acak.",
         soal: 20,
-        thumb: "assets/tts/IMG_4206.webp"
+        thumb: "assets/images/tts/tts-1.svg"
     },
 
     {
@@ -13,7 +13,7 @@ const ttsList = [
         title: "TTS #2",
         description: "Teka-teki silang seputar penyakit mulut dengan soal yang dipilih secara acak.",
         soal: 25,
-        thumb: "assets/tts/IMG_4206.webp"
+        thumb: "assets/images/tts/IMG_4206.webp"
     },
 
     {
@@ -21,7 +21,7 @@ const ttsList = [
         title: "TTS #3",
         description: "Teka-teki silang seputar penyakit mulut dengan soal yang dipilih secara acak.",
         soal: 30,
-        thumb: "assets/tts/IMG_4206.webp"
+        thumb: "assets/images/tts/tts-1.svg"
     },
 
     {
@@ -29,7 +29,7 @@ const ttsList = [
         title: "TTS #4",
         description: "Teka-teki silang seputar penyakit mulut dengan soal yang dipilih secara acak.",
         soal: 20,
-        thumb: "assets/tts/IMG_4206.webp"
+        thumb: "assets/images/tts/IMG_4206.webp"
     }
 
 ];
