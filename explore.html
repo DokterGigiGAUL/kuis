@@ -12,6 +12,21 @@
     <link rel="stylesheet"
           href="css/style.css">
 
+    <style>
+    @media (min-width: 768px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px!important;
+    }
+    
+    .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+    }
+}
+    </style>
 </head>
 
 <body>
@@ -25,29 +40,19 @@
     </h1>
 </header>
 <main class="container">
-    
-
-    
     <div class="explore-tabs">
-
         <button
             id="quizTab"
             class="tab-btn">
-
             Kuis
-
         </button>
 
         <button
             id="comicTab"
             class="tab-btn">
-
             Komik
-
         </button>
-
     </div>
-
 
     <section
         id="quiz-list"
@@ -55,49 +60,32 @@
 
     </section>
 
-
     <section
         id="comics-container"
         class="card-grid">
-
     </section>
 
 </main>
 
-
-
 <!-- TEMPLATE QUIZ -->
 
 <template id="quiz-card-template">
-
+    
 <div class="quiz-card">
-
     <img class="quiz-thumbnail">
-
     <div class="quiz-content">
-
         <h3 class="quiz-title"></h3>
-
         <p class="quiz-description"></p>
-
         <div class="quiz-info">
-
             <span>📄 10 Soal</span>
-
             <span>⏱ 10 Menit</span>
-
         </div>
-
         <button class="start-btn">
-
             Mulai Kuis
-
         </button>
-
     </div>
-
 </div>
-
+    
 </template>
 
 
@@ -107,31 +95,19 @@
 <template id="comic-card-template">
 
 <div class="comic-card">
-
     <div class="comic-cover">
-
         <img class="comic-thumb">
-
         <div class="comic-overlay">
-
             <div class="comic-episode"></div>
-
             <h3 class="comic-title"></h3>
-
         </div>
-
     </div>
 
     <div class="comic-content">
-
         <button class="comic-btn">
-
             Baca Komik
-
         </button>
-
     </div>
-
 </div>
 
 </template>
