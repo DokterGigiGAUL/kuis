@@ -71,7 +71,8 @@
 <template id="quiz-card-template">
     
 <div class="quiz-card">
-    <img class="quiz-thumbnail">
+    <img class="quiz-thumbnail loading="lazy"
+            alt="Thumbnail Kuis"">
     <div class="quiz-content">
         <h3 class="quiz-title"></h3>
         <p class="quiz-description"></p>
@@ -111,7 +112,30 @@
 
 </template>
 
-
+<template id="comic-card-template">
+    
+<article class="comic-card">
+    <div class="comic-cover">
+        <img
+            class="comic-thumb"
+            loading="lazy"
+            alt="Thumbnail Komik">
+        <div class="comic-overlay">
+            <div class="comic-episode"></div>
+            <h3 class="comic-title"></h3>
+        </div>
+    </div>
+    
+    <div class="comic-content">
+        <button
+            class="comic-btn">
+            Baca Komik
+        </button>
+    </div>
+</article>
+    
+</template>
+    
 <script src="js/storage.js"></script>
 <script src="js/comics-data.js"></script>
 <script src="js/explore.js"></script>
