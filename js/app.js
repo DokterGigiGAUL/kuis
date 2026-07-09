@@ -177,8 +177,11 @@ function loadTTS() {
 
     if (ttsExplore) {
 
-        ttsExplore.textContent =
-            "TTS Lainnya →";
+ttsExplore.href =
+    "tts-list.html";
+
+ttsExplore.textContent =
+    "TTS Lainnya →";
 
     }
 
