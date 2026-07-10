@@ -5,7 +5,7 @@ const ttsList = [
         title: "TTS #1",
         description: "Topik: Penyakit Mulut",
         soal: 18,
-        thumb: "assets/images/tts/C786BC7F-557F-4325-A40F-1D9BCB141C58.png"
+        thumb: "assets/images/tts/Tts1.webp"
     },
 
     {
@@ -13,7 +13,7 @@ const ttsList = [
         title: "TTS #2",
         description: "Topik: Kedokteran Gigi",
         soal: 10,
-        thumb: "assets/images/tts/C786BC7F-557F-4325-A40F-1D9BCB141C58.png"
+        thumb: "assets/images/tts/Tts2.webp"
     },
 
     {
@@ -21,7 +21,7 @@ const ttsList = [
         title: "TTS #3",
         description: "Topik: Kedokteran Gigi",
         soal: 12,
-        thumb: "assets/images/tts/C786BC7F-557F-4325-A40F-1D9BCB141C58.png"
+        thumb: "assets/images/tts/Tts3.webp"
     },
 
     {
@@ -29,7 +29,7 @@ const ttsList = [
         title: "TTS #4",
         description: "Topik: Kedokteran Gigi",
         soal: 10,
-        thumb: "assets/images/tts/C786BC7F-557F-4325-A40F-1D9BCB141C58.png"
+        thumb: "assets/images/tts/Tts4.webp"
     }
 
 ];
