@@ -27,10 +27,6 @@
 }
     </style>
 
-    <script src="js/storage.js"></script>
-<script src="js/comics-data.js"></script>
-<script src="js/tts-list.js"></script>
-<script src="js/explore.js"></script>
 </head>
 
 <body>
@@ -43,6 +39,7 @@
         Semua Kuis
     </h1>
 </header>
+    
 <main class="container">
     <div class="explore-tabs">
         <button
@@ -85,8 +82,11 @@
 <template id="quiz-card-template">
     
 <article class="quiz-card">
-    <img class="quiz-thumbnail loading="lazy"
-            alt="Thumbnail Kuis"">
+    <img 
+        class="quiz-thumbnail"
+        loading="lazy"
+        alt="Thumbnail Kuis"">
+    
     <div class="quiz-content">
         <h3 class="quiz-title"></h3>
         <p class="quiz-description"></p>
@@ -130,32 +130,28 @@
 
 <template id="tts-card-template">
 
-<div class="tts-card">
-
+<article class="tts-card">
     <img
         class="tts-thumb"
         loading="lazy"
         alt="Thumbnail TTS">
-
+    
     <div class="tts-content">
-
         <h3 class="tts-title"></h3>
-
         <p class="tts-description"></p>
-
         <p class="tts-soal"></p>
-
         <button class="tts-btn">
-
             Isi TTS
-
         </button>
-
     </div>
-
-</div>
+</article>
 
 </template>
+
+<script src="js/storage.js"></script>
+<script src="js/comics-data.js"></script>
+<script src="js/tts-list.js"></script>
+<script src="js/explore.js"></script>
 
 </body>
 </html>
