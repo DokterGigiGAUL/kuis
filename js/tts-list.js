@@ -13,7 +13,7 @@ const ttsList = [
         title: "TTS #2",
         description: "Teka-teki silang Interaktif.",
         soal: 10,
-        thumb: "assets/images/tts/C786BC7F-557F-4325-A40F-1D9BCB141C58.pngp"
+        thumb: "assets/images/tts/C786BC7F-557F-4325-A40F-1D9BCB141C58.png"
     },
 
     {
