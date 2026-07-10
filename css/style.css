@@ -101,7 +101,7 @@ body {
 
 .quiz-description {
     color: var(--text-light);
-    font-size: .85rem;
+    font-size: 14px;    
     line-height: 1.25;
 }
 
@@ -151,10 +151,6 @@ body {
 
     .quiz-title {
         font-size: 18px;
-    }
-
-    .quiz-description {
-        font-size: 14px;
     }
 
     .quiz-info {
