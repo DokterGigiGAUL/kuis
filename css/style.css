@@ -101,8 +101,9 @@ body {
 
 .quiz-description {
     color: var(--text-light);
-    font-size: 14px;    
+    font-size: .85rem;    
     line-height: 1.25;
+    margin-bottom:6px;
 }
 
 .quiz-info {
@@ -685,6 +686,7 @@ body {
     color: var(--text-light);
     font-size: .85rem;
     line-height: 1.25;
+    margin-bottom: 6px;
 }
 
 .tts-soal {
