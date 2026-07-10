@@ -19,7 +19,7 @@ for (const tts of ttsList) {
         tts.description;
 
     card.querySelector(".tts-soal").textContent =
-        `${tts.soal} Soal`;
+        `✎ ${tts.soal} Soal`;
 
     card.querySelector(".tts-btn").onclick = () => {
 
