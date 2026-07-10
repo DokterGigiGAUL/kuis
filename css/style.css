@@ -690,10 +690,10 @@ body {
 }
 
 .tts-soal {
-    font-size: .9rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 16px;
+    font-size: .85rem;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 18px;
 }
 
 .tts-btn {
