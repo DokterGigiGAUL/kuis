@@ -101,14 +101,14 @@ body {
 
 .quiz-description {
     color: var(--text-light);
-    font-size: 14px;
-    margin-bottom: 12px;
+    font-size: .85rem;
+    line-height: 1.25;
 }
 
 .quiz-info {
     display: flex;
     justify-content: space-between;
-    font-size: 13px;
+    font-size: .85rem
     color: var(--text-light);
     margin-bottom: 15px;
 }
@@ -687,9 +687,8 @@ body {
 
 .tts-description {
     color: var(--text-light);
-    font-size: .95rem;
-    line-height: 1.5;
-    margin-bottom: 14px;
+    font-size: .85rem;
+    line-height: 1.25;
 }
 
 .tts-soal {
