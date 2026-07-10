@@ -109,7 +109,7 @@ body {
 .quiz-info {
     display: flex;
     justify-content: space-between;
-    font-size: .85rem
+    font-size: .85rem;
     color: var(--text-light);
     margin-bottom: 15px;
 }
