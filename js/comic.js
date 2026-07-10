@@ -41,21 +41,3 @@ list.innerHTML = comics
     `
   )
   .join("");
-
-document
-  .getElementById("comic-list-button")
-  .addEventListener("click", () => {
-    modal.classList.add("show");
-  });
-
-document
-  .getElementById("close-modal")
-  .addEventListener("click", () => {
-    modal.classList.remove("show");
-  });
-
-modal.addEventListener("click", e => {
-  if (e.target === modal) {
-    modal.classList.remove("show");
-  }
-});
