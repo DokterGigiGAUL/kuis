@@ -169,10 +169,6 @@ body {
         height: 120px;
     }
 
-    .quiz-title {
-        font-size: 24px;
-    }
-
     .quiz-info {
         display: flex;
         justify-content: space-between;
@@ -453,6 +449,10 @@ body {
         padding-bottom:10px;
     }
 
+    .quiz-title {
+        font-size: 24px;
+    }
+    
     .quiz-description {
     font-size: 17px;   
     }
