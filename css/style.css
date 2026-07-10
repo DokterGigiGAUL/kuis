@@ -540,7 +540,7 @@ body {
     transition: .2s;
 }
 
-.comic-action button{
+.comic-actions button{
     margin: 30px 20px;
     border: 0px solid var(--primary);
     color: #ffffff;
@@ -549,6 +549,9 @@ body {
     cursor: pointer;
     font-size: 15px;
     font-weight: 700;
+    width: auto;
+    transition: .2s;
+    
 }
 
 @media (min-width:768px){
