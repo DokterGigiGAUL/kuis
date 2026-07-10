@@ -576,6 +576,13 @@ body {
     .comic-title{
     font-size:24px;
     }
+
+    .tts-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+    margin-top:24px;
+}
 }
 
 /* ==========================
@@ -632,7 +639,8 @@ body {
 }
 
 .card-grid .quiz-card,
-.card-grid .comic-card{
+.card-grid .comic-card,
+.card-grid .tts-card {
     width:100%;
     margin:0;
 }
@@ -706,6 +714,13 @@ body {
 
 .tts-btn:hover {
     background: var(--primary-dark);
+}
+
+.tts-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:18px;
+    margin-top:24px;
 }
 
 /* =========================
