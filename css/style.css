@@ -601,6 +601,7 @@ body {
     cursor:pointer;
     font-weight:600;
     font-size: 15px;
+    color: var(--text-light);
 }
 
 .tab-btn.active{
