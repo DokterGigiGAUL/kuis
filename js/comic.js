@@ -28,16 +28,3 @@ nextButton.addEventListener("click", () => {
     window.location.href = `komik.html?id=${comics[currentIndex + 1].id}`;
   }
 });
-
-const modal = document.getElementById("comic-modal");
-const list = document.getElementById("comic-list");
-
-list.innerHTML = comics
-  .map(
-    comic => `
-      <a href="komik.html?id=${comic.id}">
-        ${comic.title}
-      </a>
-    `
-  )
-  .join("");
