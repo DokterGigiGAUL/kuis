@@ -22,10 +22,6 @@ body {
     color: var(--text);
 }
 
-iframe{
-        height:480px;
-}
-
 .header {
     background: var(--primary);
     color: white;
@@ -420,9 +416,6 @@ iframe{
 ========================== */
 
 @media (min-width:768px){
-iframe{
-        height:720px;
-}
     
 .section-header{
     margin-right:20px;
