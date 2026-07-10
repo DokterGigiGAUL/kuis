@@ -1,6 +1,3 @@
-const container =
-    document.getElementById("tts-list");
-
 const template =
     document.getElementById("tts-card-template");
 
@@ -30,7 +27,5 @@ for (const tts of ttsList) {
             `assets/tts/tts${tts.id}.html`;
 
     };
-
-    container.appendChild(card);
 
 }
