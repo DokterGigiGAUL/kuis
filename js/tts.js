@@ -5,7 +5,7 @@ const ttsList = [
         title: "TTS #1",
         description: "Teka-teki silang Interaktif.",
         soal: 18,
-        thumb: "assets/images/tts/tts-1.svg"
+        thumb: "assets/images/tts/IMG_4206.webp"
     },
 
     {
@@ -21,7 +21,7 @@ const ttsList = [
         title: "TTS #3",
         description: "Teka-teki silang Interaktif.",
         soal: 30,
-        thumb: "assets/images/tts/tts-1.svg"
+        thumb: "assets/images/tts/IMG_4206.webp"
     },
 
     {
