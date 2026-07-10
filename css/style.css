@@ -39,6 +39,26 @@ body {
     font-size: 15px;
 }
 
+@media (min-width:768px){
+    .header h1 {
+        font-size: 36px;
+        margin-bottom: 6px;
+    }
+
+    .header p {
+        opacity: .9;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size:32px;
+    }
+
+    .section-header a {
+        font-size:16px;
+    }
+}
+
 .judul h2 {
     font-size: 24px;
     margin-bottom: 16px;
@@ -176,7 +196,7 @@ body {
     width:42px;
     height:42px;
     border-radius:50%;
-    font-size:20px;
+    font-size:15px;
     cursor:pointer;
 }
 
@@ -622,9 +642,9 @@ body {
 
 .tab-btn{
     flex:1;
-    padding:14px;
+    padding:15px;
     border:none;
-    border-radius:12px;
+    border-radius:15px;
     background:#ececec;
     cursor:pointer;
     font-weight:600;
@@ -820,7 +840,7 @@ body {
     border:none;
     border-radius:50%;
     background:transparent;
-    font-size:21px;
+    font-size:15px;
     font-weight:bold;
     color:#eeffff;
     cursor:pointer;
