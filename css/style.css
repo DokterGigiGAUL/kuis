@@ -642,11 +642,16 @@ body {
 ========================= */
 
 .tts-card {
+    display:flex;
+    flex-direction:column;    
     background: var(--card);
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    box-shadow:var(--shadow);
     transition: .25s;
+    flex: 0 0 calc((100% - 24px) / 3.25);
+    overflow:hidden;
+    
 }
 
 .tts-card:hover {
