@@ -540,6 +540,17 @@ body {
     transition: .2s;
 }
 
+.comic-action button{
+    margin: 30px 20px;
+    border: 0px solid var(--primary);
+    color: #ffffff;
+    border-radius: 8px;
+    background-color: var(--primary);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+
 @media (min-width:768px){
 
     .card-grid{
