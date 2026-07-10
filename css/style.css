@@ -446,33 +446,6 @@ body {
         flex:0 0 calc((100% - 24px) / 3.25);
 
     }
-    
-    .comics-grid{
-
-        display:flex;
-        gap:24px;
-
-        overflow-x:auto;
-        overflow-y:hidden;
-
-        scroll-behavior:smooth;
-
-        padding-bottom:10px;
-    }
-
-    .tts-grid{
-
-        display:flex;
-        gap:24px;
-
-        overflow-x:auto;
-        overflow-y:hidden;
-
-        scroll-behavior:smooth;
-
-        padding-bottom:10px;
-    }
-
 
     .container{
         padding-left:30px;
@@ -603,7 +576,8 @@ body {
     grid-template-columns:repeat(3,minmax(0,1fr));
     gap:18px;
     margin-top:24px;
-}
+    }
+    
     .comics-grid{
         display:flex;
         gap:24px;
@@ -628,28 +602,6 @@ body {
 
     .comic-title{
     font-size:24px;
-    }
-
-    .tts-grid{
-        display:flex;
-        gap:24px;
-        overflow-x:auto;
-        overflow-y:hidden;
-        scroll-behavior:smooth;
-        padding-bottom:10px;
-    }
-
-    .tts-grid::-webkit-scrollbar{
-        height:8px;
-    }
-
-    .tts-grid::-webkit-scrollbar-thumb{
-        background:#c7c7c7;
-        border-radius:10px;
-    }
-
-    .tts-card{
-        flex:0 0 calc((100% - 24px) / 3.25);
     }
 }
 
@@ -792,18 +744,42 @@ body {
     margin-top:24px;
 }
 
-    .tts-header{
-        max-width:900px;
-        margin:30px auto 10px;
-        padding:0 20px;
-        text-align: center;
+.tts-header{
+    max-width:900px;
+    margin:30px auto 10px;
+    padding:0 20px;
+    text-align: center;
+}
+
+.tts-header h1{
+    font-size:32px;
+    font-weight:700;
+    color:#1f2937;
+}
+
+@media (min-width:768px){
+ .tts-grid{
+        display:flex;
+        gap:24px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        scroll-behavior:smooth;
+        padding-bottom:10px;
     }
 
-    .tts-header h1{
-        font-size:32px;
-        font-weight:700;
-        color:#1f2937;
+    .tts-grid::-webkit-scrollbar{
+        height:8px;
     }
+
+    .tts-grid::-webkit-scrollbar-thumb{
+        background:#c7c7c7;
+        border-radius:10px;
+    }
+
+    .tts-card{
+        flex:0 0 calc((100% - 24px) / 3.25);
+    }
+}
 
 /* =========================
    EXPLORE
