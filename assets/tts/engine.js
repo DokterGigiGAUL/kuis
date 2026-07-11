@@ -257,6 +257,18 @@ this.backspace();
 
 });
 
+document.getElementById("check-btn").onclick=()=>{
+
+this.checkAnswer();
+
+};
+
+document.getElementById("reset-btn").onclick=()=>{
+
+this.resetPuzzle();
+
+};
+
 }
 
 selectCell(r,c){
@@ -440,6 +452,77 @@ this.clearHighlight();
 this.highlightWord();
 
 }
+
+checkAnswer(){
+
+let total=0;
+let benar=0;
+
+for(let r=0;r<this.rows;r++){
+
+for(let c=0;c<this.cols;c++){
+
+const cell=this.grid[r][c];
+
+if(!cell)continue;
+
+total++;
+
+const html=this.cells[r][c];
+
+html.classList.remove("correct","wrong");
+
+if(cell.letter==="")continue;
+
+if(cell.letter===cell.answer){
+
+html.classList.add("correct");
+benar++;
+
+}else{
+
+html.classList.add("wrong");
+
+}
+
+}
+
+}
+
+const persen=Math.round((benar/total)*100);
+
+document.getElementById("progress-fill").style.width=persen+"%";
+document.getElementById("progress-text").textContent=persen+"%";
+
+}
+
+resetPuzzle(){
+
+for(let r=0;r<this.rows;r++){
+
+for(let c=0;c<this.cols;c++){
+
+const cell=this.grid[r][c];
+
+if(!cell)continue;
+
+cell.letter="";
+
+const html=this.cells[r][c];
+
+html.querySelector(".letter").textContent="";
+
+html.classList.remove("correct","wrong");
+
+}
+
+}
+
+document.getElementById("progress-fill").style.width="0%";
+document.getElementById("progress-text").textContent="0%";
+
+}
+
 
 }
 
