@@ -32,6 +32,8 @@ this.renderClues();
 this.createHiddenInput();
 this.bindEvents();
 
+}
+
 selectWord(word){
 
 this.direction=word.direction;
@@ -46,7 +48,6 @@ this.highlightWord();
 
 this.hiddenInput.focus();
 
-}
 }
 
 buildGrid(){
