@@ -585,7 +585,9 @@ body {
 }
 
 .comic-btn:disabled {
-    background: #bdbdbd;
+    background: #cccccc;
+    color:#666666;
+    border: 0px solid #666666;
     cursor: not-allowed;
 }
 
