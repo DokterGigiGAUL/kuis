@@ -117,8 +117,6 @@ this.grid[r][c].number=n++;
 
 }
 
-// Ganti renderGrid()
-
 renderGrid(){
 
 const board=document.getElementById("crossword-grid");
@@ -198,8 +196,6 @@ down.appendChild(li);
 });
 
 }
-
-// Tambahkan setelah renderClues()
 
 createHiddenInput(){
 
@@ -283,8 +279,6 @@ this.hiddenInput.focus();
 
 }
 
-// Tambahkan
-
 getCurrentWord(){
 
 const words=this.puzzle.words.filter(w=>{
@@ -307,8 +301,6 @@ return false;
 return words[0]||null;
 
 }
-
-// Tambahkan
 
 highlightWord(){
 
@@ -337,8 +329,6 @@ this.activeIndex=i;
 
 }
 
-// Tambahkan
-
 clearHighlight(){
 
 this.cells.forEach(row=>{
@@ -355,8 +345,6 @@ cell.classList.remove("active");
 });
 
 }
-
-// Tambahkan
 
 typeLetter(letter){
 
@@ -401,8 +389,6 @@ this.currentRow++;
 this.highlightWord();
 
 }
-
-// Tambahkan
 
 backspace(){
 
