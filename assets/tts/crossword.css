@@ -1,0 +1,209 @@
+:root{
+    --cell-size:48px;
+    --gap:2px;
+    --border:#444;
+    --black:#2d2d2d;
+    --white:#ffffff;
+    --active:#4da3ff;
+    --word:#dceeff;
+    --correct:#c8f7c5;
+    --wrong:#ffd3d3;
+    --number:#666;
+    --radius:10px;
+    --shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+/* ====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f5f7;
+    color:#222;
+    padding:20px;
+}
+
+/* ====================================== */
+
+.page{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ====================================== */
+
+.header{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.header h1{
+    font-size:28px;
+}
+
+.toolbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.toolbar button{
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    box-shadow:var(--shadow);
+}
+
+.premium-btn{
+    opacity:.7;
+}
+
+/* ====================================== */
+
+.progress-wrapper{
+    margin-bottom:30px;
+}
+
+.progress-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+}
+
+.progress-bar{
+    height:12px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+#progress-fill{
+    width:0%;
+    height:100%;
+    transition:.3s;
+}
+
+/* ====================================== */
+
+.crossword-section{
+    display:flex;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+/* ====================================== */
+
+#crossword-grid{
+    display:grid;
+    gap:var(--gap);
+    width:max-content;
+}
+
+/* ====================================== */
+
+.cell{
+    width:var(--cell-size);
+    height:var(--cell-size);
+    background:var(--white);
+    border:1px solid var(--border);
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.cell.black{
+    background:var(--black);
+    border:none;
+}
+
+.cell-number{
+    position:absolute;
+    top:2px;
+    left:3px;
+    font-size:10px;
+    color:var(--number);
+}
+
+.cell input{
+    width:100%;
+    height:100%;
+    border:none;
+    outline:none;
+    background:none;
+    text-align:center;
+    text-transform:uppercase;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* ====================================== */
+
+.cell.active{
+    background:var(--active);
+}
+
+.cell.word{
+    background:var(--word);
+}
+
+.cell.correct{
+    background:var(--correct);
+}
+
+.cell.wrong{
+    background:var(--wrong);
+}
+
+/* ====================================== */
+
+.clues-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.clue-column{
+    background:white;
+    padding:20px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.clue-column h2{
+    margin-bottom:15px;
+}
+
+.clue-column ol{
+    padding-left:22px;
+}
+
+.clue-column li{
+    margin-bottom:10px;
+    cursor:pointer;
+    line-height:1.5;
+}
+
+.clue-column li.active{
+    font-weight:bold;
+}
+
+/* ====================================== */
+
+@media(max-width:768px){
+    :root{
+        --cell-size:36px;
+    }
+    .clues-section{
+        grid-template-columns:1fr;
+    }
+}
