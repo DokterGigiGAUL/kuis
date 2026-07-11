@@ -13,6 +13,7 @@ this.activeWord=null;
 this.activeIndex=0;
 this.direction="across";
 this.hiddenInput=null;
+this.activeClue=null;
 }
 
 async load(){
@@ -46,6 +47,7 @@ this.currentCol=word.col;
 this.clearHighlight();
 this.highlightWord();
 
+this.highlightClue();
 this.hiddenInput.focus();
 
 }
@@ -185,7 +187,15 @@ const li=document.createElement("li");
 li.textContent=word.clue;
 li.value=this.grid[word.row][word.col].number;
 
-li.onclick=()=>this.selectWord(word);
+li.onclick=()=>{
+
+this.activeClue=li;
+
+this.selectWord(word);
+
+this.highlightClue();
+
+};
 
 if(word.direction==="across"){
 across.appendChild(li);
@@ -338,7 +348,21 @@ this.activeIndex=i;
 }
 
 }
+this.puzzle.words.forEach((word,i)=>{
 
+if(word!==this.activeWord)return;
+
+const list=word.direction==="across"
+?document.querySelector("#across-list").children
+:document.querySelector("#down-list").children;
+
+this.activeClue=list[i-(word.direction==="down"
+?this.puzzle.words.filter(w=>w.direction==="across").length
+:0)];
+
+});
+
+this.highlightClue();
 }
 
 clearHighlight(){
@@ -380,7 +404,6 @@ this.nextCell();
 
 }
 
-// Tambahkan
 
 nextCell(){
 
@@ -523,6 +546,17 @@ document.getElementById("progress-text").textContent="0%";
 
 }
 
+highlightClue(){
+
+document
+.querySelectorAll("#across-list li,#down-list li")
+.forEach(li=>li.classList.remove("active"));
+
+if(!this.activeClue)return;
+
+this.activeClue.classList.add("active");
+
+}
 
 }
 
