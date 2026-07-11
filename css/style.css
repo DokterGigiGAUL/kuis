@@ -642,8 +642,8 @@ body {
 
 .explore-tabs{
     display:flex;
-    gap:12px;
-    margin:24px 0;
+    gap:15px;
+    margin:0 0 24px 0;
 }
 
 .tab-btn{
