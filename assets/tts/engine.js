@@ -29,7 +29,24 @@ this.buildGrid();
 this.numberCells();
 this.renderGrid();
 this.renderClues();
+this.createHiddenInput();
+this.bindEvents();
 
+selectWord(word){
+
+this.direction=word.direction;
+this.activeWord=word;
+this.activeIndex=0;
+
+this.currentRow=word.row;
+this.currentCol=word.col;
+
+this.clearHighlight();
+this.highlightWord();
+
+this.hiddenInput.focus();
+
+}
 }
 
 buildGrid(){
@@ -165,11 +182,11 @@ down.innerHTML="";
 this.puzzle.words.forEach(word=>{
 
 const li=document.createElement("li");
+
 li.textContent=word.clue;
+li.value=this.grid[word.row][word.col].number;
 
-const number=this.grid[word.row][word.col].number;
-
-li.value=number;
+li.onclick=()=>this.selectWord(word);
 
 if(word.direction==="across"){
 across.appendChild(li);
@@ -247,11 +264,18 @@ this.backspace();
 
 selectCell(r,c){
 
-this.clearHighlight();
+if(
+this.currentRow===r &&
+this.currentCol===c
+){
+this.toggleDirection();
+return;
+}
 
 this.currentRow=r;
 this.currentCol=c;
 
+this.clearHighlight();
 this.highlightWord();
 
 this.hiddenInput.focus();
@@ -418,6 +442,19 @@ this.currentRow--;
 this.highlightWord();
 
 }
+
+toggleDirection(){
+
+this.direction=this.direction==="across"
+?"down"
+:"across";
+
+this.clearHighlight();
+this.highlightWord();
+
+}
+
+  
 
 }
 
