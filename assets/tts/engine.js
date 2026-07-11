@@ -441,8 +441,6 @@ this.highlightWord();
 
 }
 
-  
-
 }
 
 window.engine=new CrosswordEngine();
