@@ -574,14 +574,19 @@ body {
     margin: 30px 20px;
     border: 0px solid var(--primary);
     color: #ffffff;
-    border-radius: 8px;
+    border-radius: 10px;
+    padding:12px;
     background-color: var(--primary);
     cursor: pointer;
     font-size: 15px;
-    font-weight: 700;
+    font-weight: bold;
     width: auto;
-    transition: .2s;
-    
+    transition: .2s; 
+}
+
+.comic-btn:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
 }
 
 .comic-actions{
