@@ -7,6 +7,10 @@ const currentComic = comics[currentIndex];
 const title = document.getElementById("comic-title");
 const image = document.getElementById("comic-image");
 
+title.textContent = currentComic.title;
+image.src = currentComic.image;
+image.alt = currentComic.title;
+
 const prevButton = document.getElementById("prev-comic");
 const nextButton = document.getElementById("next-comic");
 
