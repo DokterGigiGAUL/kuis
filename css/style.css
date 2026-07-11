@@ -686,7 +686,7 @@ body {
 .card-grid{
     display:grid;
     grid-template-columns:repeat(2, 1fr);
-    gap:18px;
+    gap:14px;
     margin-top:24px;
 }
 
