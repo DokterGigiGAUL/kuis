@@ -1,6 +1,6 @@
 {
   "id": 1,
-  "title": "Penyakit Mulut #1",
+  "title": "TTS Gigital",
   "premium": false,
   "words": [
     {
@@ -18,11 +18,11 @@
       "col": 4
     },
     {
-      "answer": "GINGIVA",
-      "clue": "Nama lain gusi.",
+      "answer": "LUPA",
+      "clue": "Tidak ingat.",
       "direction": "across",
-      "row": 3,
-      "col": 1
+      "row": 5,
+      "col": 5
     },
     {
       "answer": "LIDAH",
