@@ -1,1 +1,35 @@
-TTS1
+{
+  "id": 1,
+  "title": "Penyakit Mulut #1",
+  "premium": false,
+  "words": [
+    {
+      "answer": "KARIES",
+      "clue": "Kerusakan jaringan keras gigi.",
+      "direction": "across",
+      "row": 0,
+      "col": 0
+    },
+    {
+      "answer": "EMAIL",
+      "clue": "Lapisan terluar gigi.",
+      "direction": "down",
+      "row": 0,
+      "col": 4
+    },
+    {
+      "answer": "GINGIVA",
+      "clue": "Nama lain gusi.",
+      "direction": "across",
+      "row": 3,
+      "col": 1
+    },
+    {
+      "answer": "LIDAH",
+      "clue": "Organ pengecap.",
+      "direction": "down",
+      "row": 1,
+      "col": 7
+    }
+  ]
+}
