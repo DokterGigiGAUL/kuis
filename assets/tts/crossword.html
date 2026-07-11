@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossword</title>
+
+    <link rel="stylesheet" href="crossword.css">
+</head>
+<body>
+
+    <main class="page">
+
+        <!-- Header -->
+        <header class="header">
+            <h1 id="puzzle-title">Memuat...</h1>
+
+            <div class="toolbar">
+
+                <button id="check-btn">
+                    Cek Jawaban
+                </button>
+
+                <button id="reset-btn">
+                    Reset
+                </button>
+
+                <button id="hint-btn" class="premium-btn">
+                    Hint ★
+                </button>
+
+                <button id="reveal-btn" class="premium-btn">
+                    Reveal ★
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- Progress -->
+        <section class="progress-wrapper">
+
+            <div class="progress-top">
+                <span>Progress</span>
+                <span id="progress-text">0%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+        </section>
+
+        <!-- Crossword -->
+        <section class="crossword-section">
+
+            <div id="crossword-grid"></div>
+
+        </section>
+
+        <!-- Clues -->
+        <section class="clues-section">
+
+            <div class="clue-column">
+
+                <h2>Mendatar</h2>
+
+                <ol id="across-list"></ol>
+
+            </div>
+
+            <div class="clue-column">
+
+                <h2>Menurun</h2>
+
+                <ol id="down-list"></ol>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="engine.js"></script>
+    <script src="crossword.js"></script>
+
+</body>
+</html>
