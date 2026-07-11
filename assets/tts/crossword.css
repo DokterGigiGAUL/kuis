@@ -197,6 +197,14 @@ body{
     font-weight:bold;
 }
 
+.letter{
+font-size:24px;
+font-weight:bold;
+text-transform:uppercase;
+user-select:none;
+pointer-events:none;
+}
+
 /* ====================================== */
 
 @media(max-width:768px){
