@@ -8,6 +8,15 @@ const title = document.getElementById("comic-title");
 const image = document.getElementById("comic-image");
 
 title.textContent = currentComic.title;
+
+const wrapper = image.parentElement;
+
+wrapper.classList.add("loading");
+
+image.onload = () => {
+    wrapper.classList.remove("loading");
+};
+
 image.src = currentComic.image;
 image.alt = currentComic.title;
 
