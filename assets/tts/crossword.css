@@ -126,12 +126,12 @@ body{
     border:none;
 }
 
-.cell-number{
-    position:absolute;
-    top:1px;
-    left:1px;
-    font-size:10px;
-    color:var(--number);
+.cell-number {
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    font-size: 9px;
+    color: var(--number);
 }
 
 .cell input{
