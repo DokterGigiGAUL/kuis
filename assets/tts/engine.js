@@ -288,14 +288,37 @@ if(
 this.currentRow===r &&
 this.currentCol===c
 ){
-this.toggleDirection();
-this.hiddenInput.blur();
-this.hiddenInput.focus();
-return;
-}
+
+this.direction=this.direction==="across"
+?"down"
+:"across";
+
+}else{
 
 this.currentRow=r;
 this.currentCol=c;
+
+}
+
+this.activeWord=this.findWord(
+this.currentRow,
+this.currentCol,
+this.direction
+);
+
+if(!this.activeWord){
+
+this.direction=this.direction==="across"
+?"down"
+:"across";
+
+this.activeWord=this.findWord(
+this.currentRow,
+this.currentCol,
+this.direction
+);
+
+}
 
 this.clearHighlight();
 this.highlightWord();
@@ -327,14 +350,37 @@ return words[0]||null;
 
 }
 
+findWord(row,col,direction){
+
+return this.puzzle.words.find(word=>{
+
+if(word.direction!==direction)return false;
+
+for(let i=0;i<word.answer.length;i++){
+
+const r=direction==="across"
+?word.row
+:word.row+i;
+
+const c=direction==="across"
+?word.col+i
+:word.col;
+
+if(r===row && c===col)return true;
+
+}
+
+return false;
+
+})||null;
+
+}
+
 highlightWord(){
 
 const word=this.getCurrentWord();
 
 if(!word)return;
-
-this.activeWord=word;
-this.activeWord=word;
 
 this.activeClue=word.clueElement;
 this.highlightClue();
