@@ -601,9 +601,39 @@ this.cells[r][c].classList.add("correct");
   
 const persen=Math.round((benar/total)*100);
 
+const wrapper=document.querySelector(".progress-wrapper");
+
+if(persen===100){
+
+if(this.puzzle.next){
+
+wrapper.innerHTML=`
+<h3>🎉 Puzzle selesai!</h3>
+<button id="next-btn">
+TTS Berikutnya →
+</button>
+`;
+
+document.getElementById("next-btn").onclick=()=>{
+
+location.href=`crossword.html?puzzle=${this.puzzle.next}`;
+
+};
+
+}else{
+
+wrapper.innerHTML=`
+<h3>🎉 Semua TTS selesai!</h3>
+`;
+
+}
+
+return;
+
+}
+
 document.getElementById("progress-fill").style.width=persen+"%";
 document.getElementById("progress-text").textContent=persen+"%";
-
 }
 
 resetPuzzle(){
