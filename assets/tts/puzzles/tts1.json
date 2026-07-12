@@ -10,6 +10,20 @@
       "col": 1,
       "direction": "across"
     },
+      {
+      "answer": "EDEMA",
+      "clue": "Pembengkakan akibat penumpukan cairan.",
+      "row": 0,
+      "col": 5,
+      "direction": "down"
+    },
+    {
+      "answer": "UVULA",
+      "clue": "Jaringan kecil yang menggantung di belakang langit-langit lunak.",
+      "row": 0,
+      "col": 9,
+      "direction": "down"
+    },
     {
       "answer": "PLAK",
       "clue": "Lapisan biofilm pada mahkota gigi.",
@@ -25,22 +39,15 @@
       "direction": "across"
     },
     {
-      "answer": "UVULA",
-      "clue": "Jaringan kecil yang menggantung di belakang langit-langit lunak.",
-      "row": 0,
-      "col": 9,
-      "direction": "down"
-    },
-    {
-      "answer": "EDEMA",
-      "clue": "Pembengkakan berisi cairan.",
-      "row": 0,
-      "col": 5,
+      "answer": "KISTA",
+      "clue": "Kantung berisi cairan fisiologis.",
+      "row": 3,
+      "col": 7,
       "direction": "down"
     },
     {
       "answer": "KRUSTA",
-      "clue": "Jaringan lunak di bagian dalam gigi yang berisi saraf dan pembuluh darah.",
+      "clue": "lapisan keras yang terbentuk dari cairan tubuh mengering seperti darah, nanah, atau serum",
       "row": 4,
       "col": 0,
       "direction": "across"
@@ -53,11 +60,11 @@
       "direction": "down"
     },
     {
-      "answer": "KISTA",
-      "clue": "Kantung berisi cairan fisiologis.",
-      "row": 3,
-      "col": 7,
-      "direction": "down"
+      "answer": "LESI",
+      "clue": "Istilah medis untuk kondisi kelainan pada jaringan.",
+      "row": 6,
+      "col": 0,
+      "direction": "across"
     },
     {
       "answer": "ATRISI",
@@ -70,13 +77,6 @@
       "answer": "ATROFI",
       "clue": "Penyusutan/ pengurangan jaringan tubuh.",
       "row": 8,
-      "col": 0,
-      "direction": "across"
-    },
-    {
-      "answer": "LESI",
-      "clue": "Istilah umum untuk kelainan pada jaringan.",
-      "row": 6,
       "col": 0,
       "direction": "across"
     }
