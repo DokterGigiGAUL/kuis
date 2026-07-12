@@ -2,7 +2,7 @@ class CrosswordEngine{
 
 constructor(){
 
-this.puzzle=puzzle;
+this.puzzle=null;
 this.grid=[];
 this.rows=0;
 this.cols=0;
