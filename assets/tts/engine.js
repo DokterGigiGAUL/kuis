@@ -289,6 +289,8 @@ this.currentRow===r &&
 this.currentCol===c
 ){
 this.toggleDirection();
+this.hiddenInput.blur();
+this.hiddenInput.focus();
 return;
 }
 
@@ -332,7 +334,10 @@ const word=this.getCurrentWord();
 if(!word)return;
 
 this.activeWord=word;
+this.activeWord=word;
 
+this.activeClue=word.clueElement;
+this.highlightClue();
 for(let i=0;i<word.answer.length;i++){
 
 const r=word.direction==="across"?word.row:word.row+i;
