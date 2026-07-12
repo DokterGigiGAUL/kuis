@@ -1,5 +1,5 @@
 :root{
-    --cell-size:36px;
+    --cell-size:48px;
     --gap:2px;
     --border:#444;
     --black:#2d2d2d;
@@ -97,7 +97,7 @@ body{
 .crossword-section{
     display:flex;
     justify-content:center;
-    margin-bottom:40px;
+    margin:0 15px 40px;
 }
 
 /* ====================================== */
