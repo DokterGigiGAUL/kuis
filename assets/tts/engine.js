@@ -214,17 +214,7 @@ updateActiveClue(){
     document.getElementById("active-clue-text").textContent =
         this.activeWord.clue;
 
-    const answer=document.getElementById("active-answer");
-
-    answer.innerHTML="";
-
-    for(let i=0;i<this.activeWord.answer.length;i++){
-
-        const box=document.createElement("span");
-
-        answer.appendChild(box);
-
-    }
+    document.getElementById("active-answer").innerHTML = "";
 
 }
 
@@ -348,6 +338,8 @@ this.direction
 
 this.clearHighlight();
 this.highlightWord();
+
+this.updateActiveClue();
 
 this.hiddenInput.focus();
 
