@@ -677,25 +677,6 @@ this.activeClue.classList.add("active");
 
 }
 
-function buildNumberMap(entries){
-    const numberMap = new Map();
-    let number = 1;
-
-    entries
-        .sort((a, b) => a.row - b.row || a.col - b.col)
-        .forEach(entry => {
-            const key = `${entry.row},${entry.col}`;
-
-            if (!numberMap.has(key)) {
-                numberMap.set(key, number++);
-            }
-
-            entry.number = numberMap.get(key);
-        });
-
-    return numberMap;
-}
-
 }
 
 window.engine=new CrosswordEngine();
