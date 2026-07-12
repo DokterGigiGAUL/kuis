@@ -302,6 +302,12 @@ this.resetPuzzle();
 
 };
 
+document.getElementById("home-btn").onclick=()=>{
+
+location.href="../../index.html";
+
+};
+
 }
 
 selectCell(r,c){
