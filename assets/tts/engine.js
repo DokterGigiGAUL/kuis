@@ -47,9 +47,6 @@ this.currentCol=word.col;
 this.clearHighlight();
 this.highlightWord();
 
-this.activeClue=word.clueElement;
-
-this.highlightClue();
 this.hiddenInput.focus();
 
 }
@@ -302,7 +299,7 @@ this.clearHighlight();
 this.highlightWord();
 
 this.hiddenInput.focus();
-  
+
 }
 
 getCurrentWord(){
