@@ -4,17 +4,17 @@
   "premium": false,
   "words": [
     {
-      "answer": "MUKOSA",
-      "clue": "Lapisan jaringan lunak yang melapisi rongga mulut.",
+      "answer": "ENAMEL",
+      "clue": "Jaringan paling keras di tubuh.",
       "row": 0,
       "col": 0,
       "direction": "across"
     },
     {
-      "answer": "LIDAH",
-      "clue": "Organ pengecap di dalam rongga mulut.",
+      "answer": "UVULA",
+      "clue": "Jaringan di belakang palatum molle.",
       "row": 0,
-      "col": 4,
+      "col": 10,
       "direction": "down"
     },
     {
@@ -27,16 +27,16 @@
     {
       "answer": "UVULA",
       "clue": "Jaringan kecil yang menggantung di belakang langit-langit lunak.",
-      "row": 1,
-      "col": 7,
+      "row": 0,
+      "col": 9,
       "direction": "down"
     },
     {
-      "answer": "GINGIVA",
-      "clue": "Istilah medis untuk gusi.",
-      "row": 5,
-      "col": 0,
-      "direction": "across"
+      "answer": "EDEMA",
+      "clue": "Pembengkakan berisi cairan.",
+      "row": 0,
+      "col": 5,
+      "direction": "down"
     },
     {
       "answer": "PULPA",
