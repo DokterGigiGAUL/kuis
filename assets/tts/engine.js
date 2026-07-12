@@ -392,6 +392,7 @@ this.cells[r][c]
 .querySelector(".letter")
 .textContent=letter;
 
+this.checkAnswer();
 this.nextCell();
 
 }
@@ -435,6 +436,7 @@ this.grid[r][c].letter="";
 this.cells[r][c]
 .querySelector(".letter")
 .textContent="";
+this.checkAnswer();
 return;
 
 }
@@ -470,40 +472,59 @@ this.highlightWord();
 
 checkAnswer(){
 
-let total=0;
+let total=this.puzzle.words.length;
 let benar=0;
 
-for(let r=0;r<this.rows;r++){
+this.puzzle.words.forEach(word=>{
 
-for(let c=0;c<this.cols;c++){
+let selesai=true;
+
+for(let i=0;i<word.answer.length;i++){
+
+const r=word.direction==="across"
+?word.row
+:word.row+i;
+
+const c=word.direction==="across"
+?word.col+i
+:word.col;
 
 const cell=this.grid[r][c];
-
-if(!cell)continue;
-
-total++;
 
 const html=this.cells[r][c];
 
 html.classList.remove("correct","wrong");
 
-if(cell.letter==="")continue;
+if(cell.letter!==cell.answer){
 
-if(cell.letter===cell.answer){
+selesai=false;
 
-html.classList.add("correct");
+}
+
+}
+
+if(selesai){
+
 benar++;
 
-}else{
+for(let i=0;i<word.answer.length;i++){
 
-html.classList.add("wrong");
+const r=word.direction==="across"
+?word.row
+:word.row+i;
+
+const c=word.direction==="across"
+?word.col+i
+:word.col;
+
+this.cells[r][c].classList.add("correct");
 
 }
 
 }
 
-}
-
+});
+  
 const persen=Math.round((benar/total)*100);
 
 document.getElementById("progress-fill").style.width=persen+"%";
