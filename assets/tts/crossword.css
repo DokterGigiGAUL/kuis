@@ -5,7 +5,7 @@
     --black:#2d2d2d;
     --white:#ffffff;
     --active:#4da3ff;
-    --word:#dceeff;
+    --word:#ddeeff;
     --correct:#ffffff;
     --wrong:#ffd3d3;
     --number:#666;
@@ -98,7 +98,6 @@ body{
     display:flex;
     justify-content:center;
     margin-bottom:40px;
-    padding:0 20px;
 }
 
 /* ====================================== */
@@ -161,7 +160,7 @@ z-index:2;
 
 .cell.correct{
     background:var(--correct);
-    color:cccccc;
+    color:#cccccc;
 }
 
 .cell.wrong{
