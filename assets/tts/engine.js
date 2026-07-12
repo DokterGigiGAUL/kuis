@@ -2,7 +2,7 @@ class CrosswordEngine{
 
 constructor(){
 
-this.puzzle=null;
+this.puzzle=puzzle;
 this.grid=[];
 this.rows=0;
 this.cols=0;
@@ -14,8 +14,7 @@ this.activeIndex=0;
 this.direction="across";
 this.hiddenInput=null;
 this.activeClue=null;
-this.puzzle.across
-this.puzzle.down
+
 }
 
 async load(){
@@ -121,28 +120,29 @@ number:null
 
 numberCells(){
 
-let n=1;
-const used=new Map();
+    let n = 1;
+    const used = new Map();
 
-const entries=[
-...this.puzzle.across,
-...this.puzzle.down
-].sort((a,b)=>a.row-b.row||a.col-b.col);
+    const entries = [
+        ...this.puzzle.across,
+        ...this.puzzle.down
+    ].sort((a,b)=>a.row-b.row || a.col-b.col);
 
-for(const entry of entries){
+    for(const entry of entries){
 
-const key=`${entry.row},${entry.col}`;
+        const key = `${entry.row},${entry.col}`;
 
-if(!used.has(key)){
-used.set(key,n++);
+        if(!used.has(key)){
+            used.set(key,n++);
+        }
+
+        const cell = this.grid[entry.row][entry.col];
+        if(cell){
+            cell.number = used.get(key);
+        }
+    }
+
 }
-
-this.grid[entry.row][entry.col].number=used.get(key);
-
-}
-
-}
-
 renderGrid(){
 
 const board=document.getElementById("crossword-grid");
