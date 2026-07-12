@@ -61,9 +61,16 @@
     },
     {
       "answer": "ATRISI",
-      "clue": "Engikisan lapisan enamel karena gesekan.",
+      "clue": "Pengikisan lapisan email karena gesekan.",
       "row": 6,
       "col": 6,
+      "direction": "across"
+    },
+    {
+      "answer": "ATROFI",
+      "clue": "Penyusutan/ pengurangan jaringan tubuh.",
+      "row": 8,
+      "col": 0,
       "direction": "across"
     },
     {
