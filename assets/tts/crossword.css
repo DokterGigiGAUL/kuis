@@ -169,39 +169,51 @@ z-index:2;
 
 /* ====================================== */
 
-.clues-section{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
+.active-clue-section{
+    margin-top:24px;
 }
 
-.clue-column{
-    background:white;
-    padding:12px 24px;
-    border-radius:var(--radius);
+.active-clue-card{
+    background:#fff;
+    border-radius:12px;
+    padding:18px;
     box-shadow:var(--shadow);
 }
 
-.clue-column h2{
-    margin-bottom:5px;
-    font-size:20px;
+.active-clue-header{
+    display:flex;
+    gap:8px;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:12px;
 }
 
-.clue-column ol{
-    padding-left:20px;
+#active-direction{
+    color:#2563eb;
 }
 
-.clue-column li{
-padding:5px;
-border:1px solid transparent;
-border-radius:5px;
-transition:.15s;
+#active-number{
+    color:#444;
 }
 
-.clue-column li.active{
-background:#f0f0f0;
-border-color:#cccccc;
-font-weight:bold;
+.active-clue-text{
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+.active-answer{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+}
+
+.active-answer span{
+    width:34px;
+    height:34px;
+    border:2px solid #999;
+    border-radius:6px;
 }
 
 .letter{
@@ -209,14 +221,6 @@ font-size:17px;
 text-transform:uppercase;
 user-select:none;
 pointer-events:none;
-}
-
-.clue-column{
-height:160px;
-overflow-y:auto;
-scroll-behavior:smooth;
-overflow-y: scroll;
-scrollbar-gutter: stable;
 }
 
 .loader{
@@ -247,7 +251,17 @@ color:#666;
     :root{
         --cell-size:28px;
     }
-    .clues-section{
-        grid-template-columns:1fr;
+
+    .active-clue-header{
+        font-size:18px;
+    }
+
+    .active-clue-text{
+        font-size:16px;
+    }
+
+    .active-answer span{
+        width:28px;
+        height:28px;
     }
 }
