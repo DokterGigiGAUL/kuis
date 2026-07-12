@@ -204,7 +204,7 @@ font-weight:bold;
 }
 
 .letter{
-font-size:21px;
+font-size:18px;
 text-transform:uppercase;
 user-select:none;
 pointer-events:none;
@@ -230,7 +230,7 @@ color:#666;
 
 @media(max-width:768px){
     :root{
-        --cell-size:36px;
+        --cell-size:24px;
     }
     .clues-section{
         grid-template-columns:1fr;
