@@ -248,10 +248,10 @@ color:#666;
 
 .next-btn{
     width: auto;
-    border: 1px solid var(--primary);
+    border: 1px solid #2563eb;
     border-radius: 12px;
     background: transparent;
-    color: var(--primary);
+    color: #2563eb;
     padding: 12px;
     font-size: 15px;
     font-weight: bold;
