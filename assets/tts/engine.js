@@ -637,11 +637,6 @@ if(!this.activeClue)return;
 
 this.activeClue.classList.add("active");
 
-this.activeClue.scrollIntoView({
-behavior:"smooth",
-block:"nearest"
-});
-
 }
 
 }
