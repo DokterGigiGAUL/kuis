@@ -599,7 +599,7 @@ if(this.puzzle.next){
 
 wrapper.innerHTML=`
 <h3>🎉 Puzzle selesai!</h3>
-<button id="next-btn">
+<button id="next-btn" class="next-btn">
 TTS Berikutnya →
 </button>
 `;
