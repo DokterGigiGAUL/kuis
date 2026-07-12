@@ -629,7 +629,7 @@ if(persen===100){
 if(this.puzzle.next){
 
 wrapper.innerHTML=`
-<h3>🎉 Puzzle selesai!</h3>
+<h3>🎉 Teka-teki silang selesai!</h3>
 <button id="next-btn" class="next-btn">
 TTS Berikutnya →
 </button>
@@ -644,7 +644,7 @@ location.href=`crossword.html?puzzle=${this.puzzle.next}`;
 }else{
 
 wrapper.innerHTML=`
-<h3>🎉 Semua TTS selesai!</h3>
+<h3>🎉 Semua TTS gratis sudah diselesaikan!</h3>
 `;
 
 }
