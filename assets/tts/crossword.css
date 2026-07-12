@@ -6,7 +6,7 @@
     --white:#ffffff;
     --active:#4da3ff;
     --word:#dceeff;
-    --correct:#c8f7c5;
+    --correct:#ffffff;
     --wrong:#ffd3d3;
     --number:#666;
     --radius:10px;
@@ -161,6 +161,7 @@ z-index:2;
 
 .cell.correct{
     background:var(--correct);
+    color:cccccc;
 }
 
 .cell.wrong{
