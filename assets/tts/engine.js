@@ -48,10 +48,7 @@ this.clearHighlight();
 this.highlightWord();
 
 this.highlightClue();
-setTimeout(()=>{
 this.hiddenInput.focus();
-this.hiddenInput.click();
-},0);
 
 }
 
@@ -300,11 +297,8 @@ this.currentCol=c;
 this.clearHighlight();
 this.highlightWord();
 
-setTimeout(()=>{
 this.hiddenInput.focus();
-this.hiddenInput.click();
-},0);
-
+  
 }
 
 getCurrentWord(){
