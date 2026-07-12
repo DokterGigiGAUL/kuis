@@ -190,11 +190,11 @@ z-index:2;
 }
 
 #active-direction{
-    color:#2563eb;
+    color:var(--black);
 }
 
 #active-number{
-    color:#444;
+    color:var(--black);
 }
 
 .active-clue-text{
