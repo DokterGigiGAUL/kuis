@@ -123,10 +123,9 @@ numberCells(){
     let n = 1;
     const used = new Map();
 
-    const entries = [
-        ...this.puzzle.across,
-        ...this.puzzle.down
-    ].sort((a,b)=>a.row-b.row || a.col-b.col);
+    const entries = [...this.puzzle.words]
+
+        .sort((a,b)=>a.row-b.row || a.col-b.col);
 
     for(const entry of entries){
 
