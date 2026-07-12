@@ -8,7 +8,7 @@
     --word:#ddeeff;
     --correct:#ffffff;
     --wrong:#ffd3d3;
-    --number:#666;
+    --number:#999;
     --radius:10px;
     --shadow:0 2px 10px rgba(0,0,0,.08);
 }
@@ -130,7 +130,7 @@ body{
     position:absolute;
     top:1px;
     left:1px;
-    font-size:8px;
+    font-size:10px;
     color:var(--number);
 }
 
