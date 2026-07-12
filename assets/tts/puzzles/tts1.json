@@ -7,21 +7,21 @@
       "answer": "ENAMEL",
       "clue": "Jaringan paling keras di tubuh.",
       "row": 0,
-      "col": 0,
+      "col": 1,
       "direction": "across"
     },
     {
-      "answer": "UVULA",
-      "clue": "Jaringan di belakang palatum molle.",
+      "answer": "PLAK",
+      "clue": "Lapisan biofilm pada mahkota gigi.",
       "row": 0,
-      "col": 10,
+      "col": 1,
       "direction": "down"
     },
     {
-      "answer": "PALATUM",
-      "clue": "Nama anatomi untuk langit-langit mulut.",
-      "row": 2,
-      "col": 1,
+      "answer": "MAKULA",
+      "clue": "Lesi yang menunjukkan perubahan warna jaringan.",
+      "row": 3,
+      "col": 5,
       "direction": "across"
     },
     {
