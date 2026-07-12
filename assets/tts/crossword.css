@@ -229,6 +229,18 @@ font-weight:600;
 color:#666;
 }
 
+.start-btn {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
 /* ====================================== */
 
 @media(max-width:768px){
