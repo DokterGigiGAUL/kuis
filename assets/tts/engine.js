@@ -18,10 +18,17 @@ this.activeClue=null;
 
 async load(){
 
+try{
+
 const params=new URLSearchParams(location.search);
 const file=params.get("puzzle")||"tts1";
 
 const res=await fetch(`puzzles/${file}.json`);
+
+if(!res.ok){
+throw new Error("Puzzle tidak ditemukan");
+}
+
 this.puzzle=await res.json();
 
 document.getElementById("puzzle-title").textContent=this.puzzle.title;
@@ -32,6 +39,21 @@ this.renderGrid();
 this.renderClues();
 this.createHiddenInput();
 this.bindEvents();
+
+document.getElementById("loader").style.display="none";
+document.getElementById("crossword-app").style.display="block";
+
+}catch(err){
+
+document.getElementById("loader").innerHTML=`
+<h2>Puzzle tidak dapat dimuat</h2>
+<p>${err.message}</p>
+<button onclick="location.href='../index.html'">
+Kembali ke Beranda
+</button>
+`;
+
+}
 
 }
 
