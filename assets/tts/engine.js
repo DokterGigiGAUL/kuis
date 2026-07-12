@@ -27,7 +27,7 @@ const file=params.get("puzzle")||"tts1";
 const res=await fetch(`puzzles/${file}.json`);
 
 if(!res.ok){
-throw new Error("Puzzle tidak ditemukan");
+throw new Error("Tidak ada lagi teka-teki silang gratis");
 }
 
 this.puzzle=await res.json();
