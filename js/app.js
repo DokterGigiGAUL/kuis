@@ -111,9 +111,8 @@ function loadTTS() {
         card.querySelector(".tts-soal").textContent =
             `${tts.soal} Soal`; //jumlah soal
         card.querySelector(".tts-btn").onclick = () => {
-            location.href =
-    //            `assets/tts/tts${tts.id}.html`;
-                  'assets/tts/crossword.html?puzzle=tts1'
+    location.href =
+        `assets/tts/crossword.html?puzzle=tts${tts.id}`;
         };
         ttsContainer.appendChild(card);
     }
