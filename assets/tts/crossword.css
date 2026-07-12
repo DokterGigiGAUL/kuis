@@ -172,7 +172,7 @@ z-index:2;
 .clues-section{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:30px;
+    gap:20px;
 }
 
 .clue-column{
@@ -183,11 +183,12 @@ z-index:2;
 }
 
 .clue-column h2{
-    margin-bottom:15px;
+    margin-bottom:5px;
+    font-size:20px;
 }
 
 .clue-column ol{
-    padding-left:22px;
+    padding-left:20px;
 }
 
 .clue-column li{
@@ -211,10 +212,11 @@ pointer-events:none;
 }
 
 .clue-column{
-max-height:240px;
+height:160px;
 overflow-y:auto;
 scroll-behavior:smooth;
-overflow:scroll;
+overflow-y: scroll;
+scrollbar-gutter: stable;
 }
 
 .loader{
