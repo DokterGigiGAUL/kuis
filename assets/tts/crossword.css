@@ -1,5 +1,5 @@
 :root{
-    --cell-size:48px;
+    --cell-size:36px;
     --gap:2px;
     --border:#444;
     --black:#2d2d2d;
@@ -51,11 +51,11 @@ body{
 .toolbar{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:8px;
 }
 
 .toolbar button{
-    padding:10px 18px;
+    padding:8px;
     border:none;
     border-radius:8px;
     cursor:pointer;
@@ -199,6 +199,7 @@ transition:.15s;
 .clue-column li.active{
 background:#f0f0f0;
 border-color:#cccccc;
+font-weight:bold;
 }
 
 .letter{
