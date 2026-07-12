@@ -35,6 +35,7 @@ this.puzzle=await res.json();
 document.getElementById("puzzle-title").textContent=this.puzzle.title;
 
 this.buildGrid();
+this.resizeGrid();
 this.numberCells();
 this.renderGrid();
 this.renderClues();
@@ -119,6 +120,25 @@ number:null
 }
 
 });
+
+}
+
+resizeGrid(){
+
+    const padding = 40;
+    const maxWidth = window.innerWidth - padding;
+
+    const size = Math.floor(
+        Math.min(
+            48,
+            maxWidth / this.cols
+        )
+    );
+
+    document.documentElement.style.setProperty(
+        "--cell-size",
+        `${size}px`
+    );
 
 }
 
@@ -296,6 +316,17 @@ location.href="../../index.html";
 
 };
 
+window.addEventListener("resize",()=>{
+
+    this.resizeGrid();
+
+});
+
+window.addEventListener("orientationchange",()=>{
+
+    this.resizeGrid();
+
+});
 }
 
 selectCell(r,c){
