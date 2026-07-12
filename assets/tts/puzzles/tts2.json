@@ -1,0 +1,77 @@
+{
+  "title": "TTS #2",
+  "next": "tts3",
+  "premium": false,
+  "words": [
+    {
+      "answer": "MUKOSA",
+      "clue": "Lapisan jaringan lunak yang melapisi rongga mulut.",
+      "row": 0,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "answer": "LIDAH",
+      "clue": "Organ pengecap di dalam rongga mulut.",
+      "row": 0,
+      "col": 4,
+      "direction": "down"
+    },
+    {
+      "answer": "PALATUM",
+      "clue": "Nama anatomi untuk langit-langit mulut.",
+      "row": 2,
+      "col": 1,
+      "direction": "across"
+    },
+    {
+      "answer": "UVULA",
+      "clue": "Jaringan kecil yang menggantung di belakang langit-langit lunak.",
+      "row": 1,
+      "col": 7,
+      "direction": "down"
+    },
+    {
+      "answer": "GINGIVA",
+      "clue": "Istilah medis untuk gusi.",
+      "row": 5,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "answer": "PULPA",
+      "clue": "Jaringan lunak di bagian dalam gigi yang berisi saraf dan pembuluh darah.",
+      "row": 3,
+      "col": 3,
+      "direction": "down"
+    },
+    {
+      "answer": "EMAIL",
+      "clue": "Lapisan terkeras yang melindungi mahkota gigi.",
+      "row": 8,
+      "col": 2,
+      "direction": "across"
+    },
+    {
+      "answer": "KARIES",
+      "clue": "Kerusakan jaringan keras gigi akibat proses demineralisasi.",
+      "row": 6,
+      "col": 6,
+      "direction": "down"
+    },
+    {
+      "answer": "LESI",
+      "clue": "Istilah umum untuk kelainan pada jaringan.",
+      "row": 10,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "answer": "ULKUS",
+      "clue": "Luka terbuka pada mukosa mulut.",
+      "row": 7,
+      "col": 9,
+      "direction": "down"
+    }
+  ]
+}
