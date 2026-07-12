@@ -177,7 +177,7 @@ z-index:2;
 
 .clue-column{
     background:white;
-    padding:20px;
+    padding:10px 20px;
     border-radius:var(--radius);
     box-shadow:var(--shadow);
 }
@@ -191,9 +191,9 @@ z-index:2;
 }
 
 .clue-column li{
-padding:8px 10px;
+padding:5px;
 border:1px solid transparent;
-border-radius:8px;
+border-radius:5px;
 transition:.15s;
 }
 
