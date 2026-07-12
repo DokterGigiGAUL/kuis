@@ -14,6 +14,8 @@ this.activeIndex=0;
 this.direction="across";
 this.hiddenInput=null;
 this.activeClue=null;
+this.puzzle.across
+this.puzzle.down
 }
 
 async load(){
@@ -120,21 +122,22 @@ number:null
 numberCells(){
 
 let n=1;
+const used=new Map();
 
-for(let r=0;r<this.rows;r++){
+const entries=[
+...this.puzzle.across,
+...this.puzzle.down
+].sort((a,b)=>a.row-b.row||a.col-b.col);
 
-for(let c=0;c<this.cols;c++){
+for(const entry of entries){
 
-if(!this.grid[r][c])continue;
+const key=`${entry.row},${entry.col}`;
 
-const left=c===0||!this.grid[r][c-1];
-const top=r===0||!this.grid[r-1][c];
-
-if(left||top){
-this.grid[r][c].number=n++;
+if(!used.has(key)){
+used.set(key,n++);
 }
 
-}
+this.grid[entry.row][entry.col].number=used.get(key);
 
 }
 
@@ -673,6 +676,25 @@ if(!this.activeClue)return;
 
 this.activeClue.classList.add("active");
 
+}
+
+function buildNumberMap(entries){
+    const numberMap = new Map();
+    let number = 1;
+
+    entries
+        .sort((a, b) => a.row - b.row || a.col - b.col)
+        .forEach(entry => {
+            const key = `${entry.row},${entry.col}`;
+
+            if (!numberMap.has(key)) {
+                numberMap.set(key, number++);
+            }
+
+            entry.number = numberMap.get(key);
+        });
+
+    return numberMap;
 }
 
 }
