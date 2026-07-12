@@ -13,8 +13,8 @@
     {
       "answer": "PLAK",
       "clue": "Lapisan biofilm pada mahkota gigi.",
-      "row": 0,
-      "col": 1,
+      "row": 1,
+      "col": 0,
       "direction": "down"
     },
     {
@@ -39,25 +39,11 @@
       "direction": "down"
     },
     {
-      "answer": "PULPA",
+      "answer": "KRUSTA",
       "clue": "Jaringan lunak di bagian dalam gigi yang berisi saraf dan pembuluh darah.",
-      "row": 3,
-      "col": 3,
-      "direction": "down"
-    },
-    {
-      "answer": "EMAIL",
-      "clue": "Lapisan terkeras yang melindungi mahkota gigi.",
-      "row": 8,
-      "col": 2,
+      "row": 4,
+      "col": 0,
       "direction": "across"
-    },
-    {
-      "answer": "KARIES",
-      "clue": "Kerusakan jaringan keras gigi akibat proses demineralisasi.",
-      "row": 6,
-      "col": 6,
-      "direction": "down"
     },
     {
       "answer": "LESI",
@@ -65,13 +51,6 @@
       "row": 10,
       "col": 0,
       "direction": "across"
-    },
-    {
-      "answer": "ULKUS",
-      "clue": "Luka terbuka pada mukosa mulut.",
-      "row": 7,
-      "col": 9,
-      "direction": "down"
     }
   ]
 }
