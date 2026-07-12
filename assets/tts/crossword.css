@@ -247,16 +247,17 @@ color:#666;
 }
 
 .next-btn{
-    width: 100%;
+    width: auto;
     border: 1px solid var(--primary);
     border-radius: 12px;
-    background: #ffffff;
+    background: transparent;
     color: var(--primary);
     padding: 12px;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: .2s;
+    margin-top: 8px;
 }
 
 /* ====================================== */
