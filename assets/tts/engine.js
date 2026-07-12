@@ -41,6 +41,8 @@ this.renderClues();
 this.createHiddenInput();
 this.bindEvents();
 
+this.selectWord(this.puzzle.words[0]);
+
 document.getElementById("loader").style.display="none";
 document.getElementById("crossword-app").style.display="block";
 
@@ -60,17 +62,19 @@ Kembali ke Beranda
 
 selectWord(word){
 
-this.direction=word.direction;
-this.activeWord=word;
-this.activeIndex=0;
+    this.direction=word.direction;
+    this.activeWord=word;
+    this.activeIndex=0;
 
-this.currentRow=word.row;
-this.currentCol=word.col;
+    this.currentRow=word.row;
+    this.currentCol=word.col;
 
-this.clearHighlight();
-this.highlightWord();
+    this.clearHighlight();
+    this.highlightWord();
 
-this.hiddenInput.focus();
+    this.updateActiveClue();
+
+    this.hiddenInput.focus();
 
 }
 
@@ -195,40 +199,32 @@ board.appendChild(cell);
 
 }
   
-renderClues(){
+renderClues(){}
 
-const across=document.getElementById("across-list");
-const down=document.getElementById("down-list");
+updateActiveClue(){
 
-across.innerHTML="";
-down.innerHTML="";
+    if(!this.activeWord)return;
 
-this.puzzle.words.forEach(word=>{
+    document.getElementById("active-direction").textContent =
+        this.activeWord.direction==="across" ? "Mendatar" : "Menurun";
 
-const li=document.createElement("li");
+    document.getElementById("active-number").textContent =
+        this.grid[this.activeWord.row][this.activeWord.col].number;
 
-li.textContent=word.clue;
-li.value=this.grid[word.row][word.col].number;
+    document.getElementById("active-clue-text").textContent =
+        this.activeWord.clue;
 
-  word.clueElement=li;
+    const answer=document.getElementById("active-answer");
 
-li.onclick=()=>{
+    answer.innerHTML="";
 
-this.activeClue=li;
+    for(let i=0;i<this.activeWord.answer.length;i++){
 
-this.selectWord(word);
+        const box=document.createElement("span");
 
-this.highlightClue();
+        answer.appendChild(box);
 
-};
-
-if(word.direction==="across"){
-across.appendChild(li);
-}else{
-down.appendChild(li);
-}
-
-});
+    }
 
 }
 
