@@ -1,90 +1,107 @@
 {
-  "title": "TTS #3",
-  "next": "tts4",
+  "title": "TTS #4",
+  "next": "tts5",
   "premium": false,
   "words": [
     {
-      "answer": "ENAMEL",
-      "clue": "Jaringan paling keras di tubuh.",
+      "answer": "KAVITAS",
+      "clue": "Lubang pada gigi akibat penyakit karies",
       "row": 0,
-      "col": 1,
+      "col": 4,
       "direction": "across"
     },
     {
-      "answer": "ABSES",
-      "clue": "Kumpulan pus dari proses infeksi",
-      "row": 0,
-      "col": 3,
-      "direction": "down"
-    },
-      {
-      "answer": "EDEMA",
-      "clue": "Pembengkakan akibat penumpukan cairan.",
-      "row": 0,
-      "col": 5,
-      "direction": "down"
-    },
-    {
-      "answer": "UVULA",
-      "clue": "Jaringan kecil yang menggantung di belakang langit-langit lunak.",
-      "row": 0,
-      "col": 9,
-      "direction": "down"
-    },
-    {
-      "answer": "PLAK",
-      "clue": "Lapisan biofilm pada mahkota gigi.",
+      "answer": "STOMATOGNATI",
+      "clue": "Sistem yang terdiri dari gigi, rahang, dan jaringan rongga mulut.",
       "row": 1,
       "col": 0,
-      "direction": "down"
-    },
-    {
-      "answer": "MAKULA",
-      "clue": "Lesi yang menunjukkan perubahan warna jaringan.",
-      "row": 3,
-      "col": 5,
       "direction": "across"
     },
     {
-      "answer": "KISTA",
-      "clue": "Kantung berisi cairan fisiologis.",
+      "answer": "TONSIL",
+      "clue": "Jaringan limfoid yang berada di bagian belakang rongga mulut.",
+      "row": 1,
+      "col": 1,
+      "direction": "down"
+    },
+     {
+      "answer": "IDIOPATIK",
+      "clue": "Terjadi tanpa penyebab yang diketahui.",
+      "row": 1,
+      "col": 11,
+      "direction": "down"
+    },
+    {
+      "answer": "FIBROMA",
+      "clue": "Tumor jinak yang berasal dari jaringan ikat.",
+      "row": 3,
+      "col": 3,
+      "direction": "across"
+    },
+     {
+      "answer": "OPERKULUM",
+      "clue": "Lipatan jaringan gusi yang menutupi sebagian mahkota gigi yang belum erupsi sempurna.",
       "row": 3,
       "col": 7,
       "direction": "down"
     },
     {
-      "answer": "KRUSTA",
-      "clue": "Lapisan keras yang terbentuk dari cairan tubuh mengering seperti darah, nanah, atau serum",
-      "row": 4,
-      "col": 0,
+      "answer": "KARIES",
+      "clue": "Kerusakan jaringan keras gigi akibat aktivitas bakteri.",
+      "row": 5,
+      "col": 3,
       "direction": "across"
     },
     {
-      "answer": "ULSER",
-      "clue": "Lesi primer/ sekunder berupa cerukan.",
-      "row": 4,
-      "col": 2,
+      "answer": "AKAR",
+      "clue": "Penyangga gigi yang tertanam di dalam tulang rahang",
+      "row": 5,
+      "col": 3,
       "direction": "down"
     },
     {
-      "answer": "LESI",
-      "clue": "Istilah medis untuk kondisi kelainan pada jaringan.",
-      "row": 6,
-      "col": 0,
-      "direction": "across"
+      "answer": "PIPI",
+      "clue": "Jaringan lunak yang membentuk dinding samping rongga mulut.",
+      "row": 3,
+      "col": 7,
+      "direction": "down"
     },
     {
       "answer": "ATRISI",
-      "clue": "Pengikisan lapisan email karena gesekan.",
-      "row": 6,
-      "col": 6,
+      "clue": "Keausan gigi akibat gesekan antargigi.",
+      "row": 3,
+      "col": 5,
+      "direction": "down"
+    },
+    
+   
+    
+    {
+      "answer": "KALKULUS",
+      "clue": "Endapan plak yang telah mengeras pada permukaan gigi.",
+      "row": 8,
+      "col": 3,
       "direction": "across"
     },
     {
-      "answer": "ATROFI",
-      "clue": "Penyusutan/ pengurangan jaringan tubuh.",
+      "answer": "PERKUSI",
+      "clue": "Pemeriksaan dengan mengetuk gigi untuk menilai kondisinya.",
       "row": 8,
-      "col": 0,
+      "col": 9,
+      "direction": "down"
+    },
+    {
+      "answer": "OKLUSI",
+      "clue": "Hubungan kontak antara gigi rahang atas dan bawah.",
+      "row": 2,
+      "col": 8,
+      "direction": "down"
+    },
+    {
+      "answer": "PERKUSI",
+      "clue": "Teknik mengetuk gigi sebagai bagian dari pemeriksaan klinis.",
+      "row": 10,
+      "col": 2,
       "direction": "across"
     }
   ]
