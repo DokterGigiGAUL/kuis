@@ -1,140 +1,105 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kuis Penyakit Mulut</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <header class="header">
+      <h1>Penyakit Mulut Wonder App</h1>
+      <p>Karena masalah di mulut bukan cuma gigi!</p>
+    </header>
 
-<body>
+    <main class="container">
 
-<header class="header">
-    <h1>Penyakit Mulut Wonder App</h1>
-    <p>Karena masalah di mulut bukan cuma gigi!</p>
-</header>
-
-<main class="container">
-    
-    <div class="section-header">
+      <!-- Template Card -->
+      <div class="section-header">
         <h2>Kuis Trivia</h2>
-        <a
-        id="quizExplore"
-        class="section-link"
-        href="explore.html?tab=quiz">
+        <a id="quizExplore" class="section-link" href="explore.html?tab=quiz">
         </a>
-    </div>
-    
-    <!-- Daftar Kuis -->
-    <section id="quiz-list" class="quiz-grid">
+      </div>
+
+      <section id="quiz-list" class="quiz-grid">
         <!-- Card akan dibuat otomatis oleh app.js -->
-    </section>
+      </section>
 
-    <div class="section-header" style="margin-top: 40px;">
+      <div class="section-header" style="margin-top: 40px;">
         <h2>Komik Edukasi</h2>
-        <a
-        id="comicExplore"
-        class="section-link"
-        href="explore.html?tab=comic">
+        <a id="comicExplore" class="section-link" href="explore.html?tab=comic">
         </a>
-    </div>
-    
-    <section id="comics-container" class="comics-grid"
-    <!-- Card komik akan dibuat oleh JavaScript -->
-    </section>
-    
-    <div class="section-header" style="margin-top: 40px;">
+      </div>
+
+      <section
+        id="comics-container"
+        class="comics-grid">
+        <!-- Card akan dibuat otomatis oleh app.js -->
+      </section>
+
+      <div class="section-header" style="margin-top: 40px;">
         <h2>Teka-Teki Silang</h2>
-        <a 
-            id="ttsExplore"
-            class="section-link"
-            href="explore.html?tab=tts">
+        <a id="ttsExplore" class="section-link" href="explore.html?tab=tts">
         </a>
-    </div>
-    
-    <section id="tts-container" class="comics-grid">
-    <!-- Card TTS akan dibuat otomatis oleh app.js -->
-    </section>
-    
-</main>
+      </div>
 
-<!-- Template Card -->
-<template id="quiz-card-template">
+      <section id="tts-container" class="comics-grid">
+        <!-- Card TTS akan dibuat otomatis oleh app.js -->
+      </section>
+    </main>
 
-    <div class="quiz-card">
-
-        <img class="quiz-thumbnail"
-             src=""
-             alt="Thumbnail Kuis">
+    <!-- Template Card -->
+      
+    <template id="quiz-card-template">
+      <div class="quiz-card">
+        <img class="quiz-thumbnail" src="" alt="Thumbnail Kuis" />
 
         <div class="quiz-content">
-            <h2 class="quiz-title"></h2>
-            <p class="quiz-description"></p>
-            <div class="quiz-info">
-                <span>📄 10 Soal</span>
-                <span>⏱ 10 Menit</span>
-            </div>
-            <button class="start-btn">
-                Mulai Kuis
-            </button>
-
+          <h2 class="quiz-title"></h2>
+          <p class="quiz-description"></p>
+          <div class="quiz-info">
+            <span>📄 10 Soal</span>
+            <span>⏱ 10 Menit</span>
+          </div>
+          <button class="start-btn">Mulai Kuis</button>
         </div>
+      </div>
+    </template>
 
-    </div>
-
-</template>
-
-<template id="comic-card-template">
-    
-<article class="comic-card">
-    <div class="comic-cover">
-        <img
-            class="comic-thumb"
-            loading="lazy"
-            alt="Thumbnail Komik">
-        <div class="comic-overlay">
+    <template id="comic-card-template">
+      <article class="comic-card">
+        <div class="comic-cover">
+          <img class="comic-thumb" loading="lazy" alt="Thumbnail Komik" />
+          <div class="comic-overlay">
             <div class="comic-episode"></div>
             <h3 class="comic-title"></h3>
+          </div>
         </div>
-    </div>
-    
-    <div class="comic-content">
-        <button class="start-btn">
-            Baca Komik
-        </button>
-    </div>
-</article>
-    
-</template>
 
-<!-- Template Card TTS -->
+        <div class="comic-content">
+          <button class="start-btn">Baca Komik</button>
+        </div>
+      </article>
+    </template>
 
-<template id="tts-card-template">
-    <div class="tts-card">
-        <img
-            class="tts-thumb"
-            src=""
-            alt="Thumbnail TTS"
-        >
+    <template id="tts-card-template">
+      <div class="tts-card">
+        <img class="tts-thumb" src="" alt="Thumbnail TTS" />
 
         <div class="tts-content">
-            <h3 class="tts-title"></h3>
-            <p class="tts-description"></p>
-            <p class="tts-soal"></p>
-            <button class="tts-btn">
-                Isi TTS
-            </button>
+          <h3 class="tts-title"></h3>
+          <p class="tts-description"></p>
+          <p class="tts-soal"></p>
+          <button class="tts-btn">Isi TTS</button>
         </div>
-    </div>
+      </div>
+    </template>
 
-</template>
-    
-<script src="js/storage.js"></script>
-<script src="js/comics-data.js"></script>
-<script src="js/tts-list.js"></script>
-<script src="js/tts.js"></script>
-<script src="js/app.js"></script>
-
-</body>
+    <script src="js/storage.js"></script>
+    <script src="js/comics-data.js"></script>
+    <script src="js/tts-list.js"></script>
+    <script src="js/tts.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
