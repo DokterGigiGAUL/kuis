@@ -286,6 +286,7 @@ color:#666;
 .loader-error p{
     font-size:20px;
     color:#666;
+    font-weight:400;
 }
 
 .loader-error button{
