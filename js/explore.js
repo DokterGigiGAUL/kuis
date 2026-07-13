@@ -130,22 +130,12 @@ function showComic() {
 
 function showTTS() {
 
-    pageTitle.textContent =
-        "Semua TTS";
-
-    quizSection.style.display =
-        "none";
-
-    comicSection.style.display =
-        "none";
-
-    ttsSection.style.display =
-        "grid";
-
+    pageTitle.textContent = "Semua TTS";
+    quizSection.style.display = "none";
+    comicSection.style.display = "none";
+    ttsSection.style.display = "block";
     quizTab.classList.remove("active");
-
     comicTab.classList.remove("active");
-
     ttsTab.classList.add("active");
 
     const template =
@@ -160,25 +150,17 @@ function showTTS() {
 
         card.querySelector(".tts-list-thumb").src =
             tts.thumb;
-
         card.querySelector(".tts-list-title").textContent =
             tts.title;
-
         card.querySelector(".tts-list-description").textContent =
             tts.description;
-
         card.querySelector(".tts-list-soal").textContent =
             `${tts.soal} Soal`;
-
         card.querySelector(".tts-list-btn").onclick = () => {
-
             location.href =
                 `assets/tts/tts${tts.id}.html`;
-
         };
-
         ttsSection.appendChild(card);
-
     });
 
 }
