@@ -55,15 +55,15 @@
     {
       "answer": "AKAR",
       "clue": "Penyangga gigi yang tertanam di dalam tulang rahang",
-      "row": 5,
-      "col": 3,
+      "row": 7,
+      "col": 5,
       "direction": "down"
     },
     {
       "answer": "PIPI",
       "clue": "Jaringan lunak yang membentuk dinding samping rongga mulut.",
-      "row": 3,
-      "col": 7,
+      "row": 7,
+      "col": 9,
       "direction": "down"
     },
     {
@@ -72,10 +72,7 @@
       "row": 3,
       "col": 5,
       "direction": "down"
-    },
-    
-   
-    
+    },    
     {
       "answer": "KALKULUS",
       "clue": "Endapan plak yang telah mengeras pada permukaan gigi.",
@@ -84,24 +81,17 @@
       "direction": "across"
     },
     {
-      "answer": "PERKUSI",
-      "clue": "Pemeriksaan dengan mengetuk gigi untuk menilai kondisinya.",
-      "row": 8,
-      "col": 9,
-      "direction": "down"
-    },
-    {
       "answer": "OKLUSI",
       "clue": "Hubungan kontak antara gigi rahang atas dan bawah.",
-      "row": 2,
-      "col": 8,
+      "row": 8,
+      "col": 4,
       "direction": "down"
     },
     {
       "answer": "PERKUSI",
       "clue": "Teknik mengetuk gigi sebagai bagian dari pemeriksaan klinis.",
       "row": 10,
-      "col": 2,
+      "col": 3,
       "direction": "across"
     }
   ]
