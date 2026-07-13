@@ -20,14 +20,14 @@
     {
       "answer": "PAPUL",
       "clue": "Lesi padat yang menonjol dengan diameter kurang dari 1 cm.",
-      "row": 2,
+      "row": 1,
       "col": 2,
       "direction": "down"
     },
     {
       "answer": "PUSTULA",
       "clue": "Lesi kecil yang berisi nanah.",
-      "row": 3,
+      "row": 2,
       "col": 4,
       "direction": "across"
     },
@@ -46,8 +46,8 @@
       "direction": "down"
     },
     {
-      "answer": "FISURA",
-      "clue": "Celah atau retakan pada mukosa mulut.",
+      "answer": "FISTULA",
+      "clue": "Saluran abnormal yang menghubungkan dua rongga di tubuh.",
       "row": 4,
       "col": 10,
       "direction": "down"
