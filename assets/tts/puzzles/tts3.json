@@ -4,80 +4,80 @@
   "premium": false,
   "words": [
     {
-      "answer": "KAVITAS",
-      "clue": "Lubang pada gigi akibat penyakit karies",
+      "answer": "VESIKEL",
+      "clue": "Lesi kecil berisi cairan dengan diameter kurang dari 5 mm.",
       "row": 0,
-      "col": 4,
+      "col": 6,
       "direction": "down"
     },
     {
-      "answer": "STOMATOGNATI",
-      "clue": "Sistem yang terdiri dari gigi, rahang, dan jaringan rongga mulut.",
-      "row": 1,
-      "col": 0,
-      "direction": "across"
-    },
-    {
-      "answer": "TONSILITIS",
-      "clue": "Peradangan jaringan limfoid yang berada di bagian belakang rongga mulut.",
-      "row": 1,
-      "col": 1,
-      "direction": "down"
-    },
-     {
-      "answer": "IDIOPATIK",
-      "clue": "Terjadi tanpa penyebab yang diketahui.",
-      "row": 1,
-      "col": 11,
-      "direction": "down"
-    },
-    {
-      "answer": "FIBROMA",
-      "clue": "Tumor jinak yang berasal dari jaringan ikat.",
-      "row": 3,
-      "col": 3,
-      "direction": "across"
-    },
-     {
-      "answer": "OPERKULUM",
-      "clue": "Lipatan jaringan gusi yang menutupi sebagian mahkota gigi yang belum erupsi sempurna.",
-      "row": 3,
-      "col": 7,
-      "direction": "down"
-    },
-    {
-      "answer": "KARIES",
-      "clue": "Kerusakan jaringan keras gigi akibat aktivitas bakteri.",
-      "row": 5,
-      "col": 3,
-      "direction": "across"
-    },
-    {
-      "answer": "AKAR",
-      "clue": "Penyangga gigi yang tertanam di dalam tulang rahang",
-      "row": 7,
-      "col": 5,
-      "direction": "down"
-    },
-    {
-      "answer": "PIPI",
-      "clue": "Jaringan lunak yang membentuk dinding samping rongga mulut.",
-      "row": 7,
+      "answer": "BULA",
+      "clue": "Lesi berisi cairan dengan diameter lebih dari 5 mm.",
+      "row": 0,
       "col": 9,
       "direction": "down"
-    },   
+    },
     {
-      "answer": "OKLUSI",
-      "clue": "Hubungan kontak antara gigi rahang atas dan bawah.",
-      "row": 8,
+      "answer": "PAPUL",
+      "clue": "Lesi padat yang menonjol dengan diameter kurang dari 1 cm.",
+      "row": 2,
+      "col": 2,
+      "direction": "down"
+    },
+    {
+      "answer": "PUSTULA",
+      "clue": "Lesi kecil yang berisi nanah.",
+      "row": 3,
       "col": 4,
       "direction": "across"
     },
     {
-      "answer": "PERKUSI",
-      "clue": "Teknik mengetuk gigi sebagai bagian dari pemeriksaan klinis.",
-      "row": 10,
+      "answer": "ANTERIOR",
+      "clue": "Istilah anatomi untuk bagian depan rongga mulut.",
+      "row": 5,
       "col": 3,
+      "direction": "down"
+    },
+    {
+      "answer": "NODUL",
+      "clue": "Benjolan padat yang lebih besar daripada papula.",
+      "row": 4,
+      "col": 8,
+      "direction": "down"
+    },
+    {
+      "answer": "FISURA",
+      "clue": "Celah atau retakan pada mukosa mulut.",
+      "row": 4,
+      "col": 10,
+      "direction": "down"
+    },
+    {
+      "answer": "PLAK",
+      "clue": "Lesi datar yang sedikit menonjol pada permukaan mukosa.",
+      "row": 5,
+      "col": 1,
+      "direction": "across"
+    },
+    {
+      "answer": "EROSI",
+      "clue": "Kehilangan sebagian epitel tanpa meninggalkan jaringan parut.",
+      "row": 5,
+      "col": 6,
+      "direction": "across"
+    },
+    {
+      "answer": "ULKUS",
+      "clue": "Lesi mukosa berupa cekungan yang sering terasa nyeri.",
+      "row": 8,
+      "col": 7,
+      "direction": "across"
+    },
+    {
+      "answer": "PERIODONTIA",
+      "clue": "Cabang ilmu kedokteran gigi yang mempelajari jaringan penyangga gigi.",
+      "row": 10,
+      "col": 0,
       "direction": "across"
     }
   ]
