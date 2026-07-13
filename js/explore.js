@@ -43,6 +43,7 @@ async function showQuiz() {
     quizSection.style.display = "grid";
     comicSection.style.display = "none";
     ttsSection.style.display = "none";
+    
     quizTab.classList.add("active");
     comicTab.classList.remove("active");
     ttsTab.classList.remove("active");
@@ -134,6 +135,7 @@ function showTTS() {
     quizSection.style.display = "none";
     comicSection.style.display = "none";
     ttsSection.style.display = "block";
+    
     quizTab.classList.remove("active");
     comicTab.classList.remove("active");
     ttsTab.classList.add("active");
