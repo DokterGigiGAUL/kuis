@@ -49,10 +49,6 @@ async function loadQuiz() {
     } catch (e) {
         console.error(e);
     }
-
-    if (quizExplore) {
-        quizExplore.textContent = "Kuis Lainnya →";
-    }
 }
 
 function createQuizCard(quiz) {
@@ -94,10 +90,6 @@ function loadComics() {
 
         comicsContainer.appendChild(card);
     }
-
-    if (comicExplore) {
-        comicExplore.textContent = "Episode Lainnya →";
-    }
 }
 
 function loadTTS() {
@@ -119,9 +111,5 @@ function loadTTS() {
         };
 
         ttsContainer.appendChild(card);
-    }
-
-    if (ttsExplore) {
-        ttsExplore.textContent = "TTS Lainnya →";
     }
 }
