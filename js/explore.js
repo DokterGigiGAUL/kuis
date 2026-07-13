@@ -153,7 +153,7 @@ function showTTS() {
             tts.description;
         card.querySelector(".tts-soal").textContent =
             `${tts.soal} Soal`;
-        card.querySelector(".comic-btn").onclick = () => {
+        card.querySelector(".tts-btn").onclick = () => {
             location.href =
                 `assets/tts/tts${tts.id}.html`;
         };
