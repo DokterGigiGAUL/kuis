@@ -1,108 +1,72 @@
 <!DOCTYPE html>
 <html lang="id">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Explore</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <style>
-    @media (min-width: 768px) {
-    .container {
-        padding-left: 30px;
-        padding-right: 30px!important;
-    }
-    
-    .card-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 24px;
-    }
-}
+          @media (min-width: 768px) {
+          .container {
+              padding-left: 30px;
+              padding-right: 30px!important;
+          }
+
+          .card-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+          margin-top: 24px;
+          }
+      }
     </style>
+  </head>
 
-</head>
+  <body>
+    <header class="explore-header">
+      <button class="back-btn" onclick="history.back()">←</button>
 
-<body>
-<header class="explore-header">
-    <button class="back-btn" onclick="history.back()">
-        ←
-    </button>
+      <h1 id="pageTitle">Semua Kuis</h1>
+    </header>
 
-    <h1 id="pageTitle">
-        Semua Kuis
-    </h1>
-</header>
-    
-<main class="container">
-    <div class="explore-tabs">
-        <button
-            id="quizTab"
-            class="tab-btn">
-            Kuis
-        </button>
+    <main class="container">
+      <div class="explore-tabs">
+        <button id="quizTab" class="tab-btn">Kuis</button>
 
-        <button
-            id="comicTab"
-            class="tab-btn">
-            Komik
-        </button>
+        <button id="comicTab" class="tab-btn">Komik</button>
 
-        <button
-            id="ttsTab"
-            class="tab-btn">
-            TTS
-       </button>
-    </div>
+        <button id="ttsTab" class="tab-btn">TTS</button>
+      </div>
 
-    <section
-        id="quiz-list"
-        class="card-grid">
-    </section>
+      <section id="quiz-list" class="card-grid"></section>
 
-    <section
-        id="comics-container"
-        class="card-grid">
-    </section>
+      <section id="comics-container" class="card-grid"></section>
 
-    <section
-        id="tts-container"
-        class="tts-grid">
-    </section>
-</main>
+      <section id="tts-container" class="tts-grid"></section>
+    </main>
 
-<!-- TEMPLATE QUIZ -->
+    <!-- TEMPLATE QUIZ -->
 
-<template id="quiz-card-template">
-    
-<article class="quiz-card">
-    <img 
-        class="quiz-thumbnail"
-        loading="lazy"
-        alt="Thumbnail Kuis"">
-    
-    <div class="quiz-content">
-        <h3 class="quiz-title"></h3>
-        <p class="quiz-description"></p>
-        <div class="quiz-info">
+    <template id="quiz-card-template">
+      <article class="quiz-card">
+        <img class="quiz-thumbnail" loading="lazy" alt="Thumbnail Kuis"">
+
+        <div class="quiz-content">
+          <h3 class="quiz-title"></h3>
+          <p class="quiz-description"></p>
+          <div class="quiz-info">
             <span>📄 10 Soal</span>
             <span>⏱ 10 Menit</span>
+          </div>
+          <button class="comic-btn">Mulai Kuis</button>
         </div>
-        <button class="comic-btn">
-            Mulai Kuis
-        </button>
-    </div>
-</article>
-    
-</template>
+      </article>
+    </template>
 
-<!-- TEMPLATE KOMIK 
+    <!-- TEMPLATE KOMIK 
 
 <template id="comic-card-template">
     
@@ -128,24 +92,20 @@
     
 </template>-->
 
-<template id="comic-list-template">
-    <article class="comic-list-item">
-
-        <img class="comic-list-thumb" src="" alt="">
+    <template id="comic-list-template">
+      <article class="comic-list-item">
+        <img class="comic-list-thumb" src="" alt="" />
 
         <div class="comic-list-info">
-            <div class="comic-list-episode"></div>
-            <h3 class="comic-list-title"></h3>
+          <div class="comic-list-episode"></div>
+          <h3 class="comic-list-title"></h3>
         </div>
 
-        <button class="comic-list-btn">
-            Baca
-        </button>
+        <button class="comic-list-btn">Baca</button>
+      </article>
+    </template>
 
-    </article>
-</template>
-    
-<!-- <template id="tts-card-template">
+    <!-- <template id="tts-card-template">
 
 <article class="tts-card">
     <img
@@ -165,37 +125,25 @@
 
 </template> -->
 
-<template id="tts-card-template">
-
-    <article class="tts-list-card">
-
-        <img
-            class="tts-list-thumb"
-            loading="lazy"
-            alt="Thumbnail TTS">
+    <template id="tts-card-template">
+      <article class="tts-list-card">
+        <img class="tts-list-thumb" loading="lazy" alt="Thumbnail TTS" />
 
         <div class="tts-list-info">
+          <h3 class="tts-list-title"></h3>
 
-            <h3 class="tts-list-title"></h3>
+          <p class="tts-list-description"></p>
 
-            <p class="tts-list-description"></p>
-
-            <p class="tts-list-soal"></p>
-
+          <p class="tts-list-soal"></p>
         </div>
 
-        <button class="start-btn tts-list-btn">
-            Isi
-        </button>
+        <button class="start-btn tts-list-btn">Isi</button>
+      </article>
+    </template>
 
-    </article>
-
-</template>
-
-<script src="js/storage.js"></script>
-<script src="js/comics-data.js"></script>
-<script src="js/tts-list.js"></script>
-<script src="js/explore.js"></script>
-
-</body>
+    <script src="js/storage.js"></script>
+    <script src="js/comics-data.js"></script>
+    <script src="js/tts-list.js"></script>
+    <script src="js/explore.js"></script>
+  </body>
 </html>
