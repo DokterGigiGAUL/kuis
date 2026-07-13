@@ -46,21 +46,25 @@ body{
 
 .header h1{
     font-size:28px;
+    text-align:center;
 }
 
 .toolbar{
-    display:flex;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
     gap:8px;
+    width:100%;
 }
 
 .toolbar button{
-    padding:8px;
+    width:100%;
+    padding:12px 6px;
     border:none;
     border-radius:8px;
     cursor:pointer;
     font-size:15px;
     box-shadow:var(--shadow);
+    white-space:nowrap;
 }
 
 .premium-btn{
