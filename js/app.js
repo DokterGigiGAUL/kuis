@@ -28,16 +28,26 @@ loadComics();
 loadTTS();
 
 async function loadQuiz() {
-    for (const id of quizFiles.slice(0, 4)) {
-        try {
-            const response = await fetch(`assets/quizzes/${id}.json`);
-            if (!response.ok) continue;
+    try {
+        const responses = await Promise.all(
+            quizFiles.slice(0, 4).map(id =>
+                fetch(`assets/quizzes/${id}.json`)
+            )
+        );
 
-            const quiz = await response.json();
-            createQuizCard(quiz);
-        } catch (e) {
-            console.error(e);
-        }
+        const quizzes = await Promise.all(
+            responses.map(async response => {
+                if (!response.ok) return null;
+                return response.json();
+            })
+        );
+
+        quizzes
+            .filter(quiz => quiz !== null)
+            .forEach(createQuizCard);
+
+    } catch (e) {
+        console.error(e);
     }
 
     if (quizExplore) {
