@@ -129,65 +129,56 @@ function showComic() {
 }
 
 function showTTS() {
+
     pageTitle.textContent =
         "Semua TTS";
-    quizSection.style.display = "none";
-    comicSection.style.display = "none";
-    ttsSection.style.display = "grid";
+
+    quizSection.style.display =
+        "none";
+
+    comicSection.style.display =
+        "none";
+
+    ttsSection.style.display =
+        "grid";
+
     quizTab.classList.remove("active");
+
     comicTab.classList.remove("active");
+
     ttsTab.classList.add("active");
 
     const template =
         document.getElementById("tts-card-template");
+
     ttsSection.innerHTML = "";
+
     ttsList.forEach(tts => {
 
         const card =
             template.content.cloneNode(true);
+
         card.querySelector(".tts-list-thumb").src =
-        tts.thumb;
+            tts.thumb;
+
         card.querySelector(".tts-list-title").textContent =
-        tts.title;
+            tts.title;
+
         card.querySelector(".tts-list-description").textContent =
-        tts.description;
+            tts.description;
+
         card.querySelector(".tts-list-soal").textContent =
-        `${tts.soal} Soal`;
+            `${tts.soal} Soal`;
+
         card.querySelector(".tts-list-btn").onclick = () => {
+
             location.href =
-            `assets/tts/tts${tts.id}.html`;
+                `assets/tts/tts${tts.id}.html`;
 
-};
-
-ttsSection.appendChild(card);
         };
+
         ttsSection.appendChild(card);
+
     });
+
 }
-
-quizTab.onclick = () => {
-    history.replaceState(
-        {},
-        "",
-        "explore.html?tab=quiz"
-    );
-    showQuiz();
-};
-
-comicTab.onclick = () => {
-    history.replaceState(
-        {},
-        "",
-        "explore.html?tab=comic"
-    );
-    showComic();
-};
-
-ttsTab.onclick = () => {
-    history.replaceState(
-        {},
-        "",
-        "explore.html?tab=tts"
-    );
-    showTTS();
-};
