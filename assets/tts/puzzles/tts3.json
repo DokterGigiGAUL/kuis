@@ -65,21 +65,7 @@
       "row": 7,
       "col": 9,
       "direction": "down"
-    },
-    {
-      "answer": "ATRISI",
-      "clue": "Keausan gigi akibat gesekan antargigi.",
-      "row": 3,
-      "col": 5,
-      "direction": "down"
-    },    
-    {
-      "answer": "KALKULUS",
-      "clue": "Endapan plak yang telah mengeras pada permukaan gigi.",
-      "row": 8,
-      "col": 3,
-      "direction": "across"
-    },
+    },   
     {
       "answer": "OKLUSI",
       "clue": "Hubungan kontak antara gigi rahang atas dan bawah.",
