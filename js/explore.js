@@ -84,33 +84,48 @@ async function showQuiz() {
 }
 
 function showComic() {
-    pageTitle.textContent =
-        "Semua Komik";
+
+    pageTitle.textContent = "Semua Komik";
+
     quizSection.style.display = "none";
-    comicSection.style.display = "grid";
+    comicSection.style.display = "block";
     ttsSection.style.display = "none";
+
     comicTab.classList.add("active");
     quizTab.classList.remove("active");
     ttsTab.classList.remove("active");
-    
-    const template =
-        document.getElementById("comic-card-template");
+
     comicSection.innerHTML = "";
+
     comics.forEach(comic => {
-        const card =
-            template.content.cloneNode(true);
-        card.querySelector(".comic-thumb").src =
-            comic.thumb;
-        card.querySelector(".comic-title").textContent =
-            comic.title;
-        card.querySelector(".comic-episode").textContent =
-            `EPISODE #${String(comic.id).padStart(3,"0")}`;
-        card.querySelector(".comic-btn").onclick = () => {
-            location.href =
-                `komik.html?id=${comic.id}`;
-        };
-        comicSection.appendChild(card);
+
+        comicSection.innerHTML += `
+            <article class="comic-list-card">
+
+                <img
+                    src="${comic.thumb}"
+                    class="comic-list-thumb"
+                    alt="${comic.title}"
+                    loading="lazy"
+                >
+
+                <div class="comic-list-info">
+
+                    <h3>${comic.title}</h3>
+
+                </div>
+
+                <button
+                    class="start-btn comic-list-btn"
+                    onclick="location.href='komik.html?id=${comic.id}'">
+                    Baca
+                </button>
+
+            </article>
+        `;
+
     });
+
 }
 
 function showTTS() {
