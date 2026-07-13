@@ -145,30 +145,21 @@ function showTTS() {
 
         const card =
             template.content.cloneNode(true);
-        <article class="tts-list-card">
-
-    <img
-        class="tts-list-thumb"
-        loading="lazy"
-        alt="">
-
-    <div class="tts-list-info">
-
-        <h3 class="tts-list-title"></h3>
-
-        <p class="tts-list-description"></p>
-
-        <p class="tts-list-soal"></p>
-
-    </div>
-
-    <button class="start-btn tts-list-btn">
-        Isi
-    </button>
-
-</article>
+        card.querySelector(".tts-list-thumb").src =
+        tts.thumb;
+        card.querySelector(".tts-list-title").textContent =
+        tts.title;
+        card.querySelector(".tts-list-description").textContent =
+        tts.description;
+        card.querySelector(".tts-list-soal").textContent =
+        `${tts.soal} Soal`;
+        card.querySelector(".tts-list-btn").onclick = () => {
             location.href =
-                `assets/tts/tts${tts.id}.html`;
+            `assets/tts/tts${tts.id}.html`;
+
+};
+
+ttsSection.appendChild(card);
         };
         ttsSection.appendChild(card);
     });
