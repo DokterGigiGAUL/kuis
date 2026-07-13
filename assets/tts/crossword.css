@@ -244,12 +244,13 @@ color:#666;
     font-weight: bold;
     cursor: pointer;
     transition: .2s;
+    font-weight: bold;
 }
 
 .next-btn{
     width: auto;
     border: 1px solid #2563eb;
-    border-radius: 12px;
+    border-radius: 12px 20px;
     background: transparent;
     color: #2563eb;
     padding: 12px;
@@ -258,6 +259,39 @@ color:#666;
     cursor: pointer;
     transition: .2s;
     margin-top: 8px;
+}
+
+.loader-error{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    text-align:center;
+    min-height:70vh;
+    padding:20px;
+}
+
+.loader-error h2{
+    font-size:32px;
+}
+
+.loader-error p{
+    font-size:20px;
+    color:#666;
+}
+
+.loader-error button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:#fff;
+    cursor:pointer;
+    width: auto; 
+    font-size: 15px;
+    font-weight: bold;
+    transition: .2s;
 }
 
 /* ====================================== */
