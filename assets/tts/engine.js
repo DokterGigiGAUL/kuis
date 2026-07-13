@@ -50,11 +50,13 @@ document.getElementById("crossword-app").style.display="block";
 }catch(err){
 
 document.getElementById("loader").innerHTML=`
-<h2>Puzzle tidak dapat dimuat</h2>
-<p>${err.message}</p>
-<button onclick="location.href='../index.html'">
-Kembali ke Beranda
-</button>
+<div class="loader-error">
+    <h2>Puzzle tidak dapat dimuat</h2>
+    <p>${err.message}</p>
+    <button onclick="location.href='../../index.html'">
+        Kembali ke Beranda
+    </button>
+</div>
 `;
 
 }
