@@ -438,15 +438,11 @@ body {
     margin-right:20px;
 }
     .quiz-grid{
-
         display:flex;
         gap:24px;
-
         overflow-x:auto;
         overflow-y:hidden;
-
         scroll-behavior:smooth;
-
         padding-bottom:10px;
     }
 
@@ -642,11 +638,6 @@ body {
     flex-shrink:0;
 }
 
-.tts-grid{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
 @media (max-width:640px){
     .comics-grid {
         gap: 14px;
@@ -892,14 +883,15 @@ body {
     flex-shrink:0;
 }
 
-@media (max-width:640px){   
-    .container {
-        padding: 15px;
-    }
+@media (max-width:640px){  
     
-    .tts-grid {
-        gap: 14px;
-    }
+.container {
+   padding: 15px;
+}
+    
+.tts-grid {
+    gap: 14px;
+}
 
 }
 
