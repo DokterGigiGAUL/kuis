@@ -132,6 +132,7 @@ function showComic() {
 function showTTS() {
 
     pageTitle.textContent = "Semua TTS";
+    
     quizSection.style.display = "none";
     comicSection.style.display = "none";
     ttsSection.style.display = "block";
@@ -160,7 +161,7 @@ function showTTS() {
             `${tts.soal} Soal`;
         card.querySelector(".tts-list-btn").onclick = () => {
             location.href =
-                `assets/tts/tts${tts.id}.html`;
+                `assets/tts/crossword.html?puzzle=tts${tts.id}`;
         };
         ttsSection.appendChild(card);
     });
