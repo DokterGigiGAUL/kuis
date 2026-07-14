@@ -131,7 +131,24 @@ body {
     background:var(--primary-dark);
 }
 
+.btn-primary-list{
+    width:100%;
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn-primary-list:hover{
+    background:var(--primary-dark);
+}
+
 .btn-outline{
+    background:var(--card);
+    color:var(--primary);
+    border:1px solid var(--primary);
+}
+
+.btn-outline-list{
+    width:auto;
     background:var(--card);
     color:var(--primary);
     border:1px solid var(--primary);
@@ -194,6 +211,10 @@ body {
     font-size: .85rem;
     color: var(--text-light);
     margin-bottom: 15px;
+}
+
+.quiz-btn{
+    width:100%;
 }
 
 .start-btn{
