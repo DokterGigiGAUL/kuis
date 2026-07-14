@@ -101,6 +101,50 @@ body {
 }
 
 /* ==========================
+   BUTTON
+========================== */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    border:none;
+    border-radius:12px;
+    padding:12px;
+
+    font-size:15px;
+    font-weight:700;
+    text-decoration:none;
+
+    cursor:pointer;
+    transition:.2s;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:var(--primary-dark);
+}
+
+.btn-outline{
+    background:var(--card);
+    color:var(--primary);
+    border:1px solid var(--primary);
+}
+
+.btn:disabled{
+    background:#ccc;
+    color:#666;
+    border:none;
+    cursor:not-allowed;
+}
+
+/* ==========================
    KUIS
 ========================== */
 
@@ -152,26 +196,8 @@ body {
     margin-bottom: 15px;
 }
 
-.start-btn {
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    background: var(--primary);
-    color: white;
-    padding: 12px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .2s;
-}
-
-.start-btn:hover {
-    background: var(--primary-dark);
-}
-
-.start-btn:disabled {
-    background: #bdbdbd;
-    cursor: not-allowed;
+.start-btn{
+    width:100%;
 }
 
 
@@ -307,13 +333,7 @@ body {
 }
 
 .nav-btn{
-    border:none;
     padding:12px 24px;
-    border-radius:12px;
-    cursor:pointer;
-    font-size: 15px;
-    cursor: pointer;
-    transition: .2s;
 }
 
 .primary{
@@ -573,16 +593,7 @@ body {
 }
 
 .comic-btn{
-    width: 100%;
-    border: 1px solid var(--primary);
-    border-radius: 12px;
-    background: #ffffff;
-    color: var(--primary);
-    padding: 12px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .2s;
+    width:100%;
 }
 
 .comic-actions button{
@@ -597,13 +608,6 @@ body {
     font-weight: bold;
     width: auto;
     transition: .2s; 
-}
-
-.comic-btn:disabled {
-    background: #cccccc;
-    color:#666666;
-    border: 0px solid #666666;
-    cursor: not-allowed;
 }
 
 .comic-actions{
@@ -808,21 +812,8 @@ body {
     margin-bottom: 15px;
 }
 
-.tts-btn {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: var(--primary);
-    color: #fff;
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
-    transition: .2s;
-}
-
-.tts-btn:hover {
-    background: var(--primary-dark);
+.tts-btn{
+    width:100%;
 }
 
 .tts-header{
