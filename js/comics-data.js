@@ -16,7 +16,7 @@ const comics = [
 
   images: [
     "assets/comics/komik2/IMG_1970.webp",
-    "assets/comics/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png",
+    "assets/comics/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png"
   ]
   },
   {
@@ -26,7 +26,7 @@ const comics = [
 
   images: [
     "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png",
-    "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png",
+    "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png"
   ]
   }
 ];
