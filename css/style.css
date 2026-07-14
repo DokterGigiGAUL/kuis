@@ -112,7 +112,7 @@ body {
 
     border:none;
     border-radius:12px;
-    padding:12px;
+    padding:10px;
 
     font-size:15px;
     font-weight:700;
@@ -168,6 +168,18 @@ body {
     width:100%;
 }
 
+.quiz-btn,
+.start-btn,
+.comic-btn,
+.tts-btn{
+    width:100%;
+}
+
+.quiz-btn-list,
+.comic-btn-list,
+.tts-btn-list{
+    width:25%;
+}
 /* ==========================
    KUIS
 ========================== */
@@ -185,11 +197,11 @@ body {
     box-shadow: var(--shadow);
 }
 
-.quiz-card:hover {
+.quiz-card:hover, comic-card:hover, tts-card:hover {
     transform: translateY(-4px);
 }
 
-.quiz-thumbnail{
+.quiz-thumbnail, tts-thumbnail{
     width:100%;
     aspect-ratio:3 / 2;
     object-fit:cover;
@@ -219,19 +231,6 @@ body {
     color: var(--text-light);
     margin-bottom: 15px;
 }
-
-.quiz-btn{
-    width:100%;
-}
-
-.quiz-btn-list{
-    width:25%;
-}
-
-.start-btn{
-    width:100%;
-}
-
 
 @media (max-width: 640px) {
 
@@ -530,9 +529,7 @@ body {
     }
     
     .quiz-card{
-
         flex:0 0 calc((100% - 24px) / 3.25);
-
     }
 
     .container{
@@ -544,19 +541,14 @@ body {
 
 /* Scrollbar */
 
-.quiz-grid::-webkit-scrollbar{
-
+.quiz-grid::-webkit-scrollbar, .comics-grid::-webkit-scrollbar, .tts-grid::-webkit-scrollbar{
     height:8px;
-
 }
 
-.quiz-grid::-webkit-scrollbar-thumb{
-
+.quiz-grid::-webkit-scrollbar-thumb, comics-grid::-webkit-scrollbar-thumb, tts-grid::-webkit-scrollbar-thumb {
     background:#c7c7c7;
     border-radius:10px;
-
 }
-
 
 /* ==========================
    KOMIK
@@ -622,14 +614,6 @@ body {
 
 .comic-content{
     padding:15px;
-}
-
-.comic-btn{
-    width:100%;
-}
-
-.comic-btn-list{
-    width:25%;
 }
 
 .comic-actions button{
@@ -719,15 +703,6 @@ body {
         overflow-y:hidden;
         scroll-behavior:smooth;
         padding-bottom:10px;
-    }
-
-    .comics-grid::-webkit-scrollbar{
-        height:8px;
-    }
-
-    .comics-grid::-webkit-scrollbar-thumb{
-        background:#c7c7c7;
-        border-radius:10px;
     }
 
     .comic-card{
@@ -820,18 +795,6 @@ body {
     overflow: hidden;
 }
 
-.tts-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0,0,0,.12);
-}
-
-.tts-thumb {
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
-    display: block;
-}
-
 .tts-content {
     padding: 15px;
 }
@@ -846,14 +809,6 @@ body {
     font-weight: 400;
     color: var(--text-light);
     margin-bottom: 15px;
-}
-
-.tts-btn{
-    width:100%;
-}
-
-.tts-btn-list{
-    width:25%;
 }
 
 .tts-header{
@@ -944,14 +899,7 @@ body {
         padding-bottom:10px;
     }
 
-    .tts-grid::-webkit-scrollbar{
-        height:8px;
-    }
 
-    .tts-grid::-webkit-scrollbar-thumb{
-        background:#c7c7c7;
-        border-radius:10px;
-    }
 
     .tts-card{
         flex:0 0 calc((100% - 24px) / 3.25);
