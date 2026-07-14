@@ -1,1 +1,94 @@
-a
+{
+  "id": "tts4",
+  "productId": "tts4",
+  "title": "TTS #4",
+  "premium": true,
+  "price": 5000,
+  "next": "tts5",
+  "words": [
+    {
+      "answer": "ENAMEL",
+      "clue": "Jaringan paling keras di tubuh.",
+      "row": 0,
+      "col": 1,
+      "direction": "across"
+    },
+    {
+      "answer": "ABSES",
+      "clue": "Kumpulan pus dari proses infeksi",
+      "row": 0,
+      "col": 3,
+      "direction": "down"
+    },
+      {
+      "answer": "EDEMA",
+      "clue": "Pembengkakan akibat penumpukan cairan.",
+      "row": 0,
+      "col": 5,
+      "direction": "down"
+    },
+    {
+      "answer": "UVULA",
+      "clue": "Jaringan kecil yang menggantung di belakang langit-langit lunak.",
+      "row": 0,
+      "col": 9,
+      "direction": "down"
+    },
+    {
+      "answer": "PLAK",
+      "clue": "Lapisan biofilm pada mahkota gigi.",
+      "row": 1,
+      "col": 0,
+      "direction": "down"
+    },
+    {
+      "answer": "MAKULA",
+      "clue": "Lesi yang menunjukkan perubahan warna jaringan.",
+      "row": 3,
+      "col": 5,
+      "direction": "across"
+    },
+    {
+      "answer": "KISTA",
+      "clue": "Kantung berisi cairan fisiologis.",
+      "row": 3,
+      "col": 7,
+      "direction": "down"
+    },
+    {
+      "answer": "KRUSTA",
+      "clue": "Lapisan keras yang terbentuk dari cairan tubuh mengering seperti darah, nanah, atau serum",
+      "row": 4,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "answer": "ULSER",
+      "clue": "Lesi primer/ sekunder berupa cerukan.",
+      "row": 4,
+      "col": 2,
+      "direction": "down"
+    },
+    {
+      "answer": "LESI",
+      "clue": "Istilah medis untuk kondisi kelainan pada jaringan.",
+      "row": 6,
+      "col": 0,
+      "direction": "across"
+    },
+    {
+      "answer": "ATRISI",
+      "clue": "Pengikisan lapisan email karena gesekan.",
+      "row": 6,
+      "col": 6,
+      "direction": "across"
+    },
+    {
+      "answer": "ATROFI",
+      "clue": "Penyusutan/ pengurangan jaringan tubuh.",
+      "row": 8,
+      "col": 0,
+      "direction": "across"
+    }
+  ]
+}
