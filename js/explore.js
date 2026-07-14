@@ -60,7 +60,9 @@ async function showQuiz() {
         const quiz =
             await response.json();
         const card =
-            template.content.cloneNode(true);
+    template.content.cloneNode(true);
+
+console.log(card.querySelector(".quiz-description"));
         card.querySelector(".quiz-thumbnail").src =
             quiz.thumbnail;
         card.querySelector(".quiz-title").textContent =
