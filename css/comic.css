@@ -16,6 +16,17 @@
     border-radius:12px;
 }
 
+#comic-image {
+    display: flex;
+    flex-direction: column;
+}
+
+#comic-image .comic-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .comic-navigation,
 .comic-actions{
     display:flex;
