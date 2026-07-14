@@ -1,7 +1,10 @@
 {
+  "id": "tts1",
+  "productId": "tts1",
   "title": "TTS #1",
-  "next": "tts2",
   "premium": false,
+  "price": 0,
+  "next": "tts2",
   "words": [
     {
       "answer": "ENAMEL",
