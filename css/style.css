@@ -201,7 +201,7 @@ body {
     transform: translateY(-4px);
 }
 
-.quiz-thumbnail, tts-thumbnail{
+.quiz-thumbnail, .tts-thumbnail{
     width:100%;
     aspect-ratio:3 / 2;
     object-fit:cover;
