@@ -117,7 +117,7 @@ function showComic() {
                 </div>
 
                 <button
-                    class="btn btn-outline-list comic-btn-list"
+                    class="btn btn-outline comic-btn-list"
                     onclick="location.href='komik.html?id=${comic.id}'">
                     Baca
                 </button>
