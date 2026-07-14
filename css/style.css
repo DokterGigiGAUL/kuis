@@ -147,6 +147,16 @@ body {
     border:1px solid var(--primary);
 }
 
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
 .btn:disabled{
     background:#ccc;
     color:#666;
