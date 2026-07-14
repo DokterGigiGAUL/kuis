@@ -5,11 +5,22 @@ const currentIndex = comics.findIndex(comic => comic.id === comicId);
 const currentComic = comics[currentIndex];
 
 const title = document.getElementById("comic-title");
-const image = document.getElementById("comic-image");
+const imageContainer = document.getElementById("comic-image");
 
 title.textContent = currentComic.title;
-image.src = currentComic.image;
-image.alt = currentComic.title;
+
+imageContainer.innerHTML = "";
+
+currentComic.images.forEach(src => {
+  const img = document.createElement("img");
+
+  img.src = src;
+  img.alt = currentComic.title;
+  img.className = "comic-image";
+  img.loading = "lazy";
+
+  imageContainer.appendChild(img);
+});
 
 const prevButton = document.getElementById("prev-comic");
 const nextButton = document.getElementById("next-comic");
