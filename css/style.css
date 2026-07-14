@@ -785,8 +785,9 @@ body {
 }
 
 .tts-soal {
+    display: flex;
+    justify-content: space-between;
     font-size: .85rem;
-    font-weight: 400;
     color: var(--text-light);
     margin-bottom: 15px;
 }
