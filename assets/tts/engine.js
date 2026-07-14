@@ -14,7 +14,8 @@ this.activeIndex=0;
 this.direction="across";
 this.hiddenInput=null;
 this.activeClue=null;
-
+this.activeClue=null;
+this.originalProgressHTML="";
 }
 
 async load(){
@@ -46,7 +47,8 @@ this.selectWord(this.puzzle.words[0]);
 
 document.getElementById("loader").style.display="none";
 document.getElementById("crossword-app").style.display="block";
-
+this.originalProgressHTML =
+document.querySelector(".progress-wrapper").innerHTML;
 }catch(err){
 
 document.getElementById("loader").innerHTML=`
@@ -660,7 +662,11 @@ document.getElementById("progress-text").textContent=persen+"%";
 }
 
 resetPuzzle(){
+const wrapper = document.querySelector(".progress-wrapper");
 
+if(wrapper.innerHTML !== this.originalProgressHTML){
+    wrapper.innerHTML = this.originalProgressHTML;
+}
 for(let r=0;r<this.rows;r++){
 
 for(let c=0;c<this.cols;c++){
