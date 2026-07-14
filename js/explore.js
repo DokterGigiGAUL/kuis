@@ -155,8 +155,6 @@ function showTTS() {
             tts.thumb;
         card.querySelector(".tts-list-title").textContent =
             tts.title;
-        card.querySelector(".tts-list-description").textContent =
-            tts.description;
         card.querySelector(".tts-list-soal").textContent =
             `${tts.soal} Soal`;
         card.querySelector(".tts-list-btn").onclick = () => {
