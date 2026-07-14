@@ -11,7 +11,7 @@ const ttsList = [
         id: 2,
         title: "TTS #2",
         soal: 11,
-        thumb: "assets/images/tts/IMG_4268.jpeg
+        thumb: "assets/images/tts/IMG_4268.jpeg"
     },
 
     {
