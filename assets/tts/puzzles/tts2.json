@@ -4,6 +4,7 @@
   "title": "TTS #2",
   "premium": false,
   "price": 0,
+  "next": "tts3",
   "words": [
     {
       "answer": "KAVITAS",
