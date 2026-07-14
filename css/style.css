@@ -217,6 +217,10 @@ body {
     width:100%;
 }
 
+.quiz-btn-list{
+    width:25%;
+}
+
 .start-btn{
     width:100%;
 }
@@ -617,6 +621,10 @@ body {
     width:100%;
 }
 
+.comic-btn-list{
+    width:25%;
+}
+
 .comic-actions button{
     margin: 30px 20px;
     border: 0px solid var(--primary);
@@ -835,6 +843,10 @@ body {
 
 .tts-btn{
     width:100%;
+}
+
+.tts-btn2{
+    width:25%;
 }
 
 .tts-header{
