@@ -32,7 +32,7 @@ const comics = [{
   productId: "komik3",
   premium: false,
   price: 0,
-    ,
+  
   title: "Hubungan Merokok dan Kanker Mulut",
   thumb: "assets/comics/komik3/IMG_1966.jpeg",
 
@@ -46,7 +46,7 @@ const comics = [{
   productId: "komik4",
   premium: true,
   price: 5000,
-    ,
+  
   title: "Gusi Berdarah Berbahaya Gak?",
   thumb: "assets/comics/komik3/IMG_1966.jpeg",
 
