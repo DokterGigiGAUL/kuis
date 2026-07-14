@@ -11,21 +11,21 @@ const ttsList = [
         id: 2,
         title: "TTS #2",
         soal: 11,
-        thumb: "assets/images/tts/IMG_4268.jpeg"
+        thumb: "assets/images/tts/IMG_4269.jpeg"
     },
 
     {
         id: 3,
         title: "TTS #3",
         soal: 12,
-        thumb: "assets/images/tts/Tts3.webp"
+        thumb: "assets/images/tts/IMG_4270.jpeg"
     },
 
     {
         id: 4,
         title: "TTS #4",
         soal: 20,
-        thumb: "assets/images/tts/Tts4.webp"
+        thumb: "assets/images/tts/IMG_4268.jpeg"
     }
 
 ];
