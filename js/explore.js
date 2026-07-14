@@ -69,7 +69,7 @@ async function showQuiz() {
             quiz.description;
 
         const button =
-            card.querySelector(".comic-btn");
+            card.querySelector(".quiz-btn-list");
         if (Storage.isFinished(quiz.id)) {
             button.textContent =
                 "Sudah Dikerjakan";
@@ -117,7 +117,7 @@ function showComic() {
                 </div>
 
                 <button
-                    class="start-btn comic-list-btn"
+                    class="btn btn-outline-list comic-btn-list"
                     onclick="location.href='komik.html?id=${comic.id}'">
                     Baca
                 </button>
@@ -157,7 +157,7 @@ function showTTS() {
             tts.title;
         card.querySelector(".tts-list-soal").textContent =
             `${tts.soal} Soal`;
-        card.querySelector(".tts-btn").onclick = () => {
+        card.querySelector(".tts-btn-list").onclick = () => {
             location.href =
                 `assets/tts/crossword.html?puzzle=tts${tts.id}`;
         };
