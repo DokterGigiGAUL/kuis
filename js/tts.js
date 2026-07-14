@@ -6,10 +6,10 @@ for (const tts of ttsList) {
     const card =
         template.content.cloneNode(true);
 
-    card.querySelector(".tts-thumb").src =
+    card.querySelector(".tts-thumbnail").src =
         tts.thumb;
 
-    card.querySelector(".tts-thumb").alt =
+    card.querySelector(".tts-thumbnail").alt =
         tts.title;
 
     card.querySelector(".tts-title").textContent =
