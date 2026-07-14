@@ -15,9 +15,6 @@ for (const tts of ttsList) {
     card.querySelector(".tts-title").textContent =
         tts.title;
 
-    card.querySelector(".tts-description").textContent =
-        tts.description;
-
     card.querySelector(".tts-soal").textContent =
         `✎ ${tts.soal} Soal`;
 
