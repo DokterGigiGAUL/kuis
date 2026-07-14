@@ -69,7 +69,7 @@ async function showQuiz() {
             quiz.description;
 
         const button =
-            card.querySelector(".quiz-btn-list");
+            card.querySelector(".quiz-btn");
         if (Storage.isFinished(quiz.id)) {
             button.textContent =
                 "Sudah Dikerjakan";
