@@ -84,7 +84,7 @@ function loadComics() {
         card.querySelector(".comic-episode").textContent =
             `EPISODE #${String(comic.id).padStart(3, "0")}`;
 
-        card.querySelector(".start-btn").onclick = () => {
+        card.querySelector(".comic-btn").onclick = () => {
             location.href = `komik.html?id=${comic.id}`;
         };
 
