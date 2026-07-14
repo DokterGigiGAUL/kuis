@@ -1,5 +1,8 @@
 {
   "id": "kuis3",
+  "productId": "kuis3",
+  "premium": false,
+  "price": 0,
   "title": "Kuis #3",
   "description": "Apa Diagnosisnya?",
   "thumbnail": "assets/images/IMG_3994.jpeg",
