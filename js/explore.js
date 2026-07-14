@@ -157,7 +157,7 @@ function showTTS() {
             tts.title;
         card.querySelector(".tts-list-soal").textContent =
             `${tts.soal} Soal`;
-        card.querySelector(".tts-list-btn").onclick = () => {
+        card.querySelector(".tts-btn").onclick = () => {
             location.href =
                 `assets/tts/crossword.html?puzzle=tts${tts.id}`;
         };
