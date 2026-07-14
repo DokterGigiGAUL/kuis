@@ -1,7 +1,9 @@
 {
+  "id": "tts2",
+  "productId": "tts2",
   "title": "TTS #2",
-  "next": "tts3",
   "premium": false,
+  "price": 0,
   "words": [
     {
       "answer": "KAVITAS",
