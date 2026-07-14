@@ -5,7 +5,7 @@ const ttsList = [
         title: "TTS #1",
         description: "Topik: Penyakit Mulut",
         soal: 12,
-        thumb: "assets/images/tts/Tts1.webp"
+        thumb: "assets/images/tts/IMG_4268.jpeg"
     },
 
     {
@@ -13,7 +13,7 @@ const ttsList = [
         title: "TTS #2",
         description: "Topik: Kedokteran Gigi",
         soal: 11,
-        thumb: "assets/images/tts/Tts2.webp"
+        thumb: "assets/images/tts/IMG_4268.jpeg
     },
 
     {
