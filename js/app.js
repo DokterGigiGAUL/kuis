@@ -98,8 +98,8 @@ function loadTTS() {
     for (const tts of ttsList.slice(0, 4)) {
         const card = ttsTemplate.content.cloneNode(true);
 
-        card.querySelector(".tts-thumb").src = tts.thumb;
-        card.querySelector(".tts-thumb").alt = tts.title;
+        card.querySelector(".tts-thumbnail").src = tts.thumb;
+        card.querySelector(".tts-thumbnail").alt = tts.title;
         card.querySelector(".tts-title").textContent = tts.title;
         card.querySelector(".tts-soal").textContent =
             `${tts.soal} Soal`;
