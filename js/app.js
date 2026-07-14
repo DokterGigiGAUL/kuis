@@ -101,7 +101,6 @@ function loadTTS() {
         card.querySelector(".tts-thumb").src = tts.thumb;
         card.querySelector(".tts-thumb").alt = tts.title;
         card.querySelector(".tts-title").textContent = tts.title;
-        card.querySelector(".tts-description").textContent = tts.description;
         card.querySelector(".tts-soal").textContent =
             `${tts.soal} Soal`;
 
