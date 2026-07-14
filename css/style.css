@@ -208,13 +208,15 @@ body {
     display:block;
 }
 
-.quiz-content {
-    padding: 15px;
+.quiz-content,
+.comic-content,
+.tts-content{
+    padding:15px;
 }
 
-.quiz-title {
-    font-size: 18px;
-    margin-bottom: 6px;
+.quiz-title, .comic-title, .tts-title{
+    font-size:18px;
+    margin-bottom:6px;
 }
 
 .quiz-description {
@@ -603,19 +605,6 @@ body {
     margin-bottom:6px;
 }
 
-.comic-title{
-    margin:0;
-    color:#000;
-    font-size:16px;
-    font-weight:700;
-    line-height:1.25;
-    text-shadow:0 2px 8px rgba(255,255,255,.35);
-}
-
-.comic-content{
-    padding:15px;
-}
-
 .comic-actions button{
     margin: 30px 20px;
     border: 0px solid var(--primary);
@@ -793,15 +782,6 @@ body {
     border-radius: var(--radius);
     box-shadow:var(--shadow);    
     overflow: hidden;
-}
-
-.tts-content {
-    padding: 15px;
-}
-
-.tts-title {
-    font-size: 18px;
-    margin-bottom: 6px;
 }
 
 .tts-soal {
