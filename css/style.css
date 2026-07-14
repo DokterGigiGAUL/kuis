@@ -205,10 +205,10 @@ body {
     gap:12px;
 }
 
-.back-btn{
+.quiz-back-btn{
     border:none;
-    background:white;
-    color:#2563eb;
+    background:#fff;
+    color:var(--primary);
     width:42px;
     height:42px;
     border-radius:50%;
@@ -947,15 +947,15 @@ body {
     padding:18px 24px;
     background:var(--primary);}
 
-.back-btn{
+.explore-back-btn{
     width:24px;
     height:24px;
     border:none;
     border-radius:50%;
     background:transparent;
+    color:#eef4ff;
     font-size:15px;
-    font-weight:bold;
-    color:#eeffff;
+    font-weight:700;
     cursor:pointer;
     box-shadow:0 2px 8px rgba(0,0,0,.08);
     flex-shrink:0;
