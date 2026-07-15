@@ -19,13 +19,19 @@ const comicTemplate = document.getElementById("comic-card-template");
 const ttsContainer = document.getElementById("tts-container");
 const ttsTemplate = document.getElementById("tts-card-template");
 
-const quizExplore = document.getElementById("quizExplore");
-const comicExplore = document.getElementById("comicExplore");
-const ttsExplore = document.getElementById("ttsExplore");
+const caseFiles = [
+    "case1",
+    "case2",
+    "case3"
+];
+
+const caseContainer = document.getElementById("case-container");
+const caseTemplate = document.getElementById("case-card-template");
 
 loadQuiz();
 loadComics();
 loadTTS();
+loadCases();
 
 async function loadQuiz() {
     try {
@@ -111,4 +117,46 @@ function loadTTS() {
 
         ttsContainer.appendChild(card);
     }
+}
+
+async function loadCases() {
+    if (!caseContainer) return;
+
+    try {
+
+        const responses = await Promise.all(
+            caseFiles.slice(0, 4).map(file =>
+                fetch(`assets/cases/${file}.json`)
+            )
+        );
+
+        const cases = await Promise.all(
+            responses.map(r => r.json())
+        );
+
+        cases.forEach(createCaseCard);
+
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+function createCaseCard(data) {
+
+    const clone = caseTemplate.content.cloneNode(true);
+
+    clone.querySelector(".case-thumbnail").src = data.image;
+
+    clone.querySelector(".case-title").textContent =
+        data.title;
+
+    clone.querySelector(".case-description").textContent =
+        `${data.gender}, ${data.age}`;
+
+    clone.querySelector(".case-btn").onclick = () => {
+        location.href = `case.html?case=case${data.id}`;
+    };
+
+    caseContainer.appendChild(clone);
+
 }
