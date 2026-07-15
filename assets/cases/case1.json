@@ -13,5 +13,6 @@
 
     "management": "Kortikosteroid topikal.",
 
-    "premium": true
+"premium": false,
+"price": 0
 }
