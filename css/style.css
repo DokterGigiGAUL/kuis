@@ -185,16 +185,20 @@ body {
 ========================== */
 
 .quiz-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /*display: grid;
+    grid-template-columns: repeat(2, 1fr);*/
+    display:flex;
     gap: 18px;
 }
 
 .quiz-card {
+    display:flex;
+    flex-direction:column;
     background: var(--card);
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
+    flex:0 0 calc(100%-24px)/2.25);
 }
 
 .quiz-card:hover, comic-card:hover, tts-card:hover {
@@ -557,8 +561,8 @@ body {
 ========================== */
 
 .comics-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
+    /*display:grid;
+    grid-template-columns:repeat(2,1fr);*/
     gap:18px;
 }
 
@@ -569,6 +573,7 @@ body {
     border-radius: var(--radius);
     box-shadow:var(--shadow);
     overflow:hidden;
+        flex:0 0 calc(100%-24px)/2.25);
 }
 
 .comic-cover{
@@ -769,8 +774,8 @@ body {
 ========================= */
 
 .tts-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
+    /*display:grid;
+    grid-template-columns:repeat(2, 1fr);*/
     gap:18px;
     margin-top:24px;
 }
@@ -782,6 +787,7 @@ body {
     border-radius: var(--radius);
     box-shadow:var(--shadow);    
     overflow: hidden;
+        flex:0 0 calc(100%-24px)/2.25);
 }
 
 .tts-soal {
