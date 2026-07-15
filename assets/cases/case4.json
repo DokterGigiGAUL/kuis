@@ -1,0 +1,18 @@
+{
+    "id": 4,
+    "title": "Kasus 4",
+
+    "image": "assets/images/cases/case1.jpg",
+
+    "gender": "Perempuan",
+    "age": "43 tahun",
+
+    "anamnesis": "Pasien datang dengan keluhan luka putih pada mukosa pipi kanan sejak tiga minggu yang lalu. Tidak terasa nyeri.",
+
+    "diagnosis": "ORAL LICHEN PLANUS",
+
+    "management": "Kortikosteroid topikal.",
+
+"premium": true,
+"price": 5000
+}
