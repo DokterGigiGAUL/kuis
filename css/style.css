@@ -189,6 +189,8 @@ body {
     grid-template-columns: repeat(2, 1fr);*/
     display:flex;
     gap: 18px;
+    overflow:hidden;
+    margin-right:-20px;
 }
 
 .quiz-card {
@@ -564,6 +566,8 @@ body {
     grid-template-columns:repeat(2,1fr);*/
     gap:18px;
     display:flex;
+    overflow:hidden;
+    margin-right:-20px;
 }
 
 .comic-card{
@@ -776,6 +780,8 @@ body {
     grid-template-columns:repeat(2, 1fr);*/
     gap:18px;
     display:flex;
+    overflow:hidden;
+    margin-right:-20px;
 }
 
 .tts-card {    
