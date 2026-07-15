@@ -196,7 +196,7 @@ body {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
-    flex:0 0 calc(100%-24px)/2.25);
+    flex:0 0 calc((100% - 24px) / 2.25);
 }
 
 .quiz-card:hover, comic-card:hover, tts-card:hover {
@@ -570,7 +570,7 @@ body {
     border-radius: var(--radius);
     box-shadow:var(--shadow);
     overflow:hidden;
-        flex:0 0 calc(100%-24px)/2.25);
+    flex:0 0 calc((100% - 24px) / 2.25);
 }
 
 .comic-cover{
@@ -783,7 +783,7 @@ body {
     border-radius: var(--radius);
     box-shadow:var(--shadow);    
     overflow: hidden;
-        flex:0 0 calc(100%-24px)/2.25);
+    flex:0 0 calc((100% - 24px) / 2.25);
 }
 
 .tts-soal {
