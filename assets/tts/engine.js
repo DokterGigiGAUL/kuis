@@ -222,6 +222,47 @@ board.appendChild(cell);
 }
 
 }
+
+backspace(){
+
+    if(!this.activeWord)return;
+
+    const r=this.direction==="across"
+        ?this.activeWord.row
+        :this.activeWord.row+this.activeIndex;
+
+    const c=this.direction==="across"
+        ?this.activeWord.col+this.activeIndex
+        :this.activeWord.col;
+
+    if(this.grid[r][c].letter){
+
+        this.grid[r][c].letter="";
+        this.cells[r][c]
+            .querySelector(".letter")
+            .textContent="";
+        this.checkAnswer();
+        return;
+
+    }
+
+    if(this.activeIndex===0)return;
+
+    this.activeIndex--;
+
+    if(this.direction==="across"){
+
+        this.currentCol--;
+
+    }else{
+
+        this.currentRow--;
+
+    }
+
+    this.highlightWord();
+
+}
   
 renderClues(){}
 
