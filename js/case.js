@@ -1,16 +1,25 @@
-const caseData = {
-    image: "assets/cases/images/case1.jpg",
-    gender: "Perempuan",
-    age: "43 tahun",
-    anamnesis: "Pasien datang dengan keluhan luka putih pada mukosa pipi kanan sejak tiga minggu yang lalu. Tidak terasa nyeri.",
-    diagnosis: "ORAL LICHEN PLANUS"
+const params = new URLSearchParams(window.location.search);
+const file = params.get("case") || "case1";
+
+const flashcard = document.getElementById("flashcard");
+
+fetch(`assets/cases/${file}.json`)
+    .then(response => response.json())
+    .then(data => {
+
+        document.getElementById("case-image").src = data.image;
+
+        document.getElementById("patient").textContent =
+            `👤 ${data.gender}, ${data.age}`;
+
+        document.getElementById("anamnesis").textContent =
+            data.anamnesis;
+
+        document.getElementById("diagnosis").textContent =
+            data.diagnosis;
+
+    });
+
+flashcard.onclick = () => {
+    flashcard.classList.toggle("flipped");
 };
-
-document.getElementById("case-image").src = caseData.image;
-document.getElementById("patient").textContent = `👤 ${caseData.gender}, ${caseData.age}`;
-document.getElementById("anamnesis").textContent = caseData.anamnesis;
-document.getElementById("diagnosis").textContent = caseData.diagnosis;
-
-document.getElementById("flashcard").addEventListener("click", () => {
-    document.getElementById("flashcard").classList.toggle("flipped");
-});
