@@ -370,7 +370,7 @@ selectCell(r,c){
 
     }
 
-    this.moveToNextEmptyCell();
+this.moveToNextEmptyCell(true);
 
     this.updateActiveClue();
 
@@ -507,7 +507,7 @@ nextCell(){
 
 }
 
-moveToNextEmptyCell(){
+moveToNextEmptyCell(fromClick=false){
 
     if(!this.activeWord) return;
 
@@ -538,20 +538,28 @@ moveToNextEmptyCell(){
     // Jika semua huruf setelah posisi sekarang sudah terisi,
     // berhenti di huruf terakhir.
 
-    const last = this.activeWord.answer.length-1;
-
-    this.activeIndex = last;
-
-    this.currentRow = this.direction==="across"
-        ? this.activeWord.row
-        : this.activeWord.row + last;
-
-    this.currentCol = this.direction==="across"
-        ? this.activeWord.col + last
-        : this.activeWord.col;
+if(fromClick){
 
     this.clearHighlight();
     this.highlightWord();
+    return;
+
+}
+
+const last = this.activeWord.answer.length-1;
+
+this.activeIndex = last;
+
+this.currentRow = this.direction==="across"
+    ? this.activeWord.row
+    : this.activeWord.row + last;
+
+this.currentCol = this.direction==="across"
+    ? this.activeWord.col + last
+    : this.activeWord.col;
+
+this.clearHighlight();
+this.highlightWord();
 
 }
 
