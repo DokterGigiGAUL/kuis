@@ -74,8 +74,7 @@ selectWord(word){
     this.currentRow=word.row;
     this.currentCol=word.col;
 
-    this.clearHighlight();
-    this.highlightWord();
+    this.moveToNextEmptyCell();
 
     this.updateActiveClue();
 
@@ -335,48 +334,69 @@ window.addEventListener("orientationchange",()=>{
 
 selectCell(r,c){
 
-if(
-this.currentRow===r &&
-this.currentCol===c
-){
+    const words=this.getWordAtCell(r,c);
 
-this.direction=this.direction==="across"
-?"down"
-:"across";
+    const acrossHas=this.hasEmptyCell(words.across);
+    const downHas=this.hasEmptyCell(words.down);
 
-}else{
+    // Klik pada kotak yang sama
+    if(this.currentRow===r && this.currentCol===c){
 
-this.currentRow=r;
-this.currentCol=c;
+        if(acrossHas && downHas){
 
-}
+            this.direction=
+                this.direction==="across"
+                ?"down"
+                :"across";
 
-this.activeWord=this.findWord(
-this.currentRow,
-this.currentCol,
-this.direction
-);
+        }
 
-if(!this.activeWord){
+    }
 
-this.direction=this.direction==="across"
-?"down"
-:"across";
+    // Salah satu arah sudah penuh
+    else{
 
-this.activeWord=this.findWord(
-this.currentRow,
-this.currentCol,
-this.direction
-);
+        if(acrossHas && !downHas){
 
-}
+            this.direction="across";
 
-this.clearHighlight();
-this.highlightWord();
+        }else if(!acrossHas && downHas){
 
-this.updateActiveClue();
+            this.direction="down";
 
-this.hiddenInput.focus();
+        }
+
+    }
+
+    this.currentRow=r;
+    this.currentCol=c;
+
+    this.activeWord=this.findWord(
+        r,
+        c,
+        this.direction
+    );
+
+    if(!this.activeWord){
+
+        this.direction=
+            this.direction==="across"
+            ?"down"
+            :"across";
+
+        this.activeWord=this.findWord(
+            r,
+            c,
+            this.direction
+        );
+
+    }
+
+    this.moveToNextEmptyCell();
+
+    this.updateActiveClue();
+
+    this.hiddenInput.focus();
 
 }
 
@@ -426,6 +446,39 @@ if(r===row && c===col)return true;
 return false;
 
 })||null;
+
+}
+
+hasEmptyCell(word){
+
+    if(!word) return false;
+
+    for(let i=0;i<word.answer.length;i++){
+
+        const r = word.direction==="across"
+            ? word.row
+            : word.row+i;
+
+        const c = word.direction==="across"
+            ? word.col+i
+            : word.col;
+
+        if(this.grid[r][c].letter===""){
+            return true;
+        }
+
+    }
+
+    return false;
+
+}
+
+getWordAtCell(row,col){
+
+    return{
+        across:this.findWord(row,col,"across"),
+        down:this.findWord(row,col,"down")
+    };
 
 }
 
@@ -499,62 +552,141 @@ this.nextCell();
 
 nextCell(){
 
-if(this.activeIndex>=this.activeWord.answer.length-1)return;
+    if(!this.activeWord) return;
 
-this.activeIndex++;
+    if(this.activeIndex < this.activeWord.answer.length-1){
+        this.activeIndex++;
+    }
 
-if(this.direction==="across"){
-
-this.currentCol++;
-
-}else{
-
-this.currentRow++;
+    this.moveToNextEmptyCell();
 
 }
 
-this.highlightWord();
+moveToNextEmptyCell(){
+
+    if(!this.activeWord) return;
+
+    const start = this.activeIndex;
+
+    for(let i=start; i<this.activeWord.answer.length; i++){
+
+        const r = this.direction==="across"
+            ? this.activeWord.row
+            : this.activeWord.row + i;
+
+        const c = this.direction==="across"
+            ? this.activeWord.col + i
+            : this.activeWord.col;
+
+        if(this.grid[r][c].letter===""){
+
+            this.activeIndex = i;
+            this.currentRow = r;
+            this.currentCol = c;
+
+            this.clearHighlight();
+            this.highlightWord();
+            return;
+        }
+    }
+
+    // Jika semua huruf setelah posisi sekarang sudah terisi,
+    // berhenti di huruf terakhir.
+
+    const last = this.activeWord.answer.length-1;
+
+    this.activeIndex = last;
+
+    this.currentRow = this.direction==="across"
+        ? this.activeWord.row
+        : this.activeWord.row + last;
+
+    this.currentCol = this.direction==="across"
+        ? this.activeWord.col + last
+        : this.activeWord.col;
+
+    this.clearHighlight();
+    this.highlightWord();
+
+}
+
+moveToPreviousEmptyCell(){
+
+    if(!this.activeWord) return;
+
+    const start = this.activeIndex;
+
+    for(let i=start; i>=0; i--){
+
+        const r = this.direction==="across"
+            ? this.activeWord.row
+            : this.activeWord.row+i;
+
+        const c = this.direction==="across"
+            ? this.activeWord.col+i
+            : this.activeWord.col;
+
+        if(this.grid[r][c].letter===""){
+
+            this.activeIndex=i;
+            this.currentRow=r;
+            this.currentCol=c;
+
+            this.clearHighlight();
+            this.highlightWord();
+            return;
+        }
+
+    }
+
+    // Semua huruf sebelum posisi sekarang sudah terisi.
+    // Berhenti di huruf pertama.
+
+    this.activeIndex=0;
+
+    this.currentRow=this.activeWord.row;
+    this.currentCol=this.activeWord.col;
+
+    this.clearHighlight();
+    this.highlightWord();
 
 }
 
 backspace(){
 
-if(!this.activeWord)return;
+    if(!this.activeWord) return;
 
-const r=this.direction==="across"
-?this.activeWord.row
-:this.activeWord.row+this.activeIndex;
+    const r=this.direction==="across"
+        ?this.activeWord.row
+        :this.activeWord.row+this.activeIndex;
 
-const c=this.direction==="across"
-?this.activeWord.col+this.activeIndex
-:this.activeWord.col;
+    const c=this.direction==="across"
+        ?this.activeWord.col+this.activeIndex
+        :this.activeWord.col;
 
-if(this.grid[r][c].letter){
+    // Jika kotak aktif berisi huruf, hapus saja.
 
-this.grid[r][c].letter="";
-this.cells[r][c]
-.querySelector(".letter")
-.textContent="";
-this.checkAnswer();
-return;
+    if(this.grid[r][c].letter){
 
-}
+        this.grid[r][c].letter="";
 
-if(this.activeIndex===0)return;
+        this.cells[r][c]
+            .querySelector(".letter")
+            .textContent="";
 
-this.activeIndex--;
+        this.checkAnswer();
+        return;
+    }
 
-if(this.direction==="across"){
+    // Cari kotak kosong sebelumnya.
 
-this.currentCol--;
+    if(this.activeIndex>0){
 
-}else{
+        this.activeIndex--;
 
-this.currentRow--;
+        this.moveToPreviousEmptyCell();
 
-}
-
-this.highlightWord();
+    }
 
 }
 
