@@ -5,7 +5,7 @@
   "price": 0,
   "title": "Kuis #3",
   "description": "Apa Diagnosisnya?",
-  "thumbnail": "assets/images/IMG_3994.jpeg",
+  "thumbnail": "assets/images/kuis/thumbnail-kuis#3.jpeg",
   "timeLimit": 600,
   "questions": [
     {
