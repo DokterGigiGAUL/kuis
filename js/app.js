@@ -22,7 +22,8 @@ const ttsTemplate = document.getElementById("tts-card-template");
 const caseFiles = [
     "case1",
     "case2",
-    "case3"
+    "case3",
+    "case4"
 ];
 
 const caseContainer = document.getElementById("case-container");
