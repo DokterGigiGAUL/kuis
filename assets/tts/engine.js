@@ -74,10 +74,11 @@ selectWord(word){
     this.currentRow=word.row;
     this.currentCol=word.col;
 
-    this.moveToNextEmptyCell();
-
+    this.clearHighlight();
+    this.highlightWord();
+    
     this.updateActiveClue();
-
+    
     this.hiddenInput.focus();
 
 }
@@ -370,11 +371,12 @@ selectCell(r,c){
 
     }
 
-this.moveToNextEmptyCell(true);
+this.clearHighlight();
+this.highlightWord();
 
-    this.updateActiveClue();
+this.updateActiveClue();
 
-    this.hiddenInput.focus();
+this.hiddenInput.focus();
 
 }
 
@@ -497,149 +499,21 @@ this.nextCell();
 
 nextCell(){
 
-    if(!this.activeWord) return;
+    if(this.activeIndex>=this.activeWord.answer.length-1)return;
 
-    if(this.activeIndex < this.activeWord.answer.length-1){
-        this.activeIndex++;
+    this.activeIndex++;
+
+    if(this.direction==="across"){
+
+        this.currentCol++;
+
+    }else{
+
+        this.currentRow++;
+
     }
 
-    this.moveToNextEmptyCell();
-
-}
-
-moveToNextEmptyCell(fromClick=false){
-
-    if(!this.activeWord) return;
-
-    const start = this.activeIndex;
-
-    for(let i=start; i<this.activeWord.answer.length; i++){
-
-        const r = this.direction==="across"
-            ? this.activeWord.row
-            : this.activeWord.row + i;
-
-        const c = this.direction==="across"
-            ? this.activeWord.col + i
-            : this.activeWord.col;
-
-        if(this.grid[r][c].letter===""){
-
-            this.activeIndex = i;
-            this.currentRow = r;
-            this.currentCol = c;
-
-            this.clearHighlight();
-            this.highlightWord();
-            return;
-        }
-    }
-
-    // Jika semua huruf setelah posisi sekarang sudah terisi,
-    // berhenti di huruf terakhir.
-
-if(fromClick){
-
-    this.clearHighlight();
     this.highlightWord();
-    return;
-
-}
-
-const last = this.activeWord.answer.length-1;
-
-this.activeIndex = last;
-
-this.currentRow = this.direction==="across"
-    ? this.activeWord.row
-    : this.activeWord.row + last;
-
-this.currentCol = this.direction==="across"
-    ? this.activeWord.col + last
-    : this.activeWord.col;
-
-this.clearHighlight();
-this.highlightWord();
-
-}
-
-moveToPreviousEmptyCell(){
-
-    if(!this.activeWord) return;
-
-    const start = this.activeIndex;
-
-    for(let i=start; i>=0; i--){
-
-        const r = this.direction==="across"
-            ? this.activeWord.row
-            : this.activeWord.row+i;
-
-        const c = this.direction==="across"
-            ? this.activeWord.col+i
-            : this.activeWord.col;
-
-        if(this.grid[r][c].letter===""){
-
-            this.activeIndex=i;
-            this.currentRow=r;
-            this.currentCol=c;
-
-            this.clearHighlight();
-            this.highlightWord();
-            return;
-        }
-
-    }
-
-    // Semua huruf sebelum posisi sekarang sudah terisi.
-    // Berhenti di huruf pertama.
-
-    this.activeIndex=0;
-
-    this.currentRow=this.activeWord.row;
-    this.currentCol=this.activeWord.col;
-
-    this.clearHighlight();
-    this.highlightWord();
-
-}
-
-backspace(){
-
-    if(!this.activeWord) return;
-
-    const r=this.direction==="across"
-        ?this.activeWord.row
-        :this.activeWord.row+this.activeIndex;
-
-    const c=this.direction==="across"
-        ?this.activeWord.col+this.activeIndex
-        :this.activeWord.col;
-
-    // Jika kotak aktif berisi huruf, hapus saja.
-
-    if(this.grid[r][c].letter){
-
-        this.grid[r][c].letter="";
-
-        this.cells[r][c]
-            .querySelector(".letter")
-            .textContent="";
-
-        this.checkAnswer();
-        return;
-    }
-
-    // Cari kotak kosong sebelumnya.
-
-    if(this.activeIndex>0){
-
-        this.activeIndex--;
-
-        this.moveToPreviousEmptyCell();
-
-    }
 
 }
 
