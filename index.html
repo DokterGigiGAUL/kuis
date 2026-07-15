@@ -51,6 +51,17 @@
       <section id="tts-container" class="tts-grid">
         <!-- Card TTS akan dibuat otomatis oleh app.js -->
       </section>
+      
+      <div class="section-header" style="margin-top: 40px;">
+        <h2>Kartu Kasus</h2>
+        <a id="caseExplore" class="section-link" href="explore.html?tab=case">
+          Kasus Lainnya →
+        </a>
+      </div>
+
+<section id="case-container" class="quiz-grid">
+  <!-- Card Kartu Kasus -->
+</section>
     </main>
 
     <!-- Template Card -->
@@ -115,6 +126,31 @@
         </div>
       </div>
     </template>
+    
+    <template id="case-card-template">
+  <div class="quiz-card">
+    <img
+      class="case-thumbnail"
+      src=""
+      alt="Thumbnail Kasus"
+      loading="lazy"
+      decoding="async"
+    />
+
+    <div class="quiz-content">
+      <h2 class="case-title"></h2>
+      <p class="case-description"></p>
+
+      <div class="quiz-info">
+        <span>🃏 Flashcard</span>
+      </div>
+
+      <button class="btn btn-primary case-btn">
+        Buka Kartu
+      </button>
+    </div>
+  </div>
+</template>
 
     <script src="js/storage.js"></script>
     <script src="js/comics-data.js"></script>
