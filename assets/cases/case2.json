@@ -1,17 +1,16 @@
 {
-    "id": 2,
-    "title": "Kasus 2",
+  "id": 2,
+  "title": "Kasus #2",
+  "image": "assets/images/cases/case1.jpg",
 
-    "image": "assets/images/cases/case1.jpg",
+  "gender": "Laki-laki",
+  "age": "35 tahun",
 
-    "gender": "Perempuan",
-    "age": "43 tahun",
+  "anamnesis": "Pasien mengeluhkan benjolan pada bibir bawah sejak satu bulan yang lalu. Benjolan tidak nyeri dan ukurannya berubah-ubah.",
 
-    "anamnesis": "Pasien datang dengan keluhan luka putih pada mukosa pipi kanan sejak tiga minggu yang lalu. Tidak terasa nyeri.",
+  "diagnosis": "MUCOCELE",
 
-    "diagnosis": "ORAL LICHEN PLANUS",
+  "management": "Dummy tatalaksana.",
 
-    "management": "Kortikosteroid topikal.",
-
-    "premium": true
+  "premium": true
 }
