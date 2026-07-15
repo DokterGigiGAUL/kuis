@@ -10,7 +10,7 @@ fetch(`assets/cases/${file}.json`)
         document.getElementById("case-image").src = data.image;
 
         document.getElementById("patient").textContent =
-            `👤 ${data.gender}, ${data.age}`;
+            `${data.gender}, ${data.age}`;
 
         document.getElementById("anamnesis").textContent =
             data.anamnesis;
