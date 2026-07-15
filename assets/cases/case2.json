@@ -12,5 +12,6 @@
 
   "management": "Dummy tatalaksana.",
 
-  "premium": true
+"premium": false,
+"price": 0
 }
