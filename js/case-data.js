@@ -1,5 +1,6 @@
 const caseFiles = [
     "case1",
     "case2",
-    "case3"
+    "case3",
+    "case4"
 ];
