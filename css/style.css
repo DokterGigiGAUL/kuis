@@ -217,7 +217,8 @@ body {
 }
 
 .quiz-title, .comic-title, .tts-title{
-    font-size:18px;
+    font-size:16px;
+    line-height:1.15;
     margin-bottom:6px;
 }
 
@@ -231,7 +232,7 @@ body {
 .quiz-info {
     display: flex;
     justify-content: space-between;
-    font-size: .85rem;
+    font-size: .75rem;
     color: var(--text-light);
     margin-bottom: 15px;
 }
