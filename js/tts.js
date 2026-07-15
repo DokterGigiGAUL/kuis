@@ -1,28 +1,5 @@
-const template =
-    document.getElementById("tts-card-template");
+document.addEventListener("DOMContentLoaded",()=>{
 
-for (const tts of ttsList) {
+engine.load();
 
-    const card =
-        template.content.cloneNode(true);
-
-    card.querySelector(".tts-thumbnail").src =
-        tts.thumb;
-
-    card.querySelector(".tts-thumbnail").alt =
-        tts.title;
-
-    card.querySelector(".tts-title").textContent =
-        tts.title;
-
-    card.querySelector(".tts-soal").textContent =
-        `✎ ${tts.soal} Soal`;
-
-    card.querySelector(".tts-btn").onclick = () => {
-
-        location.href =
-            `assets/tts/tts${tts.id}.html`;
-
-    };
-
-}
+});
