@@ -10,12 +10,9 @@
     width:100%;
     max-width:420px;
     aspect-ratio:4/5;
-
     position:relative;
-
     transform-style:preserve-3d;
-    transition:transform .6s ease;
-
+    transition:.6s;
     cursor:pointer;
 }
 
@@ -26,28 +23,20 @@
 .card-face{
     position:absolute;
     inset:0;
-
     background:#fff;
-    border-radius:18px;
-
+    border-radius:20px;
     overflow:hidden;
-
     backface-visibility:hidden;
-
-    box-shadow:0 8px 24px rgba(0,0,0,.12);
-
     display:flex;
     flex-direction:column;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .back{
     transform:rotateY(180deg);
-
     justify-content:center;
     align-items:center;
-
-    padding:30px;
-    text-align:center;
+    padding:25px;
 }
 
 .case-image{
@@ -63,13 +52,12 @@
 .case-content{
     flex:1;
     padding:18px;
-
     display:flex;
     flex-direction:column;
 }
 
 .patient{
-    font-weight:600;
+    font-weight:bold;
     margin-bottom:12px;
 }
 
@@ -84,15 +72,14 @@
 
 .tap-hint{
     text-align:center;
-    font-size:.9rem;
     color:#888;
     margin-top:15px;
 }
 
 .diagnosis-title{
     font-size:18px;
-    color:#777;
-    margin-bottom:16px;
+    color:#666;
+    margin-bottom:15px;
 }
 
 .diagnosis-name{
