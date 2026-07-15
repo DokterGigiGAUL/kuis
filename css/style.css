@@ -171,13 +171,15 @@ body {
 .quiz-btn,
 .start-btn,
 .comic-btn,
-.tts-btn{
+.tts-btn, 
+.case-btn{
     width:100%;
 }
 
 .quiz-btn-list,
 .comic-btn-list,
-.tts-btn-list{
+.tts-btn-list,
+.case-btn-list{
     width:25%;
 }
 /* ==========================
