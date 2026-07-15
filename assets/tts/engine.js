@@ -334,59 +334,37 @@ window.addEventListener("orientationchange",()=>{
 
 selectCell(r,c){
 
-    const words=this.getWordAtCell(r,c);
+    if(
+        this.currentRow===r &&
+        this.currentCol===c
+    ){
 
-    const acrossHas=this.hasEmptyCell(words.across);
-    const downHas=this.hasEmptyCell(words.down);
+        this.direction=this.direction==="across"
+            ?"down"
+            :"across";
 
-    // Klik pada kotak yang sama
-    if(this.currentRow===r && this.currentCol===c){
+    }else{
 
-        if(acrossHas && downHas){
-
-            this.direction=
-                this.direction==="across"
-                ?"down"
-                :"across";
-
-        }
+        this.currentRow=r;
+        this.currentCol=c;
 
     }
-
-    // Salah satu arah sudah penuh
-    else{
-
-        if(acrossHas && !downHas){
-
-            this.direction="across";
-
-        }else if(!acrossHas && downHas){
-
-            this.direction="down";
-
-        }
-
-    }
-
-    this.currentRow=r;
-    this.currentCol=c;
 
     this.activeWord=this.findWord(
-        r,
-        c,
+        this.currentRow,
+        this.currentCol,
         this.direction
     );
 
     if(!this.activeWord){
 
-        this.direction=
-            this.direction==="across"
+        this.direction=this.direction==="across"
             ?"down"
             :"across";
 
         this.activeWord=this.findWord(
-            r,
-            c,
+            this.currentRow,
+            this.currentCol,
             this.direction
         );
 
@@ -446,39 +424,6 @@ if(r===row && c===col)return true;
 return false;
 
 })||null;
-
-}
-
-hasEmptyCell(word){
-
-    if(!word) return false;
-
-    for(let i=0;i<word.answer.length;i++){
-
-        const r = word.direction==="across"
-            ? word.row
-            : word.row+i;
-
-        const c = word.direction==="across"
-            ? word.col+i
-            : word.col;
-
-        if(this.grid[r][c].letter===""){
-            return true;
-        }
-
-    }
-
-    return false;
-
-}
-
-getWordAtCell(row,col){
-
-    return{
-        across:this.findWord(row,col,"across"),
-        down:this.findWord(row,col,"down")
-    };
 
 }
 
