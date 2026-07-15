@@ -185,12 +185,10 @@ body {
 ========================== */
 
 .quiz-grid {
-    /*display: grid;
-    grid-template-columns: repeat(2, 1fr);*/
-    display:flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 18px;
-    overflow:hidden;
-    margin-right:-20px;
+    
 }
 
 .quiz-card {
@@ -198,7 +196,6 @@ body {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
-    flex:0 0 calc((100% - 24px) / 2.25);
 }
 
 .quiz-card:hover, comic-card:hover, tts-card:hover {
@@ -562,12 +559,10 @@ body {
 ========================== */
 
 .comics-grid{
-    /*display:grid;
-    grid-template-columns:repeat(2,1fr);*/
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
     gap:18px;
-    display:flex;
-    overflow:hidden;
-    margin-right:-20px;
+    
 }
 
 .comic-card{
@@ -575,7 +570,6 @@ body {
     border-radius: var(--radius);
     box-shadow:var(--shadow);
     overflow:hidden;
-    flex:0 0 calc((100% - 24px) / 2.25);
 }
 
 .comic-cover{
@@ -776,12 +770,9 @@ body {
 ========================= */
 
 .tts-grid{
-    /*display:grid;
-    grid-template-columns:repeat(2, 1fr);*/
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
     gap:18px;
-    display:flex;
-    overflow:hidden;
-    margin-right:-20px;
 }
 
 .tts-card {    
@@ -789,7 +780,6 @@ body {
     border-radius: var(--radius);
     box-shadow:var(--shadow);    
     overflow: hidden;
-    flex:0 0 calc((100% - 24px) / 2.25);
 }
 
 .tts-soal {
