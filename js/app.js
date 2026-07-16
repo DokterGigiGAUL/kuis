@@ -83,7 +83,7 @@ function loadTTS() {
 
         card.querySelector(".tts-btn").onclick = () => {
             location.href =
-                `assets/tts/crossword.html?puzzle=tts${tts.id}`;
+                `tts.html?puzzle=tts${tts.id}`;
         };
 
         ttsContainer.appendChild(card);
