@@ -2,6 +2,7 @@
     "id": 4,
     "title": "Kasus 4",
     "image": "assets/images/cases/case4.jpg",
+    "description": "Apa diagnosisnya?",
     "gender": "Laki-laki",
     "age": "23 tahun",
     "anamnesis": "Pasien datang dengan keluhan pembengkakan di gigi geraham bungsu kanan sejak dua minggu yang lalu. Terasa nyeri saat makan.",
