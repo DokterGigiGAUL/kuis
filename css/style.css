@@ -946,6 +946,60 @@ body {
 
 }
 
+
+/* ==========================
+   EXPLORE - LIST CASE
+========================== */
+
+.case-list-card{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    background:#fff;
+    border-radius:16px;
+
+    padding:12px;
+    margin-bottom:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.case-list-thumb{
+    width:84px;
+    height:84px;
+
+    border-radius:12px;
+    object-fit:cover;
+
+    flex-shrink:0;
+}
+
+.case-list-info{
+    flex:1;
+    min-width:0;
+}
+
+.case-list-title{
+    font-size:17px;
+    line-height:1.35;
+    font-weight:700;
+}
+
+.case-list-description{
+    margin-top:6px;
+    font-size:14px;
+    color:var(--text-light);
+}
+
+.case-btn-list{
+    width:88px;
+    margin:0;
+    padding:10px 0;
+
+    flex-shrink:0;
+}
+
 /* =========================
    EXPLORE
 ========================= */
