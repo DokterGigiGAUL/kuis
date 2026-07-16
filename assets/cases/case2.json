@@ -2,6 +2,7 @@
   "id": 2,
   "title": "Kasus #2",
   "image": "assets/images/cases/case2.jpg",
+  "description": "Apa diagnosisnya?",
   "gender": "Laki-laki",
   "age": "35 tahun",
   "anamnesis": "Pasien mengeluhkan benjolan pada bibir bawah sejak satu bulan yang lalu. Benjolan tidak nyeri dan ukurannya berubah-ubah.",
