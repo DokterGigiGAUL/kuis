@@ -25,7 +25,7 @@ try{
 const params=new URLSearchParams(location.search);
 const file=params.get("puzzle")||"tts1";
 
-const res=await fetch(`puzzles/${file}.json`);
+const res=await fetch(`${file}.json`);
 
 if(!res.ok){
 throw new Error("Tidak ada lagi teka-teki silang gratis");
