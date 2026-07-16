@@ -2,16 +2,11 @@
   "id": 3,
   "title": "Kasus #3",
   "image": "assets/images/cases/case3.jpg",
-
   "gender": "Perempuan",
   "age": "52 tahun",
-
   "anamnesis": "Pasien datang dengan keluhan bercak putih pada sisi lidah yang tidak dapat dikerok dan telah dirasakan selama dua bulan.",
-
   "diagnosis": "LEUKOPLAKIA",
-
   "management": "Dummy tatalaksana.",
-
-"premium": false,
-"price": 0
+  "premium": false,
+  "price": 0
 }
