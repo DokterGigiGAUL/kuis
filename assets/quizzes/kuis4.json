@@ -1,0 +1,56 @@
+{
+  "id": "kuis4",
+  "productId": "kuis4",
+  "premium": false,
+  "price": 0,
+  "title": "Kuis #4",
+  "description": "Uji pengetahuanmu",
+  "thumbnail": "assets/images/kuis/thumbnail-kuis1.jpeg",
+  "timeLimit": 600,
+  "questions": [
+    {
+      "q": "Lesi fibroma iritasi (irritation fibroma) pada mukosa mulut secara histopatologis merupakan?",
+      "options": ["Neoplasma ganas jaringan ikat", "Hiperplasia jaringan ikat fibrosa reaktif akibat iritasi kronis", "Tumor kelenjar saliva minor", "Lesi vaskular kongenital"],
+      "answer": 1,
+      "explanation": "Fibroma iritasi adalah lesi reaktif (bukan neoplasma sejati) berupa hiperplasia jaringan ikat fibrosa sebagai respons terhadap trauma/iritasi kronis berulang, seperti gigitan pipi atau iritasi gigi tiruan."
+    },
+    {
+      "q": "Angioedema pada regio orofasial yang muncul mendadak dan disertai sesak napas merupakan kondisi kegawatdaruratan karena risiko utama?",
+      "options": ["Perdarahan masif intraoral", "Obstruksi jalan napas akibat pembengkakan laring/faring", "Penyebaran infeksi ke ruang fasial dalam", "Syok anafilaktik akibat reaksi obat semata"],
+      "answer": 1,
+      "explanation": "Angioedema yang melibatkan lidah, faring, atau laring dapat menyebabkan obstruksi jalan napas akut yang mengancam jiwa, sehingga memerlukan penanganan kegawatdaruratan segera termasuk proteksi jalan napas."
+    },
+    {
+      "q": "Manifestasi oral primer pada infeksi HIV yang paling sering dan merupakan salah satu tanda awal imunosupresi adalah?",
+      "options": ["Sarkoma Kaposi", "Oral hairy leukoplakia", "Kandidiasis oral", "Linear gingival erythema"],
+      "answer": 2,
+      "explanation": "Kandidiasis oral (terutama tipe pseudomembranosa) adalah manifestasi oral paling umum pada pasien HIV dan sering menjadi penanda awal imunosupresi, terutama saat CD4 < 200 sel/μL. Oral hairy leukoplakia dan linear gingival erythema juga terkait HIV namun lebih spesifik; Sarkoma Kaposi berhubungan dengan imunosupresi lanjut."
+    },
+    {
+      "q": "Seorang anak 6 tahun demam 39°C, rewel, tidak mau makan, terdapat vesikel multipel yang cepat pecah menjadi ulser di mukosa labial, gingiva eritematosa generalisata, dan limfadenopati submandibular. Diagnosis yang tepat adalah?",
+      "options": ["Herpangina", "Hand, Foot and Mouth Disease", "Stomatitis aftosa rekuren tipe mayor", "Primary herpetic gingivostomatitis"],
+      "answer": 3,
+      "explanation": "Primary herpetic gingivostomatitis akibat HSV-1 khas pada anak dengan gejala prodromal sistemik (demam, malaise), gingivitis akut eritematosa generalisata, vesikel yang cepat pecah menjadi ulser multipel di seluruh mukosa mulut termasuk keratin, dan limfadenopati servikal. Herpangina terbatas di orofaring posterior; HFMD disertai lesi di tangan dan kaki."
+    },
+    {
+      "q": "Median rhomboid glossitis paling sering berhubungan dengan infeksi Candida albicans.",
+      "options": [
+        "Benar",
+        "Salah"
+      ],
+      "answer": 0,
+      "explanation": "Median rhomboid glossitis saat ini diyakini berkaitan dengan infeksi Candida kronis, meskipun dahulu dianggap sebagai kelainan perkembangan."
+    },
+    {
+      "q": "Seorang pria 56 tahun datang dengan pembengkakan keras pada dasar mulut yang terasa nyeri terutama saat makan. Saat dipalpasi sepanjang dasar mulut teraba massa keras kecil pada jalur duktus Wharton. Diagnosis yang paling tepat adalah?",
+      "options": [
+        "Ranula",
+        "Sialolitiasis glandula submandibularis",
+        "Sialadenosis",
+        "Mucocele"
+      ],
+      "answer": 1,
+      "explanation": "Sialolitiasis pada glandula submandibularis paling sering terjadi karena saliva yang lebih kental dan jalur duktus Wharton yang panjang. Nyeri dan pembengkakan biasanya memburuk saat makan akibat hambatan aliran saliva."
+    }
+   ]
+}
