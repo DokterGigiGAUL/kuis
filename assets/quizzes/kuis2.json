@@ -4,7 +4,7 @@
   "premium": false,
   "price": 0,
   "title": "Kuis #2",
-  "description": "Tantang pengetahuanmu",
+  "description": "Uji pengetahuanmu",
   "thumbnail": "assets/images/kuis/thumbnail-kuis2.jpeg",
   "timeLimit": 600,
   "questions": [
