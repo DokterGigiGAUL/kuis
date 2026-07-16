@@ -204,7 +204,7 @@ body {
     transform: translateY(-4px);
 }
 
-.quiz-thumbnail, .tts-thumbnail{
+.quiz-thumbnail, .tts-thumbnail, .case-thumbnail{
     width:100%;
     aspect-ratio:3 / 2;
     object-fit:cover;
@@ -213,7 +213,8 @@ body {
 
 .quiz-content,
 .comic-content,
-.tts-content{
+.tts-content,
+.case-content{
     padding:15px;
 }
 
