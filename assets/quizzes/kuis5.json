@@ -1,0 +1,118 @@
+{
+  "id": "kuis5",
+  "productId": "kuis5",
+  "premium": false,
+  "price": 0,
+  "title": "Kuis #5",
+  "description": "Uji pengetahuanmu",
+  "thumbnail": "assets/images/kuis/thumbnail-kuis3.jpeg",
+  "timeLimit": 480,
+  "questions": [
+    {
+      "q": "Seorang wanita 46 tahun mengeluhkan pembengkakan tidak nyeri pada palatum selama satu tahun. Lesi berbentuk kubah, berpermukaan halus, konsistensi kenyal, dan tumbuh perlahan. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Abses palatal",
+        "Adenoma pleomorfik",
+        "Fibroma iritasi",
+        "Mucocele"
+      ],
+      "answer": 1,
+      "explanation": "Adenoma pleomorfik merupakan tumor jinak kelenjar saliva yang paling sering ditemukan. Pada rongga mulut, lesi ini paling sering muncul pada palatum sebagai massa yang tumbuh lambat, tidak nyeri, dan berpermukaan halus."
+    },
+    {
+      "q": "Seorang pria 39 tahun datang dengan benjolan lunak berwarna kuning pada mukosa bukal. Lesi mudah digerakkan, tidak nyeri, dan telah membesar perlahan selama beberapa tahun. Diagnosis yang paling tepat adalah?",
+      "options": [
+        "Lipoma",
+        "Papilloma skuamosa",
+        "Neurofibroma",
+        "Granuloma piogenik"
+      ],
+      "answer": 0,
+      "explanation": "Lipoma merupakan tumor jinak jaringan lemak yang ditandai massa lunak, berwarna kekuningan, mudah digerakkan, serta tumbuh perlahan."
+    },
+    {
+      "q": "Seorang pria 60 tahun mengeluhkan bibir bawah kering, kasar, dan tampak bersisik selama bertahun-tahun. Pasien bekerja sebagai nelayan sejak usia muda. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Cheilitis glandularis",
+        "Angular cheilitis",
+        "Herpes labialis",
+        "Actinic cheilitis"
+      ],
+      "answer": 3,
+      "explanation": "Actinic cheilitis merupakan lesi prakanker akibat paparan sinar ultraviolet kronis, terutama pada bibir bawah individu yang sering bekerja di luar ruangan."
+    },
+    {
+      "q": "Seorang pasien dengan penyakit Addison dapat menunjukkan hiperpigmentasi pada mukosa mulut sebelum gejala sistemik lainnya muncul.",
+      "options": [
+        "Benar",
+        "Salah"
+      ],
+      "answer": 0,
+      "explanation": "Benar. Hiperpigmentasi mukosa merupakan salah satu manifestasi awal penyakit Addison akibat peningkatan produksi ACTH dan MSH."
+    },
+    {
+      "q": "Seorang pria 30 tahun mengeluhkan benjolan kecil bertangkai pada dorsum lidah. Permukaannya menyerupai bunga kol, tidak nyeri, dan berwarna sama dengan mukosa sekitarnya. Diagnosis yang paling tepat adalah?",
+      "options": [
+        "Papilloma skuamosa",
+        "Fibroma iritasi",
+        "Verrucous carcinoma",
+        "Condyloma acuminatum"
+      ],
+      "answer": 0,
+      "explanation": "Papilloma skuamosa merupakan tumor epitel jinak yang sering berkaitan dengan HPV risiko rendah dan memiliki permukaan papiler menyerupai bunga kol."
+    },
+    {
+      "q": "Seorang wanita 51 tahun datang dengan keluhan nyeri hebat pada daerah submandibula yang muncul setiap kali makan. Pemeriksaan menunjukkan pembengkakan pada kelenjar submandibular dan teraba massa keras sepanjang duktus Wharton. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Ranula",
+        "Parotitis akut",
+        "Sialolitiasis",
+        "Sialadenosis"
+      ],
+      "answer": 2,
+      "explanation": "Sialolitiasis paling sering terjadi pada glandula submandibularis. Nyeri dan pembengkakan khas muncul saat makan akibat hambatan aliran saliva oleh batu."
+    },
+    {
+      "q": "Seorang anak laki-laki berusia 7 tahun datang dengan pembengkakan lunak berwarna kebiruan pada mukosa di atas gigi insisif permanen yang akan erupsi. Lesi tidak nyeri dan baru muncul satu minggu. Diagnosis yang paling tepat adalah?",
+      "options": [
+        "Granuloma piogenik",
+        "Kista erupsi",
+        "Fibroma perifer",
+        "Abses gingiva"
+      ],
+      "answer": 1,
+      "explanation": "Kista erupsi merupakan kista jaringan lunak yang berkembang di atas gigi yang sedang erupsi dan biasanya menghilang setelah gigi berhasil erupsi."
+    },
+    {
+      "q": "Seorang pria 54 tahun mengeluh rasa terbakar pada lidah sejak delapan bulan terakhir. Pemeriksaan klinis dan laboratorium tidak menunjukkan kelainan yang dapat menjelaskan keluhan tersebut. Diagnosis yang paling tepat adalah?",
+      "options": [
+        "Glossitis atrofik",
+        "Median rhomboid glossitis",
+        "Burning Mouth Syndrome",
+        "Kandidiasis eritematosa"
+      ],
+      "answer": 2,
+      "explanation": "Burning Mouth Syndrome ditandai sensasi terbakar kronis pada mukosa mulut yang tampak normal setelah penyebab lokal maupun sistemik disingkirkan."
+    },
+    {
+      "q": "Black hairy tongue merupakan kelainan yang disebabkan oleh gangguan deskuamasi papila filiformis pada lidah.",
+      "options": [
+        "Benar",
+        "Salah"
+      ],
+      "answer": 0,
+      "explanation": "Benar. Gangguan deskuamasi menyebabkan pemanjangan papila filiformis yang kemudian mengalami pewarnaan oleh bakteri, makanan, rokok, atau obat-obatan."
+    },
+    {
+      "q": "Seorang wanita 63 tahun datang dengan pembengkakan bilateral kelenjar parotis tanpa nyeri. Pasien memiliki riwayat diabetes melitus yang tidak terkontrol. Tidak ditemukan tanda infeksi maupun neoplasma. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Sialadenosis",
+        "Parotitis bakterialis akut",
+        "Adenoma pleomorfik",
+        "Sialolitiasis"
+      ],
+      "answer": 0,
+      "explanation": "Sialadenosis merupakan pembesaran noninflamasi dan nonneoplastik kelenjar saliva yang berhubungan dengan gangguan metabolik seperti diabetes melitus, malnutrisi, dan alkoholisme kronis."
+    }
+  ]
+}
