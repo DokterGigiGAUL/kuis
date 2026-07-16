@@ -1,16 +1,4 @@
-const quizFiles = [
-    "kuis1",
-    "kuis2",
-    "kuis3",
-    "kuis4",
-    "kuis5",
-    "kuis6",
-    "kuis7",
-    "kuis8",
-    "kuis9"
-];
-
-const quizList = document.getElementById("quiz-list");
+quizList = document.getElementById("quiz-list");
 const quizTemplate = document.getElementById("quiz-card-template");
 
 const comicsContainer = document.getElementById("comics-container");
@@ -18,13 +6,6 @@ const comicTemplate = document.getElementById("comic-card-template");
 
 const ttsContainer = document.getElementById("tts-container");
 const ttsTemplate = document.getElementById("tts-card-template");
-
-const caseFiles = [
-    "case1",
-    "case2",
-    "case3",
-    "case4"
-];
 
 const caseContainer = document.getElementById("case-container");
 const caseTemplate = document.getElementById("case-card-template");
