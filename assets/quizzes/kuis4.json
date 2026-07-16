@@ -6,7 +6,7 @@
   "title": "Kuis #4",
   "description": "Uji pengetahuanmu",
   "thumbnail": "assets/images/kuis/thumbnail-kuis1.jpeg",
-  "timeLimit": 600,
+  "timeLimit": 480,
   "questions": [
     {
       "q": "Lesi fibroma iritasi (irritation fibroma) pada mukosa mulut secara histopatologis merupakan?",
@@ -51,6 +51,26 @@
       ],
       "answer": 1,
       "explanation": "Sialolitiasis pada glandula submandibularis paling sering terjadi karena saliva yang lebih kental dan jalur duktus Wharton yang panjang. Nyeri dan pembengkakan biasanya memburuk saat makan akibat hambatan aliran saliva."
+    },
+    {
+      "q": "Black hairy tongue merupakan kelainan yang disebabkan oleh gangguan deskuamasi papila filiformis pada lidah.",
+      "options": [
+        "Benar",
+        "Salah"
+      ],
+      "answer": 0,
+      "explanation": "Benar. Gangguan deskuamasi menyebabkan pemanjangan papila filiformis yang kemudian mengalami pewarnaan oleh bakteri, makanan, rokok, atau obat-obatan."
+    },
+    {
+      "q": "Seorang wanita 63 tahun datang dengan pembengkakan bilateral kelenjar parotis tanpa nyeri. Pasien memiliki riwayat diabetes melitus yang tidak terkontrol. Tidak ditemukan tanda infeksi maupun neoplasma. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Sialadenosis",
+        "Parotitis bakterialis akut",
+        "Adenoma pleomorfik",
+        "Sialolitiasis"
+      ],
+      "answer": 0,
+      "explanation": "Sialadenosis merupakan pembesaran noninflamasi dan nonneoplastik kelenjar saliva yang berhubungan dengan gangguan metabolik seperti diabetes melitus, malnutrisi, dan alkoholisme kronis."
     }
    ]
 }
