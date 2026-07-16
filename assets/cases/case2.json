@@ -1,17 +1,12 @@
 {
   "id": 2,
   "title": "Kasus #2",
-  "image": "assets/images/cases/case1.jpg",
-
+  "image": "assets/images/cases/case2.jpg",
   "gender": "Laki-laki",
   "age": "35 tahun",
-
   "anamnesis": "Pasien mengeluhkan benjolan pada bibir bawah sejak satu bulan yang lalu. Benjolan tidak nyeri dan ukurannya berubah-ubah.",
-
   "diagnosis": "MUCOCELE",
-
   "management": "Dummy tatalaksana.",
-
-"premium": false,
-"price": 0
+  "premium": false,
+  "price": 0
 }
