@@ -17,22 +17,20 @@ loadCases();
 
 async function loadQuiz() {
     try {
+
+        const selected = quizzes.slice(0, 4);
+
         const responses = await Promise.all(
-            quizFiles.slice(0, 4).map(id =>
-                fetch(`assets/quizzes/${id}.json`)
+            selected.map(q =>
+                fetch(`assets/quizzes/${q.file}.json`)
             )
         );
 
-        const quizzes = await Promise.all(
-            responses.map(async response => {
-                if (!response.ok) return null;
-                return response.json();
-            })
+        const data = await Promise.all(
+            responses.map(r => r.json())
         );
 
-        quizzes
-            .filter(quiz => quiz !== null)
-            .forEach(createQuizCard);
+        data.forEach(createQuizCard);
 
     } catch (e) {
         console.error(e);
@@ -102,21 +100,21 @@ function loadTTS() {
 }
 
 async function loadCases() {
-    if (!caseContainer) return;
-
     try {
 
+        const selected = cases.slice(0, 4);
+
         const responses = await Promise.all(
-            caseFiles.slice(0, 4).map(file =>
-                fetch(`assets/cases/${file}.json`)
+            selected.map(c =>
+                fetch(`assets/cases/${c.file}.json`)
             )
         );
 
-        const cases = await Promise.all(
+        const data = await Promise.all(
             responses.map(r => r.json())
         );
 
-        cases.forEach(createCaseCard);
+        data.forEach(createCaseCard);
 
     } catch (e) {
         console.error(e);
