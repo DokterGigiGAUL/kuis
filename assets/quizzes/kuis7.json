@@ -1,12 +1,12 @@
 {
-  "id": "kuis5",
-  "productId": "kuis5",
+  "id": "kuis7",
+  "productId": "kuis7",
   "premium": true,
   "price": 5000,
   "title": "Kuis 5",
   "description": "Uji pengetahuanmu",
-  "thumbnail": "assets/images/kuis/thumbnail-kuis4.jpeg",
-  "timeLimit": 600,
+  "thumbnail": "assets/images/kuis/thumbnail-kuis2.jpeg",
+  "timeLimit": 900,
   "questions": [
     {
       "q": "Seorang pria 36 tahun datang dengan keluhan benjolan kecil pada bibir bawah sejak 8 bulan yang lalu. Lesi sewarna jaringan mukosa sekitar, tidak nyeri, dan ukurannya tidak banyak berubah. Diagnosis yang paling mungkin adalah?",
