@@ -182,7 +182,7 @@ function showCase() {
     quizSection.style.display = "none";
     comicSection.style.display = "none";
     ttsSection.style.display = "none";
-    caseSection.style.display = "grid";
+    caseSection.style.display = "block";
 
     quizTab.classList.remove("active");
     comicTab.classList.remove("active");
@@ -199,19 +199,19 @@ function showCase() {
         const card =
             template.content.cloneNode(true);
 
-        card.querySelector(".case-thumbnail").src =
-            caseData.thumbnail;
+        card.querySelector(".case-list-thumb").src =
+        caseData.thumbnail;
 
-        card.querySelector(".case-title").textContent =
-            caseData.title;
+         card.querySelector(".case-list-title").textContent =
+         caseData.title;
 
-        card.querySelector(".case-description").textContent =
-            caseData.description;
+        card.querySelector(".case-list-description").textContent =
+        caseData.description;
 
-        card.querySelector(".case-btn").onclick = () => {
-            location.href =
-                `case.html?case=${caseData.file}`;
-        };
+        card.querySelector(".case-btn-list").onclick = () => {
+        location.href =
+        `case.html?case=${caseData.file}`;
+};
 
         caseSection.appendChild(card);
 
