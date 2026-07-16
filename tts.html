@@ -1,47 +1,94 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-<title>Teka-Teki Silang</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossword</title>
+    <link rel="stylesheet" href="../../css/tts.css">
 </head>
-
 <body>
 
-<header class="page-header">
-    <button onclick="history.back()"
-            class="back-btn">
-        ←
-    </button>
-    <h1>Teka-Teki Silang</h1>
-</header>
+<div id="loader" class="loader">
+    Loading TTS...
+</div>
 
-<main>
-    <div id="tts-list"
-         class="card-grid">
-    </div>
+<main class="page" id="crossword-app" style="display:none;">
 
-</main>
+        <!-- Header -->
+        <header class="header">
+            <h1 id="puzzle-title">Memuat...</h1>
 
-<template id="tts-card-template">
+            <div class="toolbar">
 
-    <div class="tts-card">
-        <img class="tts-thumbnail">
-        <div class="tts-content">
-            <h3 class="tts-title"></h3>
-            <p class="tts-soal"></p>
-            <button class="tts-btn">
-                Isi TTS
-            </button>
+                <button id="check-btn">
+                    Cek Jawaban
+                </button>
+
+                <button id="reset-btn">
+                    Reset
+                </button>
+
+                <button id="hint-btn" class="premium-btn">
+                    Hint ★
+                </button>
+
+                <button id="reveal-btn" class="premium-btn">
+                    Reveal ★
+                </button>
+
+            </div>
+<button id="home-btn" class="start-btn">
+    ← Kembali ke Beranda
+</button>
+        </header>
+
+        <!-- Progress -->
+        <section class="progress-wrapper">
+
+            <div class="progress-top">
+                <span>Progress</span>
+                <span id="progress-text">0%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+        </section>
+
+        <!-- Crossword -->
+        <section class="crossword-section">
+
+            <div id="crossword-grid"></div>
+
+        </section>
+
+        <!-- Clue Aktif -->
+<section class="active-clue-section">
+
+    <div class="active-clue-card">
+
+        <div class="active-clue-header">
+            <span id="active-number">1</span>
+            <span id="active-direction">Mendatar</span>
+            
         </div>
+
+        <div id="active-clue-text" class="active-clue-text">
+            Pilih kotak untuk mulai bermain.
+        </div>
+
+        <div id="active-answer" class="active-answer"></div>
+
     </div>
-</template>
 
-<script src="js/tts.js"></script>
-<script src="js/tts-data.js"></script>
-      
+</section>
+
+    </main>
+
+    <script src="engine.js"></script>
+    <!--<script src="crossword.js"></script>-->
+    <script src="../../js/tts.js"></script>
+
 </body>
-
 </html>
