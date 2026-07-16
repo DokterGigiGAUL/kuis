@@ -1,0 +1,118 @@
+{
+  "id": "kuis5",
+  "productId": "kuis5",
+  "premium": true,
+  "price": 5000,
+  "title": "Kuis 5",
+  "description": "Uji pengetahuanmu",
+  "thumbnail": "assets/images/kuis/thumbnail-kuis4.jpeg",
+  "timeLimit": 600,
+  "questions": [
+    {
+      "q": "Seorang pria 36 tahun datang dengan keluhan benjolan kecil pada bibir bawah sejak 8 bulan yang lalu. Lesi sewarna jaringan mukosa sekitar, tidak nyeri, dan ukurannya tidak banyak berubah. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Fibroma iritasi",
+        "Hemangioma",
+        "Mukokel",
+        "Lipoma"
+      ],
+      "answer": 0,
+      "explanation": "Fibroma iritasi merupakan hiperplasia jaringan ikat fibrosa reaktif akibat trauma atau iritasi kronis, seperti tergigit atau gesekan gigi tajam. Lesi biasanya berupa nodul berwarna menyerupai mukosa normal, berpermukaan halus, tumbuh lambat, dan tidak nyeri."
+    },
+    {
+      "q": "Seorang wanita 61 tahun mengeluh terdapat bercak putih bilateral pada mukosa bukal yang disertai rasa terbakar saat mengonsumsi makanan pedas. Pemeriksaan menunjukkan area eritematosa yang dikelilingi striae putih halus. Diagnosis yang paling tepat adalah?",
+      "options": [
+        "Leukoplakia homogen",
+        "Oral lichen planus tipe erosif",
+        "Kandidiasis kronis hiperplastik",
+        "Lupus eritematosus diskoid"
+      ],
+      "answer": 1,
+      "explanation": "Oral lichen planus tipe erosif ditandai area eritematosa atau ulserasi yang dikelilingi striae Wickham dan sering menimbulkan rasa perih."
+    },
+    {
+      "q": "Seorang pria 67 tahun datang dengan pembengkakan perlahan pada palatum keras bagian posterior. Massa tidak nyeri, permukaannya halus, konsistensi kenyal, dan telah membesar selama dua tahun. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Adenoma pleomorfik",
+        "Abses palatal",
+        "Ranula",
+        "Papilloma skuamosa"
+      ],
+      "answer": 0,
+      "explanation": "Adenoma pleomorfik merupakan tumor jinak kelenjar saliva yang paling sering terjadi. Pada rongga mulut, lokasi tersering adalah palatum karena banyaknya kelenjar saliva minor."
+    },
+    {
+      "q": "Kandidiasis pseudomembranosa ditandai oleh plak putih yang dapat dikerok sehingga meninggalkan dasar mukosa yang eritematosa.",
+      "options": [
+        "Benar",
+        "Salah"
+      ],
+      "answer": 0,
+      "explanation": "Benar. Plak putih pada kandidiasis pseudomembranosa mudah diangkat dan biasanya meninggalkan permukaan mukosa yang merah serta dapat berdarah ringan."
+    },
+    {
+      "q": "Seorang wanita 25 tahun mengeluh pembengkakan berulang pada bibir disertai lidah berfisur. Pemeriksaan menunjukkan edema persisten pada bibir atas tanpa tanda infeksi. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Herpes labialis",
+        "Angioedema",
+        "Cheilitis glandularis",
+        "Melkersson-Rosenthal syndrome""
+      ],
+      "answer": 3,
+      "explanation": "Melkersson-Rosenthal syndrome ditandai triad klasik berupa edema orofasial berulang, facial nerve palsy, dan fissured tongue, meskipun tidak semua komponen selalu ditemukan."
+    },
+    {
+      "q": "Seorang pria 52 tahun datang dengan bercak merah terang bertekstur halus seperti beludru pada dasar mulut. Lesi tidak dapat dikerok dan tidak disertai nyeri. Diagnosis klinis yang paling tepat adalah?",
+      "options": [
+        "Eritema akibat trauma",
+        "Eritroplakia",
+        "Stomatitis nikotina",
+        "Kandidiasis eritematosa"
+      ],
+      "answer": 1,
+      "explanation": "Eritroplakia merupakan lesi merah yang tidak dapat diklasifikasikan sebagai penyakit lain dan memiliki risiko transformasi ganas yang sangat tinggi."
+    },
+    {
+      "q": "Seorang anak berusia 9 tahun datang dengan benjolan kecil pada gingiva di atas gigi molar pertama permanen yang belum erupsi sempurna. Lesi lunak, berwarna kebiruan, dan tidak nyeri. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Granuloma piogenik",
+        "Abses gingiva",
+        "Kista erupsi",
+        "Fibroma perifer"
+      ],
+      "answer": 2,
+      "explanation": "Kista erupsi merupakan kista jaringan lunak yang muncul tepat di atas gigi yang sedang erupsi dan biasanya sembuh spontan setelah gigi erupsi."
+    },
+    {
+      "q": "Seorang pria 45 tahun mengeluhkan lidah tampak hitam dengan permukaan berbulu sejak menjalani terapi antibiotik jangka panjang dan memiliki kebiasaan merokok. Diagnosis yang paling tepat adalah?",
+      "options": [
+        "Geographic tongue",
+        "Black hairy tongue",
+        "Median rhomboid glossitis",
+        "Hairy leukoplakia"
+      ],
+      "answer": 1,
+      "explanation": "Black hairy tongue terjadi akibat pemanjangan papila filiformis yang disertai akumulasi pigmen, sering dikaitkan dengan antibiotik, merokok, kebersihan mulut yang buruk, dan konsumsi kopi."
+    },
+    {
+      "q": "Black hairy tongue merupakan lesi prakanker yang memiliki risiko tinggi mengalami transformasi menjadi karsinoma sel skuamosa.",
+      "options": [
+        "Benar",
+        "Salah"
+      ],
+      "answer": 1,
+      "explanation": "Salah. Black hairy tongue adalah kondisi jinak akibat gangguan deskuamasi papila filiformis dan tidak termasuk lesi pra-kanker."
+    },
+    {
+      "q": "Seorang wanita 47 tahun datang dengan ulser kronis pada palatum yang tidak nyeri. Pemeriksaan menunjukkan perforasi palatum disertai riwayat batuk kronis, penurunan berat badan, dan keringat malam. Diagnosis yang paling mungkin adalah?",
+      "options": [
+        "Stomatitis aftosa mayor",
+        "Necrotizing sialometaplasia",
+        "Tuberkulosis oral",
+        "Pemfigus vulgaris"
+      ],
+      "answer": 2,
+      "explanation": "Tuberkulosis oral merupakan manifestasi sekunder yang jarang ditemukan. Ulser kronis yang tidak sembuh pada pasien dengan gejala sistemik tuberkulosis harus menimbulkan kecurigaan terhadap diagnosis ini dan memerlukan pemeriksaan lebih lanjut."
+    }
+  ]
+}
