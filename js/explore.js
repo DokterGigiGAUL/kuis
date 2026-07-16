@@ -1,14 +1,3 @@
-const quizFiles = [
-    "kuis1",
-    "kuis2",
-    "kuis3",
-    "kuis4",
-    "kuis5",
-    "kuis6",
-    "kuis7",
-    "kuis8",
-    "kuis9"
-];
 const params =
     new URLSearchParams(location.search);
 const tab =
@@ -19,6 +8,8 @@ const comicSection =
     document.getElementById("comics-container");
 const ttsSection =
     document.getElementById("tts-container");
+const caseSection =
+    document.getElementById("case-container");
 const quizTab =
     document.getElementById("quizTab");
 const comicTab =
@@ -27,61 +18,75 @@ const ttsTab =
     document.getElementById("ttsTab");
 const pageTitle =
     document.getElementById("pageTitle");
-
+const caseTab =
+    document.getElementById("caseTab");
 
 if (tab === "comic") {
     showComic();
 } else if (tab === "tts") {
     showTTS();
+} else if (tab === "case") {
+    showCase();
 } else {
     showQuiz();
 }
 
-async function showQuiz() {
-    pageTitle.textContent =
-        "Semua Kuis";
+function showQuiz() {
+
+    pageTitle.textContent = "Semua Kuis";
+
     quizSection.style.display = "grid";
     comicSection.style.display = "none";
     ttsSection.style.display = "none";
-    
+    caseSection.style.display = "none";
+
     quizTab.classList.add("active");
     comicTab.classList.remove("active");
     ttsTab.classList.remove("active");
-    
+    caseTab.classList.remove("active");
+
     const template =
         document.getElementById("quiz-card-template");
-    quizSection.innerHTML = "";
-    for (const id of quizFiles) {
-        const response =
-            await fetch(`assets/quizzes/${id}.json`);
-        if (!response.ok)
-            continue;
 
-        const quiz =
-            await response.json();
+    quizSection.innerHTML = "";
+
+    quizzes.forEach(quiz => {
+
         const card =
-    template.content.cloneNode(true);
+            template.content.cloneNode(true);
+
         card.querySelector(".quiz-thumbnail").src =
             quiz.thumbnail;
+
         card.querySelector(".quiz-title").textContent =
             quiz.title;
+
         card.querySelector(".quiz-description").textContent =
             quiz.description;
 
         const button =
             card.querySelector(".quiz-btn");
-        if (Storage.isFinished(quiz.id)) {
+
+        if (Storage.isFinished(quiz.productId)) {
+
             button.textContent =
                 "Sudah Dikerjakan";
+
             button.disabled = true;
+
         } else {
+
             button.onclick = () => {
                 location.href =
-                    `quiz.html?id=${quiz.id}`;
+                    `quiz.html?id=${quiz.file}`;
             };
+
         }
+
         quizSection.appendChild(card);
-    }
+
+    });
+
 }
 
 function showComic() {
@@ -91,10 +96,12 @@ function showComic() {
     quizSection.style.display = "none";
     comicSection.style.display = "block";
     ttsSection.style.display = "none";
+    caseSection.style.display = "none";
 
-    comicTab.classList.add("active");
     quizTab.classList.remove("active");
+    comicTab.classList.add("active");
     ttsTab.classList.remove("active");
+    caseTab.classList.remove("active");
 
     comicSection.innerHTML = "";
 
@@ -104,7 +111,7 @@ function showComic() {
             <article class="comic-list-card">
 
                 <img
-                    src="${comic.thumb}"
+                    src="${comic.thumbnail}"
                     class="comic-list-thumb"
                     alt="${comic.title}"
                     loading="lazy"
@@ -136,11 +143,13 @@ function showTTS() {
     quizSection.style.display = "none";
     comicSection.style.display = "none";
     ttsSection.style.display = "block";
-    
+    caseSection.style.display = "none";
+
     quizTab.classList.remove("active");
     comicTab.classList.remove("active");
     ttsTab.classList.add("active");
-
+    caseTab.classList.remove("active");
+    
     const template =
         document.getElementById("tts-card-template");
 
@@ -152,7 +161,7 @@ function showTTS() {
             template.content.cloneNode(true);
 
         card.querySelector(".tts-list-thumb").src =
-            tts.thumb;
+            tts.thumbnail;
         card.querySelector(".tts-list-title").textContent =
             tts.title;
         card.querySelector(".tts-list-soal").textContent =
@@ -162,6 +171,50 @@ function showTTS() {
                 `assets/tts/crossword.html?puzzle=tts${tts.id}`;
         };
         ttsSection.appendChild(card);
+    });
+
+}
+
+function showCase() {
+
+    pageTitle.textContent = "Semua Kartu Kasus";
+
+    quizSection.style.display = "none";
+    comicSection.style.display = "none";
+    ttsSection.style.display = "none";
+    caseSection.style.display = "grid";
+
+    quizTab.classList.remove("active");
+    comicTab.classList.remove("active");
+    ttsTab.classList.remove("active");
+    caseTab.classList.add("active");
+
+    const template =
+        document.getElementById("case-card-template");
+
+    caseSection.innerHTML = "";
+
+    cases.forEach(caseData => {
+
+        const card =
+            template.content.cloneNode(true);
+
+        card.querySelector(".case-thumbnail").src =
+            caseData.thumbnail;
+
+        card.querySelector(".case-title").textContent =
+            caseData.title;
+
+        card.querySelector(".case-description").textContent =
+            caseData.description;
+
+        card.querySelector(".case-btn").onclick = () => {
+            location.href =
+                `case.html?case=${caseData.file}`;
+        };
+
+        caseSection.appendChild(card);
+
     });
 
 }
@@ -199,5 +252,17 @@ ttsTab.onclick = () => {
     );
 
     showTTS();
+
+};
+
+caseTab.onclick = () => {
+
+    history.replaceState(
+        {},
+        "",
+        "explore.html?tab=case"
+    );
+
+    showCase();
 
 };
