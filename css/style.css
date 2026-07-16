@@ -395,6 +395,58 @@ body {
 
 }
 
+/* ==========================
+   EXPLORE - LIST QUIZ
+========================== */
+
+.quiz-list-card{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    background:#fff;
+    border-radius:16px;
+
+    padding:12px;
+    margin-bottom:12px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.quiz-list-thumb{
+    width:84px;
+    height:84px;
+
+    border-radius:12px;
+    object-fit:cover;
+
+    flex-shrink:0;
+}
+
+.quiz-list-info{
+    flex:1;
+    min-width:0;
+}
+
+.quiz-list-title{
+    font-size:17px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.quiz-list-description{
+    font-size:14px;
+    color:var(--text-light);
+    margin-bottom:8px;
+}
+
+.quiz-list-meta{
+    display:flex;
+    gap:14px;
+    font-size:13px;
+    color:var(--text-light);
+}
+
     /* =========================
    RESULT
 ========================= */
