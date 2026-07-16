@@ -35,7 +35,7 @@ function showQuiz() {
 
     pageTitle.textContent = "Semua Kuis";
 
-    quizSection.style.display = "grid";
+    quizSection.style.display = "block";
     comicSection.style.display = "none";
     ttsSection.style.display = "none";
     caseSection.style.display = "none";
@@ -55,17 +55,17 @@ function showQuiz() {
         const card =
             template.content.cloneNode(true);
 
-        card.querySelector(".quiz-thumbnail").src =
-            quiz.thumbnail;
+        card.querySelector(".quiz-list-thumb").src =
+        quiz.thumbnail;
 
-        card.querySelector(".quiz-title").textContent =
-            quiz.title;
+        card.querySelector(".quiz-list-title").textContent =
+        quiz.title;
 
-        card.querySelector(".quiz-description").textContent =
-            quiz.description;
+        card.querySelector(".quiz-list-description").textContent =
+        quiz.description;
 
         const button =
-            card.querySelector(".quiz-btn");
+        card.querySelector(".quiz-btn-list");
 
         if (Storage.isFinished(quiz.productId)) {
 
