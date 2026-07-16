@@ -6,7 +6,7 @@
   "title": "Kuis #2",
   "description": "Uji pengetahuanmu",
   "thumbnail": "assets/images/kuis/thumbnail-kuis2.jpeg",
-  "timeLimit": 600,
+  "timeLimit": 480,
   "questions": [
     {
       "q": "Pasien laki-laki 32 tahun mengeluh luka nyeri berulang di mukosa mulut, muncul 3–4 kali per tahun, berukuran < 1 cm, sembuh sendiri dalam 7–14 hari tanpa jaringan parut. Diagnosis yang paling tepat adalah?",
