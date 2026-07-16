@@ -35,17 +35,15 @@
     <main class="container">
       <div class="explore-tabs">
         <button id="quizTab" class="tab-btn">Kuis</button>
-
-        <button id="comicTab" class="tab-btn">Komik</button>
-
         <button id="ttsTab" class="tab-btn">TTS</button>
+        <button id="caseTab" class="tab-btn">Kasus</button>
+        <button id="comicTab" class="tab-btn">Komik</button>
       </div>
 
       <section id="quiz-list" class="card-grid"></section>
-
-      <section id="comics-container" class="card-grid"></section>
-
       <section id="tts-container" class="tts-grid"></section>
+      <section id="case-container" class="card-grid"></section>
+      <section id="comics-container" class="card-grid"></section>
     </main>
 
     <!-- TEMPLATE QUIZ -->
@@ -93,11 +91,29 @@
       </article>
     </template>
 
+    <template id="case-card-template">
+    <article class="quiz-card">
+        <img
+            class="case-thumbnail"
+            src=""
+            loading="lazy"
+            alt="Thumbnail Kasus">
+
+        <div class="quiz-content">
+            <h3 class="case-title"></h3>
+            <p class="case-description"></p>
+            <button class="btn btn-outline case-btn">
+                Buka Kasus
+            </button>
+        </div>
+    </article>
+</template>
+
     <script src="js/storage.js"></script>
     <script src="js/quiz-data.js"></script>
     <script src="js/comics-data.js"></script>
     <script src="js/tts-data.js"></script>
-    
+    <script src="js/case-data.js"></script>
     <script src="js/explore.js"></script>
   </body>
 </html>
