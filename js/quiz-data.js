@@ -5,7 +5,7 @@ const quizzes = [
         productId: "kuis1",
         title: "Kuis #1",
         description: "Apa Diagnosisnya?",
-        thumb: "assets/images/kuis/thumbnail-kuis1.jpeg",
+        thumbnail: "assets/images/kuis/thumbnail-kuis1.jpeg",
         premium: false,
         price: 0
     },
@@ -15,7 +15,7 @@ const quizzes = [
         productId: "kuis2",
         title: "Kuis #2",
         description: "Apa Diagnosisnya?",
-        thumb: "assets/images/kuis/thumbnail-kuis2.jpeg",
+        thumbnail: "assets/images/kuis/thumbnail-kuis2.jpeg",
         premium: false,
         price: 0
     },
@@ -25,7 +25,7 @@ const quizzes = [
         productId: "kuis3",
         title: "Kuis #3",
         description: "Apa Diagnosisnya?",
-        thumb: "assets/images/kuis/thumbnail-kuis3.jpeg",
+        thumbnail: "assets/images/kuis/thumbnail-kuis3.jpeg",
         premium: false,
         price: 0
     },
@@ -35,7 +35,7 @@ const quizzes = [
         productId: "kuis4",
         title: "Kuis #4",
         description: "Apa Diagnosisnya?",
-        thumb: "assets/images/kuis/thumbnail-kuis4.jpeg",
+        thumbnail: "assets/images/kuis/thumbnail-kuis4.jpeg",
         premium: true,
         price: 5000
     }
