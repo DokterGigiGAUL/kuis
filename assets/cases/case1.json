@@ -2,6 +2,7 @@
     "id": 1,
     "title": "Kasus #1",
     "image": "assets/images/cases/case1.jpg",
+    "description": "Apa diagnosisnya?",
     "gender": "Perempuan",
     "age": "43 tahun",
     "anamnesis": "Pasien datang dengan keluhan luka putih pada mukosa pipi kanan sejak tiga minggu yang lalu. Tidak terasa nyeri.",
