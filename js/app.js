@@ -15,46 +15,37 @@ loadComics();
 loadTTS();
 loadCases();
 
-async function loadQuiz() {
-    try {
+function loadQuiz() {
 
-        const selected = quizzes.slice(0, 4);
+    if (!quizList) return;
 
-        const responses = await Promise.all(
-            selected.map(q =>
-                fetch(`assets/quizzes/${q.file}.json`)
-            )
-        );
+    quizzes
+        .slice(0, 4)
+        .forEach(createQuizCard);
 
-        const data = await Promise.all(
-            responses.map(r => r.json())
-        );
-
-        data.forEach(createQuizCard);
-
-    } catch (e) {
-        console.error(e);
-    }
 }
 
 function createQuizCard(quiz) {
+
     const clone = quizTemplate.content.cloneNode(true);
 
     clone.querySelector(".quiz-thumbnail").src = quiz.thumbnail;
+    clone.querySelector(".quiz-thumbnail").alt = quiz.title;
+
     clone.querySelector(".quiz-title").textContent = quiz.title;
     clone.querySelector(".quiz-description").textContent = quiz.description;
 
     const button = clone.querySelector(".start-btn");
 
-    if (Storage.isFinished(quiz.id)) {
+    if (Storage.isFinished(quiz.productId)) {
+
         button.textContent = "Sudah Dikerjakan";
         button.disabled = true;
     } else {
         button.onclick = () => {
-            location.href = `quiz.html?id=${quiz.id}`;
+            location.href = `quiz.html?id=${quiz.file}`;
         };
     }
-
     quizList.appendChild(clone);
 }
 
@@ -64,7 +55,7 @@ function loadComics() {
     for (const comic of comics.slice(0, 4)) {
         const card = comicTemplate.content.cloneNode(true);
 
-        card.querySelector(".comic-thumb").src = comic.thumb;
+        card.querySelector(".comic-thumb").src = comic.thumbnail;
         card.querySelector(".comic-thumb").alt = comic.title;
         card.querySelector(".comic-title").textContent = comic.title;
         card.querySelector(".comic-episode").textContent =
@@ -84,7 +75,7 @@ function loadTTS() {
     for (const tts of ttsList.slice(0, 4)) {
         const card = ttsTemplate.content.cloneNode(true);
 
-        card.querySelector(".tts-thumbnail").src = tts.thumb;
+        card.querySelector(".tts-thumbnail").src = tts.thumbnail;
         card.querySelector(".tts-thumbnail").alt = tts.title;
         card.querySelector(".tts-title").textContent = tts.title;
         card.querySelector(".tts-soal").textContent =
@@ -99,44 +90,32 @@ function loadTTS() {
     }
 }
 
-async function loadCases() {
-    try {
+function loadCases() {
 
-        const selected = cases.slice(0, 4);
+    if (!caseContainer) return;
 
-        const responses = await Promise.all(
-            selected.map(c =>
-                fetch(`assets/cases/${c.file}.json`)
-            )
-        );
+    cases
+        .slice(0, 4)
+        .forEach(createCaseCard);
 
-        const data = await Promise.all(
-            responses.map(r => r.json())
-        );
-
-        data.forEach(createCaseCard);
-
-    } catch (e) {
-        console.error(e);
-    }
 }
 
-function createCaseCard(data) {
+function createCaseCard(caseData) {
 
     const clone = caseTemplate.content.cloneNode(true);
 
-    clone.querySelector(".case-thumbnail").src = data.image;
+    clone.querySelector(".case-thumbnail").src = caseData.thumbnail;
+    clone.querySelector(".case-thumbnail").alt = caseData.title;
 
     clone.querySelector(".case-title").textContent =
-        data.title;
+        caseData.title;
 
     clone.querySelector(".case-description").textContent =
-        `${data.gender}, ${data.age}`;
+        caseData.description;
 
     clone.querySelector(".case-btn").onclick = () => {
-        location.href = `case.html?case=case${data.id}`;
+        location.href =
+            `case.html?case=${caseData.file}`;
     };
-
     caseContainer.appendChild(clone);
-
 }
