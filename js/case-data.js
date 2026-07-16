@@ -27,7 +27,7 @@ const cases = [
         id: 4,
         file: "case4",
         title: "Kasus #4",
-        thumbnail: "assets/images/cases/case3.jpg",
+        thumbnail: "assets/images/cases/case4.jpg",
         premium: true,
         price: 5000
     }
