@@ -600,11 +600,11 @@ body {
 
 /* Scrollbar */
 
-.quiz-grid::-webkit-scrollbar, .comics-grid::-webkit-scrollbar, .tts-grid::-webkit-scrollbar{
+.quiz-grid::-webkit-scrollbar, .comics-grid::-webkit-scrollbar, .tts-grid::-webkit-scrollbar, .case-grid::-webkit-scrollbar{
     height:8px;
 }
 
-.quiz-grid::-webkit-scrollbar-thumb, comics-grid::-webkit-scrollbar-thumb, tts-grid::-webkit-scrollbar-thumb {
+.quiz-grid::-webkit-scrollbar-thumb, comics-grid::-webkit-scrollbar-thumb, tts-grid::-webkit-scrollbar-thumb, case-grid::-webkit-scrollbar-thumb {
     background:#c7c7c7;
     border-radius:10px;
 }
