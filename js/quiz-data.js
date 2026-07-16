@@ -65,7 +65,7 @@ const quizzes = [
         productId: "kuis7",
         title: "Kuis #7",
         description: "Uji pengetahuanmu",
-        thumbnail: "assets/images/kuis/thumbnail-kuis2.jpeg",
+        thumbnail: "assets/images/kuis/thumbnail-kuis4.jpeg",
         premium: true,
         price: 5000
     }
