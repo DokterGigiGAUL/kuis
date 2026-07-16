@@ -6,7 +6,7 @@
   "title": "Kuis #1",
   "description": "Uji pengetahuanmu",
   "thumbnail": "assets/images/kuis/thumbnail-kuis1.jpeg",
-  "timeLimit": 600,
+  "timeLimit": 480,
   "questions": [
     {
       "q": "Pasien wanita 45 tahun datang dengan keluhan bercak putih tebal di mukosa bukal kiri, tidak bisa dikerok, sudah 3 bulan, tanpa rasa nyeri. Riwayat merokok 15 tahun. Diagnosis kerja yang paling tepat adalah?",
@@ -64,18 +64,6 @@
       "options": ["Obesitas dan diabetes terkontrol baik", "Malnutrisi berat dan imunosupresi pada anak di area endemik", "Konsumsi alkohol kronis pada dewasa", "Riwayat trauma maksilofasial"],
       "answer": 1,
       "explanation": "Noma berkaitan erat dengan malnutrisi berat, imunosupresi (termasuk infeksi seperti campak/HIV), kebersihan mulut buruk, dan kondisi sosioekonomi rendah, paling banyak menyerang anak-anak di wilayah endemik."
-    },
-    {
-      "q": "Lesi fibroma iritasi (irritation fibroma) pada mukosa mulut secara histopatologis merupakan?",
-      "options": ["Neoplasma ganas jaringan ikat", "Hiperplasia jaringan ikat fibrosa reaktif akibat iritasi kronis", "Tumor kelenjar saliva minor", "Lesi vaskular kongenital"],
-      "answer": 1,
-      "explanation": "Fibroma iritasi adalah lesi reaktif (bukan neoplasma sejati) berupa hiperplasia jaringan ikat fibrosa sebagai respons terhadap trauma/iritasi kronis berulang, seperti gigitan pipi atau iritasi gigi tiruan."
-    },
-    {
-      "q": "Angioedema pada regio orofasial yang muncul mendadak dan disertai sesak napas merupakan kondisi kegawatdaruratan karena risiko utama?",
-      "options": ["Perdarahan masif intraoral", "Obstruksi jalan napas akibat pembengkakan laring/faring", "Penyebaran infeksi ke ruang fasial dalam", "Syok anafilaktik akibat reaksi obat semata"],
-      "answer": 1,
-      "explanation": "Angioedema yang melibatkan lidah, faring, atau laring dapat menyebabkan obstruksi jalan napas akut yang mengancam jiwa, sehingga memerlukan penanganan kegawatdaruratan segera termasuk proteksi jalan napas."
     },
     {
       "q": "Granuloma piogenik pada gingiva sering dikaitkan dengan perubahan hormonal, sehingga sering dijumpai pada kondisi?",
