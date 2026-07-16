@@ -22,7 +22,7 @@ const cases = [
         thumb: "assets/images/cases/case3.jpg",
         premium: false,
         price: 0
-    }
+    },
     {
         id: 4,
         file: "case4",
