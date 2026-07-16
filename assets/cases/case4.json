@@ -2,16 +2,16 @@
     "id": 4,
     "title": "Kasus 4",
 
-    "image": "assets/images/cases/case1.jpg",
+    "image": "assets/images/cases/case4.jpg",
 
-    "gender": "Perempuan",
-    "age": "43 tahun",
+    "gender": "Laki-laki",
+    "age": "23 tahun",
 
-    "anamnesis": "Pasien datang dengan keluhan luka putih pada mukosa pipi kanan sejak tiga minggu yang lalu. Tidak terasa nyeri.",
+    "anamnesis": "Pasien datang dengan keluhan pembengkakan di gigi geraham bungsu kanan sejak dua minggu yang lalu. Terasa nyeri saat makan.",
 
-    "diagnosis": "ORAL LICHEN PLANUS",
+    "diagnosis": "OPERKULITIS",
 
-    "management": "Kortikosteroid topikal.",
+    "management": "Eksisi biopsi.",
 
 "premium": true,
 "price": 5000
