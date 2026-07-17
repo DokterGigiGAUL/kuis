@@ -77,6 +77,10 @@ function showQuiz() {
         } else {
 
             button.onclick = () => {
+            if (quiz.premium) {
+        showPremiumDialog();
+        return;
+    }
                 location.href =
                     `quiz.html?id=${quiz.file}`;
             };
@@ -107,35 +111,44 @@ function showComic() {
 
     comics.forEach(comic => {
 
-        comicSection.innerHTML += `
-            <article class="comic-list-card">
+        const card = document.createElement("article");
+        card.className = "comic-list-card";
 
-                <img
-                    src="${comic.thumbnail}"
-                    class="comic-list-thumb"
-                    alt="${comic.title}"
-                    loading="lazy"
-                >
+        card.innerHTML = `
+            <img
+                src="${comic.thumbnail}"
+                class="comic-list-thumb"
+                alt="${comic.title}"
+                loading="lazy"
+            >
 
-                <div class="comic-list-info">
+            <div class="comic-list-info">
+                <h3>${comic.title}</h3>
+            </div>
 
-                    <h3>${comic.title}</h3>
-
-                </div>
-
-                <button
-                    class="btn btn-outline comic-btn-list"
-                    onclick="location.href='komik.html?id=${comic.id}'">
-                    Baca
-                </button>
-
-            </article>
+            <button class="btn btn-outline comic-btn-list">
+                Baca
+            </button>
         `;
+
+        const button = card.querySelector(".comic-btn-list");
+
+        button.onclick = () => {
+
+            if (comic.premium) {
+                showPremiumDialog();
+                return;
+            }
+
+            location.href = `komik.html?id=${comic.id}`;
+
+        };
+
+        comicSection.appendChild(card);
 
     });
 
 }
-
 function showTTS() {
 
     pageTitle.textContent = "Semua TTS";
@@ -167,6 +180,10 @@ function showTTS() {
         card.querySelector(".tts-list-soal").textContent =
             `${tts.soal} Soal`;
         card.querySelector(".tts-btn-list").onclick = () => {
+            if (quiz.premium) {
+        showPremiumDialog();
+        return;
+    }
             location.href =
                 `assets/tts/crossword.html?puzzle=tts${tts.id}`;
         };
@@ -209,6 +226,10 @@ function showCase() {
         caseData.description;
 
         card.querySelector(".case-btn-list").onclick = () => {
+            if (quiz.premium) {
+        showPremiumDialog();
+        return;
+    }
         location.href =
         `case.html?case=${caseData.file}`;
 };
