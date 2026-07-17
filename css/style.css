@@ -206,13 +206,18 @@ body {
     transform: translateY(-4px);
 }
 
-.quiz-thumbnail, .tts-thumbnail, .case-thumbnail{
+.quiz-thumbnail, .tts-thumbnail{
     width:100%;
     aspect-ratio:3 / 2;
     object-fit:cover;
     display:block;
 }
-
+.case-thumbnail{
+    width:100%;
+    aspect-ratio:1 / 1;
+    object-fit:cover;
+    display:block;
+}
 .quiz-content,
 .comic-content,
 .tts-content,
