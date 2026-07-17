@@ -641,7 +641,7 @@ TTS Berikutnya →
 
 document.getElementById("next-btn").onclick=()=>{
 
-location.href=`crossword.html?puzzle=${this.puzzle.next}`;
+location.href=`tts.html?puzzle=${this.puzzle.next}`;
 
 };
 
