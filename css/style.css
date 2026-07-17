@@ -221,7 +221,7 @@ body {
     padding:15px;
 }
 
-.quiz-title, .comic-title, .tts-title, .case-title{
+.quiz-title, .comic-title, .tts-title{
     font-size:16px;
     line-height:1.15;
     margin-bottom:6px;
