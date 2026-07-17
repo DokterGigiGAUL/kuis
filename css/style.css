@@ -830,6 +830,12 @@ body {
     margin:0;
 }
 
+.case-list-description{
+    margin-top:4px;
+    font-size:14px;
+    line-height:1.4;
+    color:#666;
+}
 /* =========================
    TTS
 ========================= */
