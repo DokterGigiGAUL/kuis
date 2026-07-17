@@ -9,6 +9,19 @@
     text-align:center;
 }
 
+.comic-title{
+    font-size:20px;
+    line-height:1.15;
+    margin-bottom:6px;
+}
+
+.comic-episode{
+    color:#000;
+    font-size:10px;
+    font-weight:400;
+    margin-bottom:6px;
+}
+
 .comic-image{
     display:block;
     width:100%;
