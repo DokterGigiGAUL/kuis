@@ -681,7 +681,7 @@ body {
    EXPLORE - LIST KOMIK
 ========================== */
 
-.comic-list-card{
+.comic-list-item{
     display:flex;
     align-items:center;
     gap:14px;
@@ -708,19 +708,31 @@ body {
 .comic-list-info{
     flex:1;
     min-width:0;
+
+    display:flex;
+    flex-direction:column;
 }
 
-.comic-list-info h3{
+.comic-list-episode{
+    font-size:13px;
+    font-weight:600;
+    color:#666;
+    margin-bottom:4px;
+}
+
+.comic-list-title{
+    margin:0;
     font-size:17px;
     line-height:1.35;
     font-weight:700;
 }
 
-.comic-list-btn{
+.comic-btn-list{
     width:88px;
     margin:0;
-    padding:10px 0;
     flex-shrink:0;
+
+    align-self:flex-end;
 }
 
 @media (max-width:640px){
