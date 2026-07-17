@@ -28,24 +28,12 @@
         <!-- Card akan dibuat otomatis oleh app.js -->
       </section>
 
-      <div class="section-header" style="margin-top: 40px;">
-        <h2>Komik Edukasi</h2>
-        <a id="comicExplore" class="section-link" href="explore.html?tab=comic">
-    Episode Lainnya →
-</a>
-      </div>
-
-      <section
-        id="comics-container"
-        class="comics-grid">
-        <!-- Card akan dibuat otomatis oleh app.js -->
-      </section>
 
       <div class="section-header" style="margin-top: 40px;">
         <h2>Teka-Teki Silang</h2>
         <a id="ttsExplore" class="section-link" href="explore.html?tab=tts">
     TTS Lainnya →
-</a>
+        </a>
       </div>
 
       <section id="tts-container" class="tts-grid">
@@ -59,9 +47,22 @@
         </a>
       </div>
 
-<section id="case-container" class="quiz-grid">
+      <section id="case-container" class="quiz-grid">
   <!-- Card Kartu Kasus -->
-</section>
+      </section>
+
+      <div class="section-header" style="margin-top: 40px;">
+        <h2>Komik Edukasi</h2>
+        <a id="comicExplore" class="section-link" href="explore.html?tab=comic">
+          Episode Lainnya →
+        </a>
+      </div>
+
+      <section
+        id="comics-container"
+        class="comics-grid">
+        <!-- Card akan dibuat otomatis oleh app.js -->
+      </section>
     </main>
 
     <!-- Template Card -->
@@ -107,7 +108,7 @@
     </template>
     
     <template id="case-card-template">
-  <div class="quiz-card">
+    <div class="quiz-card">
     <img
       class="case-thumbnail"
       src=""
@@ -124,13 +125,12 @@
             <span>🃏 Apa diagnosisnya?</span>
           </div> 
         </div>
-  </div>
 
         <div class="quiz-content">
           <button class="btn btn-primary comic-btn">Baca Komik</button>
         </div>
-      
-    <div class="quiz-content">
+    </div>  
+   <!--<div class="quiz-content">
       <h3 class="case-title"></h3>
       <p class="case-description"></p>
 
@@ -141,8 +141,7 @@
       <button class="btn btn-primary case-btn">
         Lihat Kasus
       </button>
-    </div>
-  </div>
+    </div>-->
 </template>
 
         <template id="comic-card-template">
