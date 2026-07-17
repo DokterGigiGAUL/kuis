@@ -221,8 +221,8 @@ body {
     padding:15px;
 }
 
-.quiz-title, .comic-title, .tts-title{
-    font-size:16px;
+.quiz-title, .tts-title{
+    font-size:20px;
     line-height:1.15;
     margin-bottom:6px;
 }
@@ -656,15 +656,6 @@ body {
     bottom:0;
     padding:0 12px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .8) 20%, rgba(255, 255, 255, .6) 40%, rgba(255, 255, 255, .4) 60%, rgba(255, 255, 255, .2) 80%, rgba(255, 255, 255, 0) 100%);
-}
-
-.comic-episode{
-    color:#000;
-    font-size:10px;
-    font-weight:400;
-    letter-spacing:.15em;
-    text-transform:uppercase;
-    margin-bottom:6px;
 }
 
 .comic-actions button{
