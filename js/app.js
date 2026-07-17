@@ -68,7 +68,7 @@ function loadComics() {
             `EPISODE #${String(comic.id).padStart(3, "0")}`;
 
         card.querySelector(".comic-btn").onclick = () => {
-            if (quiz.premium) {
+            if (comic.premium) {
         showPremiumDialog();
         return;
     }
@@ -92,7 +92,7 @@ function loadTTS() {
             `${tts.soal} Soal`;
 
         card.querySelector(".tts-btn").onclick = () => {
-            if (quiz.premium) {
+            if (tts.premium) {
         showPremiumDialog();
         return;
     }
@@ -128,7 +128,7 @@ function createCaseCard(caseData) {
         caseData.description;
 
     clone.querySelector(".case-btn").onclick = () => {
-        if (quiz.premium) {
+        if (case.premium) {
         showPremiumDialog();
         return;
     }
