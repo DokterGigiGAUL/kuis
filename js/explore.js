@@ -180,7 +180,7 @@ function showTTS() {
         card.querySelector(".tts-list-soal").textContent =
             `${tts.soal} Soal`;
         card.querySelector(".tts-btn-list").onclick = () => {
-            if (quiz.premium) {
+            if (tts.premium) {
         showPremiumDialog();
         return;
     }
@@ -226,7 +226,7 @@ function showCase() {
         caseData.description;
 
         card.querySelector(".case-btn-list").onclick = () => {
-            if (quiz.premium) {
+            if (case.premium) {
         showPremiumDialog();
         return;
     }
