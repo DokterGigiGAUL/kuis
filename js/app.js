@@ -128,7 +128,7 @@ function createCaseCard(caseData) {
         caseData.description;
 
     clone.querySelector(".case-btn").onclick = () => {
-        if (case.premium) {
+        if (caseData.premium) {
         showPremiumDialog();
         return;
     }
