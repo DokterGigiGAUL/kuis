@@ -90,7 +90,32 @@
 
 .case-thumbnail{
     width:100%;
-    aspect-ratio:3 / 2;
+    aspect-ratio:1 / 1;
     object-fit:cover;
     display:block;
+}
+
+.case-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 12px;
+    background: linear-gradient(to top, rgba(255, 255, 255, .85) 0%, rgba(255, 255, 255, .45) 45%, rgba(255, 255, 255, 0) 100%);
+}
+
+.case-cover {
+    position: relative;
+}
+
+.case-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
 }
