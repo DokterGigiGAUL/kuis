@@ -185,7 +185,7 @@ function showTTS() {
         return;
     }
             location.href =
-                `assets/tts/crossword.html?puzzle=tts${tts.id}`;
+                `tts.html?puzzle=tts${tts.id}`;
         };
         ttsSection.appendChild(card);
     });
