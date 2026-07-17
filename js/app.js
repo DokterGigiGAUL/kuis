@@ -65,7 +65,7 @@ function loadComics() {
         card.querySelector(".comic-thumb").alt = comic.title;
         card.querySelector(".comic-title").textContent = comic.title;
         card.querySelector(".comic-episode").textContent =
-            `Episode #${String(comic.id).padStart(0, "0")}`;
+            `Episode #${String(comic.id).padStart(1, "0")}`;
 
         card.querySelector(".comic-btn").onclick = () => {
             if (comic.premium) {
