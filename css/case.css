@@ -119,3 +119,15 @@
     display: flex;
     justify-content: space-between;
 }
+
+.case-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+@media (max-width:640px){
+    .case-grid {
+        gap: 14px;
+    }
+}
