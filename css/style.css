@@ -263,7 +263,7 @@ body {
 
 }
     .quiz-header{
-    background:var(--hitam);
+    background:var(--primary);
     color:white;
     padding:16px;
     display:flex;
