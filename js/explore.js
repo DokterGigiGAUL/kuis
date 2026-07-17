@@ -219,8 +219,8 @@ function showCase() {
         card.querySelector(".case-list-thumb").src =
         caseData.thumbnail;
 
-         card.querySelector(".case-list-title").textContent =
-         caseData.title;
+        card.querySelector(".case-list-title").textContent =
+        caseData.title;
 
         card.querySelector(".case-list-description").textContent =
         caseData.description;
