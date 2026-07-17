@@ -35,7 +35,7 @@ function createQuizCard(quiz) {
     clone.querySelector(".quiz-title").textContent = quiz.title;
     clone.querySelector(".quiz-description").textContent = quiz.description;
 
-    const button = clone.querySelector(".start-btn");
+    const button = clone.querySelector(".quiz-btn");
 
     if (Storage.isFinished(quiz.productId)) {
 
