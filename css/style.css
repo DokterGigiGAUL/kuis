@@ -203,7 +203,7 @@ body {
     box-shadow: var(--shadow);
 }
 
-.quiz-card:hover, comic-card:hover, tts-card:hover {
+.quiz-card:hover, comic-card:hover, tts-card:hover, case-card:hover{
     transform: translateY(-4px);
 }
 
@@ -213,12 +213,7 @@ body {
     object-fit:cover;
     display:block;
 }
-.case-thumbnail{
-    width:100%;
-    aspect-ratio:1 / 1;
-    object-fit:cover;
-    display:block;
-}
+
 .quiz-content,
 .comic-content,
 .tts-content,
@@ -831,7 +826,8 @@ body {
 
 .card-grid .quiz-card,
 .card-grid .comic-card,
-.card-grid .tts-card {
+.card-grid .tts-card,
+.card-grid .case-card{
     width:100%;
     margin:0;
 }
