@@ -12,7 +12,7 @@
     --text: #1f2937;
     --text-light: #6b7280;
     --border: #e5e7eb;
-    --shadow: 0 8px 18px rgba(0, 0, 0, .08);
+    --shadow: 0 10px 20px rgba(0, 0, 0, .1);
     --radius: 12px;
 }
 
@@ -792,11 +792,11 @@ body {
     gap:6px;
     padding:8px 14px;
     background:#fff;
-    color:var(--primary);
-    border:1px solid var(--primary);
+    /*color:var(--primary);
+    border:0px solid var(--primary);*/
     border-radius:999px;
     text-decoration:none;
-    font-size:.85rem;
+    font-size:.95rem;
     font-weight:400;
     transition:.2s;
 }
