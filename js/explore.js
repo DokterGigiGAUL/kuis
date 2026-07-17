@@ -226,7 +226,7 @@ function showCase() {
         caseData.description;
 
         card.querySelector(".case-btn-list").onclick = () => {
-            if (case.premium) {
+            if (caseData.premium) {
         showPremiumDialog();
         return;
     }
