@@ -43,6 +43,12 @@ function createQuizCard(quiz) {
         button.disabled = true;
     } else {
         button.onclick = () => {
+
+        if (quiz.premium) {
+        showPremiumDialog();
+        return;
+    }
+            
             location.href = `quiz.html?id=${quiz.file}`;
         };
     }
@@ -62,6 +68,10 @@ function loadComics() {
             `EPISODE #${String(comic.id).padStart(3, "0")}`;
 
         card.querySelector(".comic-btn").onclick = () => {
+            if (quiz.premium) {
+        showPremiumDialog();
+        return;
+    }
             location.href = `komik.html?id=${comic.id}`;
         };
 
@@ -82,6 +92,10 @@ function loadTTS() {
             `${tts.soal} Soal`;
 
         card.querySelector(".tts-btn").onclick = () => {
+            if (quiz.premium) {
+        showPremiumDialog();
+        return;
+    }
             location.href =
                 `tts.html?puzzle=tts${tts.id}`;
         };
@@ -114,6 +128,10 @@ function createCaseCard(caseData) {
         caseData.description;
 
     clone.querySelector(".case-btn").onclick = () => {
+        if (quiz.premium) {
+        showPremiumDialog();
+        return;
+    }
         location.href =
             `case.html?case=${caseData.file}`;
     };
