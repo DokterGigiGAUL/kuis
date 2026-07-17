@@ -7,7 +7,7 @@
 :root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
-    --hitam: #0f0f0f;
+    --hitam: #1e1e1e;
     --bg: #f4f7fb;
     --card: #ffffff;
     --text: #1f2937;
@@ -24,10 +24,10 @@ body {
 }
 
 .header {
-    background: var(--primary);
+    background: var(--hitam);
     color: white;
     text-align: center;
-    padding: 20px 16px;
+    padding: 16px;
 }
 
 .header h1 {
@@ -987,7 +987,7 @@ body {
 .case-list-description{
     margin-top:6px;
     font-size:14px;
-    color:var(--text-light);
+    color:#999999;
 }
 
 .case-btn-list{
