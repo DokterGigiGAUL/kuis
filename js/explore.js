@@ -107,33 +107,29 @@ function showComic() {
     ttsTab.classList.remove("active");
     caseTab.classList.remove("active");
 
+    const template =
+        document.getElementById("comic-list-template");
+
     comicSection.innerHTML = "";
 
     comics.forEach(comic => {
 
-        const card = document.createElement("article");
-        card.className = "comic-list-card";
+        const card =
+            template.content.cloneNode(true);
 
-        card.innerHTML = `
-            <img
-                src="${comic.thumbnail}"
-                class="comic-list-thumb"
-                alt="${comic.title}"
-                loading="lazy"
-            >
+        card.querySelector(".comic-list-thumb").src =
+            comic.thumbnail;
 
-            <div class="comic-list-info">
-                <h3>${comic.title}</h3>
-            </div>
+        card.querySelector(".comic-list-thumb").alt =
+            comic.title;
 
-            <button class="btn btn-outline comic-btn-list">
-                Baca
-            </button>
-        `;
+        card.querySelector(".comic-list-episode").textContent =
+            `Episode ${comic.episode}`;
 
-        const button = card.querySelector(".comic-btn-list");
+        card.querySelector(".comic-list-title").textContent =
+            comic.title;
 
-        button.onclick = () => {
+        card.querySelector(".comic-btn-list").onclick = () => {
 
             if (comic.premium) {
                 showPremiumDialog();
