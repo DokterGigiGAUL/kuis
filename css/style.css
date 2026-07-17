@@ -7,6 +7,7 @@
 :root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
+    --hitam: #0f0f0f;
     --bg: #f4f7fb;
     --card: #ffffff;
     --text: #1f2937;
@@ -115,7 +116,8 @@ body {
     padding:10px;
 
     font-size:15px;
-    font-weight:700;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
     text-decoration:none;
 
     cursor:pointer;
@@ -260,7 +262,7 @@ body {
 
 }
     .quiz-header{
-    background:#2563eb;
+    background:var(--hitam);
     color:white;
     padding:16px;
     display:flex;
@@ -277,6 +279,7 @@ body {
     height:42px;
     border-radius:50%;
     font-size:15px;
+    font-weight:700;
     cursor:pointer;
 }
 
@@ -336,8 +339,10 @@ body {
 }
 
 .question-card h3{
-    margin-bottom:20px;
-    line-height:1.25;
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.25;
+    font-weight: 400;
 }
 
 .choices{
@@ -563,9 +568,14 @@ body {
 
 @media (min-width:768px){
     
-.section-header{
-    margin-right:20px;
-}
+    .section-header{
+        margin-right:20px;
+    }    
+
+    .section-header h2{
+        letter-spacing:-0.05rem;
+    }
+    
     .quiz-grid{
         display:flex;
         gap:24px;
