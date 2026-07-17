@@ -36,8 +36,8 @@ const quizzes = [
         title: "Kuis #4",
         description: "Uji pengetahuanmu",
         thumbnail: "assets/images/kuis/thumbnail-kuis4.jpeg",
-        premium: true,
-        price: 5000
+        premium: false,
+        price: 0
     },
     {
         id: 5,
@@ -46,8 +46,8 @@ const quizzes = [
         title: "Kuis #5",
         description: "Uji pengetahuanmu",
         thumbnail: "assets/images/kuis/thumbnail-kuis2.jpeg",
-        premium: false,
-        price: 0
+        premium: true,
+        price: 5000
     },
     {
         id: 6,
