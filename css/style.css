@@ -743,6 +743,15 @@ body {
 
 @media (min-width:768px){
 
+    .case-grid {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        padding-bottom: 10px;
+    }
+    
     .card-grid{
     display:grid;
     grid-template-columns:repeat(3,minmax(0,1fr));
