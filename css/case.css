@@ -143,6 +143,15 @@
     .case-card {
         flex: 0 0 calc((100% - 24px) / 3.25);
     }
+
+        .case-grid {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        padding-bottom: 10px;
+    }
 }
 
 .back{
@@ -160,7 +169,6 @@
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 28px;
     line-height: 1.3;
 }
 
