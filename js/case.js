@@ -43,6 +43,66 @@ data.clinicalExamination.forEach(item => {
 
 });
 
+const premium =
+    data.premiumContent;
+
+if (!data.premium) {
+
+    document.getElementById("pathophysiology").textContent =
+        premium.pathophysiology;
+
+    document.getElementById("supporting-examination").textContent =
+        premium.supportingExamination;
+
+    document.getElementById("treatment-plan").textContent =
+        premium.treatmentPlan;
+
+    document.getElementById("follow-up").textContent =
+        premium.followUp;
+
+    const ul =
+        document.getElementById("key-points");
+
+    premium.keyPoints.forEach(item => {
+
+        const li =
+            document.createElement("li");
+
+        li.textContent = item;
+
+        ul.appendChild(li);
+
+    });
+
+} else {
+
+    document.getElementById("pathophysiology").innerHTML =
+        `<div class="premium-hidden">
+            🔒 Konten Premium
+        </div>`;
+
+    document.getElementById("supporting-examination").innerHTML =
+        `<div class="premium-hidden">
+            🔒 Konten Premium
+        </div>`;
+
+    document.getElementById("treatment-plan").innerHTML =
+        `<div class="premium-hidden">
+            🔒 Konten Premium
+        </div>`;
+
+    document.getElementById("follow-up").innerHTML =
+        `<div class="premium-hidden">
+            🔒 Konten Premium
+        </div>`;
+
+    document.getElementById("key-points").innerHTML =
+        `<div class="premium-hidden">
+            🔒 Konten Premium
+        </div>`;
+
+}
+
     });
 
 flashcard.onclick = () => {
