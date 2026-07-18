@@ -1,211 +1,81 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Apple Style Hero</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",
-    "Segoe UI",sans-serif;
-    background:#fff;
-    color:#1d1d1f;
-}
-
-/* ========================= */
-
-.hero{
-
-    width:100%;
-    min-height:100svh;
-
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-
-    text-align:center;
-
-    background-image:url("https://www.apple.com/v/home/images/iphone-family/a/hero_iphone_family__be5jkzxszb1e_large.jpg");
-    background-size:cover;
-    background-position:center bottom;
-    background-repeat:no-repeat;
-
-}
-
-.hero-content{
-
-    width:min(90%,900px);
-
-    margin-top:72px;
-
-}
-
-.hero h1{
-
-    font-size:64px;
-    font-weight:600;
-    line-height:1.05;
-    letter-spacing:-2px;
-
-}
-
-.hero p{
-
-    margin:20px auto 0;
-
-    max-width:650px;
-
-    font-size:28px;
-    font-weight:400;
-    line-height:1.35;
-
-    color:#555;
-
-}
-
-.actions{
-
-    margin-top:34px;
-
-    display:flex;
-    justify-content:center;
-    gap:32px;
-
-}
-
-.actions a{
-
-    text-decoration:none;
-
-    font-size:21px;
-
-    color:#0071e3;
-
-    transition:.25s;
-
-}
-
-.actions a:hover{
-
-    color:#0057c2;
-
-}
-
-/* ========================= */
-/* Tablet                    */
-/* ========================= */
-
-@media(max-width:1068px){
-
-.hero{
-
-background-image:url("https://www.apple.com/v/home/images/iphone-family/a/hero_iphone_family__be5jkzxszb1e_medium.jpg");
-
-}
-
-.hero h1{
-
-font-size:52px;
-
-}
-
-.hero p{
-
-font-size:24px;
-
-}
-
-}
-
-/* ========================= */
-/* Mobile                    */
-/* ========================= */
-
-@media(max-width:734px){
-
-.hero{
-
-background-image:url("https://www.apple.com/v/home/images/iphone-family/a/hero_iphone_family__be5jkzxszb1e_small.jpg");
-
-background-position:center;
-
-}
-
-.hero-content{
-
-margin-top:48px;
-
-}
-
-.hero h1{
-
-font-size:38px;
-
-letter-spacing:-1px;
-
-}
-
-.hero p{
-
-font-size:19px;
-
-max-width:320px;
-
-}
-
-.actions{
-
-flex-direction:column;
-
-gap:18px;
-
-}
-
-.actions a{
-
-font-size:19px;
-
-}
-
-}
-
-</style>
-
-</head>
-<body>
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <h1>Belajar Lebih Cerdas.</h1>
-
-        <p>
-            Platform belajar yang dirancang dengan fokus,
-            sederhana, dan membantu kamu memahami konsep
-            lebih cepat.
-        </p>
-
-        <div class="actions">
-
-            <a href="#">Mulai Belajar ></a>
-
-            <a href="#">Pelajari Lebih Lanjut ></a>
-
-        </div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuis Penyakit Mulut</title>
+ <!--  <link rel="preload" as="image" href="..."> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/case.css" /> -->
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Penyakit Mulut Wonder App</h1>
+    </header>
+
+    <main class="container">
+
+      <!-- Template Card -->
+<section class="home-section">
+    <div class="section-header">
+        <h2>Kuis</h2>
+        <a href="explore.html?tab=quiz">Lihat semua →</a>
     </div>
 
+    <div id="quiz-list" class="horizontal-scroll"></div>
 </section>
 
-</body>
+<section class="home-section">
+    <div class="section-header">
+        <h2>Kartu Kasus</h2>
+        <a href="explore.html?tab=case">Lihat semua →</a>
+    </div>
+
+    <div id="case-container" class="horizontal-scroll"></div>
+</section>
+      
+<section class="home-section">
+    <div class="section-header">
+        <h2>TTS</h2>
+        <a href="explore.html?tab=tts">Lihat semua →</a>
+    </div>
+
+    <div id="tts-container" class="horizontal-scroll"></div>
+</section>
+        
+<section class="home-section">
+    <div class="section-header">
+        <h2>Komik</h2>
+        <a href="explore.html?tab=comic">Lihat semua →</a>
+    </div>
+
+    <div id="comics-container" class="horizontal-scroll"></div>
+</section>
+        
+    </main>
+
+    <!-- Template -->
+      
+<template id="content-card-template">
+    <article class="content-card">
+        <img
+            class="content-thumb"
+            loading="lazy"
+            alt="Thumbnail">
+
+        <div class="content-info">
+            <h3 class="content-title"></h3>
+            <p class="content-description"></p>
+        </div>
+    </article>
+</template>
+    <script src="js/storage.js"></script>
+    <script src="js/quiz-data.js"></script>
+    <script src="js/comics-data.js"></script>
+    <script src="js/tts-data.js"></script>
+    <script src="js/case-data.js"></script>
+<script src="js/premium.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
