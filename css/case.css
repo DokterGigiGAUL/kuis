@@ -84,9 +84,12 @@
 }
 
 .tap-hint{
-    text-align:center;
-    color:#888;
-    margin-top:15px;
+    text-align: center;
+    color: #f0f0f0;
+    background: var(--primary);
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 12px;
 }
 
 .diagnosis-name{
