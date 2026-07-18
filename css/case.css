@@ -145,3 +145,25 @@
         flex: 0 0 calc((100% - 24px) / 3.25);
     }
 }
+
+.case-back-content{
+    padding:24px;
+}
+
+.case-back-content h3{
+    margin-top:24px;
+    margin-bottom:8px;
+}
+
+.case-back-content h3:first-child{
+    margin-top:0;
+}
+
+.case-back-content p,
+.case-back-content ul{
+    margin:0;
+}
+
+.case-back-content ul{
+    padding-left:20px;
+}
