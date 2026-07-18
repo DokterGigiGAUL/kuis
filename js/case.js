@@ -16,7 +16,32 @@ fetch(`assets/cases/${file}.json`)
             data.anamnesis;
 
         document.getElementById("diagnosis").textContent =
-            data.diagnosis;
+    data.diagnosis;
+
+const ddList =
+    document.getElementById("dd-list");
+
+data.differentialDiagnosis.forEach(item => {
+
+    const li = document.createElement("li");
+    li.textContent = item;
+    ddList.appendChild(li);
+
+});
+
+document.getElementById("lesion-description").textContent =
+    data.lesionDescription;
+
+const clinicalList =
+    document.getElementById("clinical-list");
+
+data.clinicalExamination.forEach(item => {
+
+    const li = document.createElement("li");
+    li.textContent = item;
+    clinicalList.appendChild(li);
+
+});
 
     });
 
