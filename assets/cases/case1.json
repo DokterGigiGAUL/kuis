@@ -13,31 +13,37 @@
 
   "differentialDiagnosis": [
     "Leukoplakia",
-    "Kandidiasis Hiperplastik",
-    "Oral Lichenoid Reaction"
+    "Oral Lichenoid Reaction",
+    "Kandidiasis Hiperplastik"
   ],
 
-  "lesionDescription": "Lesi putih berbentuk striae bilateral pada mukosa bukal dengan pola seperti renda (Wickham striae).",
+  "lesionDescription": "Lesi putih bilateral pada mukosa bukal berupa garis-garis keratotik yang saling beranyam (Wickham striae), tidak dapat dikerok dan umumnya tidak menimbulkan nyeri.",
 
   "clinicalExamination": [
     "Inspeksi seluruh mukosa rongga mulut",
     "Evaluasi distribusi lesi bilateral",
-    "Palpasi untuk menilai indurasi",
-    "Evaluasi faktor iritasi lokal"
+    "Pastikan lesi tidak dapat dikerok",
+    "Palpasi untuk menilai adanya indurasi",
+    "Evaluasi kemungkinan faktor iritasi lokal seperti restorasi atau tepi gigi tajam"
   ],
 
   "premium": false,
   "price": 0,
 
   "premiumContent": {
-    "pathophysiology": "....",
-    "supportingExamination": "....",
-    "treatmentPlan": "....",
-    "followUp": "....",
+    "pathophysiology": "Oral Lichen Planus merupakan penyakit inflamasi kronis yang dimediasi oleh limfosit T terhadap sel basal epitel sehingga menyebabkan kerusakan lapisan basal dan hiperkeratosis mukosa.",
+
+    "supportingExamination": "Biopsi dan pemeriksaan histopatologi merupakan standar konfirmasi diagnosis. Pemeriksaan imunofluoresensi direk dapat dipertimbangkan pada kasus tertentu.",
+
+    "treatmentPlan": "Terapi lini pertama adalah kortikosteroid topikal. Eliminasi faktor iritasi lokal, edukasi pasien, serta pemantauan berkala diperlukan karena sebagian kecil kasus memiliki potensi transformasi ganas.",
+
+    "followUp": "Kontrol setiap 3–6 bulan untuk mengevaluasi respons terapi, mendeteksi perubahan klinis, dan memantau kemungkinan transformasi menjadi keganasan.",
+
     "keyPoints": [
-      "...",
-      "...",
-      "..."
+      "Wickham striae merupakan gambaran klinis khas Oral Lichen Planus.",
+      "Lesi umumnya bersifat bilateral dan simetris pada mukosa bukal.",
+      "Biopsi dianjurkan pada lesi yang atipikal atau persisten.",
+      "Pemantauan jangka panjang diperlukan karena terdapat risiko transformasi ganas meskipun rendah."
     ]
   }
 }
