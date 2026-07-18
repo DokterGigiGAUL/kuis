@@ -156,7 +156,7 @@ prevBtn.disabled =
     currentId === 1;
 
 nextBtn.disabled =
-    currentId === case.length;
+    currentId === cases.length;
         
 flashcard.onclick = () => {
     flashcard.classList.toggle("flipped");
