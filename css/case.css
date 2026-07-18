@@ -254,3 +254,24 @@
 #premium-banner button{
    margin-top:14px;
 }
+
+
+.case-navigation{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+
+    padding:16px 20px;
+
+    background:#fff;
+    border-top:1px solid #e5e7eb;
+}
+
+.case-navigation button{
+    flex:1;
+}
