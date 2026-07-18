@@ -222,10 +222,6 @@ function showCase() {
         caseData.description;
 
         card.querySelector(".case-btn-list").onclick = () => {
-            if (caseData.premium) {
-        showPremiumDialog();
-        return;
-    }
         location.href =
         `case.html?case=${caseData.file}`;
 };
