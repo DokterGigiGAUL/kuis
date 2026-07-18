@@ -140,9 +140,6 @@
 @media (max-width:640px){
 
 @media (min-width: 768px) {
-    .case-card {
-        flex: 0 0 calc((100% - 24px) / 3.25);
-    }
 
         .case-grid {
         display: flex;
@@ -151,6 +148,10 @@
         overflow-y: hidden;
         scroll-behavior: smooth;
         padding-bottom: 10px;
+    }
+
+    .case-card {
+        flex: 0 0 calc((100% - 24px) / 3.25);
     }
 }
 
