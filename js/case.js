@@ -163,4 +163,12 @@ flashcard.onclick = () => {
 };
 
 })
+
+backBtn.onclick = ()=>{
+    if(confirm("Keluar dari kuis?")){
+        stopTimer();
+        window.location.href="index.html";
+    }
+};
+
 .catch(err => console.error(err));
