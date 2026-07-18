@@ -123,7 +123,6 @@ document.getElementById("follow-up").parentElement.style.display =
 
 document.getElementById("key-points").parentElement.style.display =
     "none";
-    });
 
     }
 
