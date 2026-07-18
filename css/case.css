@@ -76,16 +76,19 @@
     margin-top:15px;
 }
 
-.diagnosis-title{
-    font-size:18px;
-    color:#666;
-    margin-bottom:15px;
+.diagnosis-name{
+    font-size:2rem;
+    font-weight:800;
+    text-transform:uppercase;
+    text-align:center;
+    line-height:1.2;
+    margin:0;
 }
 
-.diagnosis-name{
-    font-size:28px;
-    font-weight:bold;
-    text-align:center;
+.diagnosis-hero{
+    padding-bottom:24px;
+    margin-bottom:28px;
+    border-bottom:1px solid #e5e7eb;
 }
 
 .case-thumbnail{
