@@ -751,7 +751,11 @@ body {
         scroll-behavior: smooth;
         padding-bottom: 10px;
     }
-    
+
+    .case-card {
+        flex: 0 0 calc((100% - 24px) / 3.25);
+    }
+
     .card-grid{
     display:grid;
     grid-template-columns:repeat(3,minmax(0,1fr));
