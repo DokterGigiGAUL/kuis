@@ -3,11 +3,48 @@
   "title": "Kasus #3",
   "image": "assets/images/cases/case3.jpg",
   "description": "Apa diagnosisnya?",
+
   "gender": "Perempuan",
   "age": "52 tahun",
+
   "anamnesis": "Pasien datang dengan keluhan bercak putih pada sisi lidah yang tidak dapat dikerok dan telah dirasakan selama dua bulan.",
-  "diagnosis": "LEUKOPLAKIA",
-  "management": "Dummy tatalaksana.",
+
+  "diagnosis": "Leukoplakia",
+
+  "differentialDiagnosis": [
+    "Oral Lichen Planus",
+    "Kandidiasis Hiperplastik",
+    "Oral Hairy Leukoplakia"
+  ],
+
+  "lesionDescription": "Plak putih homogen dengan permukaan sedikit kasar pada tepi lateral lidah, tidak dapat diangkat dengan pengerokan dan tidak disertai nyeri.",
+
+  "clinicalExamination": [
+    "Inspeksi ukuran, bentuk, dan batas lesi",
+    "Pastikan lesi tidak dapat dikerok menggunakan kasa",
+    "Palpasi untuk menilai adanya indurasi",
+    "Evaluasi faktor risiko seperti kebiasaan merokok, alkohol, atau iritasi kronis",
+    "Lakukan pemeriksaan mukosa rongga mulut secara menyeluruh untuk mencari lesi lain"
+  ],
+
   "premium": false,
-  "price": 0
+  "price": 0,
+
+  "premiumContent": {
+    "pathophysiology": "Leukoplakia merupakan lesi putih yang tidak dapat diklasifikasikan sebagai penyakit lain dan berhubungan dengan hiperkeratosis epitel akibat paparan iritan kronis. Sebagian kasus menunjukkan displasia epitel dengan potensi transformasi menjadi karsinoma sel skuamosa.",
+
+    "supportingExamination": "Biopsi merupakan pemeriksaan utama untuk menentukan ada tidaknya displasia epitel dan menyingkirkan keganasan. Toluidine blue, autofluorescence, atau brush biopsy dapat digunakan sebagai pemeriksaan tambahan pada kasus tertentu.",
+
+    "treatmentPlan": "Eliminasi faktor risiko seperti merokok dan iritasi lokal. Lesi dengan displasia atau risiko tinggi dianjurkan dilakukan eksisi bedah atau laser, disertai pemantauan berkala.",
+
+    "followUp": "Evaluasi klinis dilakukan setiap 3–6 bulan. Lesi yang mengalami perubahan ukuran, warna, permukaan, atau timbul ulserasi perlu segera dilakukan biopsi ulang.",
+
+    "keyPoints": [
+      "Leukoplakia adalah diagnosis eksklusi.",
+      "Lesi tidak dapat dikerok.",
+      "Lokasi pada tepi lateral lidah dan dasar mulut memiliki risiko transformasi ganas lebih tinggi.",
+      "Biopsi diperlukan untuk menentukan derajat displasia.",
+      "Eliminasi faktor risiko dan follow-up jangka panjang sangat penting."
+    ]
+  }
 }
