@@ -76,33 +76,53 @@ if (!data.premium) {
 
 } else {
 
-    document.getElementById("pathophysiology").innerHTML =
-        `<div class="premium-hidden">
-            🔒 Konten Premium
-        </div>`;
+    const banner =
+    document.getElementById("premium-banner");
 
-    document.getElementById("supporting-examination").innerHTML =
-        `<div class="premium-hidden">
-            🔒 Konten Premium
-        </div>`;
+banner.style.display = "block";
 
-    document.getElementById("treatment-plan").innerHTML =
-        `<div class="premium-hidden">
-            🔒 Konten Premium
-        </div>`;
+banner.innerHTML = `
+<h3>🔒 Konten Premium</h3>
 
-    document.getElementById("follow-up").innerHTML =
-        `<div class="premium-hidden">
-            🔒 Konten Premium
-        </div>`;
+<p>
+Buka akses Premium untuk mempelajari:
+</p>
 
-    document.getElementById("key-points").innerHTML =
-        `<div class="premium-hidden">
-            🔒 Konten Premium
-        </div>`;
+<ul>
 
-}
+<li>Patofisiologi</li>
 
+<li>Pemeriksaan Penunjang</li>
+
+<li>Rencana Perawatan</li>
+
+<li>Follow Up</li>
+
+<li>Key Points</li>
+
+</ul>
+
+<button class="btn btn-primary">
+
+Buka Premium
+
+</button>
+`;
+
+document.getElementById("pathophysiology").parentElement.style.display =
+    "none";
+
+document.getElementById("supporting-examination").parentElement.style.display =
+    "none";
+
+document.getElementById("treatment-plan").parentElement.style.display =
+    "none";
+
+document.getElementById("follow-up").parentElement.style.display =
+    "none";
+
+document.getElementById("key-points").parentElement.style.display =
+    "none";
     });
 
 flashcard.onclick = () => {
