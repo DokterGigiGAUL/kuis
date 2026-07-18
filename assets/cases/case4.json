@@ -1,13 +1,51 @@
 {
-    "id": 4,
-    "title": "Kasus 4",
-    "image": "assets/images/cases/case4.jpg",
-    "description": "Apa diagnosisnya?",
-    "gender": "Laki-laki",
-    "age": "23 tahun",
-    "anamnesis": "Pasien datang dengan keluhan pembengkakan di gigi geraham bungsu kanan sejak dua minggu yang lalu. Terasa nyeri saat makan.",
-    "diagnosis": "OPERKULITIS",
-    "management": "Eksisi biopsi.",
-    "premium": true,
-    "price": 5000
+  "id": 4,
+  "title": "Kasus #4",
+  "image": "assets/images/cases/case4.jpg",
+  "description": "Apa diagnosisnya?",
+
+  "gender": "Laki-laki",
+  "age": "23 tahun",
+
+  "anamnesis": "Pasien datang dengan keluhan pembengkakan di daerah gigi geraham bungsu kanan bawah sejak dua minggu yang lalu. Nyeri terutama saat mengunyah dan pasien merasa sulit membuka mulut secara maksimal.",
+
+  "diagnosis": "Operkulitis",
+
+  "differentialDiagnosis": [
+    "Abses Perikoronal",
+    "Abses Periodontal",
+    "Perikoronitis"
+  ],
+
+  "lesionDescription": "Jaringan operkulum di atas mahkota gigi molar tiga bawah tampak eritematosa, edema, dan nyeri tekan. Dapat dijumpai akumulasi debris makanan serta eksudat purulen di bawah operkulum.",
+
+  "clinicalExamination": [
+    "Inspeksi jaringan operkulum dan gigi molar tiga yang erupsi sebagian",
+    "Palpasi untuk menilai nyeri tekan dan adanya fluktuasi",
+    "Evaluasi adanya pus atau eksudat",
+    "Periksa keterbatasan pembukaan mulut (trismus)",
+    "Palpasi kelenjar limfa regional",
+    "Evaluasi hubungan oklusal dengan gigi antagonis"
+  ],
+
+  "premium": true,
+  "price": 5000,
+
+  "premiumContent": {
+    "pathophysiology": "Operkulitis merupakan inflamasi jaringan operkulum yang menutupi sebagian mahkota gigi yang erupsi parsial. Debris makanan dan bakteri mudah terperangkap di bawah operkulum sehingga memicu infeksi lokal.",
+
+    "supportingExamination": "Radiografi panoramik atau periapikal diperlukan untuk mengevaluasi posisi impaksi gigi molar tiga, arah erupsi, serta hubungan dengan struktur anatomi di sekitarnya.",
+
+    "treatmentPlan": "Terapi awal meliputi irigasi daerah operkulum, debridemen, kontrol infeksi, analgesik, dan antibiotik bila terdapat indikasi. Setelah fase akut teratasi, dilakukan operkulektomi atau pencabutan gigi molar tiga sesuai indikasi.",
+
+    "followUp": "Evaluasi dilakukan dalam 3–7 hari untuk memastikan inflamasi membaik dan menentukan waktu tindakan definitif.",
+
+    "keyPoints": [
+      "Paling sering terjadi pada gigi molar tiga bawah yang erupsi sebagian.",
+      "Debris makanan di bawah operkulum merupakan faktor pencetus utama.",
+      "Trismus dan limfadenopati dapat menyertai kasus yang lebih berat.",
+      "Radiografi penting sebelum menentukan terapi definitif.",
+      "Eliminasi penyebab diperlukan untuk mencegah kekambuhan."
+    ]
+  }
 }
