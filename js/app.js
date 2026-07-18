@@ -124,8 +124,8 @@ function createCaseCard(caseData) {
     clone.querySelector(".case-title").textContent =
         caseData.title;
 
-    clone.querySelector(".case-description").textContent =
-        caseData.description;
+   // clone.querySelector(".case-description").textContent =
+   //     caseData.description;
 
     clone.querySelector(".case-btn").onclick = () => {
     location.href = `case.html?case=${caseData.file}`;
