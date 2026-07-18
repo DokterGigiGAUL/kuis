@@ -1,0 +1,50 @@
+{
+  "id": 4,
+  "title": "Kasus #4",
+  "image": "assets/images/cases/case4.jpg",
+  "description": "Apa diagnosisnya?",
+
+  "gender": "Perempuan",
+  "age": "58 tahun",
+
+  "anamnesis": "Pasien mengeluhkan luka-luka nyeri di rongga mulut sejak dua bulan yang lalu sehingga sulit makan. Lepuh sering pecah dan meninggalkan ulser yang sulit sembuh.",
+
+  "diagnosis": "Pemphigus Vulgaris",
+
+  "differentialDiagnosis": [
+    "Mucous Membrane Pemphigoid",
+    "Erosive Oral Lichen Planus",
+    "Erythema Multiforme"
+  ],
+
+  "lesionDescription": "Tampak erosi dan ulser multipel pada mukosa bukal serta palatum dengan sisa bula yang mudah pecah. Mukosa tampak eritematosa dan nyeri saat disentuh.",
+
+  "clinicalExamination": [
+    "Inspeksi seluruh mukosa rongga mulut",
+    "Uji tanda Nikolsky secara hati-hati",
+    "Evaluasi keterlibatan kulit dan mukosa lainnya",
+    "Nilai tingkat nyeri dan kemampuan makan pasien",
+    "Periksa tanda infeksi sekunder"
+  ],
+
+  "premium": true,
+  "price": 5000,
+
+  "premiumContent": {
+    "pathophysiology": "Pemfigus vulgaris merupakan penyakit autoimun yang ditandai pembentukan autoantibodi terhadap desmoglein sehingga terjadi akantolisis dan pembentukan bula intraepitel.",
+
+    "supportingExamination": "Biopsi untuk pemeriksaan histopatologi dan Direct Immunofluorescence (DIF) merupakan pemeriksaan utama. Pemeriksaan ELISA antibodi anti-desmoglein dapat membantu konfirmasi diagnosis.",
+
+    "treatmentPlan": "Terapi utama berupa kortikosteroid sistemik yang dikombinasikan dengan agen imunosupresan sesuai derajat penyakit. Perawatan suportif rongga mulut dan kontrol nyeri juga diperlukan.",
+
+    "followUp": "Evaluasi respons terapi, efek samping obat imunosupresan, serta pemantauan kekambuhan dilakukan secara berkala.",
+
+    "keyPoints": [
+      "Manifestasi oral sering muncul sebelum lesi kulit.",
+      "Bula mudah pecah sehingga sering hanya tampak erosi atau ulser.",
+      "Tanda Nikolsky biasanya positif.",
+      "Diagnosis dikonfirmasi dengan histopatologi dan Direct Immunofluorescence.",
+      "Memerlukan terapi imunosupresif dan follow-up jangka panjang."
+    ]
+  }
+}
