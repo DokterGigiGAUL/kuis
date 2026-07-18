@@ -3,11 +3,45 @@
   "title": "Kasus #2",
   "image": "assets/images/cases/case2.jpg",
   "description": "Apa diagnosisnya?",
+
   "gender": "Laki-laki",
   "age": "35 tahun",
+
   "anamnesis": "Pasien mengeluhkan benjolan pada bibir bawah sejak satu bulan yang lalu. Benjolan tidak nyeri dan ukurannya berubah-ubah.",
-  "diagnosis": "MUCOCELE",
-  "management": "Dummy tatalaksana.",
+
+  "diagnosis": "Mucocele",
+
+  "differentialDiagnosis": [
+    "Fibroma Iritasi",
+    "Hemangioma",
+    "Mucoepidermoid Carcinoma Derajat Rendah"
+  ],
+
+  "lesionDescription": "Nodul berbentuk kubah, berwarna kebiruan-transparan, permukaan licin, konsistensi lunak dan berfluktuasi, terutama pada mukosa labial bawah.",
+
+  "clinicalExamination": [
+    "Inspeksi ukuran, warna, dan lokasi lesi",
+    "Palpasi untuk menilai konsistensi dan fluktuasi",
+    "Evaluasi riwayat trauma atau kebiasaan menggigit bibir",
+    "Periksa adanya lesi serupa pada kelenjar saliva minor lainnya"
+  ],
+
   "premium": false,
-  "price": 0
+  "price": 0,
+
+  "premiumContent": {
+    "pathophysiology": "Mukokel terjadi akibat ruptur atau obstruksi duktus kelenjar saliva minor sehingga mukus keluar ke jaringan ikat sekitarnya (fenomena ekstravasasi) atau tertahan di dalam duktus (fenomena retensi).",
+
+    "supportingExamination": "Diagnosis umumnya ditegakkan secara klinis. Pemeriksaan histopatologi dilakukan setelah eksisi untuk mengonfirmasi diagnosis dan menyingkirkan lesi lain.",
+
+    "treatmentPlan": "Eksisi bedah lesi beserta kelenjar saliva minor yang terlibat. Alternatif lain meliputi marsupialisasi atau laser pada kasus tertentu.",
+
+    "followUp": "Evaluasi penyembuhan luka dan pantau kemungkinan rekurensi, terutama bila kelenjar penyebab tidak ikut diangkat.",
+
+    "keyPoints": [
+      "Paling sering terjadi pada mukosa labial bawah.",
+      "Riwayat trauma menggigit bibir sering ditemukan.",
+      "Eksisi harus disertai pengangkatan kelenjar saliva minor untuk mengurangi risiko kekambuhan."
+    ]
+  }
 }
