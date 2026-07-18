@@ -242,6 +242,10 @@ body {
     margin-bottom: 15px;
 }
 
+.case-cover {
+    position: relative;
+}
+
 @media (max-width: 640px) {
 
     .container {
