@@ -157,18 +157,20 @@ prevBtn.disabled =
 
 nextBtn.disabled =
     currentId === cases.length;
+
+
+const backBtn = document.getElementById("backBtn");
+
+if (backBtn) {
+    backBtn.onclick = () => {
+        window.location.href = "index.html";
+    };
+}
         
 flashcard.onclick = () => {
     flashcard.classList.toggle("flipped");
 };
 
 })
-
-backBtn.onclick = ()=>{
-    if(confirm("Keluar dari kuis?")){
-        stopTimer();
-        window.location.href="index.html";
-    }
-};
 
 .catch(err => console.error(err));
