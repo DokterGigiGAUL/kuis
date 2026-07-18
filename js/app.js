@@ -128,12 +128,8 @@ function createCaseCard(caseData) {
         caseData.description;
 
     clone.querySelector(".case-btn").onclick = () => {
-        if (caseData.premium) {
-        showPremiumDialog();
-        return;
-    }
-        location.href =
-            `case.html?case=${caseData.file}`;
-    };
+    location.href = `case.html?case=${caseData.file}`;
+};
+    
     caseContainer.appendChild(clone);
 }
