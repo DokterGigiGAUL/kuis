@@ -207,7 +207,7 @@ body {
     transform: translateY(-4px);
 }
 
-.quiz-thumbnail, .tts-thumbnail{
+.quiz-thumbnail, .tts-thumbnail, .case-thumbnail{
     width:100%;
     aspect-ratio:3 / 2;
     object-fit:cover;
@@ -221,7 +221,7 @@ body {
     padding:15px;
 }
 
-.quiz-title, .tts-title{
+.quiz-title, .tts-title, .case-title{
     font-size:20px;
     line-height:1.15;
     margin-bottom:6px;
@@ -735,17 +735,29 @@ body {
     align-self:center;
 }
 
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.case-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 12px;
+    height:100px;
+    background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .8) 20%, rgba(255, 255, 255, .6) 40%, rgba(255, 255, 255, .4) 60%, rgba(255, 255, 255, .2) 80%, rgba(255, 255, 255, 0) 100%);
+}
+
 @media (max-width:640px){
     .comics-grid {
         gap: 14px;
     }
 }
 
-.case-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
+
 @media (min-width:768px){
 
     .case-grid {
