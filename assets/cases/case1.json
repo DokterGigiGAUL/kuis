@@ -1,13 +1,43 @@
 {
-    "id": 1,
-    "title": "Kasus #1",
-    "image": "assets/images/cases/case1.jpg",
-    "description": "Apa diagnosisnya?",
-    "gender": "Perempuan",
-    "age": "43 tahun",
-    "anamnesis": "Pasien datang dengan keluhan luka putih pada mukosa pipi kanan sejak tiga minggu yang lalu. Tidak terasa nyeri.",
-    "diagnosis": "ORAL LICHEN PLANUS",
-    "management": "Kortikosteroid topikal.",
-    "premium": false,
-    "price": 0
+  "id": 1,
+  "title": "Kasus #1",
+  "image": "assets/images/cases/case1.jpg",
+  "description": "Apa diagnosisnya?",
+
+  "gender": "Perempuan",
+  "age": "43 tahun",
+
+  "anamnesis": "Pasien datang dengan keluhan luka putih pada mukosa pipi kanan sejak tiga minggu yang lalu. Tidak terasa nyeri.",
+
+  "diagnosis": "Oral Lichen Planus",
+
+  "differentialDiagnosis": [
+    "Leukoplakia",
+    "Kandidiasis Hiperplastik",
+    "Oral Lichenoid Reaction"
+  ],
+
+  "lesionDescription": "Lesi putih berbentuk striae bilateral pada mukosa bukal dengan pola seperti renda (Wickham striae).",
+
+  "clinicalExamination": [
+    "Inspeksi seluruh mukosa rongga mulut",
+    "Evaluasi distribusi lesi bilateral",
+    "Palpasi untuk menilai indurasi",
+    "Evaluasi faktor iritasi lokal"
+  ],
+
+  "premium": false,
+  "price": 0,
+
+  "premiumContent": {
+    "pathophysiology": "....",
+    "supportingExamination": "....",
+    "treatmentPlan": "....",
+    "followUp": "....",
+    "keyPoints": [
+      "...",
+      "...",
+      "..."
+    ]
+  }
 }
