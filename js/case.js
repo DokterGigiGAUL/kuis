@@ -125,7 +125,39 @@ document.getElementById("key-points").parentElement.style.display =
     "none";
 
     }
+const currentId =
+    Number(data.id);
 
+const prevBtn =
+    document.getElementById("prev-case");
+
+const nextBtn =
+    document.getElementById("next-case");
+
+prevBtn.onclick = () => {
+
+    if (currentId > 1) {
+
+        location.href =
+            `case.html?case=case${currentId - 1}`;
+
+    }
+
+};
+
+nextBtn.onclick = () => {
+
+    location.href =
+        `case.html?case=case${currentId + 1}`;
+
+};
+
+prevBtn.disabled =
+    currentId === 1;
+
+nextBtn.disabled =
+    currentId === cases.length;
+        
 flashcard.onclick = () => {
     flashcard.classList.toggle("flipped");
 };
