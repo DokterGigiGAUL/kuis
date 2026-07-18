@@ -125,6 +125,11 @@ document.getElementById("key-points").parentElement.style.display =
     "none";
     });
 
+    }
+
 flashcard.onclick = () => {
     flashcard.classList.toggle("flipped");
 };
+
+})
+.catch(err => console.error(err));
