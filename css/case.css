@@ -138,13 +138,9 @@
     bottom: 0;
 }
 @media (max-width:640px){
-    .case-grid {
-        gap: 14px;
-    }
-}
 
 @media (min-width: 768px) {
-    .tts-card {
+    .case-card {
         flex: 0 0 calc((100% - 24px) / 3.25);
     }
 }
