@@ -667,6 +667,7 @@ body {
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .8) 20%, rgba(255, 255, 255, .6) 40%, rgba(255, 255, 255, .4) 60%, rgba(255, 255, 255, .2) 80%, rgba(255, 255, 255, 0) 100%);
 }
 
+
 .comic-actions button{
     margin: 30px 20px;
     border: 0px solid var(--primary);
@@ -760,6 +761,12 @@ body {
     background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .8) 20%, rgba(255, 255, 255, .6) 40%, rgba(255, 255, 255, .4) 60%, rgba(255, 255, 255, .2) 80%, rgba(255, 255, 255, 0) 100%);
 }
 
+.comic-episode{
+    font-size: 20px;
+    line-height: 1.15;
+    margin-bottom: 6px;
+}
+
 @media (max-width:640px){
     .comics-grid {
         gap: 14px;
@@ -782,7 +789,7 @@ body {
         flex: 0 0 calc((100% - 24px) / 3.25);
     }
 
-    .case-title {
+    .case-title, .comic-title, .comic-episode {
         font-size: 24px;
     }
 
@@ -806,9 +813,6 @@ body {
         flex:0 0 calc((100% - 24px) / 3.25);
     }
 
-    .comic-title{
-    font-size:24px;
-    }
 }
 
 /* ==========================
