@@ -128,13 +128,13 @@ body {
         font-size: 28px;
         margin-bottom: 6px;
     }
-    
+}   
 @media (min-width: 768px) and (max-width: 1024px) {
     .header h1 {
         font-size: 32px;
         margin-bottom: 6px;
     }
-
+}
 /* ==========================
    BUTTON
 ========================== */
