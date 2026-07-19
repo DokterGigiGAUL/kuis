@@ -7,7 +7,7 @@ const comics = [{
   price: 0,
   title: "Episode #1",
   description: "Sariawan Karena Infeksi Jamur?",
-  thumbnail: "assets/comics/Coverweb.webp.webp",
+  thumbnail: "assets/comics/Coverweb.webp",
   images: [
     "assets/comics/komik1/IMG_1967.webp",
     "assets/comics/komik1/IMG_1964.webp",
@@ -23,7 +23,7 @@ const comics = [{
     
   title: "Episode #2",
   description: "Kenapa Gigi Hilang Perlu Diganti?",
-  thumbnail: "assets/comics/Coverweb.webp.webp",
+  thumbnail: "assets/comics/Coverweb.webp",
 
   images: [
     "assets/comics/komik2/IMG_1970.webp",
@@ -38,7 +38,7 @@ const comics = [{
   price: 0,
   title: "Episode #3",
   description: "Hubungan Merokok dan Kanker Mulut",
-  thumbnail: "assets/comics/Coverweb.webp.webp",
+  thumbnail: "assets/comics/Coverweb.webp",
 
   images: [
     "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png",
@@ -53,7 +53,7 @@ const comics = [{
   price: 5000,
   title: "Episode #4",
   description: "Gusi Berdarah Berbahaya Gak?",
-  thumbnail: "assets/comics/Coverweb.webp.webp",
+  thumbnail: "assets/comics/Coverweb.webp",
 
   images: [
     "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png",
