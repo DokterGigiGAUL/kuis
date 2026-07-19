@@ -1,0 +1,22 @@
+:root {
+    --list-thumb-size: 96px;
+    --list-gap: 16px;
+}
+
+.list-card {
+    display: grid;
+    grid-template-columns:
+        var(--list-thumb-size)
+        1fr
+        auto;
+
+    gap: var(--list-gap);
+    align-items: center;
+}
+
+.list-thumb {
+    width: var(--list-thumb-size);
+    height: var(--list-thumb-size);
+    object-fit: cover;
+    border-radius: 16px;
+}
