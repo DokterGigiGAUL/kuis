@@ -55,28 +55,24 @@ function createQuizCard(quiz) {
     quizList.appendChild(clone);
 }
 
-function loadComics() {
-    if (!comicsContainer) return;
+function createCaseCard(caseData) {
 
-    for (const comic of comics.slice(0, 4)) {
-        const card = comicTemplate.content.cloneNode(true);
+    const clone = caseTemplate.content.cloneNode(true);
 
-        card.querySelector(".comic-thumb").src = comic.thumbnail;
-        card.querySelector(".comic-thumb").alt = comic.title;
-        card.querySelector(".comic-title").textContent = comic.title;
-        card.querySelector(".comic-episode").textContent =
-            `Episode #${String(comic.id).padStart(1, "0")}`;
+    clone.querySelector(".case-thumbnail").src = caseData.thumbnail;
+    clone.querySelector(".case-thumbnail").alt = caseData.title;
 
-        card.querySelector(".comic-btn").onclick = () => {
-            if (comic.premium) {
-        showPremiumDialog();
-        return;
-    }
-            location.href = `komik.html?id=${comic.id}`;
-        };
+    clone.querySelector(".case-title").textContent =
+        caseData.title;
 
-        comicsContainer.appendChild(card);
-    }
+   // clone.querySelector(".case-description").textContent =
+   //     caseData.description;
+
+    clone.querySelector(".case-btn").onclick = () => {
+    location.href = `case.html?case=${caseData.file}`;
+};
+    
+    caseContainer.appendChild(clone);
 }
 
 function loadTTS() {
@@ -114,22 +110,26 @@ function loadCases() {
 
 }
 
-function createCaseCard(caseData) {
+function loadComics() {
+    if (!comicsContainer) return;
 
-    const clone = caseTemplate.content.cloneNode(true);
+    for (const comic of comics.slice(0, 4)) {
+        const card = comicTemplate.content.cloneNode(true);
 
-    clone.querySelector(".case-thumbnail").src = caseData.thumbnail;
-    clone.querySelector(".case-thumbnail").alt = caseData.title;
+        card.querySelector(".comic-thumb").src = comic.thumbnail;
+        card.querySelector(".comic-thumb").alt = comic.title;
+        card.querySelector(".comic-title").textContent = comic.title;
+        card.querySelector(".comic-description").textContent = comic.description;
+            //`Episode #${String(comic.id).padStart(1, "0")}`;
 
-    clone.querySelector(".case-title").textContent =
-        caseData.title;
+        card.querySelector(".comic-btn").onclick = () => {
+            if (comic.premium) {
+        showPremiumDialog();
+        return;
+    }
+            location.href = `komik.html?id=${comic.id}`;
+        };
 
-   // clone.querySelector(".case-description").textContent =
-   //     caseData.description;
-
-    clone.querySelector(".case-btn").onclick = () => {
-    location.href = `case.html?case=${caseData.file}`;
-};
-    
-    caseContainer.appendChild(clone);
+        comicsContainer.appendChild(card);
+    }
 }
