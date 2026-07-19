@@ -112,7 +112,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
 }
 
 .section-header h2 {
