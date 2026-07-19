@@ -53,7 +53,7 @@ const comics = [{
   price: 5000,
   title: "Episode #4",
   description: "Gusi Berdarah Berbahaya Gak?",
-  thumbnail: "assets/comics/Coverweb.webp",
+  thumbnail: "assets/comics/AE1AD1C0-04A2-4649-AD62-E7BCA3C6EE41.jpeg",
 
   images: [
     "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png",
