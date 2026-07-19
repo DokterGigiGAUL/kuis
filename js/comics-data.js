@@ -38,7 +38,7 @@ const comics = [{
   price: 0,
   title: "Episode #3",
   description: "Hubungan Merokok dan Kanker Mulut",
-  thumbnail: "assets/comics/komik3/IMG_1966.jpeg",
+  thumbnail: "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.jpeg",
 
   images: [
     "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png",
