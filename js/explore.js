@@ -123,8 +123,8 @@ function showComic() {
         card.querySelector(".comic-list-thumb").alt =
             comic.title;
 
-        card.querySelector(".comic-list-episode").textContent =
-            `Episode ${comic.episode}`;
+        card.querySelector(".comic-list-description").textContent =
+            comic.description;
 
         card.querySelector(".comic-list-title").textContent =
             comic.title;
