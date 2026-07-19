@@ -7,7 +7,7 @@ const comics = [{
   price: 0,
   title: "Episode #1",
   description: "Sariawan Karena Infeksi Jamur?",
-  thumbnail: "assets/comics/komik1/IMG_4353.jpeg",
+  thumbnail: "assets/comics/komik1/IMG_4354.jpeg",
   images: [
     "assets/comics/komik1/IMG_1967.webp",
     "assets/comics/komik1/IMG_1964.webp",
@@ -23,7 +23,7 @@ const comics = [{
     
   title: "Episode #2",
   description: "Kenapa Gigi Hilang Perlu Diganti?",
-  thumbnail: "assets/comics/komik2/IMG_4353.jpeg",
+  thumbnail: "assets/comics/komik2/IMG_4355.jpeg",
 
   images: [
     "assets/comics/komik2/IMG_1970.webp",
