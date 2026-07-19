@@ -38,11 +38,20 @@ body {
     text-align:center;
 }
 
-.toolbar{
+/*.toolbar{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:8px;
     width:100%;
+}*/
+
+.toolbar{
+    display:flex;
+    gap:8px;
+}
+
+#reset-btn{
+    margin-left:auto;
 }
 
 .toolbar button{
