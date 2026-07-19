@@ -79,13 +79,6 @@ body {
     line-height: 1.3;
 }
 
-.content-description {
-    margin-top: 6px;
-    font-size: 14px;
-    color: #666;
-    line-height: 1.4;
-}
-
 .content-thumb {
     width: 100%;
     aspect-ratio: 4 / 3;
@@ -93,19 +86,19 @@ body {
     display: block;
 }
 
+.content-description {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+}
+
 .content-info {
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding: 12px;
-    flex: 1;
-}
-
-.content-description {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-    line-height: 1.4;
     flex: 1;
 }
 
@@ -218,11 +211,4 @@ body {
 .tts-btn, 
 .case-btn{
     width:100%;
-}
-
-.quiz-btn-list,
-.comic-btn-list,
-.tts-btn-list,
-.case-btn-list{
-    width:25%;
 }
