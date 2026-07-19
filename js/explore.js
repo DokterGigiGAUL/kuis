@@ -133,29 +133,26 @@ function showComic() {
 
         createListCard({
 
-    container: quizSection,
+    container: comicSection,
 
-    thumbnail: quiz.thumbnail,
+    thumbnail: comic.thumbnail,
 
-    title: quiz.title,
+    title: comic.title,
 
-    description: quiz.description,
+    description: comic.description,
 
-    buttonText: Storage.isFinished(quiz.productId)
-        ? "Sudah Dikerjakan"
-        : "Mulai",
-
-    disabled: Storage.isFinished(quiz.productId),
+    buttonText: "Baca",
 
     onClick() {
 
-        if (quiz.premium) {
+        if (comic.premium) {
             showPremiumDialog();
             return;
         }
 
         location.href =
-            `quiz.html?id=${quiz.file}`;
+            `komik.html?id=${comic.id}`;
+
     }
 
 });
@@ -183,29 +180,26 @@ function showTTS() {
 
         createListCard({
 
-    container: quizSection,
+    container: ttsSection,
 
-    thumbnail: quiz.thumbnail,
+    thumbnail: tts.thumbnail,
 
-    title: quiz.title,
+    title: tts.title,
 
-    description: quiz.description,
+    description: `${tts.soal} Soal`,
 
-    buttonText: Storage.isFinished(quiz.productId)
-        ? "Sudah Dikerjakan"
-        : "Mulai",
-
-    disabled: Storage.isFinished(quiz.productId),
+    buttonText: "Main",
 
     onClick() {
 
-        if (quiz.premium) {
+        if (tts.premium) {
             showPremiumDialog();
             return;
         }
 
         location.href =
-            `quiz.html?id=${quiz.file}`;
+            `tts.html?puzzle=tts${tts.id}`;
+
     }
 
 });
@@ -233,29 +227,21 @@ function showCase() {
 
         createListCard({
 
-    container: quizSection,
+    container: caseSection,
 
-    thumbnail: quiz.thumbnail,
+    thumbnail: caseData.thumbnail,
 
-    title: quiz.title,
+    title: caseData.title,
 
-    description: quiz.description,
+    description: caseData.description,
 
-    buttonText: Storage.isFinished(quiz.productId)
-        ? "Sudah Dikerjakan"
-        : "Mulai",
-
-    disabled: Storage.isFinished(quiz.productId),
+    buttonText: "Lihat",
 
     onClick() {
 
-        if (quiz.premium) {
-            showPremiumDialog();
-            return;
-        }
-
         location.href =
-            `quiz.html?id=${quiz.file}`;
+            `case.html?case=${caseData.file}`;
+
     }
 
 });
