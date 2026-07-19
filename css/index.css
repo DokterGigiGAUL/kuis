@@ -141,3 +141,69 @@ body {
         font-size: 32px;
         margin-bottom: 6px;
     }
+
+/* ==========================
+   BUTTON
+========================== */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    border:none;
+    border-radius:12px;
+    padding:10px;
+    font-size:15px;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+    text-decoration:none;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:var(--primary-dark);
+}
+
+.btn-outline{
+    background:var(--card);
+    color:var(--primary);
+    border:1px solid var(--primary);
+}
+
+.btn-outline:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn:disabled{
+    background:#ccc;
+    color:#666;
+    border:none;
+    cursor:not-allowed;
+}
+
+.w-100{
+    width:100%;
+}
+
+.quiz-btn,
+.start-btn,
+.comic-btn,
+.tts-btn, 
+.case-btn{
+    width:100%;
+}
+
+.quiz-btn-list,
+.comic-btn-list,
+.tts-btn-list,
+.case-btn-list{
+    width:25%;
+}
