@@ -7,15 +7,26 @@
     --button-radius: 14px;
 }
 
-.list-card {
-    display: grid;
+:root{
+    --list-thumb-size:96px;
+    --list-gap:16px;
+    --list-padding:20px;
+    --list-radius:24px;
+}
+
+.list-card{
+    display:grid;
     grid-template-columns:
         var(--list-thumb-size)
-        1fr
+        minmax(0,1fr)
         auto;
-
-    gap: var(--list-gap);
-    align-items: center;
+    gap:var(--list-gap);
+    align-items:center;
+    padding:var(--list-padding);
+    background:#fff;
+    border-radius:var(--list-radius);
+    box-shadow:0 4px 16px rgba(0,0,0,.08);
+    margin-bottom:20px;
 }
 
 .list-thumb {
@@ -23,4 +34,89 @@
     height: var(--list-thumb-size);
     object-fit: cover;
     border-radius: 16px;
+}
+
+.list-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.list-description {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.list-info {
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap: 8px;
+    padding: 12px;
+    flex: 1;
+}
+
+.list-btn {
+    margin-top: auto;
+}
+/* ==========================
+   BUTTON
+========================== */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    border:none;
+    border-radius:12px;
+    padding:10px;
+    font-size:15px;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+    text-decoration:none;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:var(--primary-dark);
+}
+
+.btn-outline{
+    background:var(--card);
+    color:var(--primary);
+    border:1px solid var(--primary);
+}
+
+.btn-outline:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn:disabled{
+    background:#ccc;
+    color:#666;
+    border:none;
+    cursor:not-allowed;
+}
+
+.w-100{
+    width:100%;
+}
+
+.quiz-btn-list,
+.comic-btn-list,
+.tts-btn-list,
+.case-btn-list{
+    width:25%;
 }
