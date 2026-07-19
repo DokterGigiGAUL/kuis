@@ -89,26 +89,22 @@ Buka akses Premium untuk mempelajari:
 </p>
 
 <ul>
-
 <li>Patofisiologi</li>
-
 <li>Pemeriksaan Penunjang</li>
-
 <li>Rencana Perawatan</li>
-
 <li>Follow Up</li>
-
 <li>Key Points</li>
-
 </ul>
 
-<button class="btn btn-primary">
-
-Buka Premium
-
+<button
+    id="premium-btn"
+    class="btn btn-primary">
+    Buka Premium
 </button>
 `;
-
+    
+document.getElementById("premium-btn").onclick = showPremiumDialog;
+    
 document.getElementById("pathophysiology").parentElement.style.display =
     "none";
 
