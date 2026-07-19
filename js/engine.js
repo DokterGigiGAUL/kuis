@@ -55,7 +55,7 @@ document.getElementById("loader").innerHTML=`
 <div class="loader-error">
     <h2>Puzzle tidak dapat dimuat</h2>
     <p>${err.message}</p>
-    <button onclick="location.href='indexx.html'">
+    <button onclick="location.href='index.html'">
         Kembali ke Beranda
     </button>
 </div>
