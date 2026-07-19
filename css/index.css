@@ -52,12 +52,15 @@ body {
 
 .content-card {
     flex: 0 0 170px;
+    display: flex;
+    flex-direction: column;
     scroll-snap-align: start;
     background: #fff;
     border-radius: 14px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
+        box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
 .content-title {
@@ -74,19 +77,9 @@ body {
     line-height: 1.4;
 }
 
-.content-card {
-    flex: 0 0 170px;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
-}
-
 .content-thumb {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 5 / 8;
     object-fit: cover;
     display: block;
 }
