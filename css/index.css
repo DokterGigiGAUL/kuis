@@ -15,6 +15,8 @@
     --border: #e5e7eb;
     --shadow: 0 10px 20px rgba(0, 0, 0, .1);
     --radius: 12px;
+    --home-card-gap: 16px;
+    --home-card-per-view: 2.25;
 }
 
 body {
@@ -37,7 +39,7 @@ body {
 
 .horizontal-scroll {
     display: flex;
-    gap: 16px;
+    gap: var(--home-card-gap);;
     overflow-x: auto;
     overflow-y: hidden;
     padding: 4px 0 8px;
@@ -51,7 +53,10 @@ body {
 }
 
 .content-card {
-    flex: 0 0 170px;
+    flex: 0 0 calc(
+        (100% - (var(--home-card-gap) * (var(--home-card-per-view) - 1)))
+        / var(--home-card-per-view)
+    );
     display: flex;
     flex-direction: column;
     scroll-snap-align: start;
