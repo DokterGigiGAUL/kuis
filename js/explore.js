@@ -166,7 +166,7 @@ function showTTS() {
             tts.title;
         card.querySelector(".list-title").textContent =
             tts.title;
-        card.querySelector(".list-soal").textContent =
+        card.querySelector(".list-description").textContent =
             `${tts.soal} Soal`;
         card.querySelector(".list-btn").onclick = () => {
             if (tts.premium) {
