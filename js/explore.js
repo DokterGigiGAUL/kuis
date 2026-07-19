@@ -46,7 +46,7 @@ function showQuiz() {
     caseTab.classList.remove("active");
 
     const template =
-        document.getElementById("quiz-card-template");
+        document.getElementById("list-card-template");
 
     quizSection.innerHTML = "";
 
@@ -108,7 +108,7 @@ function showComic() {
     caseTab.classList.remove("active");
 
     const template =
-        document.getElementById("comic-list-template");
+        document.getElementById("list-card-template");
 
     comicSection.innerHTML = "";
 
@@ -160,7 +160,7 @@ function showTTS() {
     caseTab.classList.remove("active");
     
     const template =
-        document.getElementById("tts-card-template");
+        document.getElementById("list-card-template");
 
     ttsSection.innerHTML = "";
 
@@ -203,7 +203,7 @@ function showCase() {
     caseTab.classList.add("active");
 
     const template =
-        document.getElementById("case-card-template");
+        document.getElementById("list-card-template");
 
     caseSection.innerHTML = "";
 
