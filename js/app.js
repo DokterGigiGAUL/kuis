@@ -1,13 +1,13 @@
-const quizList = document.getElementById("quiz-list");
+//const quizList = document.getElementById("quiz-list");
 const quizTemplate = document.getElementById("quiz-card-template");
 
-const comicsContainer = document.getElementById("comics-container");
+//const comicsContainer = document.getElementById("comics-container");
 const comicTemplate = document.getElementById("comic-card-template");
 
-const ttsContainer = document.getElementById("tts-container");
+//const ttsContainer = document.getElementById("tts-container");
 const ttsTemplate = document.getElementById("tts-card-template");
 
-const caseContainer = document.getElementById("case-container");
+//const caseContainer = document.getElementById("case-container");
 const caseTemplate = document.getElementById("case-card-template");
 
 loadQuiz();
