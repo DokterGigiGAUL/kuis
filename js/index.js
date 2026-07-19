@@ -97,7 +97,8 @@ function loadComics() {
 
             title: comic.title,
 
-            description: `Episode #${comic.id}`,
+            //description: `Episode #${comic.id}`,
+            description: comic.description,
 
             buttonText: "Baca",
 
