@@ -23,7 +23,7 @@ const comics = [{
     
   title: "Episode #2",
   description: "Kenapa Gigi Hilang Perlu Diganti?",
-  thumbnail: "assets/comics/komik2/IMG_4355.jpeg",
+  thumbnail: "assets/comics/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.jpeg",
 
   images: [
     "assets/comics/komik2/IMG_1970.webp",
