@@ -46,71 +46,23 @@
       <section id="comics-container" class="card-grid"></section>
     </main>
 
-    <!-- TEMPLATE QUIZ -->
+    <!-- TEMPLATE CARD -->
 
-<template id="quiz-card-template">
-    <article class="quiz-list-card">
+<template id="list-card-template">
+    <article class="list-card">
         <img
-            class="quiz-list-thumb"
-            loading="lazy"
-            alt="Thumbnail Kuis">
-        <div class="quiz-list-info">
-            <h3 class="quiz-list-title"></h3>
-            <p class="quiz-list-description"></p>
-            <div class="quiz-list-meta" style="display:none;">
-                <span>📄 10 Soal</span>
-                <span>⏱ 10 Menit</span>
-            </div>
+            class="list-thumb"
+            loading=""
+            alt="">
+        <div class="list-info">
+            <p class="list-subtitle"></p>
+            <h3 class="list-title"></h3>
+            <p class="list-description"></p>
         </div>
-        <button class="btn btn-outline quiz-btn-list">
-            Mulai
-        </button>
+        <button class="list-btn"></button>
     </article>
+
 </template>
-    
-    <template id="comic-list-template">
-      <article class="comic-list-item">
-        <img class="comic-list-thumb" src="" alt="" />
-
-        <div class="comic-list-info">
-          <div class="comic-list-title"></div>
-          <h3 class="comic-list-description"></h3>
-        </div>
-
-        <button class="btn btn-outline comic-btn-list">Baca</button>
-      </article>
-    </template>
-
-    <template id="tts-card-template">
-      <article class="tts-list-card">
-        <img class="tts-list-thumb" loading="lazy" alt="Thumbnail TTS" />
-
-        <div class="tts-list-info">
-          <h3 class="tts-list-title"></h3>
-
-          <p class="tts-list-soal"></p>
-        </div>
-
-        <button class="btn btn-outline tts-btn-list">Isi</button>
-      </article>
-    </template>
-
-    <template id="case-card-template">
-    <article class="case-list-card">
-        <img
-            class="case-list-thumb"
-            loading="lazy"
-            alt="Thumbnail Kasus">
-        <div class="case-list-info">
-            <h3 class="case-list-title"></h3>
-            <p class="case-list-description"></p>
-        </div>
-        <button class="btn btn-outline case-btn-list">
-            Lihat
-        </button>
-    </article>
-</template>
-
     <script src="js/storage.js"></script>
     <script src="js/quiz-data.js"></script>
     <script src="js/comics-data.js"></script>
