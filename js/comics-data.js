@@ -5,8 +5,8 @@ const comics = [{
   episode: 1,
   premium: false,
   price: 0,
-  
-  title: "Sariawan Karena Infeksi Jamur?",
+  title: "Episode #1",
+  description: "Sariawan Karena Infeksi Jamur?",
   thumbnail: "assets/comics/komik1/IMG_1966.jpeg",
   images: [
     "assets/comics/komik1/IMG_1967.webp",
@@ -21,7 +21,8 @@ const comics = [{
   premium: false,
   price: 0,
     
-  title: "Kenapa Gigi Hilang Perlu Diganti?",
+  title: "Episode #2",
+  description: "Kenapa Gigi Hilang Perlu Diganti?",
   thumbnail: "assets/comics/komik2/IMG_1966.jpeg",
 
   images: [
@@ -35,8 +36,8 @@ const comics = [{
   episode: 3,
   premium: false,
   price: 0,
-  
-  title: "Hubungan Merokok dan Kanker Mulut",
+  title: "Episode #3",
+  description: "Hubungan Merokok dan Kanker Mulut",
   thumbnail: "assets/comics/komik3/IMG_1966.jpeg",
 
   images: [
@@ -50,8 +51,8 @@ const comics = [{
   episode: 4,
   premium: true,
   price: 5000,
-  
-  title: "Gusi Berdarah Berbahaya Gak?",
+  title: "Episode #4",
+  description: "Gusi Berdarah Berbahaya Gak?",
   thumbnail: "assets/comics/komik3/IMG_1966.jpeg",
 
   images: [
