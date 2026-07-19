@@ -52,7 +52,6 @@
 }
 
 .list-btn {
-    margin-top: auto;
 }
 /* ==========================
    BUTTON
@@ -72,6 +71,7 @@
     text-decoration:none;
     cursor:pointer;
     transition:.2s;
+    margin-top:auto;
 }
 
 .btn-primary{
@@ -100,14 +100,10 @@
     border:none;
     cursor:not-allowed;
 }
-
-.w-100{
-    width:100%;
-}
-
+/*
 .quiz-btn-list,
 .comic-btn-list,
 .tts-btn-list,
 .case-btn-list{
     width:25%;
-}
+}*/
