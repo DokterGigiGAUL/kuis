@@ -11,9 +11,9 @@ const ttsTemplate = document.getElementById("tts-card-template");
 const caseTemplate = document.getElementById("case-card-template");
 
 loadQuiz();
-loadComics();
-loadTTS();
 loadCases();
+loadTTS();
+loadComics();
 
 function loadQuiz() {
 
