@@ -20,6 +20,8 @@ const pageTitle =
     document.getElementById("pageTitle");
 const caseTab =
     document.getElementById("caseTab");
+const listTemplate =
+    document.getElementById("list-card-template");
 
 if (tab === "comic") {
     showComic();
@@ -29,6 +31,36 @@ if (tab === "comic") {
     showCase();
 } else {
     showQuiz();
+}
+
+function createListCard({
+    container,
+    thumbnail,
+    title,
+    description,
+    buttonText,
+    disabled = false,
+    onClick
+}) {
+
+    const clone = listTemplate.content.cloneNode(true);
+
+    clone.querySelector(".list-thumb").src = thumbnail;
+    clone.querySelector(".list-thumb").alt = title;
+
+    clone.querySelector(".list-title").textContent = title;
+    clone.querySelector(".list-description").textContent = description;
+
+    const button = clone.querySelector(".list-btn");
+
+    button.textContent = buttonText;
+    button.disabled = disabled;
+
+    if (!disabled && onClick) {
+        button.onclick = onClick;
+    }
+
+    container.appendChild(clone);
 }
 
 function showQuiz() {
@@ -45,46 +77,38 @@ function showQuiz() {
     ttsTab.classList.remove("active");
     caseTab.classList.remove("active");
 
-    const template =
-        document.getElementById("list-card-template");
-
     quizSection.innerHTML = "";
 
     quizzes.forEach(quiz => {
 
-        const card =
-            template.content.cloneNode(true);
+        createListCard({
 
-        card.querySelector(".list-thumb").src =
-        quiz.thumbnail;
-        card.querySelector(".list-thumb").alt =
-        quiz.title;
-        card.querySelector(".list-title").textContent =
-        quiz.title;
-        card.querySelector(".list-description").textContent =
-        quiz.description;
-        const button =
-        card.querySelector(".list-btn");
+    container: quizSection,
 
-        if (Storage.isFinished(quiz.productId)) {
+    thumbnail: quiz.thumbnail,
 
-            button.textContent =
-                "Sudah Dikerjakan";
+    title: quiz.title,
 
-            button.disabled = true;
+    description: quiz.description,
 
-        } else {
+    buttonText: Storage.isFinished(quiz.productId)
+        ? "Sudah Dikerjakan"
+        : "Mulai",
 
-            button.onclick = () => {
-            if (quiz.premium) {
-        showPremiumDialog();
-        return;
-    }
-                location.href =
-                    `quiz.html?id=${quiz.file}`;
-            };
+    disabled: Storage.isFinished(quiz.productId),
+
+    onClick() {
+
+        if (quiz.premium) {
+            showPremiumDialog();
+            return;
         }
-        quizSection.appendChild(card);
+
+        location.href =
+            `quiz.html?id=${quiz.file}`;
+    }
+
+});
     });
 }
 
@@ -102,36 +126,39 @@ function showComic() {
     ttsTab.classList.remove("active");
     caseTab.classList.remove("active");
 
-    const template =
-        document.getElementById("list-card-template");
 
     comicSection.innerHTML = "";
 
     comics.forEach(comic => {
 
-        const card =
-            template.content.cloneNode(true);
-        
-        card.querySelector(".list-thumb").src =
-            comic.thumbnail;
-        card.querySelector(".list-thumb").alt =
-            comic.title;
-        card.querySelector(".list-description").textContent =
-            comic.description;
-        card.querySelector(".list-title").textContent =
-            comic.title;
-        card.querySelector(".list-btn").onclick = () => {
+        createListCard({
 
-            if (comic.premium) {
-                showPremiumDialog();
-                return;
-            }
+    container: quizSection,
 
-            location.href = `komik.html?id=${comic.id}`;
+    thumbnail: quiz.thumbnail,
 
-        };
+    title: quiz.title,
 
-        comicSection.appendChild(card);
+    description: quiz.description,
+
+    buttonText: Storage.isFinished(quiz.productId)
+        ? "Sudah Dikerjakan"
+        : "Mulai",
+
+    disabled: Storage.isFinished(quiz.productId),
+
+    onClick() {
+
+        if (quiz.premium) {
+            showPremiumDialog();
+            return;
+        }
+
+        location.href =
+            `quiz.html?id=${quiz.file}`;
+    }
+
+});
 
     });
 
@@ -149,34 +176,39 @@ function showTTS() {
     comicTab.classList.remove("active");
     ttsTab.classList.add("active");
     caseTab.classList.remove("active");
-    
-    const template =
-        document.getElementById("list-card-template");
 
     ttsSection.innerHTML = "";
 
     ttsList.forEach(tts => {
 
-        const card =
-            template.content.cloneNode(true);
+        createListCard({
 
-        card.querySelector(".list-thumb").src =
-            tts.thumbnail;
-        card.querySelector(".list-thumb").alt =
-            tts.title;
-        card.querySelector(".list-title").textContent =
-            tts.title;
-        card.querySelector(".list-description").textContent =
-            `${tts.soal} Soal`;
-        card.querySelector(".list-btn").onclick = () => {
-            if (tts.premium) {
-        showPremiumDialog();
-        return;
+    container: quizSection,
+
+    thumbnail: quiz.thumbnail,
+
+    title: quiz.title,
+
+    description: quiz.description,
+
+    buttonText: Storage.isFinished(quiz.productId)
+        ? "Sudah Dikerjakan"
+        : "Mulai",
+
+    disabled: Storage.isFinished(quiz.productId),
+
+    onClick() {
+
+        if (quiz.premium) {
+            showPremiumDialog();
+            return;
+        }
+
+        location.href =
+            `quiz.html?id=${quiz.file}`;
     }
-            location.href =
-                `tts.html?puzzle=tts${tts.id}`;
-        };
-        ttsSection.appendChild(card);
+
+});
     });
 
 }
@@ -195,30 +227,38 @@ function showCase() {
     ttsTab.classList.remove("active");
     caseTab.classList.add("active");
 
-    const template =
-        document.getElementById("list-card-template");
-
     caseSection.innerHTML = "";
 
     cases.forEach(caseData => {
 
-        const card =
-            template.content.cloneNode(true);
+        createListCard({
 
-        card.querySelector(".list-thumb").src =
-        caseData.thumbnail;
-        card.querySelector(".list-thumb").alt =
-        caseData.title;
-        card.querySelector(".list-title").textContent =
-        caseData.title;
-        card.querySelector(".list-description").textContent =
-        caseData.description;
-        card.querySelector(".list-btn").onclick = () => {
+    container: quizSection,
+
+    thumbnail: quiz.thumbnail,
+
+    title: quiz.title,
+
+    description: quiz.description,
+
+    buttonText: Storage.isFinished(quiz.productId)
+        ? "Sudah Dikerjakan"
+        : "Mulai",
+
+    disabled: Storage.isFinished(quiz.productId),
+
+    onClick() {
+
+        if (quiz.premium) {
+            showPremiumDialog();
+            return;
+        }
+
         location.href =
-        `case.html?case=${caseData.file}`;
-    };
+            `quiz.html?id=${quiz.file}`;
+    }
 
-        caseSection.appendChild(card);
+});
 
     });
 
