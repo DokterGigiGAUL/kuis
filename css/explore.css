@@ -1,6 +1,10 @@
 :root {
     --list-thumb-size: 96px;
     --list-gap: 16px;
+    --card-radius: 18px;
+    --card-gap: 16px;
+    --section-gap: 32px;
+    --button-radius: 14px;
 }
 
 .list-card {
