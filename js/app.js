@@ -1,4 +1,4 @@
-const.quizList = document.getElementById("quiz-list");
+const quizList = document.getElementById("quiz-list");
 const quizTemplate = document.getElementById("quiz-card-template");
 
 const comicsContainer = document.getElementById("comics-container");
