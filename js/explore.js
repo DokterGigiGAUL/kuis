@@ -57,13 +57,12 @@ function showQuiz() {
 
         card.querySelector(".list-thumb").src =
         quiz.thumbnail;
-
-        card.querySelector(".ist-title").textContent =
+        card.querySelector(".list-thumb").alt =
         quiz.title;
-
+        card.querySelector(".list-title").textContent =
+        quiz.title;
         card.querySelector(".list-description").textContent =
         quiz.description;
-
         const button =
         card.querySelector(".list-btn");
 
@@ -84,13 +83,9 @@ function showQuiz() {
                 location.href =
                     `quiz.html?id=${quiz.file}`;
             };
-
         }
-
         quizSection.appendChild(card);
-
     });
-
 }
 
 function showComic() {
@@ -116,19 +111,15 @@ function showComic() {
 
         const card =
             template.content.cloneNode(true);
-
+        
         card.querySelector(".list-thumb").src =
             comic.thumbnail;
-
         card.querySelector(".list-thumb").alt =
             comic.title;
-
         card.querySelector(".list-description").textContent =
             comic.description;
-
         card.querySelector(".list-title").textContent =
             comic.title;
-
         card.querySelector(".list-btn").onclick = () => {
 
             if (comic.premium) {
@@ -171,6 +162,8 @@ function showTTS() {
 
         card.querySelector(".list-thumb").src =
             tts.thumbnail;
+        card.querySelector(".list-thumb").alt =
+            tts.title;
         card.querySelector(".list-title").textContent =
             tts.title;
         card.querySelector(".list-soal").textContent =
@@ -214,17 +207,16 @@ function showCase() {
 
         card.querySelector(".list-thumb").src =
         caseData.thumbnail;
-
+        card.querySelector(".list-thumb").alt =
+        caseData.title;
         card.querySelector(".list-title").textContent =
         caseData.title;
-
         card.querySelector(".list-description").textContent =
         caseData.description;
-
         card.querySelector(".list-btn").onclick = () => {
         location.href =
         `case.html?case=${caseData.file}`;
-};
+    };
 
         caseSection.appendChild(card);
 
