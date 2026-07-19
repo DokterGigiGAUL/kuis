@@ -233,49 +233,37 @@ function showCase() {
 }
 
 quizTab.onclick = () => {
-
     history.replaceState(
         {},
         "",
         "explore.html?tab=quiz"
     );
-
     showQuiz();
-
 };
 
 comicTab.onclick = () => {
-
     history.replaceState(
         {},
         "",
         "explore.html?tab=comic"
     );
-
     showComic();
-
 };
 
 ttsTab.onclick = () => {
-
     history.replaceState(
         {},
         "",
         "explore.html?tab=tts"
     );
-
     showTTS();
-
 };
 
 caseTab.onclick = () => {
-
     history.replaceState(
         {},
         "",
         "explore.html?tab=case"
     );
-
     showCase();
-
 };
