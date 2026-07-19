@@ -450,7 +450,7 @@ body {
 }
 
 .quiz-list-description{
-    font-size:14px;
+    font-size:15px;
     color:var(--text-light);
     margin-bottom:8px;
 }
@@ -732,9 +732,10 @@ body {
 
 .comic-list-title{
     margin:0;
-    font-size:17px;
+    font-size:15px;
     line-height:1.35;
-    font-weight:700;
+    font-weight:400;
+    color: #999999;
 }
 
 .comic-btn-list{
@@ -879,7 +880,7 @@ body {
 
 .case-list-description{
     margin-top:4px;
-    font-size:14px;
+    font-size:15px;
     line-height:1.4;
     color:#666;
 }
@@ -962,7 +963,7 @@ body {
 
 .tts-list-soal{
     margin-top:6px;
-    font-size:14px;
+    font-size:15px;
     opacity:.8;
 }
 
@@ -1051,7 +1052,7 @@ body {
 
 .case-list-description{
     margin-top:6px;
-    font-size:14px;
+    font-size:15px;
     color:#999999;
 }
 
