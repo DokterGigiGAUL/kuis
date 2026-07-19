@@ -55,17 +55,17 @@ function showQuiz() {
         const card =
             template.content.cloneNode(true);
 
-        card.querySelector(".quiz-list-thumb").src =
+        card.querySelector(".list-thumb").src =
         quiz.thumbnail;
 
-        card.querySelector(".quiz-list-title").textContent =
+        card.querySelector(".ist-title").textContent =
         quiz.title;
 
-        card.querySelector(".quiz-list-description").textContent =
+        card.querySelector(".list-description").textContent =
         quiz.description;
 
         const button =
-        card.querySelector(".quiz-btn-list");
+        card.querySelector(".list-btn");
 
         if (Storage.isFinished(quiz.productId)) {
 
@@ -117,19 +117,19 @@ function showComic() {
         const card =
             template.content.cloneNode(true);
 
-        card.querySelector(".comic-list-thumb").src =
+        card.querySelector(".list-thumb").src =
             comic.thumbnail;
 
-        card.querySelector(".comic-list-thumb").alt =
+        card.querySelector(".list-thumb").alt =
             comic.title;
 
-        card.querySelector(".comic-list-description").textContent =
+        card.querySelector(".list-description").textContent =
             comic.description;
 
-        card.querySelector(".comic-list-title").textContent =
+        card.querySelector(".list-title").textContent =
             comic.title;
 
-        card.querySelector(".comic-btn-list").onclick = () => {
+        card.querySelector(".list-btn").onclick = () => {
 
             if (comic.premium) {
                 showPremiumDialog();
@@ -169,13 +169,13 @@ function showTTS() {
         const card =
             template.content.cloneNode(true);
 
-        card.querySelector(".tts-list-thumb").src =
+        card.querySelector(".list-thumb").src =
             tts.thumbnail;
-        card.querySelector(".tts-list-title").textContent =
+        card.querySelector(".list-title").textContent =
             tts.title;
-        card.querySelector(".tts-list-soal").textContent =
+        card.querySelector(".list-soal").textContent =
             `${tts.soal} Soal`;
-        card.querySelector(".tts-btn-list").onclick = () => {
+        card.querySelector(".list-btn").onclick = () => {
             if (tts.premium) {
         showPremiumDialog();
         return;
@@ -212,16 +212,16 @@ function showCase() {
         const card =
             template.content.cloneNode(true);
 
-        card.querySelector(".case-list-thumb").src =
+        card.querySelector(".list-thumb").src =
         caseData.thumbnail;
 
-        card.querySelector(".case-list-title").textContent =
+        card.querySelector(".list-title").textContent =
         caseData.title;
 
-        card.querySelector(".case-list-description").textContent =
+        card.querySelector(".list-description").textContent =
         caseData.description;
 
-        card.querySelector(".case-btn-list").onclick = () => {
+        card.querySelector(".list-btn").onclick = () => {
         location.href =
         `case.html?case=${caseData.file}`;
 };
