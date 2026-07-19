@@ -17,6 +17,10 @@
     --radius: 12px;
     --home-card-gap: 16px;
     --home-card-per-view: 2.25;
+    --card-radius: 18px;
+    --card-gap: 16px;
+    --section-gap: 32px;
+    --button-radius: 14px;
 }
 
 body {
