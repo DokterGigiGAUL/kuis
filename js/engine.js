@@ -337,12 +337,6 @@ this.backspace();
 
 });
 
-document.getElementById("check-btn").onclick=()=>{
-
-this.checkAnswer();
-
-};
-
 document.getElementById("reset-btn").onclick=()=>{
 
 this.resetPuzzle();
