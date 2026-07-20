@@ -1,4 +1,6 @@
 :root{
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
     --cell-size:48px;
     --gap:0px;
     --border:#444;
@@ -7,7 +9,6 @@
     --active:#4da3ff;
     --word:#ddeeff;
     --correct:#ffffff;
-    --wrong:#ffd3d3;
     --number:#999;
     --radius:10px;
     --bg: #f4f7fb;
