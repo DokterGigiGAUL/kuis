@@ -286,7 +286,6 @@ featuredButton.textContent = ({
     })[item.type];
 
 const card = clone.querySelector(".featured-card");
-const featuredButton = clone.querySelector(".featured-card-btn");
 
 const openContent = () => {
 
