@@ -7,6 +7,8 @@ const currentComic = comics[currentIndex];
 const title = document.getElementById("comic-title");
 const imageContainer = document.getElementById("comic-image");
 
+document.getElementById("home-btn").onclick = () => history.back();
+
 title.textContent = currentComic.title;
 
 imageContainer.innerHTML = "";
