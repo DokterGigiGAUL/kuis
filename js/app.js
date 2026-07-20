@@ -39,7 +39,7 @@ function createQuizCard(quiz) {
 
     if (Storage.isFinished(quiz.productId)) {
 
-        button.textContent = "Sudah Dikerjakan";
+        button.textContent = "Sudah Selesai";
         button.disabled = true;
     } else {
         button.onclick = () => {
