@@ -264,22 +264,21 @@ body {
 ========================== */
 
 .featured-hero{
-    position: relative;
-    width: 100%;
-    min-height: 400px;
-    margin: 0 0 15px;
-    border-radius: 0px;
-    overflow: hidden;
+    position:relative;
+    width:100%;
+    min-height:400px;
+    margin:0 0 120px;
+    border-radius:0;
+    overflow:visible;
 
-    display: flex;
-    align-items: flex-end;
+    display:block;
 
-    background-color: #d1d5db;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color:#d1d5db;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
-    box-shadow: var(--shadow);
+    box-shadow:var(--shadow);
 }
 
 .featured-hero::before{
@@ -296,13 +295,19 @@ body {
 }
 
 .featured-overlay{
-    position:relative;
-    z-index:1;
-    width:100%;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:110px;
+
+    z-index:2;
+
     padding:24px;
+
     display:flex;
     flex-direction:column;
     gap:16px;
+
     color:#fff;
 }
 
@@ -376,20 +381,23 @@ body {
 
 .featured-latest{
     position:absolute;
-    left:20px;
-    right:20px;
+
+    left:0;
+    right:0;
     bottom:-90px;
 
     display:flex;
     gap:16px;
 
+    padding:0 20px;
+
     overflow-x:auto;
-    overflow-y:hidden;
+    overflow-y:visible;
+
+    z-index:3;
 
     scrollbar-width:none;
     -webkit-overflow-scrolling:touch;
-
-    z-index:5;
 }
 
 .featured-latest::-webkit-scrollbar{
