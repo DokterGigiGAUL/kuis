@@ -449,6 +449,16 @@ body {
     flex:1;
 }
 
+.featured-items{
+    width: max-content;
+    max-height: fit-content;
+    background: #990000;
+    color: #ffffff;
+    font-weight: 400;
+    border-radius: 99px;
+    padding: 3px 6px;
+}
+
 @media (min-width:768px){
 
     .featured-card{
