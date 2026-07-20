@@ -19,6 +19,21 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.page{
+    max-width:1200px;
+    margin:12px 24px;
+}
+
+.loader{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:70vh;
+font-size:24px;
+font-weight:600;
+color:#666;
+}
+
 /* =============================== */
 /*     TTS - HEADER NAVBAR         */
 /* =============================== */
@@ -59,12 +74,9 @@ body {
     opacity:.9;
 }
 
-/* ====================================== */
-.page{
-    max-width:1200px;
-    margin:12px 24px;
-}
-/* ====================================== */
+/* =============================== */
+/*     TTS - TOOLBAR         */
+/* =============================== */
 
 .toolbar{
     display:flex;
@@ -94,7 +106,10 @@ body {
     opacity:.55;
 }
 
-/* ====================================== */
+/* =============================== */
+/*     TTS - PROGRESS BAR          */
+/* =============================== */
+
 .progress-top{
     display:flex;
     justify-content:space-between;
@@ -137,11 +152,13 @@ body {
 }
 
 /* ====================================== */
+
 #crossword-grid{
     display:grid;
     gap:var(--gap);
     width:max-content;
 }
+
 /* ====================================== */
 
 .cell{
@@ -254,16 +271,6 @@ font-size:17px;
 text-transform:uppercase;
 user-select:none;
 pointer-events:none;
-}
-
-.loader{
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:70vh;
-font-size:24px;
-font-weight:600;
-color:#666;
 }
 
 .tts-btn {
