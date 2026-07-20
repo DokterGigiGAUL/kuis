@@ -7,7 +7,9 @@ const quizzes = [
         description: "8 Soal",
         thumbnail: "assets/images/kuis/thumbnail-kuis1.jpeg",
         premium: false,
-        price: 0
+        price: 0,
+        releaseDate: "2026-06-20",
+        type: "quiz"
     },
     {
         id: 2,
@@ -17,7 +19,9 @@ const quizzes = [
         description: "8 Soal",
         thumbnail: "assets/images/kuis/thumbnail-kuis2.jpeg",
         premium: false,
-        price: 0
+        price: 0,
+        releaseDate: "2026-06-20",
+        type: "quiz"
     },
     {
         id: 3,
@@ -27,7 +31,9 @@ const quizzes = [
         description: "8 Soal",
         thumbnail: "assets/images/kuis/thumbnail-kuis3.jpeg",
         premium: false,
-        price: 0
+        price: 0,
+        releaseDate: "2026-06-20",
+        type: "quiz"
     },
     {
         id: 4,
@@ -37,7 +43,9 @@ const quizzes = [
         description: "8 Soal",
         thumbnail: "assets/images/kuis/thumbnail-kuis4.jpeg",
         premium: false,
-        price: 0
+        price: 0,
+        releaseDate: "2026-06-20",
+        type: "quiz"
     },
     {
         id: 5,
@@ -47,7 +55,9 @@ const quizzes = [
         description: "8 Soal",
         thumbnail: "assets/images/kuis/thumbnail-kuis2.jpeg",
         premium: true,
-        price: 5000
+        price: 5000,
+        releaseDate: "2026-06-20",
+        type: "quiz"
     },
     {
         id: 6,
@@ -57,7 +67,9 @@ const quizzes = [
         description: "10 Soal",
         thumbnail: "assets/images/kuis/thumbnail-kuis1.jpeg",
         premium: true,
-        price: 5000
+        price: 5000,
+        releaseDate: "2026-06-20",
+        type: "quiz"
     },
     {
         id: 7,
@@ -67,6 +79,8 @@ const quizzes = [
         description: "10 Soal",
         thumbnail: "assets/images/kuis/thumbnail-kuis4.jpeg",
         premium: true,
-        price: 5000
+        price: 5000,
+        releaseDate: "2026-07-20",
+        type: "quiz"
     }
 ];
