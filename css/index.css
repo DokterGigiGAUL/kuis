@@ -266,7 +266,7 @@ body {
 .featured-hero{
     position:relative;
     width:100%;
-    min-height:400px;
+aspect-ratio:16/10;
     margin:0 0 120px;
     border-radius:0;
     overflow:visible;
