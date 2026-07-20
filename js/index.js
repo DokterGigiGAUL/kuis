@@ -206,9 +206,8 @@ const heroItem = latestItems[0];
 const latestCards = latestItems.slice(1, 5);
 
 if (!heroItem) return;
-    if (!item) return;
 
-    featuredHero.style.backgroundImage = `url(${item.thumbnail})`;
+    featuredHero.style.backgroundImage = `url(${heroItem.thumbnail})`;
 
     const badge = featuredHero.querySelector(".featured-badge");
     const title = featuredHero.querySelector(".featured-title");
@@ -229,19 +228,18 @@ if (!heroItem) return;
         case: "Lihat"
     };
 
-    badge.textContent = typeLabel[item.type] ?? "";
-    title.textContent = item.title;
-    description.textContent = item.description;
-    button.textContent = buttonLabel[item.type] ?? "Buka";
-
+    badge.textContent = typeLabel[heroItem.type] ?? "";
+    title.textContent = heroItem.title;
+    description.textContent = heroItem.description;
+    button.textContent = buttonLabel[heroItem.type] ?? "Buka";
     button.onclick = () => {
 
-        if (item.premium) {
+if (heroItem.premium) {
             showPremiumDialog();
             return;
         }
 
-        switch (item.type) {
+switch (heroItem.type) {
 
             case "quiz":
                 location.href = `quiz.html?id=${item.file}`;
@@ -284,27 +282,27 @@ latestCards.forEach(item => {
 
     card.onclick = () => {
 
-        if (heroItem.premium) {
+        if (item.premium) {
     showPremiumDialog();
     return;
 }
 
-switch (heroItem.type) {
+switch (item.type) {
 
             case "quiz":
-                location.href = `quiz.html?id=${heroItem.file}`;
+                location.href = `quiz.html?id=${item.file}`;
                 break;
 
             case "comic":
-                location.href = `komik.html?id=${heroItem.id}`;
+                location.href = `komik.html?id=${item.id}`;
                 break;
 
             case "tts":
-                location.href = `tts.html?puzzle=tts${heroItem.id}`;
+                location.href = `tts.html?puzzle=tts${item.id}`;
                 break;
 
             case "case":
-                location.href = `case.html?case=${heroItem.file}`;
+                location.href = `case.html?case=${item.file}`;
                 break;
 
         }
