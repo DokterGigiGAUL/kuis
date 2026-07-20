@@ -270,7 +270,14 @@ latestCards.forEach(item => {
     clone.querySelector(".featured-card-thumb").alt = item.title;
 
     clone.querySelector(".featured-card-title").textContent = item.title;
+const featuredButton = clone.querySelector(".featured-card-btn");
 
+featuredButton.textContent = ({
+    quiz: "Mulai",
+    comic: "Baca",
+    tts: "Main",
+    case: "Lihat"
+})[item.type] ?? "Buka";
     clone.querySelector(".featured-card-type").textContent = ({
         quiz: "Kuis",
         comic: "Komik",
@@ -278,36 +285,43 @@ latestCards.forEach(item => {
         case: "Kartu Kasus"
     })[item.type];
 
-    const card = clone.querySelector(".featured-card");
+const card = clone.querySelector(".featured-card");
+const featuredButton = clone.querySelector(".featured-card-btn");
 
-    card.onclick = () => {
+const openContent = () => {
 
-        if (item.premium) {
-    showPremiumDialog();
-    return;
-}
+    if (item.premium) {
+        showPremiumDialog();
+        return;
+    }
 
-switch (item.type) {
+    switch (item.type) {
 
-            case "quiz":
-                location.href = `quiz.html?id=${item.id}`;
-                break;
+        case "quiz":
+            location.href = `quiz.html?id=${item.id}`;
+            break;
 
-            case "comic":
-                location.href = `komik.html?id=${item.id}`;
-                break;
+        case "comic":
+            location.href = `komik.html?id=${item.id}`;
+            break;
 
-            case "tts":
-                location.href = `tts.html?puzzle=tts${item.id}`;
-                break;
+        case "tts":
+            location.href = `tts.html?puzzle=tts${item.id}`;
+            break;
 
-            case "case":
-                location.href = `case.html?case=${item.id}`;
-                break;
+        case "case":
+            location.href = `case.html?case=${item.id}`;
+            break;
 
-        }
+    }
 
-    };
+};
+
+card.onclick = openContent;
+featuredButton.onclick = (e) => {
+    e.stopPropagation();
+    openContent();
+};
 
     featuredLatest.appendChild(clone);
 
