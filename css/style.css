@@ -97,10 +97,7 @@ body {
     text-decoration:none;
     background: transparent;
 }
-.container {
-    margin: auto;
-    padding: 20px;
-}
+
 
 /* ==========================
    BUTTON
@@ -252,10 +249,6 @@ body {
 }
 
 @media (max-width: 640px) {
-
-    .container {
-        padding: 15px;
-    }
 
     .quiz-grid {
         gap: 14px;
