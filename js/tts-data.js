@@ -7,7 +7,9 @@ const ttsList = [
         soal: 12,
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
         premium: false,
-        price: 0
+        price: 0, 
+        releaseDate: "2026-06-20",
+        type: "tts"
     },
 
     {
@@ -17,7 +19,9 @@ const ttsList = [
         soal: 11,
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
         premium: false,
-        price: 0
+        price: 0, 
+        releaseDate: "2026-06-20",
+        type: "tts"
     },
 
     {
@@ -27,7 +31,9 @@ const ttsList = [
         soal: 12,
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
         premium: false,
-        price: 0
+        price: 0, 
+        releaseDate: "2026-06-20",
+        type: "tts"
     },
 
     {
@@ -37,7 +43,9 @@ const ttsList = [
         soal: 20,
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
         premium: true,
-        price: 5000
+        price: 5000, 
+        releaseDate: "2026-06-20",
+        type: "tts"
     }
 
 ];
