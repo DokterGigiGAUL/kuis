@@ -290,7 +290,6 @@ body {
 
 .featured-item{
     align-self: flex-start;
-    backdrop-filter: blur(16px);
     font-size: 28px;
     border-bottom: 1px solid #ffffff;
     font-weight: 700;
