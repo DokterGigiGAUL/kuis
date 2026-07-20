@@ -38,12 +38,13 @@ body {
     background: var(--primary);
     color: white;
     text-align: center;
-    padding: 16px;
+    padding: 16px 16px 8px;
 }
 
 .header h1 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 6px;
+    text-align: left;
 }
 
 .horizontal-scroll {
@@ -293,7 +294,7 @@ body {
 
 .featured-item{
     align-self: flex-start;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -305,7 +306,7 @@ body {
 
 .featured-description{
     margin:0;
-    max-width:600px;
+    max-width:400px;
     line-height:1.6;
     color:rgba(255,255,255,.9);
 }
@@ -326,6 +327,12 @@ body {
         padding:32px;
     }
 
+    .featured-item{
+    align-self: flex-start;
+    font-size: 16px;
+    font-weight: 700;
+}
+    
     .featured-title{
         font-size:24px;
     }
