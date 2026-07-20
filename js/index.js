@@ -3,6 +3,8 @@ const comicsContainer = document.getElementById("comics-container");
 const ttsContainer = document.getElementById("tts-container");
 const caseContainer = document.getElementById("case-container");
 const featuredHero = document.getElementById("featured-hero");
+const featuredLatest = document.getElementById("featured-latest");
+const featuredCardTemplate = document.getElementById("featured-card-template");
 const cardTemplate = document.getElementById("content-card-template");
 
 loadQuiz();
@@ -194,14 +196,16 @@ function renderFeaturedHero() {
     if (!featuredHero) return;
 
     const latestItems = [
-        ...quizzes,
-        ...comics,
-        ...ttsList,
-        ...cases
-    ].sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+    ...quizzes,
+    ...comics,
+    ...ttsList,
+    ...cases
+].sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
 
-    const item = latestItems[0];
+const heroItem = latestItems[0];
+const latestCards = latestItems.slice(1, 5);
 
+if (!heroItem) return;
     if (!item) return;
 
     featuredHero.style.backgroundImage = `url(${item.thumbnail})`;
