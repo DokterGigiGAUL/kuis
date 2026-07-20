@@ -44,7 +44,7 @@ function loadQuiz() {
 
     if (!quizList) return;
 
-    quizzes.slice(0, 4).forEach(quiz => {
+    quizzes.slice(0, 6).forEach(quiz => {
 
         const finished =
             Storage.isFinished(quiz.productId);
@@ -60,7 +60,7 @@ function loadQuiz() {
             description: quiz.description,
 
             buttonText: finished
-                ? "Sudah Dikerjakan"
+                ? "Sudah Selesai"
                 : "Mulai",
 
             disabled: finished,
@@ -87,7 +87,7 @@ function loadComics() {
 
     if (!comicsContainer) return;
 
-    comics.slice(0, 4).forEach(comic => {
+    comics.slice(0, 6).forEach(comic => {
 
         createContentCard({
 
@@ -124,7 +124,7 @@ function loadTTS() {
 
     if (!ttsContainer) return;
 
-    ttsList.slice(0, 4).forEach(tts => {
+    ttsList.slice(0, 6).forEach(tts => {
 
         createContentCard({
 
@@ -161,7 +161,7 @@ function loadCases() {
 
     if (!caseContainer) return;
 
-    cases.slice(0, 4).forEach(caseData => {
+    cases.slice(0, 6).forEach(caseData => {
 
         createContentCard({
 
