@@ -270,9 +270,7 @@ body {
     margin:0 0 150px;
     border-radius:0;
     overflow:visible;
-
     display:block;
-
     background-color:#d1d5db;
     background-size:cover;
     background-position:center;
@@ -337,11 +335,7 @@ body {
 
 .featured-btn{
     width:25%;
-    padding-inline:24px;
-}
-
-.featured-card-btn{
-    width:100%;
+    padding-inline:
     margin-top:auto;
 }
 
@@ -354,12 +348,13 @@ aspect-ratio:2/1;
     }
 
     .featured-overlay{
+        top:120px;
         padding:32px;
     }
 
     .featured-item{
     align-self: flex-start;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 700;
 }
     
@@ -370,6 +365,13 @@ aspect-ratio:2/1;
     .featured-description{
         font-size:14px;
     }
+    
+.featured-btn{
+    width:max-content;
+    padding: 10px 24px;
+    padding-inline:24px;
+}
+        
 }
 
 /* ==========================
@@ -377,14 +379,14 @@ aspect-ratio:2/1;
 ========================== */
 
 .featured-hero{
-    margin-bottom:190px;
+    margin-bottom:140px;
 }
 
 .featured-latest{
     position:absolute;
     left:0;
     right:0;
-    top:200px;
+    top:210px;
     display:flex;
     gap:16px;
     padding:20px;
@@ -455,6 +457,9 @@ aspect-ratio:2/1;
     scroll-snap-align: start;
     }
 
+    .featured-latest{
+        top: 360px;
+    }
 }
 
 @media (min-width:1024px){
