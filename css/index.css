@@ -52,7 +52,7 @@ body {
     gap: var(--home-card-gap);;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 4px 0 8px;
+    padding: 0px 0px 8px;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -122,7 +122,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0px;
-    padding: 16px;
+    padding: 8px;
 }
 
 .section-header h2 {
