@@ -31,7 +31,7 @@ body {
 
 .container {
     margin: 0;
-    padding-left: 16px;
+    padding:0;
 }
 
 .header {
@@ -144,7 +144,7 @@ body {
 
     .container {
         margin: 0;
-        padding-left: 16px;
+        padding:0;
     }
 }   
 @media (min-width:1024px) {
@@ -159,7 +159,7 @@ body {
     
     .container {
         margin: 0;
-        padding-left: 16px;
+        padding:0;
     }
 }
 @media (min-width:1440px) {
@@ -173,7 +173,7 @@ body {
     
     .container {
         margin: 0;
-        padding-left: 16px;
+        padding:0;
     }
 }
 /* ==========================
