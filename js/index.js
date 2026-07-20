@@ -262,5 +262,56 @@ if (!heroItem) return;
         }
 
     };
+featuredLatest.innerHTML = "";
 
+latestCards.forEach(item => {
+
+    const clone = featuredCardTemplate.content.cloneNode(true);
+
+    clone.querySelector(".featured-card-thumb").src = item.thumbnail;
+    clone.querySelector(".featured-card-thumb").alt = item.title;
+
+    clone.querySelector(".featured-card-title").textContent = item.title;
+
+    clone.querySelector(".featured-card-type").textContent = ({
+        quiz: "Kuis",
+        comic: "Komik",
+        tts: "TTS",
+        case: "Kartu Kasus"
+    })[item.type];
+
+    const card = clone.querySelector(".featured-card");
+
+    card.onclick = () => {
+
+        if (heroItem.premium) {
+    showPremiumDialog();
+    return;
+}
+
+switch (heroItem.type) {
+
+            case "quiz":
+                location.href = `quiz.html?id=${heroItem.file}`;
+                break;
+
+            case "comic":
+                location.href = `komik.html?id=${heroItem.id}`;
+                break;
+
+            case "tts":
+                location.href = `tts.html?puzzle=tts${heroItem.id}`;
+                break;
+
+            case "case":
+                location.href = `case.html?case=${heroItem.file}`;
+                break;
+
+        }
+
+    };
+
+    featuredLatest.appendChild(clone);
+
+});
 }
