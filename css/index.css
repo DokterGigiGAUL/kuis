@@ -347,7 +347,7 @@ body {
 @media (max-width:767px){
 
     .featured-hero{
-        min-height:360px;
+        min-height:320px;
         border-radius:0px;
     }
 
@@ -381,21 +381,15 @@ body {
 
 .featured-latest{
     position:absolute;
-
     left:0;
     right:0;
     bottom:-90px;
-
     display:flex;
     gap:16px;
-
     padding:0 20px;
-
     overflow-x:auto;
     overflow-y:visible;
-
     z-index:3;
-
     scrollbar-width:none;
     -webkit-overflow-scrolling:touch;
 }
@@ -425,34 +419,28 @@ body {
 }
 
 .featured-card-info{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
     padding:10px;
+    min-height:110px;
 }
 
 .featured-card-type{
     display:inline-block;
-
     margin-bottom:6px;
-
     padding:4px 8px;
-
     border-radius:999px;
-
     background:#eef4ff;
-
     color:var(--primary);
-
     font-size:12px;
-
     font-weight:600;
 }
 
 .featured-card-title{
     margin:0;
-
     font-size:14px;
-
     line-height:1.35;
-
     color:var(--text);
 }
 
