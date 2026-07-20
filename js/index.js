@@ -242,7 +242,7 @@ if (heroItem.premium) {
 switch (heroItem.type) {
 
             case "quiz":
-                location.href = `quiz.html?id=${item.file}`;
+                location.href = `quiz.html?id=${item.id}`;
                 break;
 
             case "comic":
@@ -290,7 +290,7 @@ latestCards.forEach(item => {
 switch (item.type) {
 
             case "quiz":
-                location.href = `quiz.html?id=${item.file}`;
+                location.href = `quiz.html?id=${item.id}`;
                 break;
 
             case "comic":
@@ -302,7 +302,7 @@ switch (item.type) {
                 break;
 
             case "case":
-                location.href = `case.html?case=${item.file}`;
+                location.href = `case.html?case=${item.id}`;
                 break;
 
         }
