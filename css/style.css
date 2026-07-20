@@ -590,11 +590,6 @@ body {
         flex:0 0 calc((100% - 24px) / 3.25);
     }
 
-    .container{
-        padding-left:30px;
-        padding-right:0;
-    }
-
 }
 
 /* Scrollbar */
