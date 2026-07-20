@@ -6,7 +6,9 @@ const cases = [
         description: "Apa diagnosisnya?",
         thumbnail: "assets/images/cases/case1.jpg",
         premium: false,
-        price: 0
+        price: 0,
+        releaseDate: "2026-06-20",
+        type: "case"
     },
     {
         id: 2,
@@ -15,7 +17,9 @@ const cases = [
         description: "Apa diagnosisnya?",
         thumbnail: "assets/images/cases/case2.jpg",
         premium: false,
-        price: 0
+        price: 0,
+        releaseDate: "2026-06-20",
+        type: "case"
     },
     {
         id: 3,
@@ -24,7 +28,9 @@ const cases = [
         description: "Apa diagnosisnya?",
         thumbnail: "assets/images/cases/case3.jpg",
         premium: false,
-        price: 0
+        price: 0,
+        releaseDate: "2026-06-20",
+        type: "case"
     },
     {
         id: 4,
@@ -33,6 +39,8 @@ const cases = [
         description: "Apa diagnosisnya?",
         thumbnail: "assets/images/cases/case4.jpg",
         premium: true,
-        price: 5000
+        price: 5000,
+        releaseDate: "2026-06-20",
+        type: "case"
     }
 ];
