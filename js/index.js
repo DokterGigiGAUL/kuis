@@ -2,13 +2,14 @@ const quizList = document.getElementById("quiz-list");
 const comicsContainer = document.getElementById("comics-container");
 const ttsContainer = document.getElementById("tts-container");
 const caseContainer = document.getElementById("case-container");
-
+const featuredHero = document.getElementById("featured-hero");
 const cardTemplate = document.getElementById("content-card-template");
 
 loadQuiz();
 loadComics();
 loadTTS();
 loadCases();
+renderFeaturedHero();
 
 function createContentCard({
     container,
@@ -188,3 +189,74 @@ function loadCases() {
 
 }
 
+function renderFeaturedHero() {
+
+    if (!featuredHero) return;
+
+    const latestItems = [
+        ...quizzes,
+        ...comics,
+        ...ttsList,
+        ...cases
+    ].sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+
+    const item = latestItems[0];
+
+    if (!item) return;
+
+    featuredHero.style.backgroundImage = `url(${item.thumbnail})`;
+
+    const badge = featuredHero.querySelector(".featured-badge");
+    const title = featuredHero.querySelector(".featured-title");
+    const description = featuredHero.querySelector(".featured-description");
+    const button = featuredHero.querySelector(".featured-btn");
+
+    const typeLabel = {
+        quiz: "Kuis",
+        comic: "Komik",
+        tts: "TTS",
+        case: "Kartu Kasus"
+    };
+
+    const buttonLabel = {
+        quiz: "Mulai",
+        comic: "Baca",
+        tts: "Main",
+        case: "Lihat"
+    };
+
+    badge.textContent = typeLabel[item.type] ?? "";
+    title.textContent = item.title;
+    description.textContent = item.description;
+    button.textContent = buttonLabel[item.type] ?? "Buka";
+
+    button.onclick = () => {
+
+        if (item.premium) {
+            showPremiumDialog();
+            return;
+        }
+
+        switch (item.type) {
+
+            case "quiz":
+                location.href = `quiz.html?id=${item.file}`;
+                break;
+
+            case "comic":
+                location.href = `komik.html?id=${item.id}`;
+                break;
+
+            case "tts":
+                location.href = `tts.html?puzzle=tts${item.id}`;
+                break;
+
+            case "case":
+                location.href = `case.html?case=${item.file}`;
+                break;
+
+        }
+
+    };
+
+}
