@@ -266,7 +266,7 @@ body {
 .featured-hero{
     position:relative;
     width:100%;
-aspect-ratio:5/3;
+    aspect-ratio:5/4;
     margin:0 0 150px;
     border-radius:0;
     overflow:visible;
@@ -298,16 +298,11 @@ aspect-ratio:5/3;
     position:absolute;
     left:0;
     right:0;
-    bottom:130px;
-
     z-index:2;
-
     padding:24px;
-
     display:flex;
     flex-direction:column;
     gap:16px;
-
     color:#fff;
 }
 
@@ -322,7 +317,7 @@ aspect-ratio:5/3;
 
 .featured-item{
     align-self: flex-start;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -335,12 +330,13 @@ aspect-ratio:5/3;
 .featured-description{
     margin:0;
     max-width:400px;
-    line-height:1.6;
+    line-height:1.2;
+    padding-bottom:8px;
     color:rgba(255,255,255,.9);
 }
 
 .featured-btn{
-    width:max-content;
+    width:25%;
     padding-inline:24px;
 }
 
@@ -349,11 +345,11 @@ aspect-ratio:5/3;
     margin-top:auto;
 }
 
-@media (max-width:767px){
+@media (min-width:767px){
 
     .featured-hero{
     width:100%;
-aspect-ratio:5/3;
+aspect-ratio:2/1;
         border-radius:0px;
     }
 
@@ -363,7 +359,7 @@ aspect-ratio:5/3;
 
     .featured-item{
     align-self: flex-start;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 700;
 }
     
@@ -381,17 +377,17 @@ aspect-ratio:5/3;
 ========================== */
 
 .featured-hero{
-    margin-bottom:120px;
+    margin-bottom:190px;
 }
 
 .featured-latest{
     position:absolute;
     left:0;
     right:0;
-    bottom:-120px;
+    top:200px;
     display:flex;
     gap:16px;
-    padding:0 20px;
+    padding:20px;
     overflow-x:auto;
     overflow-y:visible;
     z-index:3;
