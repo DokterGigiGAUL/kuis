@@ -952,10 +952,6 @@ body {
 
 @media (max-width:640px){  
     
-.container {
-   padding: 15px;
-}
-    
 .tts-grid {
     gap: 14px;
 }
