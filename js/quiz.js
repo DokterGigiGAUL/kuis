@@ -23,7 +23,7 @@ async function init() {
     quiz = await response.json();
 
     if (Storage.isFinished(quiz.id)) {
-        alert("Kuis sudah pernah dikerjakan.");
+        alert("Kuis sudah selesai dikerjakan.");
         window.location.href = "index.html";
         return;
     }
