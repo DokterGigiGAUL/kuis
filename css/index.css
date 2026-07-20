@@ -343,9 +343,9 @@ body {
 
     .featured-hero{
         width:100%;
-        aspect-ratio:2/1;
+        aspect-ratio:3/2;
         border-radius:0px;
-        margin-bottom:250px;
+        margin-bottom:150px!important;
     }
 
     .featured-overlay{
@@ -380,7 +380,7 @@ body {
 ========================== */
 
 .featured-hero{
-    margin-bottom:140px;
+    margin-bottom:150px;
 }
 
 .featured-latest{
@@ -469,7 +469,7 @@ body {
     }
 
     .featured-latest{
-        top: 360px;
+        top: 330px!important;
     }
 }
 
@@ -481,5 +481,15 @@ body {
     flex-direction: column;
     scroll-snap-align: start;
     }
+    
+    .featured-hero{
+        width:100%;
+        aspect-ratio:2/1;
+        border-radius:0px;
+        margin-bottom:220px!important;
+    }
 
+    .featured-latest{
+        top: 540px!important;
+    }
 }
