@@ -342,9 +342,10 @@ body {
 @media (min-width:767px){
 
     .featured-hero{
-    width:100%;
-aspect-ratio:2/1;
+        width:100%;
+        aspect-ratio:2/1;
         border-radius:0px;
+        margin-bottom:250px;
     }
 
     .featured-overlay{
