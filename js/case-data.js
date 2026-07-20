@@ -40,7 +40,7 @@ const cases = [
         thumbnail: "assets/images/cases/case4.jpg",
         premium: true,
         price: 5000,
-        releaseDate: "2026-06-20",
+        releaseDate: "2026-07-20",
         type: "case"
     }
 ];
