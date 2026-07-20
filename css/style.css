@@ -318,20 +318,6 @@ body {
     padding:20px;
 }
 
-.progress{
-    height:8px;
-    background:#ddd;
-    border-radius:20px;
-    overflow:hidden;
-    margin-bottom:20px;
-}
-
-.progress-bar{
-    height:100%;
-    width:0%;
-    background:#2563eb;
-    transition:.3s;
-}
 
 .question-card{
     background:#fff;
