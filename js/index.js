@@ -270,14 +270,14 @@ latestCards.forEach(item => {
     clone.querySelector(".featured-card-thumb").alt = item.title;
 
     clone.querySelector(".featured-card-title").textContent = item.title;
-const featuredButton = clone.querySelector(".featured-card-btn");
-
+const featuredButton = clone.querySelector("button");
 featuredButton.textContent = ({
     quiz: "Mulai",
     comic: "Baca",
     tts: "Main",
     case: "Lihat"
 })[item.type] ?? "Buka";
+    
     clone.querySelector(".featured-card-type").textContent = ({
         quiz: "Kuis",
         comic: "Komik",
