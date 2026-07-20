@@ -271,6 +271,14 @@ body {
     padding-bottom: 8px;
 }
 
+.featured-item{
+    align-self: flex-start;
+    backdrop-filter: blur(16px);
+    font-size: 28px;
+    border-bottom: 1px solid #ffffff;
+    font-weight: 700;
+    padding-bottom: 8px;
+}
 .featured-title{
     margin:0;
     font-size:30px;
