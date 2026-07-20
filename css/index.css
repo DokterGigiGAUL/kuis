@@ -344,6 +344,11 @@ body {
     padding-inline:24px;
 }
 
+.featured-card-btn{
+    width:100%;
+    margin-top:auto;
+}
+
 @media (max-width:767px){
 
     .featured-hero{
@@ -442,6 +447,7 @@ body {
     font-size:14px;
     line-height:1.35;
     color:var(--text);
+    flex:1;
 }
 
 @media (min-width:768px){
