@@ -234,6 +234,13 @@ this.hiddenInput.addEventListener("keydown",e=>{
 document.getElementById("reset-btn").onclick=()=>{
     this.resetPuzzle();
 };
+    document.getElementById("hint-btn").onclick = () => {
+    showPremiumDialog();
+};
+
+document.getElementById("reveal-btn").onclick = () => {
+    showPremiumDialog();
+};
 document.getElementById("home-btn").onclick=()=>{
     location.href="index.html";
 };
