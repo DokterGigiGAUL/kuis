@@ -347,7 +347,7 @@ body {
 @media (max-width:767px){
 
     .featured-hero{
-        min-height:240px;
+        min-height:360px;
         border-radius:0px;
     }
 
@@ -405,18 +405,15 @@ body {
 }
 
 .featured-card{
-    flex:0 0 140px;
-
-    background:#fff;
-
+    flex: 0 0 calc((100% - (var(--home-card-gap) * (var(--home-card-per-view) - 1))) / var(--home-card-per-view));
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    background: #fff;
     border-radius:16px;
-
     overflow:hidden;
-
     box-shadow:0 6px 18px rgba(0,0,0,.18);
-
     cursor:pointer;
-
     transition:.2s;
 }
 
@@ -462,7 +459,10 @@ body {
 @media (min-width:768px){
 
     .featured-card{
-        flex:0 0 170px;
+        flex: 0 0 calc((100% - (var(--home-card-gap) * (var(--home-card-per-view) - 1))) / var(--home-card-per-view));
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
     }
 
 }
@@ -470,7 +470,10 @@ body {
 @media (min-width:1024px){
 
     .featured-card{
-        flex:0 0 190px;
+        flex: 0 0 calc((100% - (var(--home-card-gap) * (var(--home-card-per-view) - 1))) / var(--home-card-per-view));
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
     }
 
 }
