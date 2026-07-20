@@ -365,3 +365,104 @@ body {
     }
 
 }
+
+/* ==========================
+   FEATURED LATEST
+========================== */
+
+.featured-hero{
+    margin-bottom:120px;
+}
+
+.featured-latest{
+    position:absolute;
+    left:20px;
+    right:20px;
+    bottom:-90px;
+
+    display:flex;
+    gap:16px;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+
+    z-index:5;
+}
+
+.featured-latest::-webkit-scrollbar{
+    display:none;
+}
+
+.featured-card{
+    flex:0 0 140px;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.featured-card-thumb{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    display:block;
+}
+
+.featured-card-info{
+    padding:10px;
+}
+
+.featured-card-type{
+    display:inline-block;
+
+    margin-bottom:6px;
+
+    padding:4px 8px;
+
+    border-radius:999px;
+
+    background:#eef4ff;
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.featured-card-title{
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.35;
+
+    color:var(--text);
+}
+
+@media (min-width:768px){
+
+    .featured-card{
+        flex:0 0 170px;
+    }
+
+}
+
+@media (min-width:1024px){
+
+    .featured-card{
+        flex:0 0 190px;
+    }
+
+}
