@@ -271,13 +271,13 @@ latestCards.forEach(item => {
 
     clone.querySelector(".featured-card-title").textContent = item.title;
 console.log(clone.firstElementChild.outerHTML);
-//    const featuredButton = clone.querySelector("button");
-//featuredButton.textContent = ({
-//    quiz: "Mulai",
-//    comic: "Baca",
-//    tts: "Main",
-//    case: "Lihat"
-//})[item.type] ?? "Buka";
+    const featuredButton = clone.querySelector("button");
+featuredButton.textContent = ({
+    quiz: "Mulai",
+    comic: "Baca",
+    tts: "Main",
+    case: "Lihat"
+})[item.type] ?? "Buka";
     
     clone.querySelector(".featured-card-type").textContent = ({
         quiz: "Kuis",
