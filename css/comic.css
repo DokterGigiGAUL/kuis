@@ -101,3 +101,46 @@
 #comic-list a{
     text-decoration:none;
 }
+
+/* ==========================
+   HEADER
+========================== */
+
+.komik-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+
+    background:var(--primary);
+    color:#fff;
+
+    padding:0 16px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.komik-back-btn{
+    border:none;
+    background:transparent;
+
+    color:#fff;
+
+    width:40px;
+    height:40px;
+
+    font-size:22px;
+
+    cursor:pointer;
+}
+
+.komik-title-box{
+    flex:1;
+    text-align:center;
+}
+
+.komik-title-box h2{
+    margin:16px 0;
+    font-size:20px;
+}
