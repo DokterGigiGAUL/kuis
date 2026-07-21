@@ -234,10 +234,10 @@ if (!heroItem) return;
     button.textContent = buttonLabel[heroItem.type] ?? "Buka";
     button.onclick = () => {
 
-if (heroItem.premium) {
-            showPremiumDialog();
-            return;
-        }
+if (heroItem.type !== "case" && heroItem.premium) {
+    showPremiumDialog();
+    return;
+}
 
 switch (heroItem.type) {
 
@@ -290,11 +290,10 @@ const card = clone.querySelector(".featured-card");
 
 const openContent = () => {
 
-    if (item.premium) {
-        showPremiumDialog();
-        return;
-    }
-
+if (item.type !== "case" && heroItem.premium) {
+    showPremiumDialog();
+    return;
+}
     switch (item.type) {
 
         case "quiz":
