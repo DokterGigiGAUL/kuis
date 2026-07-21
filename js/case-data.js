@@ -1,6 +1,7 @@
 const cases = [
     {
         id: 1,
+        productId: "case1",
         file: "case1",
         title: "Kasus #1",
         description: "Level: Basic",
@@ -13,6 +14,7 @@ const cases = [
     {
         id: 2,
         file: "case2",
+        productId: "case2",
         title: "Kasus #2",
         description: "Level: Basic",
         thumbnail: "assets/images/cases/case2.jpg",
@@ -24,6 +26,7 @@ const cases = [
     {
         id: 3,
         file: "case3",
+        productId: "case3",
         title: "Kasus #3",
         description: "Level: Intermediate",
         thumbnail: "assets/images/cases/case3.jpg",
@@ -34,6 +37,7 @@ const cases = [
     },
     {
         id: 4,
+        productId: "case4",
         file: "case4",
         title: "Kasus #4",
         description: "Level: Intermediate",
@@ -46,6 +50,7 @@ const cases = [
         {
         id: 5,
         file: "case5",
+        productId: "case5",
         title: "Kasus #5",
         description: "Level: Advanced",
         thumbnail: "assets/images/cases/case5.jpg",
@@ -57,6 +62,7 @@ const cases = [
     {
         id: 6,
         file: "case6",
+        productId: "case6",
         title: "Kasus #6",
         description: "Level: Advanced",
         thumbnail: "assets/images/cases/case6.jpg",
