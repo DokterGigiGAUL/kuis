@@ -530,3 +530,8 @@ highlightClue(){
 }
 
 window.engine=new CrosswordEngine();
+document.addEventListener("DOMContentLoaded",()=>{
+
+engine.load();
+
+});
