@@ -267,7 +267,7 @@ body {
     position:relative;
     width:100%;
     aspect-ratio:4 / 3;
-    margin:0 0 150px;
+    margin:0 0 160px;
     border-radius:0;
     overflow:visible;
     display:block;
@@ -379,15 +379,15 @@ body {
    FEATURED LATEST
 ========================== */
 
-.featured-hero{
-    margin-bottom:150px;
-}
+/* .featured-hero{
+    margin-bottom:160px;
+} */
 
 .featured-latest{
     position:absolute;
     left:0;
     right:0;
-    top:calc((100vw / 2) - 40px);
+    top:calc(100vw / 2);
     display:flex;
     gap:16px;
     padding:20px;
