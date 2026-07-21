@@ -387,7 +387,7 @@ body {
     position:absolute;
     left:0;
     right:0;
-    top:210px;
+    top:calc(100vw / 2);
     display:flex;
     gap:16px;
     padding:20px;
@@ -469,7 +469,7 @@ body {
     }
 
     .featured-latest{
-        top: 330px!important;
+        top: calc((100vw / 2) - 50px)!important;
     }
 }
 
@@ -490,6 +490,6 @@ body {
     }
 
     .featured-latest{
-        top: 540px!important;
+        top: calc((100vw / 2) - 150px)!important;
     }
 }
