@@ -267,7 +267,7 @@ body {
     position:relative;
     width:100%;
     aspect-ratio:4 / 3;
-    margin:0 0 160px;
+    margin:0 0 170px;
     border-radius:0;
     overflow:visible;
     display:block;
@@ -420,13 +420,14 @@ body {
     aspect-ratio:4/3;
     object-fit:cover;
     display:block;
+    margin-bottom:3px;
 }
 
 .featured-card-info{
     display:flex;
     flex-direction:column;
-    gap:10px;
-    padding:10px;
+    gap:6px;
+    padding:12px;
     min-height:110px;
 }
 
@@ -444,17 +445,21 @@ body {
 .featured-card-title{
     margin:0;
     font-size:14px;
-    line-height:1.35;
+    line-height:1.25;
     color:var(--text);
     flex:1;
 }
 .featured-card-description{
     margin:0;
     max-width:400px;
-    line-height:1.2;
-    padding-bottom:8px;
-    color:rgba(255,255,255,.9);
-    font-size:11px;
+    line-height:1.25;
+    padding-bottom:6px;
+    color: #999;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .featured-items{
     width: max-content;
