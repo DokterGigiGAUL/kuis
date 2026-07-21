@@ -252,13 +252,12 @@ switch (heroItem.type) {
                 break;
 
             case "tts":
-                location.href = `tts.html?puzzle=tts${heroItem.id}`;
+                location.href = `tts.html?puzzle=tts${heroItem.file}`;
                 break;
 
             case "case":
                 location.href = `case.html?case=${heroItem.id}`;
                 break;
-
         }
 
     };
@@ -312,7 +311,7 @@ if (item.type !== "case" && item.premium) {
             break;
 
         case "case":
-            location.href = `case.html?case=${item.id}`;
+            location.href = `case.html?case=${item.file}`;
             break;
 
     }
