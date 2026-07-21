@@ -256,7 +256,7 @@ switch (heroItem.type) {
                 break;
 
             case "case":
-                location.href = `case.html?case=${heroItem.file}`;
+                location.href = `case.html?case=${heroItem.id}`;
                 break;
 
         }
