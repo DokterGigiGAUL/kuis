@@ -1,8 +1,8 @@
 :root{
-    --list-thumb-size:72px;
+    --list-thumb-size:96px;
     --list-gap:12px;
     --list-padding:12px;
-    --list-radius:12px;
+    --list-radius:24px;
 }
 
 .list-card{
