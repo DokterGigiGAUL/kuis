@@ -48,7 +48,7 @@ const cases = [
         file: "case5",
         title: "Kasus #5",
         description: "Apa diagnosisnya?",
-        thumbnail: "assets/images/cases/case4.jpg",
+        thumbnail: "assets/images/cases/case5.jpg",
         premium: true,
         price: 5000,
         releaseDate: "2026-07-20",
