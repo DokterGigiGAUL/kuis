@@ -242,19 +242,19 @@ if (heroItem.premium) {
 switch (heroItem.type) {
 
             case "quiz":
-                location.href = `quiz.html?id=${item.id}`;
+                location.href = `quiz.html?id=${heroItem.id}`;
                 break;
 
             case "comic":
-                location.href = `komik.html?id=${item.id}`;
+                location.href = `komik.html?id=${heroItem.id}`;
                 break;
 
             case "tts":
-                location.href = `tts.html?puzzle=tts${item.id}`;
+                location.href = `tts.html?puzzle=tts${heroItem.id}`;
                 break;
 
             case "case":
-                location.href = `case.html?case=${item.file}`;
+                location.href = `case.html?case=${heroItem.file}`;
                 break;
 
         }
