@@ -1,0 +1,49 @@
+{
+  "id": 6,
+  "title": "Kasus #6",
+  "image": "assets/images/cases/case1.jpg",
+  "description": "Apa diagnosisnya?",
+
+  "gender": "Perempuan",
+  "age": "58 tahun",
+
+  "anamnesis": "Pasien datang dengan keluhan benjolan pada gusi rahang atas sejak sekitar empat bulan yang lalu. Benjolan mudah berdarah saat menyikat gigi dan perlahan membesar.",
+
+  "diagnosis": "GRANULOMA PIOGENIK",
+
+  "differentialDiagnosis": [
+    "Peripheral Giant Cell Granuloma",
+    "Peripheral Ossifying Fibroma",
+    "Hemangioma"
+  ],
+
+  "lesionDescription": "Massa eksofitik berwarna merah terang hingga merah keunguan, permukaan halus atau berlobulasi, mudah berdarah saat disentuh, umumnya bertangkai atau sesil dan sering ditemukan pada gingiva.",
+
+  "clinicalExamination": [
+    "Evaluasi ukuran, bentuk, dan basis lesi",
+    "Nilai adanya perdarahan spontan atau saat palpasi",
+    "Periksa adanya iritasi lokal seperti plak, kalkulus, atau restorasi yang buruk",
+    "Evaluasi mobilitas gigi di sekitar lesi",
+    "Palpasi kelenjar limfa regional bila dicurigai infeksi sekunder"
+  ],
+
+  "premium": true,
+  "price": 5000,
+
+  "premiumContent": {
+    "pathophysiology": "Granuloma piogenik merupakan lesi hiperplasia vaskular reaktif akibat iritasi kronis atau trauma ringan yang diperberat oleh perubahan hormonal. Lesi ditandai proliferasi kapiler yang berlebihan disertai infiltrasi sel inflamasi.",
+
+    "supportingExamination": "Radiografi dilakukan bila dicurigai keterlibatan tulang. Diagnosis definitif ditegakkan melalui biopsi eksisional dan pemeriksaan histopatologi.",
+
+    "treatmentPlan": "Eliminasi seluruh faktor iritasi lokal, diikuti eksisi bedah hingga dasar lesi. Kebersihan rongga mulut harus diperbaiki untuk mencegah kekambuhan.",
+
+    "followUp": "Kontrol setelah 1–2 minggu untuk evaluasi penyembuhan, kemudian pemantauan berkala terutama bila faktor iritasi belum sepenuhnya dihilangkan.",
+
+    "keyPoints": [
+      "Granuloma piogenik merupakan lesi reaktif, bukan neoplasma.",
+      "Gingiva adalah lokasi tersering.",
+      "Lesi mudah berdarah karena kaya pembuluh darah.",
+      "Eksisi tanpa menghilangkan faktor iritasi meningkatkan risiko rekurensi."
+    ]
+  }
+}
