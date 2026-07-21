@@ -40,6 +40,17 @@ const cases = [
         thumbnail: "assets/images/cases/case4.jpg",
         premium: true,
         price: 5000,
+        releaseDate: "2026-06-20",
+        type: "case"
+    },
+        {
+        id: 5,
+        file: "case5",
+        title: "Kasus #5",
+        description: "Apa diagnosisnya?",
+        thumbnail: "assets/images/cases/case4.jpg",
+        premium: true,
+        price: 5000,
         releaseDate: "2026-07-20",
         type: "case"
     }
