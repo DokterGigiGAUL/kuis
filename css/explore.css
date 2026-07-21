@@ -1,7 +1,7 @@
 :root{
-    --list-thumb-size:64px;
+    --list-thumb-size:72px;
     --list-gap:12px;
-    --list-padding:6px;
+    --list-padding:12px;
     --list-radius:12px;
 }
 
@@ -24,7 +24,7 @@
     width: var(--list-thumb-size);
     height: var(--list-thumb-size);
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 12px;
 }
 
 .list-title {
@@ -47,7 +47,7 @@
     display:flex;
     flex-direction:column;
     gap: 6px;
-    padding: 6px;
+    padding: 12px;
     flex: 1;
 }
 
