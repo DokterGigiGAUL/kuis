@@ -3,7 +3,7 @@ const ttsList = [
     {
         id: 1,
         title: "TTS #1",
-        file: "",
+        file: "tts1",
         productId: "tts1",
         soal: 12,
         description: "Level: ★☆☆☆☆",
@@ -17,6 +17,7 @@ const ttsList = [
     {
         id: 2,
         title: "TTS #2",
+        file: "tts2",
         productId: "tts2",
         soal: 11,
         description: "Level: ★☆☆☆☆",
@@ -30,6 +31,7 @@ const ttsList = [
     {
         id: 3,
         title: "TTS #3",
+        file: "tts3",
         productId: "tts3",
         soal: 12,
         description: "Level: ★★☆☆☆",
@@ -42,6 +44,7 @@ const ttsList = [
     {
         id: 4,
         title: "TTS #4",
+        file: "tts4",
         productId: "tts4",
         soal: 20,
         description: "Level: ★★★☆☆",
@@ -54,6 +57,7 @@ const ttsList = [
     {
         id: 5,
         title: "TTS #5",
+        file: "tts5",
         productId: "tts5",
         soal: 20,
         description: "Level: ★★★★☆",
