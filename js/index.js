@@ -290,7 +290,7 @@ const card = clone.querySelector(".featured-card");
 
 const openContent = () => {
 
-if (item.type !== "case" && heroItem.premium) {
+if (item.type !== "case" && item.premium) {
     showPremiumDialog();
     return;
 }
