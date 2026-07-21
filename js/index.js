@@ -137,7 +137,9 @@ function loadTTS() {
 
             title: tts.title,
 
-            description: `${tts.soal} Soal`,
+            description: tts.description,
+
+            soal: `${tts.soal} Soal`,
 
             buttonText: "Main",
 
