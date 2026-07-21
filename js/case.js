@@ -3,7 +3,7 @@ const file = params.get("case") || "case1";
 
 const flashcard = document.getElementById("flashcard");
 
-fetch(`assets/cases/${file}.json`)
+fetch(`assets/metadata/kasus/${file}.json`)
     .then(response => response.json())
     .then(data => {
 
