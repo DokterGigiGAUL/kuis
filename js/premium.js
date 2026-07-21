@@ -1,10 +1,11 @@
 function showPremiumDialog() {
-    alert(
+    if (confirm(
         "🔒 Konten Premium\n\n" +
-        "Konten ini merupakan bagian dari Wonder App Premium.\n\n" +
-        "Saat ini konten dan atau fungsi Premium belum dapat diakses karena masih dalam tahap pengembangan. Akses premium bisa segera didapatkan maksimal dalam 1 minggu ke depan.\n\n" +
-        "Terima kasih atas dukungannya 😊"
-    );
+        "Konten ini hanya tersedia untuk member Premium.\n\n" +
+        "Tekan OK untuk mendapatkan akses akun Premium atau CANCEL untuk tetap menggunakan akun Gratis."
+    )) {
+        window.location.href = "premium.html";
+    }
 }
 
 const Premium = {
