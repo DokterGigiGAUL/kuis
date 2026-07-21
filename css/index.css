@@ -349,7 +349,7 @@ body {
     }
 
     .featured-overlay{
-        top:100px;
+        top:120px;
         padding:32px;
     }
 
@@ -481,7 +481,7 @@ body {
     }
 
     .featured-latest{
-        top: calc((100vw / 2) - 50px)!important;
+        top: calc((100vw / 2) - 25px)!important;
     }
 }
 
