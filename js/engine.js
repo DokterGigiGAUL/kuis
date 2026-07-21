@@ -19,7 +19,7 @@ async load(){
     try{
         const params=new URLSearchParams(location.search);
         const file=params.get("puzzle")||"tts1";
-        const res = await fetch(`assets/tts/${file}.json`);
+        const res = await fetch(`assets/metadata/tts/${file}.json`);
         if(!res.ok){
             throw new Error("Tidak ada lagi teka-teki silang gratis");
     }
