@@ -105,3 +105,7 @@ const Storage = {
     }
 
 };
+function userHasPremium() {
+    return localStorage.getItem("premium") === "true";
+}
+
