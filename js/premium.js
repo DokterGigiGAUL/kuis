@@ -23,3 +23,15 @@ const Premium = {
 function userHasPremium() {
     return Premium.isPremium();
 }
+
+function activatePremium() {
+    Premium.enable();
+    alert("Premium berhasil diaktifkan.");
+    location.reload();
+}
+
+function deactivatePremium() {
+    Premium.disable();
+    alert("Premium dinonaktifkan.");
+    location.reload();
+}
