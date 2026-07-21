@@ -236,7 +236,10 @@ document.getElementById("reset-btn").onclick=()=>{
 };
 document.getElementById("hint-btn").onclick = () => {
 
-
+    if(!userHasPremium()){
+        showPremiumDialog();
+        return;
+    }
 
     this.useHint();
 
@@ -244,7 +247,10 @@ document.getElementById("hint-btn").onclick = () => {
 
 document.getElementById("reveal-btn").onclick = () => {
 
-    
+    if(!userHasPremium()){
+        showPremiumDialog();
+        return;
+    }    
 
     this.revealAnswer();
 
