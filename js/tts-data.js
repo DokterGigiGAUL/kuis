@@ -49,7 +49,7 @@ const ttsList = [
         price: 5000, 
         releaseDate: "2026-06-20",
         type: "tts"
-    }
+    },
     {
         id: 5,
         title: "TTS #5",
