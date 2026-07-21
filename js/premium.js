@@ -6,3 +6,7 @@ function showPremiumDialog() {
         "Terima kasih atas dukungannya 😊"
     );
 }
+
+function userHasPremium() {
+    return false;
+}
