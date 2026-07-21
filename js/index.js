@@ -268,9 +268,10 @@ latestCards.forEach(item => {
 
     clone.querySelector(".featured-card-thumb").src = item.thumbnail;
     clone.querySelector(".featured-card-thumb").alt = item.title;
-
     clone.querySelector(".featured-card-title").textContent = item.title;
-console.log(clone.firstElementChild.outerHTML);
+    clone.querySelector(".featured-card-description").textContent = item.description;
+
+//console.log(clone.firstElementChild.outerHTML);
     const featuredButton = clone.querySelector("button");
 featuredButton.textContent = ({
     quiz: "Mulai",
