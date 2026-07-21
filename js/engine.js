@@ -234,12 +234,26 @@ this.hiddenInput.addEventListener("keydown",e=>{
 document.getElementById("reset-btn").onclick=()=>{
     this.resetPuzzle();
 };
-    document.getElementById("hint-btn").onclick = () => {
-    showPremiumDialog();
+document.getElementById("hint-btn").onclick = () => {
+
+    if(!userHasPremium()){
+        showPremiumDialog();
+        return;
+    }
+
+    this.useHint();
+
 };
 
 document.getElementById("reveal-btn").onclick = () => {
-    showPremiumDialog();
+
+    if(!userHasPremium()){
+        showPremiumDialog();
+        return;
+    }
+
+    this.revealAnswer();
+
 };
 document.getElementById("home-btn").onclick=()=>{
     location.href="index.html";
@@ -432,6 +446,60 @@ checkAnswer(){
     document.getElementById("progress-text").textContent=persen+"%";
 }
 
+useHint(){
+
+    if(!this.activeWord) return;
+
+    const r = this.direction === "across"
+        ? this.activeWord.row
+        : this.activeWord.row + this.activeIndex;
+
+    const c = this.direction === "across"
+        ? this.activeWord.col + this.activeIndex
+        : this.activeWord.col;
+
+    const answer = this.grid[r][c].answer;
+
+    this.grid[r][c].letter = answer;
+
+    this.cells[r][c]
+        .querySelector(".letter")
+        .textContent = answer;
+
+    this.checkAnswer();
+
+    this.nextCell();
+
+}
+
+revealAnswer(){
+
+    if(!this.activeWord) return;
+
+    for(let i=0;i<this.activeWord.answer.length;i++){
+
+        const r = this.direction === "across"
+            ? this.activeWord.row
+            : this.activeWord.row + i;
+
+        const c = this.direction === "across"
+            ? this.activeWord.col + i
+            : this.activeWord.col;
+
+        const answer = this.grid[r][c].answer;
+
+        this.grid[r][c].letter = answer;
+
+        this.cells[r][c]
+            .querySelector(".letter")
+            .textContent = answer;
+
+    }
+
+    this.checkAnswer();
+
+}
+    
 resetPuzzle(){
     const wrapper = document.querySelector(".progress-wrapper");
         if(wrapper.innerHTML !== this.originalProgressHTML){
