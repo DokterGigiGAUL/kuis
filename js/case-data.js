@@ -53,7 +53,7 @@ const cases = [
         price: 5000,
         releaseDate: "2026-06-20",
         type: "case"
-    }
+    },
     {
         id: 6,
         file: "case6",
