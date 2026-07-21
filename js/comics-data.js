@@ -2,6 +2,7 @@ const comics = [{
 
   id: 1,
   productId: "komik1",
+  file: "komik1",
   episode: 1,
   premium: false,
   price: 0,
@@ -19,6 +20,7 @@ const comics = [{
   {
   id: 2,
   productId: "komik2",
+  file: "komik2",
   episode: 2,
   premium: false,
   price: 0,
@@ -35,6 +37,7 @@ const comics = [{
   {
   id: 3,
   productId: "komik3",
+  file: "komik3",
   episode: 3,
   premium: false,
   price: 0,
@@ -51,6 +54,7 @@ const comics = [{
   {
   id: 4,
   productId: "komik4",
+file: "komik4",
   episode: 4,
   premium: true,
   price: 5000,
