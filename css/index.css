@@ -481,7 +481,7 @@ body {
     }
 
     .featured-latest{
-        top: calc((100vw / 2) - 25px)!important;
+        top: calc((100vw / 2) - 75px)!important;
     }
 }
 
