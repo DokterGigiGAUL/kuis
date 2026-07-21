@@ -1,3 +1,5 @@
+const PREMIUM_SUBSCRIPTION_ID = "wonderapp_premium_monthly";
+
 function showPremiumDialog() {
     if (confirm(
         "🔒 Konten Premium\n\n" +
