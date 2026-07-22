@@ -1,209 +1,9 @@
-.case-container {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-.patient {
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.case-content h3 {
-  margin-bottom: 8px;
-}
-
-.case-content p {
-  line-height: 1.3;
-}
-
-.tap-hint {
-  text-align: center;
-  color: #f0f0f0;
-  background: var(--primary);
-  padding: 12px;
-  margin: 24px 24px 12px;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
-
-.diagnosis-name {
-  font-size: 2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.diagnosis-hero {
-  padding-bottom: 24px;
-  margin-bottom: 28px;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.case-thumbnail {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-}
-
-.case-overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0 12px;
-  height: 100px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .8) 20%, rgba(255, 255, 255, .6) 40%, rgba(255, 255, 255, .4) 60%, rgba(255, 255, 255, .2) 80%, rgba(255, 255, 255, 0) 100%);
-}
-
-.case-cover {
-  position: relative;
-}
-
-.case-card {
-  background: var(--card);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.quiz-info {
-  display: flex;
-  justify-content: space-between;
-}
-
-.case-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  width: 100%;
-  margin: 0;
-}
-
-.case-title {
-  font-size: 20px;
-  line-height: 1.15;
-  margin-bottom: 6px;
-  position: absolute;
-  bottom: 0;
-}
-
-@media (max-width:640px) {}
-
-@media (min-width: 768px) {
-
-  .case-grid {
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    padding-bottom: 10px;
-  }
-
-  .case-card {
-    flex: 0 0 calc((100% - 24px) / 3.25);
-  }
-
-  .case-container {
-    padding: 40px;
-  }
-
-  .flashcard {
-    max-width: 520px;
-  }
-}
-
-.case-back-content, .case-content {
+.case-container{
     display:flex;
-    flex-direction:column;
-    height:100%;
-    background:#fff;
-    border-radius:0 0 20px 20px;
-    overflow:hidden;
-}
-
-.case-back-content h3,
-.case-front-content h3 {
-  margin-top: 24px;
-  margin-bottom: 8px;
-}
-
-.case-back-content h3:first-child,
-.case-front-content h3:first-child {
-  margin-top: 0;
-}
-
-.case-back-content p,
-.case-back-content ul,
-.case-front-content p,
-.case-front-content ul {
-  margin: 0;
-}
-
-.case-back-content ul,
-.case-front-content ul {
-  padding-left: 20px;
-}
-
-.premium-item {
-  margin-top: 24px;
-}
-
-.lock {
-  font-size: .9rem;
-  color: #f59e0b;
-}
-
-.premium-hidden {
-  background: #f5f5f5;
-  border-radius: 8px;
-  padding: 14px;
-  color: #888;
-  text-align: center;
-  font-style: italic;
-}
-
-#premium-banner {
-  display: none;
-  margin-top: 28px;
-  margin-bottom: 28px;
-  padding: 18px;
-  border-radius: 12px;
-  background: #fff8e8;
-  border: 1px solid #f5d36b;
-}
-
-#premium-banner h3 {
-  margin: 0 0 10px;
-}
-
-#premium-banner ul {
-  margin: 12px 0;
-  padding-left: 20px;
-}
-
-#premium-banner button {
-  margin-top: 14px;
-}
-
-
-.case-navigation {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 24px;
-  background: #fff;
-  border-top: 1px solid #e5e7eb;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
+    padding:20px;
 }
 
 .case-wrapper{
@@ -214,32 +14,77 @@
     grid-template-rows:auto 1fr auto;
 }
 
-.image-flip {
-  width: 100%;
+.case-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    width:100%;
+    margin:0;
 }
 
-.case-image {
-  width: 100%;
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  border-radius: 20px 20px 0 0;
+.case-card{
+    background:var(--card);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
 }
 
-.case-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.case-cover{
+    position:relative;
 }
 
-.info-flip {
-  width: 100%;
+.case-thumbnail{
+    display:block;
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
 }
 
+.case-overlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:100px;
+    padding:0 12px;
+    background:linear-gradient(0deg,rgba(255,255,255,1)0%,rgba(255,255,255,.8)20%,rgba(255,255,255,.6)40%,rgba(255,255,255,.4)60%,rgba(255,255,255,.2)80%,rgba(255,255,255,0)100%);
+}
 
+.case-title{
+    position:absolute;
+    bottom:0;
+    margin-bottom:6px;
+    font-size:20px;
+    line-height:1.15;
+}
 
-.case-navigation button {
-  flex: 1;
+.quiz-info{
+    display:flex;
+    justify-content:space-between;
+}
+
+.case-image{
+    width:100%;
+    aspect-ratio:4/3;
+    overflow:hidden;
+    border-radius:20px 20px 0 0;
+}
+
+.case-image img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.case-content,
+.case-back-content{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    background:#fff;
+    border-radius:0 0 20px 20px;
+    overflow:hidden;
 }
 
 .case-scroll{
@@ -250,55 +95,191 @@
     padding:20px;
 }
 
-/* ===========================
-   IMAGE FLIP
-=========================== */
-
-.image-flip {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  transform-style: preserve-3d;
-  transition: transform .6s;
+.case-content h3,
+.case-back-content h3{
+    margin:24px 0 8px;
 }
 
-.image-flip.flipped {
-  transform: rotateY(180deg);
+.case-content h3:first-child,
+.case-back-content h3:first-child{
+    margin-top:0;
 }
 
-.image-face {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
+.case-content p,
+.case-content ul,
+.case-back-content p,
+.case-back-content ul{
+    margin:0;
 }
 
-.image-face.back {
-  transform: rotateY(180deg);
+.case-content p{
+    line-height:1.3;
 }
 
-/* ===========================
-   INFO FLIP
-=========================== */
+.case-content ul,
+.case-back-content ul{
+    padding-left:20px;
+}
+
+.patient{
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.tap-hint{
+    flex-shrink:0;
+    margin:24px 24px 12px;
+    padding:12px;
+    text-align:center;
+    color:#f0f0f0;
+    background:var(--primary);
+    border-radius:12px;
+}
+
+.diagnosis-hero{
+    flex-shrink:0;
+    padding:0 20px 24px;
+    margin-bottom:28px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.diagnosis-name{
+    margin:0;
+    font-size:2rem;
+    font-weight:800;
+    line-height:1.2;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+.case-navigation{
+    display:flex;
+    justify-content:space-between;
+    gap:24px;
+    padding:24px;
+    background:#fff;
+    border-top:1px solid #e5e7eb;
+}
+
+.case-navigation button{
+    flex:1;
+}
+
+.lock{
+    font-size:.9rem;
+    color:#f59e0b;
+}
+
+.premium-item{
+    margin-top:24px;
+}
+
+.premium-hidden{
+    padding:14px;
+    border-radius:8px;
+    background:#f5f5f5;
+    color:#888;
+    text-align:center;
+    font-style:italic;
+}
+
+#premium-banner{
+    display:none;
+    margin:28px 0;
+    padding:18px;
+    border:1px solid #f5d36b;
+    border-radius:12px;
+    background:#fff8e8;
+}
+
+#premium-banner h3{
+    margin:0 0 10px;
+}
+
+#premium-banner ul{
+    margin:12px 0;
+    padding-left:20px;
+}
+
+#premium-banner button{
+    margin-top:14px;
+}
+
+@media(min-width:768px){
+
+    .case-container{
+        padding:40px;
+    }
+
+    .case-grid{
+        display:flex;
+        gap:24px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        scroll-behavior:smooth;
+        padding-bottom:10px;
+    }
+
+    .case-card{
+        flex:0 0 calc((100% - 24px)/3.25);
+    }
+
+    .flashcard{
+        max-width:520px;
+    }
+}
+
+.image-flip{
+    position:relative;
+    width:100%;
+    aspect-ratio:4/3;
+    transform-style:preserve-3d;
+    transition:transform .6s;
+}
+
+.image-flip.flipped{
+    transform:rotateY(180deg);
+}
+
+.image-face{
+    position:absolute;
+    inset:0;
+    backface-visibility:hidden;
+}
+
+.image-face.back{
+    transform:rotateY(180deg);
+}
 
 .info-flip{
     position:relative;
+    width:100%;
     height:380px;
     transform-style:preserve-3d;
     transition:transform .6s;
 }
 
-.info-flip.flipped {
-  transform: rotateY(180deg);
+.info-flip.flipped{
+    transform:rotateY(180deg);
 }
 
 .info-face{
     position:absolute;
     inset:0;
-    display:flex;
-    flex-direction:column;
+    display:grid;
+    grid-template-rows:1fr auto;
     backface-visibility:hidden;
 }
 
-.info-face.back {
-  transform: rotateY(180deg);
+.info-face.back{
+    transform:rotateY(180deg);
+}
+
+.case-content,
+.case-back-content{
+    min-height:0;
+}
+
+.case-scroll{
+    overscroll-behavior:contain;
 }
