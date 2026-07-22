@@ -159,8 +159,11 @@ if (backBtn) {
     };
 }
         
-flashcard.onclick = () => {
-    flashcard.classList.toggle("flipped");
+const flipBtn = document.getElementById("flipBtn");
+
+flipBtn.onclick = (e) => {
+    e.stopPropagation();
+    flashcard.classList.add("flipped");
 };
 
 })
