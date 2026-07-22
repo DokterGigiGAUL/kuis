@@ -50,41 +50,67 @@
 
     <!-- FRONT -->
 
-    <div class="info-face front">
+    <div class="info-face back">
 
-    <div class="case-content">
+        <div class="case-back-content">
 
-        <div class="case-scroll">
+            <div class="case-scroll">
 
-            <div class="patient" id="patient"></div>
+                <h3>Diagnosis Banding</h3>
+                <ul id="dd-list"></ul>
 
-            <h3>Anamnesis</h3>
-            <p id="anamnesis"></p>
+                <h3>Deskripsi Lesi</h3>
+                <p id="lesion-description"></p>
 
-            <h3>Pemeriksaan Klinis</h3>
-            <p id="clinicalExamination"></p>
+                <h3>Pemeriksaan Klinis</h3>
+                <ul id="clinical-list"></ul>
+
+                <div id="premium-section">
+
+                    <div id="premium-banner"></div>
+
+                    <section class="premium-item">
+                        <h3>Patofisiologi</h3>
+                        <p id="pathophysiology"></p>
+                    </section>
+
+                    <section class="premium-item">
+                        <h3>Pemeriksaan Penunjang</h3>
+                        <p id="supporting-examination"></p>
+                    </section>
+
+                    <section class="premium-item">
+                        <h3>Rencana Perawatan</h3>
+                        <p id="treatment-plan"></p>
+                    </section>
+
+                    <section class="premium-item">
+                        <h3>Follow Up</h3>
+                        <p id="follow-up"></p>
+                    </section>
+
+                    <section class="premium-item">
+                        <h3>Key Points</h3>
+                        <ul id="key-points"></ul>
+                    </section>
+
+                </div>
+
+            </div>
 
         </div>
+<div class="case-navigation">
 
-        <div class="tap-hint">
-            ↻ Ketuk kartu untuk melihat diagnosis
-        </div>
+    <button id="prev-case" class="btn btn-outline">
+        ← Sebelumnya
+    </button>
 
-    </div>
-
-    <div class="case-navigation">
-
-            <button id="prev-case-front" class="btn btn-outline">
-                ← Sebelumnya
-            </button>
-
-            <button id="next-case-front" class="btn btn-primary">
-                Berikutnya →
-            </button>
-
-        </div>
+    <button id="next-case" class="btn btn-primary">
+        Berikutnya →
+    </button>
 
 </div>
+    </div>
 
 
     <!-- BACK -->
