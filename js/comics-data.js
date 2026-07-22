@@ -46,8 +46,7 @@ const comics = [{
   releaseDate: "2026-06-20",
         type: "comic",
   images: [
-    "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png",
-    "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png"
+    "assets/images/komik/komik3/panel.png"
   ]
   },
   {
@@ -63,8 +62,7 @@ file: "komik4",
   releaseDate: "2026-07-20",
         type: "comic",
   images: [
-    "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png",
-    "assets/comics/komik3/6E4F0001-06FC-4B6F-8D5D-30E39EE23DB8.png"
+    "assets/images/komik/komik3/panel.png"
   ]
   }
 ];
