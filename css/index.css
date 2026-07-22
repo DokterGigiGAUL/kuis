@@ -436,3 +436,43 @@ body {
         top: calc((100vw / 2) - 220px)!important;
     }
 }
+
+/* Badge Premium */
+
+.content-card.premium,
+.list-card.premium{
+    position:relative;
+    overflow:hidden;
+}
+
+.content-card.premium::before,
+.list-card.premium::before{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:0;
+    height:0;
+
+    border-top:56px solid #e53935;
+    border-left:56px solid transparent;
+
+    z-index:10;
+}
+
+.content-card.premium::after,
+.list-card.premium::after{
+    content:"★";
+    position:absolute;
+    top:8px;
+    right:8px;
+
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    line-height:1;
+
+    z-index:11;
+
+    transform:rotate(0deg);
+}
