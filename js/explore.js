@@ -40,11 +40,16 @@ function createListCard({
     description,
     buttonText,
     disabled = false,
+    premium = false,
     onClick
 }) {
 
     const clone = listTemplate.content.cloneNode(true);
+    const card = clone.querySelector(".list-card");
 
+if (premium) {
+    card.classList.add("premium");
+}
     clone.querySelector(".list-thumb").src = thumbnail;
     clone.querySelector(".list-thumb").alt = title;
 
@@ -90,6 +95,7 @@ function showQuiz() {
     title: quiz.title,
 
     description: quiz.description,
+    premium: quiz.premium,
 
     buttonText: Storage.isFinished(quiz.productId)
         ? "Sudah Dikerjakan"
@@ -140,7 +146,7 @@ function showComic() {
     title: comic.title,
 
     description: comic.description,
-
+    premium: comic.premium,
     buttonText: "Baca",
 
     onClick() {
@@ -187,7 +193,7 @@ function showTTS() {
     title: tts.title,
 
     description: `${tts.soal} Soal`,
-
+    premium: tts.premium,
     buttonText: "Main",
 
     onClick() {
@@ -234,7 +240,7 @@ function showCase() {
     title: caseData.title,
 
     description: caseData.description,
-
+    premium: caseData.premium,
     buttonText: "Lihat",
 
     onClick() {
