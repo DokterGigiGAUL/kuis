@@ -9,21 +9,18 @@
 .flashcard{
     width:100%;
     max-width:420px;
+    /*height:85vh;
+    max-height:900px;
+    min-height:600px;*/
     aspect-ratio:2 / 3;
     position:relative;
-    perspective:1000px;
-}
-
-.card-inner{
-    position:relative;
-    width:100%;
-    height:100%;
-
     transform-style:preserve-3d;
-    transition:transform .6s;
+
+    transition:.6s;
+    cursor:pointer;
 }
 
-.flashcard.flipped .card-inner{
+.flashcard.flipped{
     transform:rotateY(180deg);
 }
 
@@ -41,22 +38,19 @@
 
 .back{
     transform:rotateY(180deg);
-    display:flex;
-    flex-direction:column;
-    height:100%;
+    justify-content:center;
+    align-items:center;
+    padding:12px;
     overflow:hidden;
 }
 
 .front{
     display:flex;
     flex-direction:column;
-    height:100%;
 }
 
 .case-image{
-    width:100%;
-    aspect-ratio:4/3;
-    overflow:hidden;
+    flex:0 0 45%;
 }
 
 .case-image img{
@@ -66,12 +60,10 @@
 }
 
 .case-content{
-    flex:1;
-
+    
     display:flex;
     flex-direction:column;
 
-    min-height:0;
 }
 
 .patient{
@@ -89,11 +81,9 @@
 
 .case-scroll{
     flex:1;
-    overflow-y:auto;
-
     min-height:0;
-
-    -webkit-overflow-scrolling:touch;
+    overflow-y:auto;
+    min-height:0;
 }
 
 .tap-hint{
@@ -297,3 +287,5 @@
 .case-navigation button{
     flex:1;
 }
+
+Tunggu saya mengunggah case.js
