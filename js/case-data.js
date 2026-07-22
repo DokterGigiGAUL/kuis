@@ -56,7 +56,7 @@ const cases = [
         thumbnail: "assets/images/cases/case5.jpg",
         premium: true,
         price: 5000,
-        releaseDate: "2026-07-20",
+        releaseDate: "2026-07-21",
         type: "case"
     },
     {
@@ -68,7 +68,7 @@ const cases = [
         thumbnail: "assets/images/cases/case6.jpg",
         premium: true,
         price: 5000,
-        releaseDate: "2026-07-21",
+        releaseDate: "2026-07-20",
         type: "case"
     }
 
