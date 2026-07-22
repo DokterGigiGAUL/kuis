@@ -59,10 +59,10 @@
 }
 
 .case-content{
-    flex:1;
+    
     display:flex;
     flex-direction:column;
-    min-height:0;
+
 }
 
 .patient{
@@ -82,8 +82,7 @@
     flex:1;
     min-height:0;
     overflow-y:auto;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-y;
+    min-height:0;
 }
 
 .tap-hint{
