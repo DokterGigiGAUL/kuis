@@ -23,87 +23,120 @@
 </header>
 <main class="case-container">
 
-    <div class="flashcard" id="flashcard">
+    <div class="case-wrapper">
 
-        <!-- FRONT -->
-        <div class="card-face front">
+        <div class="image-flip" id="imageFlip">
 
-    <div class="case-image">
-        <img id="case-image">
-    </div>
+    <div class="image-face front">
 
-    <div class="case-content">
-
-        <div class="case-scroll">
-
-            <div class="patient" id="patient"></div>
-
-            <h3>Anamnesis</h3>
-            <p id="anamnesis"></p>
-
-            <h3>Pemeriksaan Klinis</h3>
-            <p id="clinicalExamination"></p>
-
+        <div class="case-image">
+            <img id="case-image" alt="Foto kasus">
         </div>
 
-        <div class="tap-hint" id="flipBtn">
-            ↻ Ketuk kartu untuk melihat diagnosis
+    </div>
+
+    <div class="image-face back">
+
+        <div class="case-image">
+            <img id="case-image-back" alt="Foto kasus">
         </div>
 
     </div>
 
 </div>
 
-        <!-- BACK -->
-<div class="card-face back">
 
-    <div class="case-back-content">
+<div class="info-flip" id="infoFlip">
 
-        <div class="diagnosis-hero">
-    <div id="diagnosis" class="diagnosis-name"></div>
-</div>
+    <!-- FRONT -->
 
-        <h3>Diagnosis Banding</h3>
-        <ul id="dd-list"></ul>
+    <div class="info-face front">
 
-        <h3>Deskripsi Lesi</h3>
-        <p id="lesion-description"></p>
+        <div class="case-content">
 
-        <h3>Pemeriksaan Klinis</h3>
-        <ul id="clinical-list"></ul>
+            <div class="case-scroll">
 
-        <div id="premium-section">
-            
-<div id="premium-banner"></div>
-            
-    <section class="premium-item">
-        <h3>Patofisiologi</h3>
-        <p id="pathophysiology"></p>
-    </section>
+                <div class="patient" id="patient"></div>
 
-    <section class="premium-item">
-        <h3>Pemeriksaan Penunjang</h3>
-        <p id="supporting-examination"></p>
-    </section>
+                <h3>Anamnesis</h3>
+                <p id="anamnesis"></p>
 
-    <section class="premium-item">
-        <h3>Rencana Perawatan</h3>
-        <p id="treatment-plan"></p>
-    </section>
+                <h3>Pemeriksaan Klinis</h3>
+                <p id="clinicalExamination"></p>
 
-    <section class="premium-item">
-        <h3>Follow Up</h3>
-        <p id="follow-up"></p>
-    </section>
+            </div>
 
-    <section class="premium-item">
-        <h3>Key Points</h3>
-        <ul id="key-points"></ul>
-    </section>
+            <div class="tap-hint">
+                ↻ Ketuk kartu untuk melihat diagnosis
+            </div>
 
-</div>
+        </div>
+
     </div>
-    <div class="case-navigation">
+
+
+    <!-- BACK -->
+
+    <div class="info-face back">
+
+        <div class="case-back-content">
+
+            <div class="diagnosis-hero">
+                <div id="diagnosis" class="diagnosis-name"></div>
+            </div>
+
+            <div class="case-scroll">
+
+                <h3>Diagnosis Banding</h3>
+                <ul id="dd-list"></ul>
+
+                <h3>Deskripsi Lesi</h3>
+                <p id="lesion-description"></p>
+
+                <h3>Pemeriksaan Klinis</h3>
+                <ul id="clinical-list"></ul>
+
+                <div id="premium-section">
+
+                    <div id="premium-banner"></div>
+
+                    <section class="premium-item">
+                        <h3>Patofisiologi</h3>
+                        <p id="pathophysiology"></p>
+                    </section>
+
+                    <section class="premium-item">
+                        <h3>Pemeriksaan Penunjang</h3>
+                        <p id="supporting-examination"></p>
+                    </section>
+
+                    <section class="premium-item">
+                        <h3>Rencana Perawatan</h3>
+                        <p id="treatment-plan"></p>
+                    </section>
+
+                    <section class="premium-item">
+                        <h3>Follow Up</h3>
+                        <p id="follow-up"></p>
+                    </section>
+
+                    <section class="premium-item">
+                        <h3>Key Points</h3>
+                        <ul id="key-points"></ul>
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="case-navigation">
 
     <button id="prev-case" class="btn btn-outline">
         ← Sebelumnya
@@ -113,7 +146,6 @@
         Berikutnya →
     </button>
 
-</div>
 </div>
     </div>
 </main>
