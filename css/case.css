@@ -14,7 +14,8 @@
     min-height:600px;*/
     aspect-ratio:2 / 3;
     position:relative;
-    transform-style:preserve-3d;
+    /*transform-style:preserve-3d;*/
+    transform-style:flat;
     transition:.6s;
     cursor:pointer;
 }
