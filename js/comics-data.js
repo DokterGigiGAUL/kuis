@@ -10,9 +10,9 @@ const comics = [{
   description: "Sariawan Karena Infeksi Jamur?",
   thumbnail: "assets/images/komik/komik1/thumbnail1.webp",
   releaseDate: "2026-06-20",
-        type: "comic",
+  type: "comic",
   images: [
-    "assets/images/komik/komik1/panel.jpeg"
+    "assets/images/komik/komik1/panel.jpeg",
     "assets/images/komik/komik1/panel1.webp"
   ]
   },
@@ -29,8 +29,8 @@ const comics = [{
   releaseDate: "2026-06-20",
         type: "comic",
   images: [
-    "assets/comics/komik2/IMG_1970.webp",
-    "assets/comics/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png"
+    "assets/images/komik/komik2/panel.png",
+    "assets/images/komik/komik2/panel1.webp"
   ]
   },
   {
