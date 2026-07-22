@@ -60,10 +60,14 @@
 }
 
 .case-content{
-    
+    position:absolute;
+    top:45%;
+    left:0;
+    right:0;
+    bottom:0;
     display:flex;
     flex-direction:column;
-
+    overflow:hidden;
 }
 
 .patient{
@@ -84,6 +88,8 @@
     min-height:0;
     overflow-y:auto;
     min-height:0;
+    -webkit-overflow-scrolling:touch;
+    padding:0 24px;
 }
 
 .tap-hint{
