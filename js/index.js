@@ -77,7 +77,7 @@ function loadQuiz() {
             onClick() {
 
                 if (quiz.premium) {
-                    showPremiumDialog();
+                    showPremiumDialog(quiz.productId);
                     return;
                 }
 
@@ -114,7 +114,7 @@ function loadComics() {
             onClick() {
 
                 if (comic.premium) {
-                    showPremiumDialog();
+                    showPremiumDialog(comic.productId);
                     return;
                 }
 
@@ -152,7 +152,7 @@ function loadTTS() {
             onClick() {
 
                 if (tts.premium) {
-                    showPremiumDialog();
+                    showPremiumDialog(tts.productId);
                     return;
                 }
 
@@ -299,7 +299,7 @@ const card = clone.querySelector(".featured-card");
 const openContent = () => {
 
 if (item.type !== "case" && item.premium) {
-    showPremiumDialog();
+    showPremiumDialog(caseData.productId);
     return;
 }
     switch (item.type) {
