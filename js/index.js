@@ -299,7 +299,7 @@ const card = clone.querySelector(".featured-card");
 const openContent = () => {
 
 if (item.type !== "case" && item.premium) {
-    showPremiumDialog(caseData.productId);
+    showPremiumDialog(item.productId);
     return;
 }
     switch (item.type) {
