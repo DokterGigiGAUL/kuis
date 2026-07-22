@@ -50,8 +50,11 @@
 }
 
 .case-image{
-    flex:0 0 45%;
+    width:100%;
+    aspect-ratio:4/3;
+    overflow:hidden;
 }
+
 
 .case-image img{
     width:100%;
