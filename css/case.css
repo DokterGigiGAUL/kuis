@@ -81,8 +81,10 @@
 
 .case-scroll{
     flex:1;
-    overflow-y:auto;
     min-height:0;
+    overflow-y:auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
 }
 
 .tap-hint{
