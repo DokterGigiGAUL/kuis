@@ -61,7 +61,7 @@
 
 .case-content{
     flex:1;
-    padding:18px;
+    padding:24px 12px;
     display:flex;
     flex-direction:column;
 }
@@ -85,7 +85,7 @@
     color: #f0f0f0;
     background: var(--primary);
     padding: 12px;
-    margin-top: 15px;
+    margin: 24px;
     border-radius: 12px;
 }
 
@@ -269,13 +269,10 @@
     left:0;
     right:0;
     bottom:0;
-
     display:flex;
     justify-content:space-between;
-    gap:12px;
-
-    padding:16px 20px;
-
+    gap:24px;
+    padding:24px;
     background:#fff;
     border-top:1px solid #e5e7eb;
 }
