@@ -1,7 +1,8 @@
 const params = new URLSearchParams(window.location.search);
 const file = params.get("case") || "case1";
 
-const flashcard = document.getElementById("flashcard");
+const imageFlip = document.getElementById("imageFlip");
+const infoFlip = document.getElementById("infoFlip");
 
 fetch(`assets/metadata/kasus/${file}.json`)
     .then(response => response.json())
@@ -159,12 +160,15 @@ if (backBtn) {
     };
 }
         
-const flipBtn = document.getElementById("flipBtn");
-
-flipBtn.onclick = (e) => {
+function showDiagnosis(e) {
     e.stopPropagation();
-    flashcard.classList.add("flipped");
-};
+
+    imageFlip.classList.toggle("flipped");
+    infoFlip.classList.toggle("flipped");
+}
+
+imageFlip.onclick = showDiagnosis;
+infoFlip.onclick = showDiagnosis;
 
 })
 
