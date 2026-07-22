@@ -19,12 +19,18 @@ function createContentCard({
     title,
     description,
     buttonText,
+    premium = false,
     disabled = false,
     onClick
 }) {
 
     const clone = cardTemplate.content.cloneNode(true);
+    const card = clone.querySelector(".content-card");
 
+    if (premium) {
+      card.classList.add("premium");
+    }
+    
     clone.querySelector(".content-thumb").src = thumbnail;
     clone.querySelector(".content-thumb").alt = title;
 
@@ -61,7 +67,7 @@ function loadQuiz() {
             title: quiz.title,
 
             description: quiz.description,
-
+            premium: quiz.premium,
             buttonText: finished
                 ? "Sudah Selesai"
                 : "Mulai",
@@ -102,7 +108,7 @@ function loadComics() {
 
             //description: `Episode #${comic.id}`,
             description: comic.description,
-
+            premium: comic.premium,
             buttonText: "Baca",
 
             onClick() {
@@ -138,7 +144,7 @@ function loadTTS() {
             title: tts.title,
 
             description: tts.description,
-
+            premium: tts.premium,
             soal: `${tts.soal} Soal`,
 
             buttonText: "Main",
@@ -177,7 +183,7 @@ function loadCases() {
             title: caseData.title,
 
             description: caseData.description,
-
+            premium: caseData.premium,
             buttonText: "Lihat",
 
             onClick() {
