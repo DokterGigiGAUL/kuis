@@ -19,12 +19,30 @@
 <script src="js/premium.js"></script>
 
 <script>
-document.getElementById("buyItemBtn").onclick = () => {
-    alert("Fitur pembelian per konten akan segera tersedia.");
+const params = new URLSearchParams(location.search);
+
+const productId = params.get("product");
+
+const buyItemBtn = document.getElementById("buyItemBtn");
+const subscribeBtn = document.getElementById("subscribeBtn");
+
+if (!productId) {
+    buyItemBtn.style.display = "none";
+}
+
+buyItemBtn.onclick = () => {
+
+    buyProduct(productId);
+
 };
 
-document.getElementById("subscribeBtn").onclick = () => {
-    alert("Fitur Wonder App Premium akan segera tersedia.");
+subscribeBtn.onclick = () => {
+
+    subscribePremium();
+
+};
+</script>
+
 };
 </script>
 
