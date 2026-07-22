@@ -9,7 +9,8 @@ fetch(`assets/metadata/kasus/${file}.json`)
     .then(data => {
 
         document.getElementById("case-image").src = data.image;
-
+        document.getElementById("case-image-back").src = data.image;
+        
         document.getElementById("patient").textContent =
             `${data.gender}, ${data.age}`;
 
