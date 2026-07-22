@@ -49,23 +49,11 @@
     flex-direction:column;
 }*/
 
-.case-image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
-
-
-.case-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.case-content {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+.case-content{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    overflow:hidden;
 }
 
 .patient {
@@ -181,11 +169,13 @@
   }
 }
 
-.case-back-content {
-  width: 100%;
-  background: #fff;
-  border-radius: 0 0 20px 20px;
-  overflow: hidden;
+.case-back-content{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    background:#fff;
+    border-radius:0 0 20px 20px;
+    overflow:hidden;
 }
 
 .case-front-content {
@@ -194,14 +184,6 @@
   width: 100%;
   overflow-y: auto;
   padding: 24px 12px 100px;
-}
-
-.diagnosis-name {
-  font-size: 1.6rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.3;
 }
 
 .case-back-content h3,
@@ -323,11 +305,12 @@
   flex: 1;
 }
 
-.case-scroll {
-  max-height: 300px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 20px;
+.case-scroll{
+    flex:1;
+    min-height:0;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:20px;
 }
 
 /* ===========================
@@ -360,11 +343,11 @@
    INFO FLIP
 =========================== */
 
-.info-flip {
-  position: relative;
-  min-height: 420px;
-  transform-style: preserve-3d;
-  transition: transform .6s;
+.info-flip{
+    position:relative;
+    height:380px;
+    transform-style:preserve-3d;
+    transition:transform .6s;
 }
 
 .info-flip.flipped {
