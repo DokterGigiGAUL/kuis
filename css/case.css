@@ -6,58 +6,6 @@
   padding: 20px;
 }
 
-/*.flashcard{
-    width:100%;
-    max-width:420px;
-    height:85vh;
-    max-height:900px;
-    min-height:600px;
-    aspect-ratio:2 / 3;
-    position:relative;
-    transform-style:preserve-3d;
-
-    transition:.6s;
-    cursor:pointer;
-}
-
-.flashcard.flipped{
-    transform:rotateY(180deg);
-}
-
-.card-face{
-    position:absolute;
-    inset:0;
-    background:#fff;
-    border-radius:20px;
-    overflow:hidden;
-    backface-visibility:hidden;
-    display:flex;
-    flex-direction:column;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.back{
-    transform:rotateY(180deg);
-    justify-content:center;
-    align-items:center;
-    padding:12px;
-    overflow:hidden;
-}
-
-.front{
-    display:flex;
-    flex-direction:column;
-}*/
-
-.case-content{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background: #fff;
-    border-radius: 0 0 20px 20px;
-    overflow: hidden;
-}
-
 .patient {
   font-weight: bold;
   margin-bottom: 12px;
@@ -171,7 +119,7 @@
   }
 }
 
-.case-back-content, .case-front-content {
+.case-back-content, .case-content {
     display:flex;
     flex-direction:column;
     height:100%;
@@ -179,14 +127,6 @@
     border-radius:0 0 20px 20px;
     overflow:hidden;
 }
-
-/*.case-front-content {
-  max-height:900px;
-    min-height:600px;
-  width: 100%;
-  overflow-y: auto;
-  padding: 24px 12px 100px;
-}*/
 
 .case-back-content h3,
 .case-front-content h3 {
@@ -351,10 +291,12 @@
   transform: rotateY(180deg);
 }
 
-.info-face {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
+.info-face{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    backface-visibility:hidden;
 }
 
 .info-face.back {
