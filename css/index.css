@@ -124,39 +124,32 @@ body {
     :root {
         --home-card-per-view: 3.25;
     }
-
     .header h1 {
         font-size: 24px;
         margin-bottom: 6px;
     }
-
     .container {
         margin: 0;
         padding:0;
     }
-
     .container-explore {
     margin: 0;
     padding:16px;
     }
-    
 }   
 
 @media (min-width:1024px) {
     :root {
         --home-card-per-view: 4.25;
     }
-
     .header h1 {
         font-size: 28px;
         margin-bottom: 0px;
     }
-    
     .container {
         margin: 0;
         padding:0;
     }
-
     .container-explore {
     margin: 0;
     padding:16px;
@@ -170,13 +163,11 @@ body {
     .header h1 {
         font-size: 32px;
         margin-bottom: 0px;
-    }
-    
+    }    
     .container {
         margin: 0;
         padding:0;
     }
-
     .container-explore {
     margin: 0;
     padding:16px;
@@ -249,7 +240,6 @@ body {
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
     box-shadow:var(--shadow);
 }
 .featured-hero::before{
