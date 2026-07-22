@@ -38,13 +38,6 @@ document.getElementById("lesion-description").textContent =
 const clinicalList =
     document.getElementById("clinical-list");
 
-data.clinicalExamination.forEach(item => {
-
-    const li = document.createElement("li");
-    li.textContent = item;
-    clinicalList.appendChild(li);
-
-});
 
 const premium =
     data.premiumContent;
