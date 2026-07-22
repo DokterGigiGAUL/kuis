@@ -9,18 +9,21 @@
 .flashcard{
     width:100%;
     max-width:420px;
-    /*height:85vh;
-    max-height:900px;
-    min-height:600px;*/
     aspect-ratio:2 / 3;
     position:relative;
-    transform-style:preserve-3d;
-
-    transition:.6s;
-    cursor:pointer;
+    perspective:1000px;
 }
 
-.flashcard.flipped{
+.card-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+
+    transform-style:preserve-3d;
+    transition:transform .6s;
+}
+
+.flashcard.flipped .card-inner{
     transform:rotateY(180deg);
 }
 
@@ -38,9 +41,9 @@
 
 .back{
     transform:rotateY(180deg);
-    justify-content:center;
-    align-items:center;
-    padding:12px;
+    display:flex;
+    flex-direction:column;
+    height:100%;
     overflow:hidden;
 }
 
@@ -64,8 +67,10 @@
 
 .case-content{
     flex:1;
+
     display:flex;
     flex-direction:column;
+
     min-height:0;
 }
 
@@ -85,7 +90,9 @@
 .case-scroll{
     flex:1;
     overflow-y:auto;
+
     min-height:0;
+
     -webkit-overflow-scrolling:touch;
 }
 
