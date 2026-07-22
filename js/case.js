@@ -164,8 +164,8 @@ if (backBtn) {
 function showDiagnosis(e) {
     e.stopPropagation();
 
-    imageFlip.classList.toggle("flipped");
-    infoFlip.classList.toggle("flipped");
+//    imageFlip.classList.toggle("flipped");
+  //  infoFlip.classList.toggle("flipped");
 }
 
 imageFlip.onclick = showDiagnosis;
