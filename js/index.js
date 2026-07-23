@@ -304,7 +304,7 @@ const card = clone.querySelector(".featured-card");
 /*if (item.premium) {
     card.classList.add("premium");
 }*/
-
+const badge = clone.querySelector(".featured-badge");
 if (item.premium) {
     badge.textContent = `👑 Premium`;
 }
