@@ -26,10 +26,15 @@ function createContentCard({
 
     const clone = cardTemplate.content.cloneNode(true);
     const card = clone.querySelector(".content-card");
-
+/*
     if (premium) {
       card.classList.add("premium");
     }
+*/
+const badge = clone.querySelector(".featured-badge");
+if (item.premium) {
+    badge.textContent = `👑 Premium`;
+}
     
     clone.querySelector(".content-thumb").src = thumbnail;
     clone.querySelector(".content-thumb").alt = title;
