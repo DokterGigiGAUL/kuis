@@ -231,7 +231,7 @@
 .image-flip{
     position:relative;
     width:100%;
-    aspect-ratio:4/3;
+    aspect-ratio:5/3;
     transform-style:preserve-3d;
     transition:transform .6s;
 }
@@ -281,4 +281,57 @@
 
 .case-scroll{
     overscroll-behavior:contain;
+}
+
+/* ======= */
+/*   BARU  */
+/* ======= */
+.kartuflash{
+    width:100%;
+    max-width:400px;
+    aspect-ratio:1 / 2;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform .8s;
+    display:grid;
+    grid-template-rows:30% 45% 25%;
+    overflow:hidden;
+    border-radius:20px;
+    background:#fff;
+}
+
+.kartu-kasus-depan, .kartu-kasus-belakang{
+    display:grid;
+    grid-template-rows:30% 45% 25%;
+    height:100%;
+}
+
+.gambar-kasus{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.gambar-kasus img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.info-kasus{
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    padding:16px;
+
+    min-height:0;
+}
+
+.tombol-kartu{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    padding:12px;
 }
