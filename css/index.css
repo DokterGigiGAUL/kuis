@@ -289,7 +289,7 @@ body {
 
     background:rgba(0,0,0,.45);
 
-    backdrop-filter:blur(8px);
+    /*backdrop-filter:blur(8px);*/
 }
 .featured-item{
     align-self: flex-start;
@@ -488,7 +488,7 @@ body {
     position:absolute;
     top:8px;
     right:8px;
-
+z-index:9999;
     color:#fff;
     font-size:16px;
     font-weight:bold;
@@ -498,3 +498,5 @@ body {
 
     transform:rotate(0deg);
 }
+
+
