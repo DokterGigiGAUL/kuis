@@ -277,19 +277,14 @@ body {
     display:inline-flex;
     align-items:center;
     gap:6px;
-
     padding:6px 12px;
-
     border-radius:999px;
-
-    font-size:13px;
+    font-size:15px;
     font-weight:700;
-
     color:#fff;
-
     background:rgba(0,0,0,.45);
-
-   backdrop-filter:blur(8px);
+    backdrop-filter:blur(8px);
+    width: 120px;
 }
 .featured-item{
     align-self: flex-start;
