@@ -161,17 +161,17 @@ if (backBtn) {
     };
 }
     })
-        
-//function showDiagnosis(e) {
-//    e.stopPropagation();
+/*        
+function showDiagnosis(e) {
+    e.stopPropagation();
 
-//    imageFlip.classList.toggle("flipped");
-  //  infoFlip.classList.toggle("flipped");
-//}
+    imageFlip.classList.toggle("flipped");
+    infoFlip.classList.toggle("flipped");
+}
 
-//imageFlip.onclick = showDiagnosis;
-//infoFlip.onclick = showDiagnosis;
+imageFlip.onclick = showDiagnosis;
+infoFlip.onclick = showDiagnosis;
+*/
 
-//})
 
 .catch(err => console.error(err));
