@@ -27,7 +27,14 @@ fetch(`assets/metadata/kasus/${file}.json`)
       li.textContent = item;
       ddList.appendChild(li);
     });
-    document.getElementById("clinical-list").textContent = data.clinicalExamination;
+const clinicalList = document.getElementById("clinical-list");
+
+data.clinicalExamination.forEach(item => {
+  const li = document.createElement("li");
+  li.textContent = item;
+  clinicalList.appendChild(li);
+});
+    
     document.getElementById("lesion-description").textContent = data.lesionDescription;
 
     const premium = data.premiumContent;
