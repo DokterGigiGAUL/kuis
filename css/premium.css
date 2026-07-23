@@ -1,260 +1,158 @@
-/* =====================================================
-   PREMIUM PAGE
-===================================================== */
-
-:root{
-    --primary:#1e88e5;
-    --primary-light:#eaf4ff;
-
-    --gold:#f4b400;
-    --gold-light:#fff8e6;
-
-    --text:#1f2937;
-    --muted:#6b7280;
-
-    --radius:20px;
+  :root {
+  --blue : #1976d2;--blue-light : #eaf4ff;--gold : #f5b301;--gold-light : #fff7df;--text : #1f2937;--text-light : #6b7280;--radius : 22px;
 }
-
-/* =====================================================
-   PAGE
-===================================================== */
-
-body{
-    background:
-        radial-gradient(circle at top right,#dbeeff 0%,transparent 28%),
-        radial-gradient(circle at bottom left,#eef7ff 0%,transparent 30%),
-        #ffffff;
-
-    color:var(--text);
+* {
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
 }
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-.premium-header{
-    text-align:center;
-    padding:40px 24px 28px;
+body {
+  font-family : system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+  color : var(--text);
+  background : radial-gradient(circle at top right, #dfefff 0%, transparent 28%),
+		radial-gradient(circle at bottom left, #eef7ff 0%, transparent 30%), #ffffff;
 }
-
-.premium-header h1{
-    margin:0;
-    font-size:2rem;
-    font-weight:800;
+.premium-page {
+  width : min(760px, 92%);
+  margin : auto;
+  padding : 48px 0 64px;
 }
-
-.premium-header p{
-    margin-top:12px;
-    color:var(--muted);
-    line-height:1.6;
-    max-width:560px;
-    margin-inline:auto;
+.premium-header {
+  text-align : center;
+  margin-bottom : 42px;
 }
-
-/* =====================================================
-   CONTENT
-===================================================== */
-
-.premium-container{
-    width:min(720px,92%);
-    margin:auto;
-    padding-bottom:60px;
+.premium-icon {
+  font-size : 40px;
+  margin-bottom : 14px;
 }
-
-/* =====================================================
-   CARD
-===================================================== */
-
-.premium-card{
-    background:#fff;
-    border-radius:var(--radius);
-    padding:24px;
-    margin-bottom:24px;
-
-    box-shadow:
-        0 10px 28px rgba(0,0,0,.08);
-
-    transition:.25s;
+.premium-header h1 {
+  font-size : 2.3rem;
+  font-weight : 800;
+  margin-bottom : 14px;
 }
-
-.premium-card:hover{
-    transform:translateY(-2px);
+.premium-header p {
+  color : var(--text-light);
+  font-size : 1.05rem;
+  line-height : 1.7;
+  max-width : 560px;
+  margin : auto;
 }
-
-/* =====================================================
-   CARD HEADER
-===================================================== */
-
-.card-title{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-bottom:18px;
+.premium-options {
+  display : flex;
+  flex-direction : column;
+  gap : 28px;
 }
-
-.card-icon{
-    width:56px;
-    height:56px;
-    border-radius:16px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:28px;
-
-    flex-shrink:0;
+.premium-option {
+  background : #fff;
+  border-radius : var(--radius);
+  padding : 28px;
+  box-shadow : 0 8px 24px rgba(0, 0, 0, .06);
+  transition : .25s;
 }
-
-.card-title h2{
-    margin:0;
-    font-size:1.25rem;
-    font-weight:700;
+  .premium-option : hover {
+  transform : translateY(-3px);
 }
-
-.card-title p{
-    margin:4px 0 0;
-    color:var(--muted);
-    font-size:.95rem;
+.premium-item {
+  border-top : 6px solid var(--blue);
 }
-
-/* =====================================================
-   BLUE CONTENT CARD
-===================================================== */
-
-.content-card .card-icon{
-    background:var(--primary-light);
-    color:var(--primary);
+.premium-subscription {
+  border-top : 6px solid var(--gold);
 }
-
-.content-card{
-    border-top:5px solid var(--primary);
+.premium-option-header {
+  display : flex;
+  align-items : flex-start;
+  gap : 18px;
+  margin-bottom : 24px;
 }
-
-/* =====================================================
-   GOLD PREMIUM CARD
-===================================================== */
-
-.app-card .card-icon{
-    background:var(--gold-light);
-    color:var(--gold);
+.premium-option-icon {
+  width : 58px;
+  height : 58px;
+  border-radius : 16px;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  flex-shrink : 0;
+  font-size : 28px;
 }
-
-.app-card{
-    border-top:5px solid var(--gold);
+.premium-item .premium-option-icon {
+  background : var(--blue-light);
 }
-
-/* =====================================================
-   FEATURES
-===================================================== */
-
-.feature-list{
-    list-style:none;
-    padding:0;
-    margin:22px 0;
+.premium-subscription .premium-option-icon {
+  background : var(--gold-light);
 }
-
-.feature-list li{
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-    padding:10px 0;
-    color:var(--text);
+.premium-option h2 {
+  font-size : 1.5rem;
+  margin-bottom : 8px;
+  font-weight : 700;
 }
-
-.feature-list li::before{
-    content:"✓";
-    color:#22c55e;
-    font-weight:700;
-    margin-top:1px;
+.premium-option p {
+  color : var(--text-light);
+  line-height : 1.7;
 }
-
-/* =====================================================
-   PRICE
-===================================================== */
-
-.price{
-    font-size:2rem;
-    font-weight:800;
-    margin:20px 0 6px;
+.premium-btn {
+  width : 100%;
+  border : none;
+  border-radius : 14px;
+  padding : 15px;
+  color : #fff;
+  font-size : 1rem;
+  font-weight : 700;
+  cursor : pointer;
+  transition : .25s;
+  margin-bottom : 22px;
 }
-
-.price small{
-    font-size:.95rem;
-    color:var(--muted);
-    font-weight:500;
+.premium-item .premium-btn {
+  background : var(--blue);
 }
-
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-.btn-premium{
-    width:100%;
-    border:none;
-    border-radius:14px;
-    padding:15px;
-    font-size:1rem;
-    font-weight:700;
-    cursor:pointer;
-    transition:.25s;
+  .premium-item .premium-btn : hover {
+  background : #1565c0;
 }
-
-.content-card .btn-premium{
-    background:var(--primary);
-    color:#fff;
+.premium-subscription .premium-btn {
+  background : var(--gold);
+  color : #fff;
 }
-
-.content-card .btn-premium:hover{
-    background:#1976d2;
+  .premium-subscription .premium-btn : hover {
+  background : #dea100;
 }
-
-.app-card .btn-premium{
-    background:var(--gold);
-    color:#fff;
+.premium-features {
+  list-style : none;
 }
-
-.app-card .btn-premium:hover{
-    background:#d79c00;
+.premium-features li {
+  display : flex;
+  align-items : center;
+  gap : 10px;
+  padding : 8px 0;
+  font-size : 1rem;
 }
-
-/* =====================================================
-   FOOTNOTE
-===================================================== */
-
-.note{
-    margin-top:18px;
-    font-size:.9rem;
-    color:var(--muted);
-    text-align:center;
+  @media (max-width : 768px) {
+  .premium-page{width : 92%;
+  padding-top : 36px;
 }
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width:600px){
-
-    .premium-header{
-        padding-top:32px;
-    }
-
-    .premium-header h1{
-        font-size:1.7rem;
-    }
-
-    .premium-card{
-        padding:20px;
-    }
-
-    .card-icon{
-        width:50px;
-        height:50px;
-        font-size:24px;
-    }
-
-    .price{
-        font-size:1.75rem;
-    }
-
+.premium-header {
+  margin-bottom : 32px;
+}
+.premium-header h1 {
+  font-size : 1.9rem;
+}
+.premium-header p {
+  font-size : 1rem;
+}
+.premium-option {
+  padding : 22px;
+}
+.premium-option-header {
+  gap : 14px;
+}
+.premium-option-icon {
+  width : 52px;
+  height : 52px;
+  font-size : 24px;
+}
+.premium-option h2 {
+  font-size : 1.3rem;
+}
 }
