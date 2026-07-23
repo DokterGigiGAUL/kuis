@@ -106,7 +106,7 @@ function showQuiz() {
     onClick() {
 
         if (quiz.premium) {
-            showPremiumDialog();
+            showPremiumDialog(quiz.productId);
             return;
         }
 
@@ -152,7 +152,7 @@ function showComic() {
     onClick() {
 
         if (comic.premium) {
-            showPremiumDialog();
+            showPremiumDialog(comic.productId);
             return;
         }
 
@@ -199,7 +199,7 @@ function showTTS() {
     onClick() {
 
         if (tts.premium) {
-            showPremiumDialog();
+            showPremiumDialog(tts.productId);
             return;
         }
 
