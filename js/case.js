@@ -19,9 +19,7 @@ fetch(`assets/metadata/kasus/${file}.json`)
 
         document.getElementById("clinicalExamination").textContent =
             data.clinicalExamination;
-      //  document.getElementById("flipBtn").onclick = () => {
-   // infoFlip.classList.toggle("flipped");
-//};
+
         document.getElementById("diagnosis").textContent =
     data.diagnosis;
 
@@ -163,15 +161,15 @@ if (backBtn) {
     };
 }
         
-function showDiagnosis(e) {
-    e.stopPropagation();
+//function showDiagnosis(e) {
+//    e.stopPropagation();
 
 //    imageFlip.classList.toggle("flipped");
   //  infoFlip.classList.toggle("flipped");
-}
+//}
 
-imageFlip.onclick = showDiagnosis;
-infoFlip.onclick = showDiagnosis;
+//imageFlip.onclick = showDiagnosis;
+//infoFlip.onclick = showDiagnosis;
 
 })
 
