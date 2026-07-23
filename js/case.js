@@ -17,8 +17,8 @@ fetch(`assets/metadata/kasus/${file}.json`)
         document.getElementById("anamnesis").textContent =
             data.anamnesis;
 
-        document.getElementById("clinicalExamination").textContent =
-            data.clinicalExamination;
+        document.getElementById("clinicalExaminations").textContent =
+            data.clinicalExaminations;
 
         document.getElementById("diagnosis").textContent =
     data.diagnosis;
