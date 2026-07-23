@@ -35,6 +35,8 @@ const badge = clone.querySelector(".featured-badge");
 
 if (premium) {
     badge.textContent = "👑 Premium";
+} else {
+    badge.textContent = "";
 }
     
     clone.querySelector(".content-thumb").src = thumbnail;
