@@ -1,318 +1,260 @@
+/* =====================================================
+   PREMIUM PAGE
+===================================================== */
+
 :root{
-    --premium-blue:#2563eb;
-    --premium-blue-light:#e8f1ff;
+    --primary:#1e88e5;
+    --primary-light:#eaf4ff;
 
-    --premium-gold:#f4b400;
-    --premium-gold-light:#fff7d6;
+    --gold:#f4b400;
+    --gold-light:#fff8e6;
 
-    --premium-bg:#f4f8ff;
-    --premium-text:#1f2937;
-    --premium-text-secondary:#64748b;
+    --text:#1f2937;
+    --muted:#6b7280;
 
-    --premium-radius:20px;
+    --radius:20px;
 }
 
-*{
-    box-sizing:border-box;
-}
+/* =====================================================
+   PAGE
+===================================================== */
 
 body{
-    margin:0;
-    background:var(--premium-bg);
-    color:var(--premium-text);
-    font-family:system-ui,sans-serif;
+    background:
+        radial-gradient(circle at top right,#dbeeff 0%,transparent 28%),
+        radial-gradient(circle at bottom left,#eef7ff 0%,transparent 30%),
+        #ffffff;
+
+    color:var(--text);
 }
 
-.premium-page{
-    max-width:760px;
-    margin:auto;
-    padding:40px 20px 56px;
-}
-
-/* ---------- Header ---------- */
+/* =====================================================
+   HEADER
+===================================================== */
 
 .premium-header{
     text-align:center;
-    margin-bottom:32px;
-}
-
-.premium-icon{
-    font-size:64px;
-    margin-bottom:12px;
+    padding:40px 24px 28px;
 }
 
 .premium-header h1{
     margin:0;
     font-size:2rem;
-    font-weight:700;
+    font-weight:800;
 }
 
 .premium-header p{
+    margin-top:12px;
+    color:var(--muted);
+    line-height:1.6;
     max-width:560px;
-    margin:14px auto 0;
-    color:var(--premium-text-secondary);
-    line-height:1.7;
+    margin-inline:auto;
 }
 
-/* ---------- Layout ---------- */
+/* =====================================================
+   CONTENT
+===================================================== */
 
-.premium-options{
-    display:flex;
-    flex-direction:column;
-    gap:24px;
+.premium-container{
+    width:min(720px,92%);
+    margin:auto;
+    padding-bottom:60px;
 }
 
-/* ---------- Card ---------- */
+/* =====================================================
+   CARD
+===================================================== */
 
-.premium-option{
-    position:relative;
-
+.premium-card{
     background:#fff;
-
-    border-radius:var(--premium-radius);
-
+    border-radius:var(--radius);
     padding:24px;
+    margin-bottom:24px;
 
     box-shadow:
         0 10px 28px rgba(0,0,0,.08);
 
-    transition:
-        transform .2s,
-        box-shadow .2s;
+    transition:.25s;
 }
 
-.premium-option:hover{
-
+.premium-card:hover{
     transform:translateY(-2px);
-
-    box-shadow:
-        0 18px 36px rgba(0,0,0,.12);
-
 }
 
-.premium-item{
-    border-top:6px solid var(--premium-blue);
-}
+/* =====================================================
+   CARD HEADER
+===================================================== */
 
-.premium-subscription{
-    border-top:6px solid var(--premium-gold);
-}
-
-/* ---------- Header Card ---------- */
-
-.premium-option-header{
-    display:flex;
-    align-items:flex-start;
-    gap:18px;
-
-    margin-bottom:20px;
-}
-
-.premium-option-icon{
-
-    width:64px;
-    height:64px;
-
+.card-title{
     display:flex;
     align-items:center;
-    justify-content:center;
+    gap:14px;
+    margin-bottom:18px;
+}
 
-    flex-shrink:0;
-
-    font-size:32px;
-
+.card-icon{
+    width:56px;
+    height:56px;
     border-radius:16px;
 
-}
-
-.premium-item .premium-option-icon{
-    background:var(--premium-blue-light);
-}
-
-.premium-subscription .premium-option-icon{
-    background:var(--premium-gold-light);
-}
-
-.premium-option h2{
-
-    margin:0;
-
-    font-size:1.35rem;
-
-    font-weight:700;
-
-}
-
-.premium-item h2{
-    color:var(--premium-blue);
-}
-
-.premium-subscription h2{
-    color:#b8860b;
-}
-
-.premium-option p{
-
-    margin:10px 0 0;
-
-    color:var(--premium-text-secondary);
-
-    line-height:1.6;
-
-}
-
-/* ---------- Badge ---------- */
-
-.premium-badge{
-
-    display:inline-block;
-
-    margin-top:10px;
-
-    padding:6px 12px;
-
-    border-radius:999px;
-
-    font-size:.8rem;
-
-    font-weight:700;
-
-}
-
-.premium-badge-blue{
-
-    background:var(--premium-blue-light);
-
-    color:var(--premium-blue);
-
-}
-
-.premium-badge-gold{
-
-    background:var(--premium-gold-light);
-
-    color:#b8860b;
-
-}
-
-/* ---------- Button ---------- */
-
-.premium-btn{
-
-    width:100%;
-
-    margin-top:22px;
-
-    border:none;
-
-    border-radius:14px;
-
-    padding:15px;
-
-    font-size:1rem;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:
-        transform .2s,
-        filter .2s;
-
-}
-
-.premium-btn:hover{
-
-    transform:translateY(-1px);
-
-    filter:brightness(.97);
-
-}
-
-.premium-item .premium-btn{
-
-    background:var(--premium-blue);
-
-    color:#fff;
-
-}
-
-.premium-subscription .premium-btn{
-
-    background:var(--premium-gold);
-
-    color:#222;
-
-}
-
-/* ---------- Features ---------- */
-
-.premium-features{
-
-    list-style:none;
-
-    margin:22px 0 0;
-
-    padding:0;
-
-}
-
-.premium-features li{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    margin:12px 0;
-
-    color:#475569;
-
-}
-
-.premium-features li::before{
-
-    content:"✓";
-
-    width:22px;
-    height:22px;
-
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border-radius:50%;
+    font-size:28px;
 
-    font-size:.8rem;
+    flex-shrink:0;
+}
+
+.card-title h2{
+    margin:0;
+    font-size:1.25rem;
     font-weight:700;
+}
 
+.card-title p{
+    margin:4px 0 0;
+    color:var(--muted);
+    font-size:.95rem;
+}
+
+/* =====================================================
+   BLUE CONTENT CARD
+===================================================== */
+
+.content-card .card-icon{
+    background:var(--primary-light);
+    color:var(--primary);
+}
+
+.content-card{
+    border-top:5px solid var(--primary);
+}
+
+/* =====================================================
+   GOLD PREMIUM CARD
+===================================================== */
+
+.app-card .card-icon{
+    background:var(--gold-light);
+    color:var(--gold);
+}
+
+.app-card{
+    border-top:5px solid var(--gold);
+}
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.feature-list{
+    list-style:none;
+    padding:0;
+    margin:22px 0;
+}
+
+.feature-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:10px 0;
+    color:var(--text);
+}
+
+.feature-list li::before{
+    content:"✓";
+    color:#22c55e;
+    font-weight:700;
+    margin-top:1px;
+}
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.price{
+    font-size:2rem;
+    font-weight:800;
+    margin:20px 0 6px;
+}
+
+.price small{
+    font-size:.95rem;
+    color:var(--muted);
+    font-weight:500;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn-premium{
+    width:100%;
+    border:none;
+    border-radius:14px;
+    padding:15px;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.content-card .btn-premium{
+    background:var(--primary);
     color:#fff;
-
 }
 
-.premium-item .premium-features li::before{
-    background:var(--premium-blue);
+.content-card .btn-premium:hover{
+    background:#1976d2;
 }
 
-.premium-subscription .premium-features li::before{
-    background:var(--premium-gold);
+.app-card .btn-premium{
+    background:var(--gold);
+    color:#fff;
 }
 
-/* ---------- Responsive ---------- */
+.app-card .btn-premium:hover{
+    background:#d79c00;
+}
 
-@media (min-width:768px){
+/* =====================================================
+   FOOTNOTE
+===================================================== */
 
-    .premium-options{
+.note{
+    margin-top:18px;
+    font-size:.9rem;
+    color:var(--muted);
+    text-align:center;
+}
 
-        display:grid;
+/* =====================================================
+   MOBILE
+===================================================== */
 
-        grid-template-columns:1fr 1fr;
+@media (max-width:600px){
 
-        gap:28px;
+    .premium-header{
+        padding-top:32px;
+    }
 
-        align-items:start;
+    .premium-header h1{
+        font-size:1.7rem;
+    }
 
+    .premium-card{
+        padding:20px;
+    }
+
+    .card-icon{
+        width:50px;
+        height:50px;
+        font-size:24px;
+    }
+
+    .price{
+        font-size:1.75rem;
     }
 
 }
