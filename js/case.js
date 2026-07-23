@@ -27,7 +27,7 @@ fetch(`assets/metadata/kasus/${file}.json`)
       li.textContent = item;
       ddList.appendChild(li);
     });
-
+    document.getElementById("clinical-list").textContent = data.clinicalExamination;
     document.getElementById("lesion-description").textContent = data.lesionDescription;
 
     const premium = data.premiumContent;
