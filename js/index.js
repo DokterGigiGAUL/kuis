@@ -238,7 +238,8 @@ if (!heroItem) return;
 
     //badge.textContent = typeLabel[heroItem.type] ?? "";
     if (heroItem.premium) {
-    badge.textContent = `👑 Premium • ${typeLabel[heroItem.type] ?? ""}`;
+    //badge.textContent = `👑 Premium • ${typeLabel[heroItem.type] ?? ""}`;
+    badge.textContent = `👑 Premium`;
 } else {
     badge.textContent = typeLabel[heroItem.type] ?? "";
 }
@@ -300,9 +301,14 @@ featuredButton.textContent = ({
     })[item.type];
 
 const card = clone.querySelector(".featured-card");
-if (item.premium) {
+/*if (item.premium) {
     card.classList.add("premium");
+}*/
+
+if (item.premium) {
+    badge.textContent = `👑 Premium`;
 }
+    
 const openContent = () => {
 
 if (item.type !== "case" && item.premium) {
