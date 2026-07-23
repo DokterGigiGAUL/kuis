@@ -34,9 +34,8 @@ function createContentCard({
 const badge = clone.querySelector(".featured-badge");
 
 if (premium) {
+    badge.style.display = "inline-flex";
     badge.textContent = "👑 Premium";
-} else {
-    badge.textContent = "";
 }
     
     clone.querySelector(".content-thumb").src = thumbnail;
