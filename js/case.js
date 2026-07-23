@@ -81,26 +81,31 @@ data.clinicalExamination.forEach(item => {
     }
 
     const currentId = Number(data.id);
-    const prevBtn = document.getElementById("prev-case");
-    const nextBtn = document.getElementById("next-case");
+    const prevBtns = document.querySelectorAll(".prev-case");
+    const nextBtns = document.querySelectorAll(".next-case");
 
     // Perbaikan: navigasi harus membentuk URL string yang valid, bukan ekspresi "case.html ? case = ..."
-    prevBtn.onclick = () => {
-      if (currentId > 1) {
-        location.href = `case.html?case=case${currentId - 1}`;
-      }
-    };
+    prevBtns.forEach(btn => {
+  btn.onclick = (e) => {
+    e.stopPropagation();
 
-    nextBtn.onclick = () => {
-      // PERHATIAN: variabel "cases" belum didefinisikan di file ini.
-      // Anda perlu mendefinisikan total jumlah kasus, misalnya:
-      // const totalCases = 20;
-      // lalu ganti "cases.length" di bawah menjadi "totalCases".
-      location.href = `case.html?case=case${currentId + 1}`;
-    };
+    if (currentId > 1) {
+      location.href = `case.html?case=case${currentId - 1}`;
+    }
+  };
 
-    prevBtn.disabled = currentId === 1;
-    nextBtn.disabled = currentId === cases.length; // <- ganti "cases.length" sesuai catatan di atas
+  btn.disabled = currentId === 1;
+});
+
+nextBtns.forEach(btn => {
+  btn.onclick = (e) => {
+    e.stopPropagation();
+
+    location.href = `case.html?case=case${currentId + 1}`;
+  };
+
+  btn.disabled = currentId === cases.length;
+});
 
     const backBtn = document.getElementById("backBtn");
     if (backBtn) {
