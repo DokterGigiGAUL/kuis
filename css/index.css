@@ -443,8 +443,8 @@ body {
     width:0;
     height:0;
 
-    border-top:56px solid #e53935;
-    border-left:56px solid transparent;
+    border-top:56px solid #e53935!important;
+    border-left:56px solid transparent!important;
 
     z-index:10;
 }
@@ -454,11 +454,11 @@ body {
 .featured-card.premium::after{
     content:"★";
     position:absolute;
-    top:6px;
-    right:6px;
+    top:6px!important;
+    right:6px!important;
 
     color:#fff;
-    font-size:20px;
+    font-size:20px!important;
     font-weight:bold;
     line-height:1;
 
