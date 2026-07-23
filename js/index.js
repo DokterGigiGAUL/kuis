@@ -32,8 +32,9 @@ function createContentCard({
     }
 */
 const badge = clone.querySelector(".featured-badge");
-if (item.premium) {
-    badge.textContent = `👑 Premium`;
+
+if (premium) {
+    badge.textContent = "👑 Premium";
 }
     
     clone.querySelector(".content-thumb").src = thumbnail;
