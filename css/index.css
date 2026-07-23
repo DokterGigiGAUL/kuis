@@ -60,6 +60,7 @@ body {
     display: none;
 }
 .content-card {
+    position:relative;
     flex: 0 0 calc(
         (100% - (var(--home-card-gap) * (var(--home-card-per-view) - 1)))
         / var(--home-card-per-view)
