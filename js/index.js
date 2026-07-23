@@ -295,7 +295,9 @@ featuredButton.textContent = ({
     })[item.type];
 
 const card = clone.querySelector(".featured-card");
-
+if (item.premium) {
+    card.classList.add("premium");
+}
 const openContent = () => {
 
 if (item.type !== "case" && item.premium) {
