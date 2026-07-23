@@ -249,7 +249,7 @@
 .image-face.back{
     transform:rotateY(180deg);
 }
-
+/*
 .info-flip{
     position:relative;
     width:100%;
@@ -268,10 +268,21 @@
     display:grid;
     grid-template-rows:1fr auto;
     backface-visibility:hidden;
-}
+} 
 
 .info-face.back{
     transform:rotateY(180deg);
+} */
+
+.info-flip{
+    width:100%;
+    height:380px;
+}
+
+.info-face{
+    height:100%;
+    display:grid;
+    grid-template-rows:1fr auto;
 }
 
 .case-content,
