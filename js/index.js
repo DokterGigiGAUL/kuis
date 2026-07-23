@@ -236,7 +236,12 @@ if (!heroItem) return;
         case: "Lihat"
     };
 
+    //badge.textContent = typeLabel[heroItem.type] ?? "";
+    if (heroItem.premium) {
+    badge.textContent = `👑 Premium • ${typeLabel[heroItem.type] ?? ""}`;
+} else {
     badge.textContent = typeLabel[heroItem.type] ?? "";
+}
     title.textContent = heroItem.title;
     description.textContent = heroItem.description;
     button.textContent = buttonLabel[heroItem.type] ?? "Buka";
