@@ -432,9 +432,19 @@ checkAnswer(){
                 TTS Berikutnya →
                 </button>
                 `;
-                document.getElementById("next-btn").onclick=()=>{
-                    location.href=`tts.html?puzzle=${this.puzzle.next}`;
-                };
+                document.getElementById("next-btn").onclick = () => {
+
+    const nextTTS = ttsList.find(
+        t => `tts${t.id}` === this.puzzle.next
+    );
+
+    if (nextTTS?.premium) {
+        showPremiumDialog(nextTTS.productId);
+        return;
+    }
+
+    location.href = `tts.html?puzzle=${this.puzzle.next}`;
+};
             }else{
                 wrapper.innerHTML=`
                 <h3>🎉 Semua TTS gratis sudah diselesaikan!</h3>
