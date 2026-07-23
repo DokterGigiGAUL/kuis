@@ -17,12 +17,44 @@ const Premium = {
     isPremium() {
         return localStorage.getItem("premium") === "true";
     },
+
     enable() {
         localStorage.setItem("premium", "true");
     },
+
     disable() {
         localStorage.removeItem("premium");
+    },
+
+    ownsProduct(productId) {
+
+        const products = JSON.parse(
+            localStorage.getItem("ownedProducts") || "[]"
+        );
+
+        return products.includes(productId);
+
+    },
+
+    addProduct(productId) {
+
+        const products = JSON.parse(
+            localStorage.getItem("ownedProducts") || "[]"
+        );
+
+        if (!products.includes(productId)) {
+
+            products.push(productId);
+
+            localStorage.setItem(
+                "ownedProducts",
+                JSON.stringify(products)
+            );
+
+        }
+
     }
+
 };
 
 function userHasPremium() {
