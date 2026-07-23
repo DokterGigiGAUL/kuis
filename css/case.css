@@ -139,13 +139,13 @@
 .diagnosis-hero {
   flex-shrink: 0;
   padding: 0 12px;
-  margin: 24px 12px 0px;
+  margin: 18px 12px 12px;
 }
 
 .diagnosis-name {
   margin: 0;
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 18px;
+  font-weight: 700;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
