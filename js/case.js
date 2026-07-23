@@ -160,6 +160,7 @@ if (backBtn) {
         window.location.href = "index.html";
     };
 }
+    })
         
 //function showDiagnosis(e) {
 //    e.stopPropagation();
@@ -171,6 +172,6 @@ if (backBtn) {
 //imageFlip.onclick = showDiagnosis;
 //infoFlip.onclick = showDiagnosis;
 
-})
+//})
 
 .catch(err => console.error(err));
