@@ -40,3 +40,32 @@ body{
     box-shadow:0 10px 30px rgba(0,0,0,.08);
     overflow:hidden;
 }
+
+.premium-option{
+    padding:24px;
+}
+
+.premium-option + .premium-option{
+    border-top:1px solid #e5e7eb;
+}
+
+.premium-option h2{
+    margin:0 0 8px;
+    font-size:1.35rem;
+}
+
+.premium-option p{
+    margin:0 0 18px;
+    color:#64748b;
+}
+
+#buyItemBtn{
+    width:100%;
+    background:var(--primary,#2563eb);
+}
+
+#subscribeBtn{
+    width:100%;
+    background:#f4b400;
+    color:#222;
+}
