@@ -1,197 +1,138 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartu Kasus</title>
-
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/case.css">
-</head>
+    <link rel="stylesheet" href="css/case.css"> </head>
+
 <body>
-
-<header class="quiz-header">
-    <button id="backBtn" class="quiz-back-btn">
-        ←
-    </button>
-    <div class="quiz-title-box">
-        <h2 id="quizTitle">Kartu Kasus</h2>
-    </div>
-</header>
-    
-<main class="case-container">
-    <div class="case-wrapper">
-        
-        <!-- KARTU KASUS LAMA -->
-        <div class="image-flip" id="imageFlip">
-            <div class="image-face front">
-                <div class="case-image">
-                  <img id="case-image" alt="Foto kasus">
+    <header class="quiz-header">
+        <button id="backBtn" class="quiz-back-btn"> ← </button>
+        <div class="quiz-title-box">
+            <h2 id="quizTitle">Kartu Kasus</h2> </div>
+    </header>
+    <main class="case-container">
+        <div class="case-wrapper">
+            <!-- KARTU KASUS LAMA -->
+            <div class="image-flip" id="imageFlip">
+                <div class="image-face front">
+                    <div class="case-image"> <img id="case-image" alt="Foto kasus"> </div>
+                </div>
+                <div class="image-face back">
+                    <div class="case-image"> <img id="case-image-back" alt="Foto kasus"> </div>
                 </div>
             </div>
-            <div class="image-face back">
-                <div class="case-image">
-                  <img id="case-image-back" alt="Foto kasus">
-                </div>
-            </div>
-        </div>
-        
-        <div class="info-flip" id="infoFlip">
-
-    <div class="info-face">
-        <div class="case-back-content">
-            <div class="patient" style="display:none;" id="patient"></div>
-
-            <div class="case-scroll">
-                <h3>Anamnesis</h3>
-                <p id="anamnesis"></p>
-
-                <h3>Pemeriksaan Klinis</h3>
-                <p id="clinicalExaminations"></p>
-            </div>
-        </div>
-
-        <div class="case-navigation">
-            <button id="prev-case" class="btn btn-outline">
-                ← Sebelumnya
-            </button>
-
-            <button id="next-case" class="btn btn-primary">
-                Berikutnya →
-            </button>
-        </div>
-    </div>
-
-</div>
-            <!-- FRONT 
-
-            
-            <div class="info-face back">
-                <div class="case-back-content">
-                    <div class="diagnosis-hero">
-                     <div id="diagnosis" class="diagnosis-name"></div>
+            <div class="info-flip" id="infoFlip">
+                <!-- FRONT -->
+                <div class="info-face back">
+                    <div class="case-back-content">
+                        <div class="diagnosis-hero">
+                            <div id="diagnosis" class="diagnosis-name"></div>
                         </div>
-                    <div class="case-scroll">
-                      <h3>Diagnosis Banding</h3>
-                      <ul id="dd-list"></ul>
-                      <h3>Deskripsi Lesi</h3>
-                      <p id="lesion-description"></p>
-                      <h3>Pemeriksaan Klinis</h3>
-                      <ul id="clinical-list"></ul>
-                        <div id="premium-section">
-                            <div id="premium-banner"></div>
-                          <section class="premium-item">
-                            <h3>Patofisiologi</h3>
-                            <p id="pathophysiology"></p>
-                          </section>
-                          <section class="premium-item">
-                            <h3>Pemeriksaan Penunjang</h3>
-                            <p id="supporting-examination"></p>
-                          </section>
-                          <section class="premium-item">
-                            <h3>Rencana Perawatan</h3>
-                            <p id="treatment-plan"></p>
-                          </section>
-                          <section class="premium-item">
-                            <h3>Follow Up</h3>
-                            <p id="follow-up"></p>
-                          </section>
-                          <section class="premium-item">
-                            <h3>Key Points</h3>
-                            <ul id="key-points"></ul>
-                          </section>
+                        <div class="case-scroll">
+                            <h3>Diagnosis Banding</h3>
+                            <ul id="dd-list"></ul>
+                            <h3>Deskripsi Lesi</h3>
+                            <p id="lesion-description"></p>
+                            <h3>Pemeriksaan Klinis</h3>
+                            <ul id="clinical-list"></ul>
+                            <div id="premium-section">
+                                <div id="premium-banner"></div>
+                                <section class="premium-item">
+                                    <h3>Patofisiologi</h3>
+                                    <p id="pathophysiology"></p>
+                                </section>
+                                <section class="premium-item">
+                                    <h3>Pemeriksaan Penunjang</h3>
+                                    <p id="supporting-examination"></p>
+                                </section>
+                                <section class="premium-item">
+                                    <h3>Rencana Perawatan</h3>
+                                    <p id="treatment-plan"></p>
+                                </section>
+                                <section class="premium-item">
+                                    <h3>Follow Up</h3>
+                                    <p id="follow-up"></p>
+                                </section>
+                                <section class="premium-item">
+                                    <h3>Key Points</h3>
+                                    <ul id="key-points"></ul>
+                                </section>
+                            </div>
                         </div>
                     </div>
+                    <div class="case-navigation">
+                        <button id="prev-case" class="btn btn-outline"> ← Sebelumnya </button>
+                        <button id="next-case" class="btn btn-primary"> Berikutnya → </button>
+                    </div>
                 </div>
-                <div class="case-navigation">
-                  <button id="prev-case" class="btn btn-outline">
-                    ← Sebelumnya
-                  </button>
-                  <button id="next-case" class="btn btn-primary">
-                    Berikutnya →
-                  </button>
+                <div class="info-face">
+                    <div class="case-back-content">
+                        <div class="patient" style="display:none;" id="patient"></div>
+                        <div class="case-scroll">
+                            <h3>Anamnesis</h3>
+                            <p id="anamnesis"></p>
+                            <h3>Pemeriksaan Klinis</h3>
+                            <p id="clinicalExaminations"></p>
+                        </div>
+                    </div>
+                    <div class="case-navigation">
+                        <button id="prev-case" class="btn btn-outline"> ← Sebelumnya </button>
+                        <button id="next-case" class="btn btn-primary"> Berikutnya → </button>
+                    </div>
+                </div>
+                <!-- BACK -->
+                <div class="info-face back">
+                    <div class="case-back-content">
+                        <div class="diagnosis-hero">
+                            <div id="diagnosis" class="diagnosis-name"></div>
+                        </div>
+                        <div class="case-scroll">
+                            <h3>Diagnosis Banding</h3>
+                            <ul id="dd-list"></ul>
+                            <h3>Deskripsi Lesi</h3>
+                            <p id="lesion-description"></p>
+                            <h3>Pemeriksaan Klinis</h3>
+                            <ul id="clinical-list"></ul>
+                            <div id="premium-section">
+                                <div id="premium-banner"></div>
+                                <section class="premium-item">
+                                    <h3>Patofisiologi</h3>
+                                    <p id="pathophysiology"></p>
+                                </section>
+                                <section class="premium-item">
+                                    <h3>Pemeriksaan Penunjang</h3>
+                                    <p id="supporting-examination"></p>
+                                </section>
+                                <section class="premium-item">
+                                    <h3>Rencana Perawatan</h3>
+                                    <p id="treatment-plan"></p>
+                                </section>
+                                <section class="premium-item">
+                                    <h3>Follow Up</h3>
+                                    <p id="follow-up"></p>
+                                </section>
+                                <section class="premium-item">
+                                    <h3>Key Points</h3>
+                                    <ul id="key-points"></ul>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-navigation">
+                        <button id="prev-case" class="btn btn-outline"> ← Sebelumnya </button>
+                        <button id="next-case" class="btn btn-primary"> Berikutnya → </button>
+                    </div>
                 </div>
             </div>
-
-        
-            <div class="info-face">
-                <div class="case-back-content">
-                    <div class="patient" style="display:none;" id="patient"></div>
-                    <div class="case-scroll">
-                        
-                          <h3>Anamnesis</h3>
-                          <p id="anamnesis"></p>
-                          <h3>Pemeriksaan Klinis</h3>
-                          <p id="clinicalExaminations"></p>
-                    </div>
-                </div>
-                <div class="case-navigation">
-                  <button id="prev-case" class="btn btn-outline">
-                    ← Sebelumnya
-                  </button>
-                  <button id="next-case" class="btn btn-primary">
-                    Berikutnya →
-                  </button>
-                </div>
-            </div>-->
-            
-     <!-- ***   BACK *** -->
-       <div style="display:none;">
-            <div class="info-face back">
-                
-                <div class="case-back-content">
-                    <div class="diagnosis-hero">
-                     <div id="diagnosis" class="diagnosis-name"></div>
-                        </div>
-                    <div class="case-scroll">
-                      <h3>Diagnosis Banding</h3>
-                      <ul id="dd-list"></ul>
-                      <h3>Deskripsi Lesi</h3>
-                      <p id="lesion-description"></p>
-                      <h3>Pemeriksaan Klinis</h3>
-                      <ul id="clinical-list"></ul>
-                        <div id="premium-section">
-                            <div id="premium-banner"></div>
-                          <section class="premium-item">
-                            <h3>Patofisiologi</h3>
-                            <p id="pathophysiology"></p>
-                          </section>
-                          <section class="premium-item">
-                            <h3>Pemeriksaan Penunjang</h3>
-                            <p id="supporting-examination"></p>
-                          </section>
-                          <section class="premium-item">
-                            <h3>Rencana Perawatan</h3>
-                            <p id="treatment-plan"></p>
-                          </section>
-                          <section class="premium-item">
-                            <h3>Follow Up</h3>
-                            <p id="follow-up"></p>
-                          </section>
-                          <section class="premium-item">
-                            <h3>Key Points</h3>
-                            <ul id="key-points"></ul>
-                          </section>
-                        </div>
-                    </div>
-                </div>
-                <div class="case-navigation">
-                  <button id="prev-case" class="btn btn-outline">
-                    ← Sebelumnya
-                  </button>
-                  <button id="next-case" class="btn btn-primary">
-                    Berikutnya →
-                  </button>
-                </div>
-            </div> 
-       </div>
         </div>
-    </div>
-</main>
-    
-<script src="js/premium.js"></script>
-<script src="js/case-data.js"></script>
-<script src="js/case.js"></script>
-
+    </main>
+    <script src="js/premium.js"></script>
+    <script src="js/case-data.js"></script>
+    <script src="js/case.js"></script>
 </body>
+
 </html>
