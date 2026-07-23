@@ -2,7 +2,9 @@ const params = new URLSearchParams(window.location.search);
 const file = params.get("case") || "case1";
 const imageFlip = document.getElementById("imageFlip");
 const infoFlip = document.getElementById("infoFlip");
-fetch(assets/metadata/kasus/${file}.json).then(response => response.json()).then(data => {
+fetch(`assets/metadata/kasus/${file}.json`)
+  .then(response => response.json())
+  .then(data => {
 	document.getElementById("case-image").src = data.image;
 	document.getElementById("case-image-back").src = data.image;
 	document.getElementById("patient").textContent = $ {
