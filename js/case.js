@@ -19,7 +19,9 @@ fetch(`assets/metadata/kasus/${file}.json`)
 
         document.getElementById("clinicalExamination").textContent =
             data.clinicalExamination;
-        
+        document.getElementById("flipBtn").onclick = () => {
+    infoFlip.classList.toggle("flipped");
+};
         document.getElementById("diagnosis").textContent =
     data.diagnosis;
 
