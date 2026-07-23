@@ -275,6 +275,10 @@
   transform: rotateY(180deg);
 }
 
+.info-face.front {
+  transform: rotateY(180deg);
+}
+
 .case-content,
 .case-back-content {
   min-height: 0;
