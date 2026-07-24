@@ -106,3 +106,15 @@
 .case-btn-list{
     width:25%;
 }*/
+
+.explore-badge-overlay{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+}
+
+.explore-badge{
+    width: auto;
+    padding: 4px 10px;
+}
