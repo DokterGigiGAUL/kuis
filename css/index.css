@@ -50,7 +50,7 @@ body {
     gap: var(--home-card-gap);;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 0px 0px 8px;
+    padding: 18px 0;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -73,7 +73,7 @@ body {
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-        box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
 }
 .content-title {
     margin: 0;
@@ -105,7 +105,7 @@ body {
     margin-top: auto;
 }
 .home-section {
-    margin-bottom: 28px;
+    margin-bottom: 15px;
 }
 .section-header {
     display: flex;
@@ -113,6 +113,7 @@ body {
     align-items: center;
     margin: 0px;
     padding: 0 16px;
+    margin-bottom:0px!important;
 }
 .section-header h2 {
     margin: 0;
