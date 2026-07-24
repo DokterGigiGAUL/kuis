@@ -261,12 +261,18 @@ if (!heroItem) return;
     description.textContent = heroItem.description;
     button.textContent = buttonLabel[heroItem.type] ?? "Buka";
     button.onclick = () => {
-
+/*
 if (!PurchaseManager.hasAccess(heroItem)) {
     showPremiumDialog(heroItem.productId);
     return;
 }
+*/
 
+if (heroItem.type !== "case" && !PurchaseManager.hasAccess(heroItem)) {
+    showPremiumDialog(heroItem.productId);
+    return;
+}
+        
 switch (heroItem.type) {
 
             case "quiz":
@@ -324,12 +330,18 @@ if (item.premium) {
 }
     
 const openContent = () => {
-
+/*
     if (!PurchaseManager.hasAccess(item)) {
         showPremiumDialog(item.productId);
         return;
     }
+*/
 
+if (item.type !== "case" && !PurchaseManager.hasAccess(item)) {
+    showPremiumDialog(item.productId);
+    return;
+}
+    
     switch (item.type) {
 
         case "quiz":
