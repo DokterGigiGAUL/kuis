@@ -635,7 +635,7 @@ body {
     scroll-snap-align: start;
     }
     .featured-latest{
-        top: calc((100vw / 2) - 60px)!important;
+        top: calc((100vw / 2) - 75px)!important;
     }
 
     /*======*/
