@@ -293,7 +293,7 @@ body {
     color: #fff;
     background: rgba(0, 0, 0, .45);
     backdrop-filter: blur(8px);
-    width: 90px;
+    width: 100px;
 }
 .featured-item{
     align-self: flex-start;
