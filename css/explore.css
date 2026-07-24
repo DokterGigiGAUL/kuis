@@ -2,7 +2,7 @@
     --list-thumb-size:96px;
     --list-gap:12px;
     --list-padding:12px;
-    --list-radius:24px;
+    --list-radius:12px;
 }
 
 .list-card{
@@ -24,7 +24,7 @@
     width: var(--list-thumb-size);
     height: var(--list-thumb-size);
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 6px;
 }
 
 .list-title {
