@@ -87,7 +87,6 @@ document.getElementById("premium-btn").onclick = () => {
       document.getElementById("follow-up").parentElement.style.display = "none";
       document.getElementById("key-points").parentElement.style.display = "none";
     }
-}
 
     const currentId = Number(data.id);
     const prevBtns = document.querySelectorAll(".prev-case");
