@@ -33,6 +33,16 @@ const PurchaseManager = (() => {
         return false;
     }
 
+    function hasTTSPremium() {
+    const products = getPurchasedProducts();
+
+    return (
+        products.includes("premium_all") ||
+        products.includes("bundle_tts") ||
+        products.some(id => id.startsWith("tts"))
+    );
+}
+    
     function purchase(productId) {
         const products = getPurchasedProducts();
 
@@ -53,10 +63,11 @@ const PurchaseManager = (() => {
     }
 
     return {
-        hasAccess,
-        purchase,
-        revoke,
-        clear,
-        getPurchasedProducts
+    hasAccess,
+    hasTTSPremium,
+    purchase,
+    revoke,
+    clear,
+    getPurchasedProducts
     };
 })();
