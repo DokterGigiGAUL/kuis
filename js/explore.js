@@ -105,7 +105,7 @@ function showQuiz() {
     premium: quiz.premium,
 
     buttonText: Storage.isFinished(quiz.productId)
-        ? "Sudah Dikerjakan"
+        ? "Sudah Selesai"
         : "Mulai",
 
     disabled: Storage.isFinished(quiz.productId),
