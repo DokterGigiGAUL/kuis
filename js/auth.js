@@ -16,31 +16,26 @@ firebase.auth().onAuthStateChanged(async user => {
     }
 
     console.log("Login:", user.displayName);
-
+    
     const action = sessionStorage.getItem("pendingAction");
-
     if (!action) return;
-
     sessionStorage.removeItem("pendingAction");
-
+    
     const raw = sessionStorage.getItem("pendingActionData");
-
     sessionStorage.removeItem("pendingActionData");
-
+    
     const data = raw ? JSON.parse(raw) : null;
-
+    
     switch (action) {
-
+            
         case "buyProduct":
             buyProduct(data.productId);
             break;
-
+            
         case "subscribePremium":
             subscribePremium();
             break;
-
     }
-
 });
 
 function requireLogin(action, data = null) {
