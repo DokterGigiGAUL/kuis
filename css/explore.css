@@ -6,6 +6,7 @@
 }
 
 .list-card{
+    position:relative;
     display:grid;
     grid-template-columns:
         var(--list-thumb-size)
