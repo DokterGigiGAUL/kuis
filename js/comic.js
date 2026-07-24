@@ -3,7 +3,16 @@ const comicId = parseInt(params.get("id")) || 1;
 
 const currentIndex = comics.findIndex(comic => comic.id === comicId);
 const currentComic = comics[currentIndex];
+if (currentIndex === -1) {
+    window.location.href = "index.html";
+    throw new Error("Komik tidak ditemukan.");
+}
 
+if (!PurchaseManager.hasAccess(currentComic)) {
+    showPremiumDialog(currentComic.productId);
+    window.location.href = "index.html";
+    throw new Error("Akses ditolak.");
+}
 const title = document.getElementById("comic-title");
 const imageContainer = document.getElementById("comic-image");
 
