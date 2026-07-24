@@ -75,6 +75,15 @@ function deactivatePremium() {
 
 function buyProduct(productId) {
 
+    if (!firebase.auth().currentUser) {
+
+        requireLogin("buyProduct", {
+            productId: productId
+        });
+
+        return;
+    }
+
     alert(
         "Produk yang dipilih:\n\n" +
         productId +
@@ -85,10 +94,19 @@ function buyProduct(productId) {
 
 function subscribePremium() {
 
-    buyProduct(PREMIUM_SUBSCRIPTION_ID);
+    if (!firebase.auth().currentUser) {
+
+        requireLogin("subscribePremium");
+
+        return;
+    }
+
+    alert(
+        "Berlangganan Wonder App Premium\n\n" +
+        "Fitur pembayaran akan segera tersedia."
+    );
 
 }
-
 function openPremiumPage(productId = null) {
 
     if (productId) {
