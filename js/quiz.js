@@ -19,15 +19,23 @@ init();
 
 async function init() {
 
+    const metadata = quizzes.find(q => q.file === quizId);
+
+    if (!metadata) {
+        alert("Kuis tidak ditemukan.");
+        window.location.href = "index.html";
+        return;
+    }
+
+    if (!PurchaseManager.hasAccess(metadata)) {
+        showPremiumDialog(metadata.productId);
+        window.location.href = "index.html";
+        return;
+    }
+
     const response = await fetch(`assets/metadata/kuis/${quizId}.json`);
     quiz = await response.json();
-const metadata = quizzes.find(q => q.file === quizId);
 
-if (metadata && !PurchaseManager.hasAccess(metadata)) {
-    showPremiumDialog(metadata.productId);
-    window.location.href = "index.html";
-    return;
-}
     if (Storage.isFinished(quiz.id)) {
         alert("Kuis sudah selesai dikerjakan.");
         window.location.href = "index.html";
