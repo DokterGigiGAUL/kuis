@@ -19,6 +19,17 @@ async load(){
     try{
         const params=new URLSearchParams(location.search);
         const file=params.get("puzzle")||"tts1";
+        const metadata = ttsList.find(t => `tts${t.id}` === file);
+
+if (!metadata) {
+    throw new Error("Puzzle tidak ditemukan");
+}
+
+if (!PurchaseManager.hasAccess(metadata)) {
+    showPremiumDialog(metadata.productId);
+    location.href = "index.html";
+    return;
+}
         const res = await fetch(`assets/metadata/tts/${file}.json`);
         if(!res.ok){
             throw new Error("Tidak ada lagi teka-teki silang gratis");
@@ -438,10 +449,10 @@ checkAnswer(){
         t => `tts${t.id}` === this.puzzle.next
     );
 
-    if (nextTTS?.premium) {
-        showPremiumDialog(nextTTS.productId);
-        return;
-    }
+if (!PurchaseManager.hasAccess(nextTTS)) {
+    showPremiumDialog(nextTTS.productId);
+    return;
+}
 
     location.href = `tts.html?puzzle=${this.puzzle.next}`;
 };
