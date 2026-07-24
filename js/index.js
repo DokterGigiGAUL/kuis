@@ -196,12 +196,12 @@ function loadCases() {
             buttonText: "Lihat",
 
             onClick() {
-
+/*
                 if (!PurchaseManager.hasAccess(caseData)) {
                     showPremiumDialog(caseData.productId);
                     return;
                 }
-
+*/
                 location.href =
                     `case.html?case=${caseData.file}`;
 
