@@ -112,10 +112,10 @@ function showQuiz() {
 
     onClick() {
 
-        if (quiz.premium) {
-            showPremiumDialog(quiz.productId);
-            return;
-        }
+        if (!PurchaseManager.hasAccess(quiz)) {
+    showPremiumDialog(quiz.productId);
+    return;
+}
 
         location.href =
             `quiz.html?id=${quiz.file}`;
@@ -158,10 +158,10 @@ function showComic() {
 
     onClick() {
 
-        if (comic.premium) {
-            showPremiumDialog(comic.productId);
-            return;
-        }
+        if (!PurchaseManager.hasAccess(comic)) {
+    showPremiumDialog(comic.productId);
+    return;
+}
 
         location.href =
             `komik.html?id=${comic.id}`;
@@ -205,10 +205,10 @@ function showTTS() {
 
     onClick() {
 
-        if (tts.premium) {
-            showPremiumDialog(tts.productId);
-            return;
-        }
+        if (!PurchaseManager.hasAccess(tts)) {
+    showPremiumDialog(tts.productId);
+    return;
+}
 
         location.href =
             `tts.html?puzzle=tts${tts.id}`;
@@ -252,8 +252,13 @@ function showCase() {
 
     onClick() {
 
-        location.href =
-            `case.html?case=${caseData.file}`;
+        if (!PurchaseManager.hasAccess(caseData)) {
+    showPremiumDialog(caseData.productId);
+    return;
+}
+
+location.href =
+    `case.html?case=${caseData.file}`;
 
     }
 
