@@ -39,12 +39,15 @@ data.clinicalExamination.forEach(item => {
 
 const premium = data.premiumContent;
     const caseMeta = cases.find(c => c.file === file);
-
+/*
 const hasAccess =
     !data.premium ||
     userHasPremium() ||
     (caseMeta && Premium.ownsProduct(caseMeta.productId));
-
+*/
+const hasAccess = caseMeta
+    ? PurchaseManager.hasAccess(caseMeta)
+    : !data.premium;
 if (hasAccess) {
       // Kasus gratis: tampilkan konten premium apa adanya
       document.getElementById("pathophysiology").textContent = premium.pathophysiology;
