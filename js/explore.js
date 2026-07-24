@@ -46,9 +46,15 @@ function createListCard({
 
     const clone = listTemplate.content.cloneNode(true);
     const card = clone.querySelector(".list-card");
-
+/*
 if (premium) {
     card.classList.add("premium");
+}
+*/
+    if (premium) {
+    badge.textContent = "👑 Premium";
+} else {
+    badge.remove();
 }
     clone.querySelector(".list-thumb").src = thumbnail;
     clone.querySelector(".list-thumb").alt = title;
