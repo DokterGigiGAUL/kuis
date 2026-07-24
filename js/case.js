@@ -71,8 +71,9 @@ data.clinicalExamination.forEach(item => {
         <button id="premium-btn" class="btn btn-primary">Buka Premium</button>
       `;
 
-      document.getElementById("premium-btn").onclick = showPremiumDialog;
-
+      document.getElementById("premium-btn").onclick = () => {
+    showPremiumDialog(data.productId);
+};
       document.getElementById("pathophysiology").parentElement.style.display = "none";
       document.getElementById("supporting-examination").parentElement.style.display = "none";
       document.getElementById("treatment-plan").parentElement.style.display = "none";
