@@ -46,6 +46,7 @@ function createListCard({
 
     const clone = listTemplate.content.cloneNode(true);
     const card = clone.querySelector(".list-card");
+    const badge = clone.querySelector(".featured-badge");
 /*
 if (premium) {
     card.classList.add("premium");
