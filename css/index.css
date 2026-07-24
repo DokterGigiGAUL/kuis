@@ -219,6 +219,7 @@ body {
     cursor:not-allowed;
 }
 .w-100{width:100%;}
+
 .quiz-btn,
 .start-btn,
 .comic-btn,
@@ -267,15 +268,7 @@ body {
     gap:12px;
     color:#fff;
 }
-/*
-.featured-badge{
-    align-self: flex-start;
-    backdrop-filter: blur(16px);
-    font-size: 28px;
-    border-bottom: 1px solid #ffffff;
-    font-weight: 700;
-    padding-bottom: 8px;
-}*/
+
 .featured-card-overlay{
     position:absolute;
     padding:6px;
@@ -449,10 +442,8 @@ body {
     right:0;
     width:0;
     height:0;
-
     border-top:56px solid #e53935!important;
     border-left:56px solid transparent!important;
-
     z-index:10;
 }
 
@@ -463,14 +454,11 @@ body {
     position:absolute;
     top:6px!important;
     right:6px!important;
-
     color:#fff;
     font-size:20px!important;
     font-weight:bold;
     line-height:1;
-
     z-index:11;
-
     transform:rotate(0deg);
 }
 }
@@ -511,10 +499,8 @@ body {
     right:0;
     width:0;
     height:0;
-
     border-top:36px solid #e53935;
     border-left:36px solid transparent;
-
     z-index:10;
 }
 
@@ -525,15 +511,10 @@ body {
     position:absolute;
     top:4px;
     right:4px;
-
     color:#fff;
     font-size:14px;
     font-weight:bold;
     line-height:1;
-
     z-index:11;
-
     transform:rotate(0deg);
 }
-
-
