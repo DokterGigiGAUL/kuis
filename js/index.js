@@ -121,8 +121,8 @@ function loadComics() {
 
             onClick() {
 
-                if (!PurchaseManager.hasAccess(quiz)) {
-    showPremiumDialog(quiz.productId);
+                if (!PurchaseManager.hasAccess(comic)) {
+    showPremiumDialog(comic.productId);
     return;
 }
 
@@ -159,8 +159,8 @@ function loadTTS() {
 
             onClick() {
 
-                if (!PurchaseManager.hasAccess(quiz)) {
-    showPremiumDialog(quiz.productId);
+                if (!PurchaseManager.hasAccess(tts)) {
+    showPremiumDialog(tts.productId);
     return;
 }
 
@@ -192,12 +192,20 @@ function loadCases() {
 
             description: caseData.description,
             premium: caseData.premium,
+
             buttonText: "Lihat",
 
-            if (!PurchaseManager.hasAccess(quiz)) {
-    showPremiumDialog(quiz.productId);
-    return;
-}
+            onClick() {
+
+                if (!PurchaseManager.hasAccess(caseData)) {
+                    showPremiumDialog(caseData.productId);
+                    return;
+                }
+
+                location.href =
+                    `case.html?case=${caseData.file}`;
+
+            }
 
         });
 
@@ -317,10 +325,11 @@ if (item.premium) {
     
 const openContent = () => {
 
-if (!PurchaseManager.hasAccess(heroItem)) {
-    showPremiumDialog(heroItem.productId);
-    return;
-}
+    if (!PurchaseManager.hasAccess(item)) {
+        showPremiumDialog(item.productId);
+        return;
+    }
+
     switch (item.type) {
 
         case "quiz":
