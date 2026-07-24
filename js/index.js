@@ -84,10 +84,10 @@ function loadQuiz() {
 
             onClick() {
 
-                if (quiz.premium) {
-                    showPremiumDialog(quiz.productId);
-                    return;
-                }
+                if (!PurchaseManager.hasAccess(quiz)) {
+    showPremiumDialog(quiz.productId);
+    return;
+}
 
                 location.href =
                     `quiz.html?id=${quiz.file}`;
@@ -121,10 +121,10 @@ function loadComics() {
 
             onClick() {
 
-                if (comic.premium) {
-                    showPremiumDialog(comic.productId);
-                    return;
-                }
+                if (!PurchaseManager.hasAccess(quiz)) {
+    showPremiumDialog(quiz.productId);
+    return;
+}
 
                 location.href =
                     `komik.html?id=${comic.id}`;
@@ -159,10 +159,10 @@ function loadTTS() {
 
             onClick() {
 
-                if (tts.premium) {
-                    showPremiumDialog(tts.productId);
-                    return;
-                }
+                if (!PurchaseManager.hasAccess(quiz)) {
+    showPremiumDialog(quiz.productId);
+    return;
+}
 
                 location.href =
                     `tts.html?puzzle=tts${tts.id}`;
@@ -194,12 +194,10 @@ function loadCases() {
             premium: caseData.premium,
             buttonText: "Lihat",
 
-            onClick() {
-
-                location.href =
-                    `case.html?case=${caseData.file}`;
-
-            }
+            if (!PurchaseManager.hasAccess(quiz)) {
+    showPremiumDialog(quiz.productId);
+    return;
+}
 
         });
 
@@ -256,8 +254,8 @@ if (!heroItem) return;
     button.textContent = buttonLabel[heroItem.type] ?? "Buka";
     button.onclick = () => {
 
-if (heroItem.type !== "case" && heroItem.premium) {
-    showPremiumDialog();
+if (!PurchaseManager.hasAccess(heroItem)) {
+    showPremiumDialog(heroItem.productId);
     return;
 }
 
@@ -319,8 +317,8 @@ if (item.premium) {
     
 const openContent = () => {
 
-if (item.type !== "case" && item.premium) {
-    showPremiumDialog(item.productId);
+if (!PurchaseManager.hasAccess(heroItem)) {
+    showPremiumDialog(heroItem.productId);
     return;
 }
     switch (item.type) {
