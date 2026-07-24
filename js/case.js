@@ -37,9 +37,15 @@ data.clinicalExamination.forEach(item => {
     
     document.getElementById("lesion-description").textContent = data.lesionDescription;
 
-    const premium = data.premiumContent;
+const premium = data.premiumContent;
+    const caseMeta = cases.find(c => c.file === file);
 
-    if (!data.premium) {
+const hasAccess =
+    !data.premium ||
+    userHasPremium() ||
+    (caseMeta && Premium.ownsProduct(caseMeta.productId));
+
+if (hasAccess) {
       // Kasus gratis: tampilkan konten premium apa adanya
       document.getElementById("pathophysiology").textContent = premium.pathophysiology;
       document.getElementById("supporting-examination").textContent = premium.supportingExamination;
@@ -53,8 +59,9 @@ data.clinicalExamination.forEach(item => {
         ul.appendChild(li);
       });
     } else {
-      // Kasus premium terkunci: tampilkan banner
-      const banner = document.getElementById("premium-banner");
+
+          // Kasus premium terkunci: tampilkan banner
+          const banner = document.getElementById("premium-banner");
       banner.style.display = "block";
 
       // Perbaikan: HTML harus berupa string (template literal), bukan tag mentah
@@ -71,8 +78,8 @@ data.clinicalExamination.forEach(item => {
         <button id="premium-btn" class="btn btn-primary">Buka Premium</button>
       `;
 
-      document.getElementById("premium-btn").onclick = () => {
-    showPremiumDialog(data.productId);
+document.getElementById("premium-btn").onclick = () => {
+    showPremiumDialog(caseMeta.productId);
 };
       document.getElementById("pathophysiology").parentElement.style.display = "none";
       document.getElementById("supporting-examination").parentElement.style.display = "none";
@@ -80,6 +87,7 @@ data.clinicalExamination.forEach(item => {
       document.getElementById("follow-up").parentElement.style.display = "none";
       document.getElementById("key-points").parentElement.style.display = "none";
     }
+}
 
     const currentId = Number(data.id);
     const prevBtns = document.querySelectorAll(".prev-case");
