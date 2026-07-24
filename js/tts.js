@@ -245,9 +245,10 @@ this.hiddenInput.addEventListener("keydown",e=>{
 document.getElementById("reset-btn").onclick=()=>{
     this.resetPuzzle();
 };
+    
 document.getElementById("hint-btn").onclick = () => {
 
-    if(!userHasPremium()){
+    if (!PurchaseManager.hasTTSPremium()) {
         showPremiumDialog();
         return;
     }
@@ -255,17 +256,18 @@ document.getElementById("hint-btn").onclick = () => {
     this.useHint();
 
 };
-
+    
 document.getElementById("reveal-btn").onclick = () => {
 
-    if(!userHasPremium()){
+    if (!PurchaseManager.hasTTSPremium()) {
         showPremiumDialog();
         return;
-    }    
+    }
 
     this.revealAnswer();
 
 };
+    
 document.getElementById("home-btn").onclick=()=>{
     location.href="index.html";
 };
