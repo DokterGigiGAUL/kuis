@@ -199,9 +199,9 @@ function showTTS() {
 
     title: tts.title,
 
-    description: `${tts.soal} Soal`,
+    description: tts.description,
     premium: tts.premium,
-    buttonText: "Main",
+    buttonText: "Mainkan",
 
     onClick() {
 
