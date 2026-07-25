@@ -20,6 +20,7 @@ function createContentCard({
     thumbnail,
     title,
     description,
+    price = null,
     buttonText,
     premium = false,
     disabled = false,
@@ -46,7 +47,21 @@ if (premium) {
 
     clone.querySelector(".content-title").textContent = title;
     clone.querySelector(".content-description").textContent = description;
+if (price !== null) {
 
+    const info = clone.querySelector(".content-info");
+
+    const priceEl = document.createElement("p");
+
+    priceEl.className = "content-price";
+    priceEl.textContent = `Rp ${price.toLocaleString("id-ID")}`;
+
+    info.insertBefore(
+        priceEl,
+        clone.querySelector(".content-btn")
+    );
+
+}
     const button = clone.querySelector(".content-btn");
 
     button.textContent = buttonText;
@@ -220,6 +235,7 @@ function loadEbooks() {
                 thumbnail: ebook.thumbnail,
                 title: ebook.title,
                 description: ebook.description,
+                price: ebook.price,
                 buttonText: "Detail",
                 onClick() {
 
