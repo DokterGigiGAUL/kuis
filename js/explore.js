@@ -303,3 +303,15 @@ caseTab.onclick = () => {
     );
     showCase();
 };
+
+ebookTab.onclick = () => {
+
+    history.replaceState(
+        {},
+        "",
+        "explore.html?tab=ebook"
+    );
+
+    showEbook();
+
+};
