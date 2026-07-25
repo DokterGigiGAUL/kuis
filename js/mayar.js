@@ -1,52 +1,66 @@
 // js/mayar.js
 
 (() => {
-    let loadingPromise = null;
+
+    const SCRIPT_URL = "https://mayarembed.r2.mayar.id/mayar-new-min.js";
+
+    let loader = null;
 
     function loadScript() {
-        if (window.Mayar) {
-            return Promise.resolve(window.Mayar);
+
+        if (window.IframeLightbox) {
+            return Promise.resolve();
         }
 
-        if (loadingPromise) {
-            return loadingPromise;
-        }
+        if (loader) return loader;
 
-        loadingPromise = new Promise((resolve, reject) => {
+        loader = new Promise((resolve, reject) => {
+
             const script = document.createElement("script");
-            script.src = "https://mayar.id/js/embed.js";
+
+            script.src = SCRIPT_URL;
             script.async = true;
 
-            script.onload = () => {
-                if (window.Mayar) {
-                    resolve(window.Mayar);
-                } else {
-                    reject(new Error("Mayar gagal dimuat."));
-                }
-            };
+            script.onload = () => resolve();
 
-            script.onerror = () => {
-                reject(new Error("Tidak dapat memuat library Mayar."));
-            };
+            script.onerror = () => reject(
+                new Error("Gagal memuat library Mayar.")
+            );
 
             document.head.appendChild(script);
+
         });
 
-        return loadingPromise;
+        return loader;
+
     }
 
     async function open(url) {
-        if (!url) {
-            console.error("URL checkout Mayar kosong.");
-            return;
-        }
 
         await loadScript();
 
-        Mayar.open(url);
+        const link = document.createElement("a");
+
+        link.href = url.includes("?")
+            ? url
+            : url + "?iframe=true";
+
+        link.className = "iframe-lightbox-link";
+
+        link.dataset.paddingBottom = "30%";
+        link.dataset.scrolling = "true";
+
+        document.body.appendChild(link);
+
+        link.lightbox = new IframeLightbox(link);
+
+        link.click();
+
+        setTimeout(() => link.remove(), 1000);
     }
 
     window.MayarWrapper = {
         open
     };
+
 })();
