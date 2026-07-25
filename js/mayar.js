@@ -52,11 +52,23 @@
 
         document.body.appendChild(link);
 
+link.style.display = "none";
+
 
         const lightbox = new IframeLightbox(link, {
-            scrolling: true,
-            rate: 500
-        });
+    scrolling: true,
+    rate: 500,
+    onIframeLoaded: function () {
+
+        const iframe = this.body.querySelector("iframe");
+
+        if (iframe) {
+            iframe.style.webkitOverflowScrolling = "touch";
+            iframe.style.overflow = "auto";
+        }
+
+    }
+});
 
 
         lightbox.open();
