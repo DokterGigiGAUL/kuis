@@ -83,11 +83,13 @@ function showQuiz() {
     comicSection.style.display = "none";
     ttsSection.style.display = "none";
     caseSection.style.display = "none";
+    ebookSection.style.display = "none";
 
     quizTab.classList.add("active");
     comicTab.classList.remove("active");
     ttsTab.classList.remove("active");
     caseTab.classList.remove("active");
+    ebookTab.classList.remove("active");
 
     quizSection.innerHTML = "";
 
@@ -133,11 +135,13 @@ function showComic() {
     comicSection.style.display = "block";
     ttsSection.style.display = "none";
     caseSection.style.display = "none";
+    ebookSection.style.display = "none";
 
     quizTab.classList.remove("active");
     comicTab.classList.add("active");
     ttsTab.classList.remove("active");
     caseTab.classList.remove("active");
+    ebookTab.classList.remove("active");
 
 
     comicSection.innerHTML = "";
@@ -181,11 +185,13 @@ function showTTS() {
     comicSection.style.display = "none";
     ttsSection.style.display = "block";
     caseSection.style.display = "none";
+    ebookSection.style.display = "none";
 
     quizTab.classList.remove("active");
     comicTab.classList.remove("active");
     ttsTab.classList.add("active");
     caseTab.classList.remove("active");
+    ebookTab.classList.remove("active");
 
     ttsSection.innerHTML = "";
 
@@ -228,11 +234,13 @@ function showCase() {
     comicSection.style.display = "none";
     ttsSection.style.display = "none";
     caseSection.style.display = "block";
+    ebookSection.style.display = "none";
 
     quizTab.classList.remove("active");
     comicTab.classList.remove("active");
     ttsTab.classList.remove("active");
     caseTab.classList.add("active");
+    ebookTab.classList.remove("active");
 
     caseSection.innerHTML = "";
 
@@ -265,6 +273,54 @@ location.href =
 });
 
     });
+
+}
+
+function showEbook() {
+
+    pageTitle.textContent = "Semua Ebook";
+
+    quizSection.style.display = "none";
+    comicSection.style.display = "none";
+    ttsSection.style.display = "none";
+    caseSection.style.display = "none";
+    ebookSection.style.display = "block";
+
+    quizTab.classList.remove("active");
+    comicTab.classList.remove("active");
+    ttsTab.classList.remove("active");
+    caseTab.classList.remove("active");
+    ebookTab.classList.add("active");
+
+    ebookSection.innerHTML = "";
+
+    ebooks
+        .slice()
+        .sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
+        .forEach(ebook => {
+
+            createListCard({
+
+                container: ebookSection,
+
+                thumbnail: ebook.thumbnail,
+
+                title: ebook.title,
+
+                description: ebook.description,
+
+                buttonText: "Detail",
+
+                onClick() {
+
+                    location.href =
+                        `ebook.html?ebook=${ebook.file}`;
+
+                }
+
+            });
+
+        });
 
 }
 
