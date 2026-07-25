@@ -10,6 +10,8 @@ const ttsSection =
     document.getElementById("tts-container");
 const caseSection =
     document.getElementById("case-container");
+const ebookSection =
+    document.getElementById("ebook-container");
 const quizTab =
     document.getElementById("quizTab");
 const comicTab =
@@ -20,10 +22,15 @@ const pageTitle =
     document.getElementById("pageTitle");
 const caseTab =
     document.getElementById("caseTab");
+const ebookTab =
+    document.getElementById("ebookTab");
 const listTemplate =
     document.getElementById("list-card-template");
 
-if (tab === "comic") {
+
+if (tab === "ebook") {
+    showEbook();
+} else if (tab === "comic") {
     showComic();
 } else if (tab === "tts") {
     showTTS();
