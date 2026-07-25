@@ -63,8 +63,10 @@ link.style.display = "none";
         const iframe = this.body.querySelector("iframe");
 
         if (iframe) {
-            iframe.style.webkitOverflowScrolling = "touch";
+            iframe.setAttribute("scrolling", "yes");
+            iframe.style.height = "100%";
             iframe.style.overflow = "auto";
+            iframe.style.webkitOverflowScrolling = "touch";
         }
 
     }
@@ -72,7 +74,16 @@ link.style.display = "none";
 
 
         lightbox.open();
+setTimeout(() => {
 
+    const iframe = document.querySelector(".iframe-lightbox iframe");
+
+    if (iframe) {
+        iframe.style.height = "100vh";
+        iframe.style.webkitOverflowScrolling = "touch";
+    }
+
+}, 500);
     }
 
 
