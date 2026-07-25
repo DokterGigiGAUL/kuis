@@ -32,11 +32,23 @@ document.getElementById("ebook-release").textContent =
         year: "numeric"
     })}`;
 
-const buyButton =
-    document.getElementById("buyButton");
+//const buyButton =
+//    document.getElementById("buyButton");
 
-buyButton.href =
-    ebook.mayarUrl + "?iframe=true";
+//buyButton.href =
+//    ebook.mayarUrl + "?iframe=true";
+
+const buyButton = document.getElementById("buyButton");
+
+buyButton.outerHTML = `
+<a
+    id="buyButton"
+    class="btn btn-primary ebook-btn mayar-button iframe-lightbox-link"
+    href="${ebook.mayarUrl}?iframe=true"
+    data-padding-bottom="30%"
+    data-scrolling="true">
+    Beli Sekarang
+</a>`;
 
 const slider =
     document.getElementById("preview-slider");
