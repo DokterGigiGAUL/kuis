@@ -140,6 +140,23 @@ section{
     margin:auto;
 }
 
+.iframe-lightbox iframe {
+    display: block;
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    border: 0;
+    box-shadow: .267rem .267rem .267rem 0 rgba(3, 3, 3, .3);
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    border-radius: 10px;
+    background-image: url(https://pub-c54bc29….r2.dev/button_bar.jpg);
+    background-color: #fff;
+    background-repeat: repeat-x;
+    background-size: contain;
+    padding-top: 4px;
+}
+
 /* ===========================
    MOBILE
 =========================== */
