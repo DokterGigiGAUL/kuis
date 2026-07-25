@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kuis Penyakit Mulut</title>
- <!--  <link rel="preload" as="image" href="..."> -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/case.css" /> -->
+
+    <link rel="stylesheet" href="css/index.css" />
+    <!--<link rel="stylesheet" href="css/style.css" />-->
+
   </head>
 
   <body>
@@ -16,162 +17,108 @@
 
     <main class="container">
 
+      <section id="featured-hero" class="featured-hero">
+        <div class="featured-overlay">
+          <span class="featured-badge""></span>
+          <!--<span class="featured-item">✭ Baru</span>-->
+          <h2 class="featured-title"></h2>
+          <p class="featured-description"></p>
+          <button class="btn btn-primary featured-btn"></button>
+        </div>
+          <div id="featured-latest" class="featured-latest"></div>
+      </section>
+      
       <!-- Template Card -->
-      <div class="section-header">
-        <h2>Kuis Trivia</h2>
-        <a id="quizExplore" class="section-link" href="explore.html?tab=quiz">
-    Kuis Lainnya →
-</a>
-      </div>
+<section class="home-section">
+    <div class="section-header">
+        <h2>Kuis</h2>
+        <a href="explore.html?tab=quiz">Lihat semua →</a>
+    </div>
 
-      <section id="quiz-list" class="quiz-grid">
-        <!-- Card akan dibuat otomatis oleh app.js -->
-      </section>
+    <div id="quiz-list" class="horizontal-scroll"></div>
+</section>
 
-      <div class="section-header" style="margin-top: 40px;">
-        <h2>Flashcards</h2>
-        <a id="caseExplore" class="section-link" href="explore.html?tab=case">
-          Kasus Lainnya →
-        </a>
-      </div>
+<section class="home-section">
+    <div class="section-header">
+        <h2>Kartu Kasus</h2>
+        <a href="explore.html?tab=case">Lihat semua →</a>
+    </div>
 
-      <section id="case-container" class="case-grid">
-  <!-- Card Kartu Kasus -->
-      </section>
+    <div id="case-container" class="horizontal-scroll"></div>
+</section>
       
-      <div class="section-header" style="margin-top: 40px;">
-        <h2>Teka-Teki Silang</h2>
-        <a id="ttsExplore" class="section-link" href="explore.html?tab=tts">
-    TTS Lainnya →
-        </a>
-      </div>
+<section class="home-section">
+    <div class="section-header">
+        <h2>TTS</h2>
+        <a href="explore.html?tab=tts">Lihat semua →</a>
+    </div>
 
-      <section id="tts-container" class="tts-grid">
-        <!-- Card TTS akan dibuat otomatis oleh app.js -->
-      </section>
-      
+    <div id="tts-container" class="horizontal-scroll"></div>
+</section>
+        
+<section class="home-section">
+    <div class="section-header">
+        <h2>Komik</h2>
+        <a href="explore.html?tab=comic">Lihat semua →</a>
+    </div>
 
-      <div class="section-header" style="margin-top: 40px;">
-        <h2>Komik Edukasi</h2>
-        <a id="comicExplore" class="section-link" href="explore.html?tab=comic">
-          Episode Lainnya →
-        </a>
-      </div>
-
-      <section
-        id="comics-container"
-        class="comics-grid">
-        <!-- Card akan dibuat otomatis oleh app.js -->
-      </section>
+    <div id="comics-container" class="horizontal-scroll"></div>
+</section>
+        
     </main>
 
-    <!-- Template Card -->
+    <!-- Template -->
       
-    <template id="quiz-card-template">
-      <div class="quiz-card">
-<img
-    class="quiz-thumbnail"
-    src=""
-    alt="Thumbnail Kuis"
-    loading=""
-    decoding="async"
-/>
+<template id="content-card-template">
+    <article class="content-card">
+<div class="featured-card-overlay">
+<span class="featured-badge"></span>
+</div>
+        <img
+            class="content-thumb"
+            loading="lazy"
+            alt="">
 
-        <div class="quiz-content">
-          <h2 class="quiz-title"></h2>
-         <p class="quiz-description" style="display:none;"></p> 
-          <div class="quiz-info">
-            <span>⏱ 10 Menit</span>
-            <span style="display:none;">📄 10 Soal</span> 
-          </div>
-          <button class="btn btn-primary quiz-btn">Mulai Kuis</button>
+        <div class="content-info">
+            <h3 class="content-title"></h3>
+            <p class="content-description"></p>
+            <button class="btn btn-primary content-btn">
+                Buka
+            </button>
         </div>
-      </div>
-    </template>
-
-    <template id="case-card-template">
-    <div class="case-card">
-      <div class="case-cover">
-    <img
-      class="case-thumbnail"
-      src=""
-      alt="Thumbnail Kasus"
-      loading="lazy"
-      decoding="async"
-    />
-
-        <div class="case-overlay">
-          <h3 class="case-title"></h3>
-         <!-- <p class="case-description"></p>-->
-        </div>
-      </div>
-
-      <div class="case-content">
-        <button class="btn btn-primary case-btn">Lihat Kasus</button>
-      </div>
-    </div>  
+    </article>
 </template>
 
-    <template id="tts-card-template">
-      <div class="tts-card">
-<img
-    class="tts-thumbnail"
-    src=""
-    alt="Thumbnail TTS"
-    loading="lazy"
-    decoding="async"
-/>
+    <template id="featured-card-template">
+    <article class="featured-card">
+<div class="featured-card-overlay">
+<span class="featured-badge"></span>
+</div>
+        <img
+            class="featured-card-thumb"
+            loading="lazy"
+            alt="">
 
-        <div class="tts-content">
-          <h3 class="tts-title"></h3>
-          <p class="tts-soal"></p>
-          <button class="btn btn-primary tts-btn">Isi TTS</button>
-        </div>
-      </div>
-    </template>
-
-        <template id="comic-card-template">
-      <article class="comic-card">
-        <div class="comic-cover">
-<img
-    class="comic-thumb"
-    loading="lazy"
-    decoding="async"
-    alt="Thumbnail Komik"
-/>
-          <div class="comic-overlay">
-            <!--<h3 class="comic-description"></h3>-->
-          </div>
+        <div class="featured-card-info">
+          <span class="featured-card-type" style="display:none;"></span>
+            <h3 class="featured-card-title"></h3>
+            <p class="featured-card-description"></p>
+            <button class="btn btn-primary featured-card-btn">
+                Buka
+            </button>
         </div>
 
-        <div class="comic-content">
-          <h3 class="content-title"></h3>
-            <p class="content-description"></p>
-          <button class="btn btn-primary comic-btn">Baca Komik</button>
-        </div>
-      </article>
-    </template>
-
-
-    <script src="js/storage.js"></script>
-    <script src="js/quiz-data.js"></script>
-    <script src="js/comics-data.js"></script>
-    <script src="js/tts-data.js"></script>
-    <script src="js/case-data.js"></script>
-    <script src="js/premium.js"></script>
-    <script src="js/index.js"></script>
-    <!--<script src="js/app.js"></script>-->
+    </article>
+</template>
+  <script src="js/purchase-manager.js"></script>    
+  <script src="js/storage.js"></script>
+  <script src="js/quiz-data.js"></script>
+  <script src="js/comics-data.js"></script>
+  <script src="js/tts-data.js"></script>
+  <script src="js/case-data.js"></script>
+  <script src="js/premium.js"></script>
+  <script src="js/index.js"></script>
+    
   </body>
+
 </html>
-<!--<div class="quiz-content" style="display:none;">
-      <h3 class="case-title"></h3>
-      <p class="case-description"></p>
-
-      <div class="quiz-info">
-        <span>🃏 Apa diagnosisnya?</span>
-      </div> 
-
-      <button class="btn btn-primary case-btn">
-        Lihat Kasus
-      </button>
-    </div>-->
