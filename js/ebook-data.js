@@ -7,7 +7,7 @@ const ebooks = [
         /*thumbnail: "assets/images/ebook/ebook1.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/6a709c40-0029-4cdc-b274-fe862da5f260.jpeg",
         releaseDate: "2026-06-25",
-        pages: -,
+        pages: 30,
         preview: [
         "https://media-myr.b-cdn.net/images/resized/600/6a709c40-0029-4cdc-b274-fe862da5f260.jpeg",
         "https://media-myr.b-cdn.net/images/resized/600/6a709c40-0029-4cdc-b274-fe862da5f260.jpeg"
@@ -23,7 +23,7 @@ const ebooks = [
         /*thumbnail: "assets/images/ebook/ebook2.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/98d4e9e7-cf62-4e0a-b736-f49f9928c2db.webp",
         releaseDate: "2026-06-25",
-        pages: -,
+        pages: 30,
         preview: [
         "https://media-myr.b-cdn.net/images/resized/600/98d4e9e7-cf62-4e0a-b736-f49f9928c2db.webp",
         "https://media-myr.b-cdn.net/images/resized/600/98d4e9e7-cf62-4e0a-b736-f49f9928c2db.webp"
@@ -39,7 +39,7 @@ const ebooks = [
         /*thumbnail: "assets/images/ebook/ebook2.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/3a6baa2d-38c9-43a0-90c3-167cad21b2b1.jpeg",
         releaseDate: "2026-06-25",
-        pages: -,
+        pages: 30,
         preview: [
         "https://media-myr.b-cdn.net/images/resized/600/3a6baa2d-38c9-43a0-90c3-167cad21b2b1.jpeg",
         "https://media-myr.b-cdn.net/images/resized/600/3a6baa2d-38c9-43a0-90c3-167cad21b2b1.jpeg"
@@ -55,7 +55,7 @@ const ebooks = [
         /*thumbnail: "assets/images/ebook/ebook2.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/92f1ad8d-e37a-47b7-a74a-0efe416af672.webp",
         releaseDate: "2026-06-25",
-        pages: -,
+        pages: 30,
         preview: [
         "https://media-myr.b-cdn.net/images/resized/600/92f1ad8d-e37a-47b7-a74a-0efe416af672.webp",
         "https://media-myr.b-cdn.net/images/resized/600/92f1ad8d-e37a-47b7-a74a-0efe416af672.webp"
@@ -71,7 +71,7 @@ const ebooks = [
         /*thumbnail: "assets/images/ebook/ebook2.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/98236151-2996-436d-91be-5bf8e506b999.jpeg",
         releaseDate: "2026-06-25",
-        pages: -,
+        pages: 30,
         preview: [
         "https://media-myr.b-cdn.net/images/resized/600/98236151-2996-436d-91be-5bf8e506b999.jpeg",
         "https://media-myr.b-cdn.net/images/resized/600/98236151-2996-436d-91be-5bf8e506b999.jpeg"
@@ -87,7 +87,7 @@ const ebooks = [
         /*thumbnail: "assets/images/ebook/ebook2.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/40439849-a51a-4bbd-85d3-7b11a69bbb4a.jpeg",
         releaseDate: "2026-06-25",
-        pages: -,
+        pages: 30,
         preview: [
         "https://media-myr.b-cdn.net/images/resized/600/40439849-a51a-4bbd-85d3-7b11a69bbb4a.jpeg",
         "https://media-myr.b-cdn.net/images/resized/600/40439849-a51a-4bbd-85d3-7b11a69bbb4a.jpeg"
