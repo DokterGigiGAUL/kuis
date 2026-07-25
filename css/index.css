@@ -129,6 +129,14 @@ body {
     padding: 12px;
     flex: 1;
 }
+
+.content-price{
+    margin:0;
+    font-size:15px;
+    font-weight:700;
+    color:var(--primary);
+}
+
 .content-btn {
     margin-top: auto;
 }
