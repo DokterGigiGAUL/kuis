@@ -24,11 +24,17 @@ function createContentCard({
     buttonText,
     premium = false,
     disabled = false,
+    extraClass = "",
     onClick
 }) {
 
     const clone = cardTemplate.content.cloneNode(true);
     const card = clone.querySelector(".content-card");
+const card = clone.querySelector(".content-card");
+
+if (extraClass) {
+    card.classList.add(extraClass);
+}
 /*
     if (premium) {
       card.classList.add("premium");
@@ -234,6 +240,7 @@ function loadEbooks() {
                 container: ebookContainer,
                 thumbnail: ebook.thumbnail,
                 title: ebook.title,
+                extraClass: "ebook-card",
                 description: ebook.description,
                 price: ebook.price,
                 buttonText: "Detail",
