@@ -7,45 +7,45 @@
   "next": "tts5",
   "words": [
     {
-      "answer": "ENAMEL",
-      "clue": "Jaringan paling keras di tubuh.",
+      "answer": "ERITEM",
+      "clue": "Kemerahan pada jaringan akibat pelebaran pembuluh darah di bawah permukaan.",
       "row": 0,
-      "col": 1,
+      "col": 5,
       "direction": "across"
     },
     {
-      "answer": "ABSES",
-      "clue": "Kumpulan pus dari proses infeksi",
-      "row": 0,
+      "answer": "BIOPSI",
+      "clue": "Pengambilan lesi dan atau jaringan tubuh untuk pemeriksaan",
+      "row": 2,
       "col": 3,
-      "direction": "down"
+      "direction": "across"
     },
       {
-      "answer": "EDEMA",
-      "clue": "Pembengkakan akibat penumpukan cairan.",
-      "row": 0,
-      "col": 5,
-      "direction": "down"
-    },
-    {
-      "answer": "UVULA",
-      "clue": "Jaringan kecil yang menggantung di belakang langit-langit lunak.",
-      "row": 0,
-      "col": 9,
-      "direction": "down"
-    },
-    {
-      "answer": "PLAK",
-      "clue": "Lapisan biofilm pada mahkota gigi.",
-      "row": 1,
+      "answer": "KERATIN",
+      "clue": "Protein struktural yang membentuk lapisan terluar epitel.",
+      "row": 4,
       "col": 0,
-      "direction": "down"
+      "direction": "across"
     },
     {
-      "answer": "MAKULA",
-      "clue": "Lesi yang menunjukkan perubahan warna jaringan.",
-      "row": 3,
-      "col": 5,
+      "answer": "DISPLASIA",
+      "clue": "Perubahan pertumbuhan dan susunan sel yang abnormal.",
+      "row": 6,
+      "col": 2,
+      "direction": "across"
+    },
+    {
+      "answer": "GLOSITIS",
+      "clue": "Peradangan pada lidah yang ditandai dengan kemerahan, nyeri, atau pembengkakan.",
+      "row": 9,
+      "col": 2,
+      "direction": "across"
+    },
+    {
+      "answer": "PALATUM",
+      "clue": "Organ tubuh yang memisahkan rongga mulut dan rongga hidung.",
+      "row": 11,
+      "col": 4,
       "direction": "across"
     },
     {
@@ -56,39 +56,46 @@
       "direction": "down"
     },
     {
-      "answer": "KRUSTA",
-      "clue": "Lapisan keras yang terbentuk dari cairan tubuh mengering seperti darah, nanah, atau serum",
-      "row": 4,
+      "answer": "LEUKOPLAKIA",
+      "clue": "Bercak putih pada mukosa mulut yang tidak dapat didiagnosis sebagai penyakit lain yang memiliki etiologi yang jelas.",
+      "row": 1,
       "col": 0,
-      "direction": "across"
-    },
-    {
-      "answer": "ULSER",
-      "clue": "Lesi primer/ sekunder berupa cerukan.",
-      "row": 4,
-      "col": 2,
       "direction": "down"
     },
     {
-      "answer": "LESI",
-      "clue": "Istilah medis untuk kondisi kelainan pada jaringan.",
-      "row": 6,
-      "col": 0,
-      "direction": "across"
+      "answer": "ABRASI",
+      "clue": "Hilangnya jaringan gigi akibat gesekan mekanis yang bukan disebabkan oleh proses mengunyah.",
+      "row": 1,
+      "col": 3,
+      "direction": "down"
     },
     {
-      "answer": "ATRISI",
-      "clue": "Pengikisan lapisan email karena gesekan.",
+      "answer": "EROSI",
+      "clue": "Hilangnya jaringan keras gigi akibat proses kimia tanpa melibatkan aktivitas bakteri.",
+      "row": 0,
+      "col": 5,
+      "direction": "down"
+    },
+    {
+      "answer": "LABIAL",
+      "clue": "Berkaitan dengan bibir atau mengarah ke permukaan gigi yang menghadap bibir.",
       "row": 6,
       "col": 6,
-      "direction": "across"
+      "direction": "down"
     },
     {
-      "answer": "ATROFI",
+      "answer": "BUKAL",
+      "clue": "Berkaitan dengan bibir atau mengarah ke permukaan gigi yang menghadap bibir.",
+      "row": 3,
+      "col": 10,
+      "direction": "down"
+    },
+    {
+      "answer": "EKSISI",
       "clue": "Penyusutan/ pengurangan jaringan tubuh.",
-      "row": 8,
-      "col": 0,
-      "direction": "across"
+      "row": 4,
+      "col": 8,
+      "direction": "down"
     }
   ]
 }
