@@ -18,7 +18,7 @@ const ebooks = [
     {
         id: 2,
         file: "ebook2",
-        title: "Panduan Resep Pasien Anak Bagi Dokter Gig",
+        title: "Panduan Resep Pasien Anak Bagi Dokter Gigi",
         description: "Panduan praktis pemilihan obat dan peresepan pada pasien anak.",
         /*thumbnail: "assets/images/ebook/ebook2.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/98d4e9e7-cf62-4e0a-b736-f49f9928c2db.webp",
@@ -67,7 +67,7 @@ const ebooks = [
         id: 5,
         file: "ebook5",
         title: "Tatalaksana Lesi Oral",
-        description: "tatalksana lesi oral yang sering ditemui dan menjadi kompetensi dokter gigi umum.",
+        description: "Tatalaksana lesi oral yang sering ditemui dan menjadi kompetensi dokter gigi umum.",
         /*thumbnail: "assets/images/ebook/ebook2.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/98236151-2996-436d-91be-5bf8e506b999.jpeg",
         releaseDate: "2026-06-25",
@@ -83,7 +83,7 @@ const ebooks = [
         id: 6,
         file: "ebook6",
         title: "Mendiagnosa Lesi Oral Itu Mudah",
-        description: "Contekan ringkas dari handphone panduan pemilihan obat topikal lesi oral.",
+        description: "Contekan pemilihan obat topikal lesi oral ringkas dari handphone .",
         /*thumbnail: "assets/images/ebook/ebook2.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/40439849-a51a-4bbd-85d3-7b11a69bbb4a.jpeg",
         releaseDate: "2026-06-25",
