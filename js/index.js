@@ -2,6 +2,7 @@ const quizList = document.getElementById("quiz-list");
 const comicsContainer = document.getElementById("comics-container");
 const ttsContainer = document.getElementById("tts-container");
 const caseContainer = document.getElementById("case-container");
+const ebookContainer = document.getElementById("ebook-container");
 const featuredHero = document.getElementById("featured-hero");
 const featuredLatest = document.getElementById("featured-latest");
 const featuredCardTemplate = document.getElementById("featured-card-template");
@@ -11,6 +12,7 @@ loadQuiz();
 loadComics();
 loadTTS();
 loadCases();
+loadEbooks();
 renderFeaturedHero();
 
 function createContentCard({
@@ -183,18 +185,13 @@ function loadCases() {
     cases.slice(0, 6).forEach(caseData => {
 
         createContentCard({
-
             container: caseContainer,
-
             thumbnail: caseData.thumbnail,
-
             title: caseData.title,
-
             description: caseData.description,
             premium: caseData.premium,
 
             buttonText: "Lihat",
-
             onClick() {
 /*
                 if (!PurchaseManager.hasAccess(caseData)) {
@@ -204,13 +201,33 @@ function loadCases() {
 */
                 location.href =
                     `case.html?case=${caseData.file}`;
-
             }
-
         });
-
     });
+}
 
+function loadEbooks() {
+    if (!ebookContainer) return;
+
+    ebooks
+        .slice()
+        .sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
+        .slice(0, 6)
+        .forEach(ebook => {
+
+            createContentCard({
+                container: ebookContainer,
+                thumbnail: ebook.thumbnail,
+                title: ebook.title,
+                description: ebook.description,
+                buttonText: "Detail",
+                onClick() {
+
+                    location.href =
+                        `ebook.html?ebook=${ebook.file}`;
+                }
+            });
+        });
 }
 
 function renderFeaturedHero() {
