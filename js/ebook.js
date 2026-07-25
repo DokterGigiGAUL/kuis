@@ -37,6 +37,11 @@ const buyButton =
 
 buyButton.href =
     ebook.mayarUrl + "?iframe=true";
+buyButton.lightbox = new IframeLightbox(buyButton, {
+    scrolling: true,
+    rate: 500
+});
+
 
 const slider =
     document.getElementById("preview-slider");
