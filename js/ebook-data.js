@@ -2,7 +2,7 @@ const ebooks = [
     {
         id: 1,
         file: "ebook1",
-        title: "Panduan Peresepan Dokter Gigi",
+        title: "Panduan Resep Bagi Dokter Gigi",
         description: "Panduan peresepan dari obat-obatan yang umum diresepkan pada terapi penyakit gigi dan mulut. ",
         /*thumbnail: "assets/images/ebook/ebook1.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/6a709c40-0029-4cdc-b274-fe862da5f260.jpeg",
@@ -18,7 +18,7 @@ const ebooks = [
     {
         id: 2,
         file: "ebook2",
-        title: "Panduan Peresepan Dokter Gigi Pasien Anak",
+        title: "Panduan Resep Pasien Anak Bagi Dokter Gig",
         description: "Panduan praktis pemilihan obat dan peresepan pada pasien anak.",
         /*thumbnail: "assets/images/ebook/ebook2.jpg",*/
         thumbnail: "https://media-myr.b-cdn.net/images/resized/600/98d4e9e7-cf62-4e0a-b736-f49f9928c2db.webp",
