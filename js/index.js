@@ -30,7 +30,6 @@ function createContentCard({
 
     const clone = cardTemplate.content.cloneNode(true);
     const card = clone.querySelector(".content-card");
-const card = clone.querySelector(".content-card");
 
 if (extraClass) {
     card.classList.add(extraClass);
