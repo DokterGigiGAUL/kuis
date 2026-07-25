@@ -39,19 +39,30 @@
 
     }
 
-    async function open(url) {
+async function open(url) {
 
-        await loadScript();
+    await loadScript();
 
-        const link = document.getElementById("mayar-link");
+    const link = document.createElement("a");
 
-        link.href = url.includes("?")
-            ? url
-            : url + "?iframe=true";
+    link.href = url.includes("?iframe=true")
+        ? url
+        : url + "?iframe=true";
 
-        link.click();
+    document.body.appendChild(link);
 
-    }
+    const lightbox = new IframeLightbox(link, {
+        scrolling: true,
+        rate: 500
+    });
+
+    lightbox.open();
+
+    setTimeout(() => {
+        link.remove();
+    }, 1000);
+
+}
 
     window.MayarWrapper = {
         open
