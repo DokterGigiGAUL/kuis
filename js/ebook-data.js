@@ -14,7 +14,7 @@ const ebooks = [
         ],
         price: 56789,
         mayarUrl: "https://gigital.myr.id/pl/ebook-gigital-panduan-peresepan-dokter-gigi"
-    }
+    },
     {
         id: 2,
         file: "ebook2",
@@ -30,7 +30,7 @@ const ebooks = [
         ],
         price: 54321,
         mayarUrl: "https://gigital.myr.id/pl/ebook-gigital-panduan-peresepan-dokter-gigi-pasien-anak?"
-    }
+    },
 {
         id: 3,
         file: "ebook3",
@@ -46,7 +46,7 @@ const ebooks = [
         ],
         price: 45678,
         mayarUrl: "https://gigital.myr.id/pl/ebook-gigital-panduan-manajemen-dental-kehamilan?"
-    }
+    },
 {
         id: 4,
         file: "ebook4",
@@ -62,7 +62,7 @@ const ebooks = [
         ],
         price: 43210,
         mayarUrl: "https://gigital.myr.id/pl/ebook-gigital-mudah-mendiagnosa-lesi-oral?"
-    }
+    },
 {
         id: 5,
         file: "ebook5",
@@ -78,7 +78,7 @@ const ebooks = [
         ],
         price: 54321,
         mayarUrl: "https://gigital.myr.id/pl/ebook-gigital-tatalaksana-lesi-oral?"
-    }
+    },
 {
         id: 6,
         file: "ebook6",
