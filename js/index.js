@@ -25,7 +25,7 @@ function createContentCard({
     premium = false,
     disabled = false,
     extraClass = "",
-    titleClass = "",
+    /*titleClass = "",*/
     onClick
 }) {
 
@@ -51,14 +51,14 @@ if (premium) {
     clone.querySelector(".content-thumb").src = thumbnail;
     clone.querySelector(".content-thumb").alt = title;
 
-    /*clone.querySelector(".content-title").textContent = title;*/
-    const titleEl = clone.querySelector(".content-title");
+    clone.querySelector(".content-title").textContent = title;
+    /*const titleEl = clone.querySelector(".content-title");
 
 if (titleClass) {
     titleEl.classList.add(titleClass);
 }
 
-titleEl.textContent = title;
+titleEl.textContent = title;*/
     clone.querySelector(".content-description").textContent = description;
 if (price !== null) {
 
@@ -248,7 +248,7 @@ function loadEbooks() {
                 thumbnail: ebook.thumbnail,
                 title: ebook.title,
                 extraClass: "ebook-card",
-                titleClass: "ebook-title",
+                /*titleClass: "ebook-title",*/
                 description: ebook.description,
                 price: ebook.price,
                 buttonText: "Detail",
