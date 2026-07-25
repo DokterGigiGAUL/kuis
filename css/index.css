@@ -131,7 +131,7 @@ body {
 }
 
 .content-price{
-    margin:0;
+    margin: 0 0 6px 0;
     font-size:15px;
     font-weight:700;
     color:#008000;
