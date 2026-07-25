@@ -761,7 +761,7 @@ body {
     transform:rotate(0deg);
 }
 
-.ebook-card .content-title {
+.ebook-tile, .ebook-card .content-title {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
