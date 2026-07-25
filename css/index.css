@@ -775,10 +775,19 @@ body {
     transform:rotate(0deg);
 }
 
-.ebook-title, .content-title .ebook-title, .ebook-card .content-title {
+.ebook-title{
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+ .content-title .ebook-title, .ebook-card .content-title{
+    min-height: calc(1.25em * 3);
+     display: -webkit-box!important;
+    -webkit-line-clamp: 3!important;
+    -webkit-box-orient: vertical!important;
 
     overflow: hidden;
 }
