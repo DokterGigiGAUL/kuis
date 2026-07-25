@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ebook</title>
+
+<link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+<header class="header">
+    <h1>Ebook</h1>
+</header>
+
+
+<main class="container">
+
+<section class="home-section">
+
+    <div class="section-header">
+        <h2>Koleksi Ebook</h2>
+    </div>
+
+    <div id="ebook-list" class="horizontal-scroll"></div>
+
+</section>
+
+</main>
+
+
+<template id="ebook-card-template">
+
+<article class="content-card">
+
+    <img class="content-thumb" loading="lazy">
+
+    <div class="content-info">
+
+        <h3 class="content-title"></h3>
+
+        <p class="content-description"></p>
+
+        <p class="ebook-price"></p>
+
+        <button class="btn btn-primary ebook-btn">
+            Beli Sekarang
+        </button>
+
+    </div>
+
+</article>
+
+</template>
+
+
+<script src="js/ebook-data.js"></script>
+<script src="js/ebook.js"></script>
+
+<script src="https://mayarembed.r2.mayar.id/mayar-new-min.js"></script>
+
+</body>
+</html>
