@@ -35,13 +35,14 @@ document.getElementById("ebook-release").textContent =
 const buyButton =
     document.getElementById("buyButton");
 
-buyButton.href =
-    ebook.mayarUrl + "?iframe=true";
-buyButton.lightbox = new IframeLightbox(buyButton, {
-    scrolling: true,
-    rate: 500
-});
+//buyButton.href =
+//    ebook.mayarUrl + "?iframe=true";
+const url = ebook.mayarUrl + "?iframe=true";
 
+buyButton.href = url;
+buyButton.dataset.src = url;
+buyButton.dataset.paddingBottom = "30%";
+buyButton.dataset.scrolling = "true";
 
 const slider =
     document.getElementById("preview-slider");
