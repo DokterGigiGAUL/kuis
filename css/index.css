@@ -37,13 +37,12 @@ body {
 .header {
     background: var(--primary);
     color: white;
-    text-align: center;
     padding: 16px 24px;
 }
 .header h1 {
     font-size: 20px;
     margin-bottom: 0px;
-    text-align: left;
+    text-align: center;
 }
 .horizontal-scroll {
     display: flex;
