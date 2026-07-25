@@ -43,7 +43,7 @@ const buyButton = document.getElementById("buyButton");
 buyButton.outerHTML = `
 <a
     id="buyButton"
-    class="btn btn-primary ebook-btn mayar-button iframe-lightbox-link"
+    class="btn btn-primary iframe-lightbox-link"
     href="${ebook.mayarUrl}?iframe=true"
     data-padding-bottom="30%"
     data-scrolling="true">
