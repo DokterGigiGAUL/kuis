@@ -8,20 +8,24 @@
 
     function loadScript() {
 
-        if (window.IframeLightbox) {
-            return Promise.resolve();
-        }
-
         if (loader) return loader;
 
         loader = new Promise((resolve, reject) => {
+
+            if (document.querySelector(`script[src="${SCRIPT_URL}"]`)) {
+                resolve();
+                return;
+            }
 
             const script = document.createElement("script");
 
             script.src = SCRIPT_URL;
             script.async = true;
 
-            script.onload = () => resolve();
+            script.onload = () => {
+                // beri waktu library menginisialisasi .mayar-button
+                setTimeout(resolve, 100);
+            };
 
             script.onerror = () => reject(
                 new Error("Gagal memuat library Mayar.")
@@ -39,24 +43,14 @@
 
         await loadScript();
 
-        const link = document.createElement("a");
+        const link = document.getElementById("mayar-link");
 
         link.href = url.includes("?")
             ? url
             : url + "?iframe=true";
 
-        link.className = "iframe-lightbox-link";
-
-        link.dataset.paddingBottom = "30%";
-        link.dataset.scrolling = "true";
-
-        document.body.appendChild(link);
-
-        link.lightbox = new IframeLightbox(link);
-
         link.click();
 
-        setTimeout(() => link.remove(), 1000);
     }
 
     window.MayarWrapper = {
