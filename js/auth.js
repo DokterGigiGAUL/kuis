@@ -15,7 +15,24 @@ firebase.auth().onAuthStateChanged(async user => {
         return;
     }
 
-    console.log("Login:", user.displayName);
+console.log("Login:", user.displayName);
+
+const userRef = db.collection("users").doc(user.uid);
+
+await userRef.set({
+    uid: user.uid,
+    name: user.displayName || "",
+    email: user.email || "",
+    photoURL: user.photoURL || "",
+
+    premium: false,
+    premiumUntil: null,
+    ownedProducts: [],
+
+    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+    lastLogin: firebase.firestore.FieldValue.serverTimestamp()
+
+}, { merge: true });
     
     const action = sessionStorage.getItem("pendingAction");
     if (!action) return;
