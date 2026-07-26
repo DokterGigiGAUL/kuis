@@ -112,3 +112,13 @@ function openPremiumPage(productId = null) {
     openPremiumModal(productId);
 
 }
+
+function openPremiumModal(productId = null) {
+
+    const modal = document.getElementById("premiumModal");
+
+    if (!modal) return;
+
+    modal.classList.add("show");
+
+}
