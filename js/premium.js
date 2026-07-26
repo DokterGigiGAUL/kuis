@@ -1,3 +1,5 @@
+const BACKEND_URL =
+    "https://script.google.com/macros/s/AKfycbwzkcz2seD-3OCb2uWYhC2Oon_swZV4SYpOh6JUZXgg04Lx6UbCf1DlaHTmUWrwXWhr/exec";
 const PREMIUM_SUBSCRIPTION_ID = "wonderapp_premium_monthly";
 
 function showPremiumDialog(productId = null) {
@@ -92,19 +94,42 @@ function buyProduct(productId) {
 
 }
 
-function subscribePremium() {
+async function subscribePremium() {
 
-    if (!firebase.auth().currentUser) {
+    const user = firebase.auth().currentUser;
 
+    if (!user) {
         requireLogin("subscribePremium");
-
         return;
     }
 
-    alert(
-        "Berlangganan Wonder App Premium\n\n" +
-        "Fitur pembayaran akan segera tersedia."
-    );
+    const response = await fetch(BACKEND_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            action: "createCheckout",
+            uid: user.uid,
+            name: user.displayName,
+            email: user.email,
+            mobile: "",
+            productId: "premium-monthly",
+            productName: "Wonder App Premium",
+            amount: 49000,
+            description: "Wonder App Premium",
+            redirectUrl: location.origin + "/kuis/premium.html"
+        })
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+        alert(result.message);
+        return;
+    }
+
+    location.href = result.checkoutUrl;
 
 }
 
