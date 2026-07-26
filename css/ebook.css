@@ -19,8 +19,8 @@ section{
     padding: 16px 24px;
 }
 .explore-header h1 {
-    font-size: 20px;
-    margin-bottom: 0px;
+    font-size: 24px;
+    margin: 0px auto!important;
     text-align: center;
 }
 /* ===========================
