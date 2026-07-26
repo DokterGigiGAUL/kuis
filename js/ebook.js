@@ -50,6 +50,38 @@ buyButton.outerHTML = `
     Beli Sekarang
 </a>`;
 
+const sampleButton =
+    document.getElementById("sampleButton");
+
+sampleButton.onclick = () => {
+
+    const overlay = document.createElement("div");
+
+    overlay.className = "pdf-overlay";
+
+    overlay.innerHTML = `
+<div class="pdf-modal">
+
+<button class="pdf-close">&times;</button>
+
+<iframe
+src="${ebook.samplePdf}"
+allowfullscreen>
+</iframe>
+
+</div>`;
+
+    document.body.appendChild(overlay);
+    overlay.querySelector(".pdf-close").onclick = () =>
+        overlay.remove();
+
+    overlay.onclick = e => {
+
+        if (e.target === overlay)
+            overlay.remove();
+    };
+};
+
 const slider =
     document.getElementById("preview-slider");
 
