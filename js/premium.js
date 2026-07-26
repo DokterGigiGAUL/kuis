@@ -99,37 +99,39 @@ async function subscribePremium() {
     const user = firebase.auth().currentUser;
 
     if (!user) {
+
         requireLogin("subscribePremium");
+
         return;
+
     }
 
-    const response = await fetch(BACKEND_URL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            action: "createCheckout",
-            uid: user.uid,
-            name: user.displayName,
-            email: user.email,
-            mobile: "",
-            productId: "premium-monthly",
-            productName: "Wonder App Premium",
-            amount: 49000,
-            description: "Wonder App Premium",
-            redirectUrl: location.origin + "/kuis/premium.html"
-        })
+    const params = new URLSearchParams({
+
+        action: "checkout",
+
+        uid: user.uid,
+
+        name: user.displayName || "",
+
+        email: user.email || "",
+
+        mobile: "",
+
+        productId: "premium-monthly",
+
+        productName: "Wonder App Premium",
+
+        amount: "49000",
+
+        description: "Wonder App Premium",
+
+        redirectUrl: location.origin + "/kuis/premium.html"
+
     });
 
-    const result = await response.json();
-
-    if (!result.success) {
-        alert(result.message);
-        return;
-    }
-
-    location.href = result.checkoutUrl;
+    window.location.href =
+        `${BACKEND_URL}?${params.toString()}`;
 
 }
 
