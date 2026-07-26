@@ -1,6 +1,16 @@
 const PREMIUM_SUBSCRIPTION_ID = "wonderapp_premium_monthly";
 
-let currentProductId = null;
+function showPremiumDialog(productId = null) {
+
+    if (confirm(
+        "🔒 Konten Premium\n\n" +
+        "Konten ini hanya tersedia untuk member Premium.\n\n" +
+        "Tekan OK untuk mendapatkan akses akun Premium atau CANCEL untuk tetap menggunakan akun Gratis."
+    )) {
+        openPremiumPage(productId);
+    }
+
+}
 
 const Premium = {
 
@@ -53,64 +63,22 @@ function userHasPremium() {
 
 function activatePremium() {
     Premium.enable();
+    alert("Premium berhasil diaktifkan.");
+    location.reload();
 }
 
 function deactivatePremium() {
     Premium.disable();
+    alert("Premium dinonaktifkan.");
+    location.reload();
 }
 
-function showPremiumDialog(productId = null) {
-    openPremiumModal(productId);
-}
-
-function openPremiumModal(productId = null) {
-
-    currentProductId = productId;
-
-    const modal = document.getElementById("premiumModal");
-    const content = document.getElementById("premiumContent");
-
-    if (!modal || !content) return;
-
-    content.innerHTML = `
-        <iframe
-            src="premium.html${productId ? `?product=${encodeURIComponent(productId)}` : ""}"
-            style="
-                width:100%;
-                height:85vh;
-                border:none;
-                display:block;
-                border-radius:22px;
-            ">
-        </iframe>
-    `;
-
-    modal.classList.add("show");
-
-    document.getElementById("premiumCloseBtn").onclick = closePremiumModal;
-
-    modal.querySelector(".premium-backdrop").onclick = closePremiumModal;
-
-}
-
-function closePremiumModal() {
-
-    const modal = document.getElementById("premiumModal");
-
-    if (!modal) return;
-
-    modal.classList.remove("show");
-
-    document.getElementById("premiumContent").innerHTML = "";
-
-}
-
-function buyProduct(productId = currentProductId) {
+function buyProduct(productId) {
 
     if (!firebase.auth().currentUser) {
 
         requireLogin("buyProduct", {
-            productId
+            productId: productId
         });
 
         return;
@@ -137,5 +105,16 @@ function subscribePremium() {
         "Berlangganan Wonder App Premium\n\n" +
         "Fitur pembayaran akan segera tersedia."
     );
+
+}
+
+function openPremiumPage(productId = null) {
+
+    if (productId) {
+        window.location.href =
+            `premium.html?product=${encodeURIComponent(productId)}`;
+    } else {
+        window.location.href = "premium.html";
+    }
 
 }
