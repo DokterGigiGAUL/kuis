@@ -17,6 +17,26 @@
 
     <div class="header-actions">
 
+        <button id="loginBtn" class="header-btn">
+            Login
+        </button>
+
+        <button
+            id="logoutBtn"
+            class="header-btn"
+            style="display:none;">
+            Logout
+        </button>
+
+    </div>
+
+</header>
+   <!-- <header class="header">
+
+    <h1>Penyakit Mulut Wonder App</h1>
+
+    <div class="header-actions">
+
         <button
             id="loginBtn"
             class="btn btn-outline"
@@ -34,7 +54,7 @@
 
     </div>
 
-</header>
+</header> -->
     <!--
     <header class="header">
       <h1>Penyakit Mulut Wonder App</h1>
@@ -156,13 +176,37 @@ Beli Sekarang
     </article>
 </template>
     
+    
 <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
 
 <script src="js/firebase-init.js"></script>
 <script src="js/auth.js"></script>
+<div id="premiumModal" class="premium-modal">
 
+    <div class="premium-backdrop"></div>
+
+    <div class="premium-window">
+
+        <button
+            id="premiumCloseBtn"
+            class="premium-close">
+            ✕
+        </button>
+
+        <div id="premiumContent"></div>
+
+    </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+
+<script src="js/firebase-init.js"></script>
+<script src="js/auth.js"></script>
 <script src="js/purchase-manager.js"></script>
 <script src="js/storage.js"></script>
 <script src="js/quiz-data.js"></script>
@@ -175,7 +219,7 @@ Beli Sekarang
 <script src="js/index.js"></script>
 
 <script type="text/javascript" src="https://mayarembed.r2.mayar.id/mayar-new-min.js"></script>
-
+<!--
 <div id="premiumModal" class="premium-modal">
 
     <div class="premium-backdrop"></div>
@@ -193,7 +237,7 @@ Beli Sekarang
 
     </div>
 
-</div>
+</div> -->
 </body>
   </body>
 
