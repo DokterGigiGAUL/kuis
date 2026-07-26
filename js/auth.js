@@ -1,5 +1,3 @@
-Ganti seluruh isi js/auth.js dengan kode berikut:
-
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 function signInWithGoogle() {
     return firebase.auth().signInWithPopup(googleProvider);
