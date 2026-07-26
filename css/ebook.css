@@ -268,7 +268,7 @@ z-index:10;
 
 /*flex-direction:column-reverse;*/
     display: flex;
-    gap: 0px;
+    gap: 24px;
     margin-bottom: 6px;
 }
 
