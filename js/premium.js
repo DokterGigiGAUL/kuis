@@ -109,11 +109,6 @@ function subscribePremium() {
 }
 function openPremiumPage(productId = null) {
 
-    if (productId) {
-        window.location.href =
-            `premium.html?product=${encodeURIComponent(productId)}`;
-    } else {
-        window.location.href = "premium.html";
-    }
+    openPremiumModal(productId);
 
 }
