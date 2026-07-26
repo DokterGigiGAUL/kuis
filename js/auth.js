@@ -10,22 +10,12 @@ function signOutUser() {
 
 firebase.auth().onAuthStateChanged(async user => {
 
-    const loginBtn = document.getElementById("loginBtn");
-    const logoutBtn = document.getElementById("logoutBtn");
-
-    if (loginBtn && logoutBtn) {
-
-        if (user) {
-            loginBtn.style.display = "none";
-            logoutBtn.style.display = "";
-        } else {
-            loginBtn.style.display = "";
-            logoutBtn.style.display = "none";
-        }
-
+    if (!user) {
+        console.log("Belum login");
+        return;
     }
 
-    if (!user) return;
+    console.log("Login:", user.displayName);
 
     const userRef = db.collection("users").doc(user.uid);
 
@@ -34,23 +24,21 @@ firebase.auth().onAuthStateChanged(async user => {
         name: user.displayName || "",
         email: user.email || "",
         photoURL: user.photoURL || "",
+
         premium: false,
         premiumUntil: null,
         ownedProducts: [],
+
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         lastLogin: firebase.firestore.FieldValue.serverTimestamp()
-    }, {
-        merge: true
-    });
+
+    }, { merge: true });
 
     const action = sessionStorage.getItem("pendingAction");
-
     if (!action) return;
-
     sessionStorage.removeItem("pendingAction");
 
     const raw = sessionStorage.getItem("pendingActionData");
-
     sessionStorage.removeItem("pendingActionData");
 
     const data = raw ? JSON.parse(raw) : null;
@@ -64,9 +52,7 @@ firebase.auth().onAuthStateChanged(async user => {
         case "subscribePremium":
             subscribePremium();
             break;
-
     }
-
 });
 
 function requireLogin(action, data = null) {
@@ -87,30 +73,3 @@ function requireLogin(action, data = null) {
     return signInWithGoogle();
 
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const loginBtn = document.getElementById("loginBtn");
-    const logoutBtn = document.getElementById("logoutBtn");
-
-    if (loginBtn) {
-
-        loginBtn.onclick = () => {
-
-            signInWithGoogle();
-
-        };
-
-    }
-
-    if (logoutBtn) {
-
-        logoutBtn.onclick = () => {
-
-            signOutUser();
-
-        };
-
-    }
-
-});
