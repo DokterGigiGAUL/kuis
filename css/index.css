@@ -724,6 +724,29 @@ body {
     z-index:11;
     transform:rotate(0deg);
 }
+    .ebook-title{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+ .content-title .ebook-title, .ebook-card .content-title{
+    min-height: calc(1.25em * 2);
+     display: -webkit-box!important;
+    -webkit-line-clamp: 2!important;
+    -webkit-box-orient: vertical!important;
+
+    overflow: hidden;
+}
+
+.ebook-card .content-description {
+    min-height: calc(1.25em * 2);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
 }
 
 @media (min-width:1024px){
@@ -742,6 +765,29 @@ body {
     .featured-latest{
         top: calc((100vw / 2) - 220px)!important;
     }
+    .ebook-title{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+ .content-title .ebook-title, .ebook-card .content-title{
+    min-height: calc(1.25em * 2);
+     display: -webkit-box!important;
+    -webkit-line-clamp: 2!important;
+    -webkit-box-orient: vertical!important;
+
+    overflow: hidden;
+}
+
+.ebook-card .content-description {
+    min-height: calc(1.25em * 2);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
 }
 
 /* Badge Premium */
