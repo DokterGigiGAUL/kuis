@@ -41,6 +41,13 @@ firebase.auth().onAuthStateChanged(async user => {
     createdAt: firebase.firestore.FieldValue.serverTimestamp(),
     lastLogin: firebase.firestore.FieldValue.serverTimestamp()
 }, { merge: true });
+    const snap = await userRef.get();
+
+if (snap.exists && snap.data().premium === true) {
+    Premium.enable();
+} else {
+    Premium.disable();
+}
     const action = sessionStorage.getItem("pendingAction");
     if (!action) return;
     sessionStorage.removeItem("pendingAction");
