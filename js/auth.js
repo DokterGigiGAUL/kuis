@@ -3,7 +3,15 @@ function signInWithGoogle() {
     return firebase.auth().signInWithPopup(googleProvider);
 }
 function signOutUser() {
+
+    Premium.disable();
+
+    PurchaseManager.clear();
+
+    localStorage.removeItem("ownedProducts");
+
     return firebase.auth().signOut();
+
 }
 const loginBtn = document.getElementById("loginBtn");
 const logoutBtn = document.getElementById("logoutBtn");
