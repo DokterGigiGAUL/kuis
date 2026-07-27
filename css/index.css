@@ -536,7 +536,7 @@ body {
     color: #fff;
     background: rgba(0, 0, 0, .25);
     backdrop-filter: blur(6px);
-    width: auto;
+    width: max-content;
 }
 .featured-item{
     align-self: flex-start;
