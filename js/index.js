@@ -25,6 +25,7 @@ function createContentCard({
     premium = false,
     disabled = false,
     extraClass = "",
+    item,
     /*titleClass = "",*/
     onClick
 }) {
@@ -99,11 +100,9 @@ function loadQuiz() {
         createContentCard({
 
             container: quizList,
-
+            item: quiz,
             thumbnail: quiz.thumbnail,
-
             title: quiz.title,
-
             description: quiz.description,
             premium: quiz.premium,
             buttonText: finished
@@ -139,11 +138,9 @@ function loadComics() {
         createContentCard({
 
             container: comicsContainer,
-
+            item: comic,
             thumbnail: comic.thumbnail,
-
             title: comic.title,
-
             //description: `Episode #${comic.id}`,
             description: comic.description,
             premium: comic.premium,
@@ -176,11 +173,9 @@ function loadTTS() {
         createContentCard({
 
             container: ttsContainer,
-
+            item: tts,
             thumbnail: tts.thumbnail,
-
             title: tts.title,
-
             description: tts.description,
             premium: tts.premium,
             soal: `${tts.soal} Soal`,
@@ -214,6 +209,7 @@ function loadCases() {
 
         createContentCard({
             container: caseContainer,
+            item: caseData,
             thumbnail: caseData.thumbnail,
             title: caseData.title,
             description: caseData.description,
@@ -301,7 +297,11 @@ if (!heroItem) return;
     //badge.textContent = typeLabel[heroItem.type] ?? "";
     if (heroItem.premium) {
     //badge.textContent = `👑 Premium • ${typeLabel[heroItem.type] ?? ""}`;
-    badge.textContent = `👑 Premium`;
+    //badge.textContent = `👑 Premium`;
+        badge.textContent =
+        PurchaseManager.hasAccess(heroItem)
+            ? "🟢 Akses permanen"
+            : "👑 Premium";
 } else {
     badge.textContent = typeLabel[heroItem.type] ?? "";
 }
@@ -374,7 +374,11 @@ const card = clone.querySelector(".featured-card");
 }*/
 const badge = clone.querySelector(".featured-badge");
 if (item.premium) {
-    badge.textContent = `👑 Premium`;
+    //badge.textContent = `👑 Premium`;
+    badge.textContent =
+        PurchaseManager.hasAccess(heroItem)
+            ? "🟢 Akses permanen"
+            : "👑 Premium";
 }
     
 const openContent = () => {
