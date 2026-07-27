@@ -48,6 +48,8 @@ if (snap.exists && snap.data().premium === true) {
 } else {
     Premium.disable();
 }
+    console.log("Firestore premium:", snap.data().premium);
+console.log("LocalStorage premium:", localStorage.getItem("premium"));
     const action = sessionStorage.getItem("pendingAction");
     if (!action) return;
     sessionStorage.removeItem("pendingAction");
