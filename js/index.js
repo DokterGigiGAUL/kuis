@@ -44,7 +44,13 @@ if (extraClass) {
 const badge = clone.querySelector(".featured-badge");
 
 if (premium) {
-    badge.textContent = "👑 Premium";
+
+    if (PurchaseManager.hasAccess(item)) {
+        badge.textContent = "🟢 Akses permanen";
+    } else {
+        badge.textContent = "👑 Premium";
+    }
+
 } else {
     badge.remove();
 }
