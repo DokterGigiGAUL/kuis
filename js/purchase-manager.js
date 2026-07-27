@@ -36,6 +36,11 @@ if (Premium.isPremium()) {
     }
 
     function hasTTSPremium() {
+
+        if (Premium.isPremium()) {
+        return true;
+    }
+        
     const products = getPurchasedProducts();
 
     return (
