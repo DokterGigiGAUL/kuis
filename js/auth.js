@@ -36,9 +36,15 @@ firebase.auth().onAuthStateChanged(async user => {
         }
     }
     if (!user) {
-        console.log("Belum login");
-        return;
-    }
+
+    Premium.disable();
+    PurchaseManager.clear();
+    localStorage.removeItem("ownedProducts");
+
+    console.log("Belum login");
+
+    return;
+}
     console.log("Login:", user.displayName);
     const userRef = db.collection("users").doc(user.uid);
     await userRef.set({
