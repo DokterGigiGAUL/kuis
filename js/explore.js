@@ -60,7 +60,11 @@ if (premium) {
 }
 */
     if (premium) {
-    badge.textContent = "👑 Premium";
+    //badge.textContent = "👑 Premium";
+        badge.textContent =
+        PurchaseManager.hasAccess(heroItem)
+            ? "🟢 Akses permanen"
+            : "👑 Premium";
 } else {
     badge.remove();
 }
