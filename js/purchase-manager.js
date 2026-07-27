@@ -12,7 +12,9 @@ const PurchaseManager = (() => {
     function hasAccess(item) {
         // Konten gratis
         if (!item.premium) return true;
-
+if (Premium.isPremium()) {
+    return true;
+}
         const products = getPurchasedProducts();
 
         // Produk individual
