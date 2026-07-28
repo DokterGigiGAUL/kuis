@@ -46,12 +46,12 @@ const ttsList = [
         title: "TTS #4",
         file: "tts4",
         productId: "tts4",
-        soal: 20,
+        soal: 11,
         description: "Level: ★★★☆☆",
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
         premium: true,
         price: 5000, 
-        releaseDate: "2026-07-21",
+        releaseDate: "2026-06-21",
         type: "tts"
     },
     {
@@ -59,12 +59,12 @@ const ttsList = [
         title: "TTS #5",
         file: "tts5",
         productId: "tts5",
-        soal: 20,
+        soal: 12,
         description: "Level: ★★★★☆",
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
-        premium: true,
+        premium: false,
         price: 5000, 
-        releaseDate: "2026-06-20",
+        releaseDate: "2026-07-22",
         type: "tts"
     }
 
