@@ -9,6 +9,10 @@ const PurchaseManager = (() => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
     }
 
+    function sync(products = []) {
+    savePurchasedProducts(products);
+}
+    
     function hasAccess(item) {
         // Konten gratis
         if (!item.premium) return true;
@@ -75,6 +79,7 @@ if (Premium.isPremium()) {
     purchase,
     revoke,
     clear,
-    getPurchasedProducts
+    getPurchasedProducts,
+    sync
     };
 })();
