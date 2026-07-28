@@ -101,32 +101,6 @@ function openCheckout(url) {
     }
 }
 
-async function buyProduct(productId) {
-
-    if (!firebase.auth().currentUser) {
-
-        await signInWithGoogle();
-
-    }
-
-    alert(
-        "Produk yang dipilih:\n\n" +
-        productId +
-        "\n\nFitur pembayaran akan segera tersedia."
-    );
-
-}
-
-async function subscribePremium() {
-
-    if (!firebase.auth().currentUser) {
-
-        await signInWithGoogle();
-
-    }
-
-    // lanjut checkout seperti sekarang
-}
 
 buyItemBtn.onclick = () => {
     buyProduct(productId);
