@@ -165,8 +165,14 @@ async function subscribePremium() {
 
     });
 
-    window.location.href =
-        `${BACKEND_URL}?${params.toString()}`;
+    const checkoutUrl =
+    `${BACKEND_URL}?${params.toString()}`;
+
+if (typeof openCheckout === "function") {
+    openCheckout(checkoutUrl);
+} else {
+    window.location.href = checkoutUrl;
+}
 
 }
 
