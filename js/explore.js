@@ -51,7 +51,6 @@ function createListCard({
     disabled = false,
     extraClass = "",
     item,
-    /*titleClass = "",*/
     onClick
 }) {
 
