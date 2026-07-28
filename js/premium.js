@@ -103,7 +103,7 @@ function deactivatePremium() {
 }
 
 function buyProduct(productId) {
-
+/*
     if (!firebase.auth().currentUser) {
 
         requireLogin("buyProduct", {
@@ -112,7 +112,7 @@ function buyProduct(productId) {
 
         return;
     }
-
+*/
     alert(
         "Produk yang dipilih:\n\n" +
         productId +
@@ -122,14 +122,17 @@ function buyProduct(productId) {
 }
 
 async function subscribePremium() {
+    
+    if (!firebase.auth().currentUser) {
+        await signInWithGoogle();
+    }
 
     const user = firebase.auth().currentUser;
 
-    if (!user) {
+  //  if (!user) {
 
-        requireLogin("subscribePremium");
-
-        return;
+   //     requireLogin("subscribePremium");
+    if (!user) return;
 
     }
 
