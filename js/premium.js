@@ -102,8 +102,8 @@ function deactivatePremium() {
     location.reload();
 }
 
-function buyProduct(productId) {
-/*
+/*function buyProduct(productId) {
+
     if (!firebase.auth().currentUser) {
 
         requireLogin("buyProduct", {
@@ -112,12 +112,50 @@ function buyProduct(productId) {
 
         return;
     }
-*/
+
     alert(
         "Produk yang dipilih:\n\n" +
         productId +
         "\n\nFitur pembayaran akan segera tersedia."
     );
+
+}*/
+
+async function buyProduct(productId) {
+
+    if (!firebase.auth().currentUser) {
+        await signInWithGoogle();
+    }
+
+    const user = firebase.auth().currentUser;
+    if (!user) return;
+
+    const params = new URLSearchParams({
+
+        action: "checkout",
+
+        uid: user.uid,
+
+        name: user.displayName || "",
+
+        email: user.email || "",
+
+        mobile: "",
+
+        productId: productId,
+
+        redirectUrl: location.origin + "/kuis/index.html"
+
+    });
+
+    const checkoutUrl =
+        `${BACKEND_URL}?${params.toString()}`;
+
+    if (typeof openCheckout === "function") {
+        openCheckout(checkoutUrl);
+    } else {
+        window.location.href = checkoutUrl;
+    }
 
 }
 
