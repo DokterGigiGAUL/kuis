@@ -28,6 +28,10 @@
     </button>
 </section>
 
+<div id="loginNotice" class="premium-login-notice">
+    Kamu akan diarahkan untuk login sebelum pembelian agar konten yang telah dibeli tersimpan pada akun dan dapat diakses dari perangkat lain.
+</div>
+
 <section id="purchaseSection" class="premium-options">
 
     <article class="premium-option premium-item">
@@ -84,10 +88,10 @@ const params = new URLSearchParams(location.search);
 const productId = params.get("product");
 const buyItemBtn = document.getElementById("buyItemBtn");
 const subscribeBtn = document.getElementById("subscribeBtn");
-    
+/*   
 const loginSection = document.getElementById("loginSection");
-const purchaseSection = document.getElementById("purchaseSection");
-const loginGoogleBtn = document.getElementById("loginGoogleBtn");
+    const purchaseSection = document.getElementById("purchaseSection");
+    const loginGoogleBtn = document.getElementById("loginGoogleBtn");
 
 function refreshPremiumUI() {
     const user = firebase.auth().currentUser;
@@ -103,7 +107,7 @@ function refreshPremiumUI() {
 loginGoogleBtn.onclick = () => {
     signInWithGoogle();
 };
-    
+*/   
 if (!productId) {
     buyItemBtn.style.display = "none";
 }
@@ -115,6 +119,34 @@ function openCheckout(url) {
         window.location.href = url;
     }
 }
+
+async function buyProduct(productId) {
+
+    if (!firebase.auth().currentUser) {
+
+        await signInWithGoogle();
+
+    }
+
+    alert(
+        "Produk yang dipilih:\n\n" +
+        productId +
+        "\n\nFitur pembayaran akan segera tersedia."
+    );
+
+}
+
+async function subscribePremium() {
+
+    if (!firebase.auth().currentUser) {
+
+        await signInWithGoogle();
+
+    }
+
+    // lanjut checkout seperti sekarang
+}
+
 buyItemBtn.onclick = () => {
     buyProduct(productId);
 };
@@ -122,11 +154,11 @@ buyItemBtn.onclick = () => {
 subscribeBtn.onclick = () => {
     subscribePremium();
 };
-
+/*
 firebase.auth().onAuthStateChanged(() => {
     refreshPremiumUI();
 });
-    
+/*    
 </script>
 
 </body>
