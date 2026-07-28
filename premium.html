@@ -88,26 +88,7 @@ const params = new URLSearchParams(location.search);
 const productId = params.get("product");
 const buyItemBtn = document.getElementById("buyItemBtn");
 const subscribeBtn = document.getElementById("subscribeBtn");
-/*   
-const loginSection = document.getElementById("loginSection");
-    const purchaseSection = document.getElementById("purchaseSection");
-    const loginGoogleBtn = document.getElementById("loginGoogleBtn");
 
-function refreshPremiumUI() {
-    const user = firebase.auth().currentUser;
-    if (user) {
-        loginSection.style.display = "none";
-        purchaseSection.style.display = "";
-    } else {
-        loginSection.style.display = "";
-        purchaseSection.style.display = "none";
-    }
-}
-
-loginGoogleBtn.onclick = () => {
-    signInWithGoogle();
-};
-*/   
 if (!productId) {
     buyItemBtn.style.display = "none";
 }
@@ -154,11 +135,7 @@ buyItemBtn.onclick = () => {
 subscribeBtn.onclick = () => {
     subscribePremium();
 };
-/*
-firebase.auth().onAuthStateChanged(() => {
-    refreshPremiumUI();
-});
-/*    
+   
 </script>
 
 </body>
