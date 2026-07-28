@@ -2,6 +2,41 @@ const BACKEND_URL =
     "https://script.google.com/macros/s/AKfycbwzkcz2seD-3OCb2uWYhC2Oon_swZV4SYpOh6JUZXgg04Lx6UbCf1DlaHTmUWrwXWhr/exec";
 const PREMIUM_SUBSCRIPTION_ID = "wonderapp_premium_monthly";
 
+function openPremiumModal(productId = null) {
+
+    const modal = document.getElementById("premiumModal");
+    const frame = document.getElementById("premiumFrame");
+
+    frame.src = productId
+        ? `premium.html?product=${encodeURIComponent(productId)}`
+        : "premium.html";
+
+    modal.classList.add("show");
+
+}
+
+function closePremiumModal() {
+
+    const modal = document.getElementById("premiumModal");
+    const frame = document.getElementById("premiumFrame");
+
+    modal.classList.remove("show");
+
+    // menghentikan proses di iframe
+    frame.src = "";
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const closeBtn = document.getElementById("closePremiumModal");
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closePremiumModal);
+    }
+
+});
+
 function showPremiumDialog(productId = null) {
 
     if (confirm(
@@ -136,12 +171,5 @@ async function subscribePremium() {
 }
 
 function openPremiumPage(productId = null) {
-
-    if (productId) {
-        window.location.href =
-            `premium.html?product=${encodeURIComponent(productId)}`;
-    } else {
-        window.location.href = "premium.html";
-    }
-
+    openPremiumModal(productId);
 }
