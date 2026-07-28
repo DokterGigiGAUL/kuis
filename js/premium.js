@@ -134,8 +134,6 @@ async function subscribePremium() {
    //     requireLogin("subscribePremium");
     if (!user) return;
 
-    }
-
     const params = new URLSearchParams({
 
         action: "checkout",
@@ -156,7 +154,7 @@ async function subscribePremium() {
 
         description: "Wonder App Premium",
 
-        redirectUrl: location.origin + "/kuis/premium.html"
+        redirectUrl: location.origin + "/kuis/index.html"
 
     });
 
