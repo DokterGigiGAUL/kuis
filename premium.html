@@ -95,6 +95,15 @@ if (!productId) {
     buyItemBtn.style.display = "none";
 }
 
+    function openCheckout(url) {
+
+    if (window.parent !== window) {
+        window.parent.location.href = url;
+    } else {
+        window.location.href = url;
+    }
+
+}
 buyItemBtn.onclick = () => {
 
     buyProduct(productId);
