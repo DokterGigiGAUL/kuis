@@ -62,7 +62,7 @@ const ttsList = [
         soal: 12,
         description: "Level: ★★★★☆",
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
-        premium: false,
+        premium: true,
         price: 5000, 
         releaseDate: "2026-07-22",
         type: "tts"
