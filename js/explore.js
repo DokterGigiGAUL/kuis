@@ -123,6 +123,7 @@ function showQuiz() {
     title: quiz.title,
 
     description: quiz.description,
+    item: quiz,
     premium: quiz.premium,
 
     buttonText: Storage.isFinished(quiz.productId)
@@ -176,6 +177,7 @@ function showComic() {
     title: comic.title,
 
     description: comic.description,
+    item: comic,
     premium: comic.premium,
     buttonText: "Baca",
 
@@ -225,6 +227,7 @@ function showTTS() {
     title: tts.title,
 
     description: tts.description,
+    item: comic,
     premium: tts.premium,
     buttonText: "Mainkan",
 
@@ -274,6 +277,7 @@ function showCase() {
     title: caseData.title,
 
     description: caseData.description,
+    item: caseData,
     premium: caseData.premium,
     buttonText: "Lihat",
 
@@ -327,6 +331,7 @@ function showEbook() {
                 title: ebook.title,
 
                 description: ebook.description,
+                item: ebook,
 
                 buttonText: "Detail",
 
