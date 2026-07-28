@@ -4,157 +4,120 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kuis Penyakit Mulut</title>
-
     <link rel="stylesheet" href="css/index.css" />
-    <!--<link rel="stylesheet" href="css/style.css" />-->
-
   </head>
 
   <body>
-    <header class="header">
-
+  <header class="header">
     <h1>Penyakit Mulut Wonder App</h1>
-
     <div class="header-actions">
-
-        <button
-            id="loginBtn"
-            class="btn btn-outline"
-            type="button">
+        <button id="loginBtn" class="btn btn-outline"type="button">
             Login
         </button>
-
-        <button
-            id="logoutBtn"
-            class="btn btn-outline"
-            type="button"
-            style="display:none;">
+        <button id="logoutBtn" class="btn btn-outline" type="button" style="display:none;">
             Logout
         </button>
-
     </div>
-
-</header>
-    <!--
-    <header class="header">
-      <h1>Penyakit Mulut Wonder App</h1>
-    </header>
--->
-    <main class="container">
-<!--
-<a class="btn btn-primary" href="ebook.html">Ebook →</a>
-<a 
-class="mayar-button iframe-lightbox-link"
-href="https://gigital.myr.id/pl/ebook-gigital-panduan-peresepan-dokter-gigi-pasien-anak?iframe=true"
-data-padding-bottom="30%"
-data-scrolling="true">
-
-Beli Sekarang
-
-</a>
--->
-      <section id="featured-hero" class="featured-hero">
-        <div class="featured-overlay">
-          <span class="featured-badge""></span>
-          <!--<span class="featured-item">✭ Baru</span>-->
-          <h2 class="featured-title"></h2>
-          <p class="featured-description"></p>
-          <button class="btn btn-primary featured-btn"></button>
-        </div>
-          <div id="featured-latest" class="featured-latest"></div>
-      </section>
+  </header>
+    
+  <main class="container">
+    <section id="featured-hero" class="featured-hero">
+      <div class="featured-overlay">
+        <span class="featured-badge""></span>
+        <h2 class="featured-title"></h2>
+        <p class="featured-description"></p>
+        <button class="btn btn-primary featured-btn"></button>
+      </div>
+      <div id="featured-latest" class="featured-latest"></div>
+    </section>
       
-      <!-- Template Card -->
-<section class="home-section">
-    <div class="section-header">
-        <h2>Kuis</h2>
-        <a href="explore.html?tab=quiz">Lihat semua →</a>
-    </div>
-
+    <!-- Template Card -->
+    <section class="home-section">
+      <div class="section-header">
+        <h2>Kuis Trivia</h2>
+        <a href="explore.html?tab=quiz">
+          Lihat semua Kuis →</a>
+      </div>
     <div id="quiz-list" class="horizontal-scroll"></div>
-</section>
+    </section>
 
-<section class="home-section">
-    <div class="section-header">
+    <section class="home-section">
+      <div class="section-header">
         <h2>Kartu Kasus</h2>
-        <a href="explore.html?tab=case">Lihat semua →</a>
-    </div>
-
-    <div id="case-container" class="horizontal-scroll"></div>
-</section>
+        <a href="explore.html?tab=case">Lihat semua Kartu Kasus →</a>
+      </div>
+      <div id="case-container" class="horizontal-scroll"></div>
+    </section>
       
-<section class="home-section">
-    <div class="section-header">
+    <section class="home-section">
+      <div class="section-header">
         <h2>TTS</h2>
         <a href="explore.html?tab=tts">Lihat semua →</a>
-    </div>
-
-    <div id="tts-container" class="horizontal-scroll"></div>
-</section>
+      </div>
+      <div id="tts-container" class="horizontal-scroll"></div>
+    </section>
         
-<section class="home-section">
-    <div class="section-header">
+    <section class="home-section">
+      <div class="section-header">
         <h2>Komik</h2>
         <a href="explore.html?tab=comic">Lihat semua →</a>
-    </div>
+      </div>
+      <div id="comics-container" class="horizontal-scroll"></div>
+    </section>
 
-    <div id="comics-container" class="horizontal-scroll"></div>
-</section>
-
-<section class="home-section">
-    <div class="section-header">
+    <section class="home-section">
+      <div class="section-header">
         <h2>Ebook</h2>
         <a href="explore.html?tab=ebook">Lihat semua →</a>
-    </div>
-
-    <div id="ebook-container" class="horizontal-scroll"></div>
-</section>
+      </div>
+      <div id="ebook-container" class="horizontal-scroll"></div>
+    </section>
       
-    </main>
+  </main>
 
     <!-- Template -->
       
-<template id="content-card-template">
+  <template id="content-card-template">
     <article class="content-card">
-<div class="featured-card-overlay">
-<span class="featured-badge"></span>
-</div>
-        <img
-            class="content-thumb"
-            loading="lazy"
-            alt="">
+      <div class="featured-card-overlay">
+        <span class="featured-badge"></span>
+      </div>
+      <img
+        class="content-thumb"
+        loading="lazy"
+        alt="">
 
-        <div class="content-info">
-            <h3 class="content-title"></h3>
-            <p class="content-description"></p>
-            <button class="btn btn-primary content-btn">
-                Buka
-            </button>
-        </div>
+      <div class="content-info">
+        <h3 class="content-title"></h3>
+        <p class="content-description"></p>
+        <button class="btn btn-primary content-btn">
+          Buka
+        </button>
+      </div>
     </article>
-</template>
+  </template>
 
-    <template id="featured-card-template">
+  <template id="featured-card-template">
     <article class="featured-card">
-<div class="featured-card-overlay">
-<span class="featured-badge"></span>
-</div>
-        <img
-            class="featured-card-thumb"
-            loading="lazy"
-            alt="">
+      <div class="featured-card-overlay">
+        <span class="featured-badge"></span>
+      </div>
+      <img
+        class="featured-card-thumb"
+        loading="lazy"
+        alt="">
 
-        <div class="featured-card-info">
-          <span class="featured-card-type" style="display:none;"></span>
-            <h3 class="featured-card-title"></h3>
-            <p class="featured-card-description"></p>
-            <button class="btn btn-primary featured-card-btn">
-                Buka
-            </button>
-        </div>
+      <div class="featured-card-info">
+        <span class="featured-card-type" style="display:none;"></span>
+        <h3 class="featured-card-title"></h3>
+        <p class="featured-card-description"></p>
+        <button class="btn btn-primary featured-card-btn">
+          Buka
+        </button>
+      </div>
 
     </article>
-</template>
+  </template>
     
 <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
@@ -176,6 +139,4 @@ Beli Sekarang
 <script type="text/javascript" src="https://mayarembed.r2.mayar.id/mayar-new-min.js"></script>
 
 </body>
-  </body>
-
 </html>
