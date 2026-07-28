@@ -38,15 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function showPremiumDialog(productId = null) {
-
-    if (confirm(
-        "🔒 Konten Premium\n\n" +
-        "Konten ini hanya tersedia untuk member Premium.\n\n" +
-        "Tekan OK untuk mendapatkan akses akun Premium atau CANCEL untuk tetap menggunakan akun Gratis."
-    )) {
-        openPremiumPage(productId);
-    }
-
+    openPremiumPage(productId);
 }
 
 const Premium = {
