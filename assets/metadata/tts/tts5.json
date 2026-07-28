@@ -42,6 +42,34 @@
       "direction": "across"
     },
     {
+      "answer": "MUKOKEL",
+      "clue": "Lesi berisi mukus akibat pecah atau tersumbatnya saluran kelenjar ludah minor.",
+      "row": 6,
+      "col": 0,
+      "direction": "down"
+    },
+    {
+      "answer": "GEMINASI",
+      "clue": "Kelainan perkembangan ketika satu benih gigi mencoba membelah sehingga tampak seperti dua mahkota.",
+      "row": 0,
+      "col": 2,
+      "direction": "down"
+    },
+    {
+      "answer": "TAURODONTISME",
+      "clue": "Kelainan bentuk gigi dengan ruang pulpa memanjang dan furkasi akar bergeser ke arah apeks.",
+      "row": 0,
+      "col": 6,
+      "direction": "down"
+    },
+    {
+      "answer": "DEHISENSI",
+      "clue": "Hilangnya tulang alveolar hingga mencapai tepi marginal sehingga permukaan akar terbuka.",
+      "row": 0,
+      "col": 9,
+      "direction": "down"
+    },
+    {
       "answer": "DILASERASI",
       "clue": "Kelengkungan tajam pada akar atau mahkota gigi akibat gangguan perkembangan.",
       "row": 3,
