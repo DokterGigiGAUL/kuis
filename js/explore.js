@@ -45,14 +45,21 @@ function createListCard({
     thumbnail,
     title,
     description,
+    price = null,
     buttonText,
-    disabled = false,
     premium = false,
+    disabled = false,
+    extraClass = "",
+    item,
+    /*titleClass = "",*/
     onClick
 }) {
 
     const clone = listTemplate.content.cloneNode(true);
     const card = clone.querySelector(".list-card");
+    if (extraClass) {
+    card.classList.add(extraClass);
+}
     const badge = clone.querySelector(".featured-badge");
 /*
 if (premium) {
