@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wonder App Premium</title>
-
     <link rel="stylesheet" href="css/premium.css">
 </head>
 <body>
@@ -13,21 +12,27 @@
 
     <div class="premium-header">
         <div class="premium-icon">👑</div>
-
         <h1>Beli Akses Premium</h1>
-
         <p>
             Dapatkan akses ke seluruh fitur Premium atau beli konten tertentu sesuai kebutuhan Anda. 
         </p>
     </div>
 
-<section class="premium-options">
+<section id="loginSection" class="premium-login">
+    <h2>Masuk ke Wonder App</h2>
+    <p>
+        Login diperlukan agar pembelian tersimpan pada akun Anda.
+    </p>
+    <button id="loginGoogleBtn" class="premium-btn">
+        Login dengan Google
+    </button>
+</section>
+
+<section id="purchaseSection" class="premium-options">
 
     <article class="premium-option premium-item">
-
         <div class="premium-option-header">
             <div class="premium-option-icon">🔒</div>
-
             <div>
                 <h2>Beli Konten Premium</h2>
                 <p>
@@ -35,24 +40,18 @@
                 </p>
             </div>
         </div>
-
         <button id="buyItemBtn" class="premium-btn">
             Beli Konten Ini
         </button>
-
         <div class="premium-features">
             <span>★ Bayar sekali</span>
             <span>★ Akses selamanya*</span>
         </div>
-
     </article>
 
-
     <article class="premium-option premium-subscription">
-
         <div class="premium-option-header">
             <div class="premium-option-icon">👑</div>
-
             <div>
                 <h2>Beli Akses Premium</h2>
                 <p>
@@ -60,16 +59,13 @@
                 </p>
             </div>
         </div>
-
         <button id="subscribeBtn" class="premium-btn">
             Berlangganan Premium
         </button>
-
         <div class="premium-features">
             <span>★ Diskon pembelian ebook 25%</span>
             <span>★ Lebih hemat</span>
         </div>
-
     </article>
 
 </section>
@@ -85,36 +81,51 @@
 
 <script>
 const params = new URLSearchParams(location.search);
-
 const productId = params.get("product");
-
 const buyItemBtn = document.getElementById("buyItemBtn");
 const subscribeBtn = document.getElementById("subscribeBtn");
+const loginSection = document.getElementById("loginSection");
+const purchaseSection = document.getElementById("purchaseSection");
+const loginGoogleBtn = document.getElementById("loginGoogleBtn");
 
+function refreshPremiumUI() {
+    const user = firebase.auth().currentUser;
+    if (user) {
+        loginSection.style.display = "none";
+        purchaseSection.style.display = "";
+    } else {
+        loginSection.style.display = "";
+        purchaseSection.style.display = "none";
+    }
+}
+
+loginGoogleBtn.onclick = () => {
+    login();
+};
+    
 if (!productId) {
     buyItemBtn.style.display = "none";
 }
 
-    function openCheckout(url) {
-
+function openCheckout(url) {
     if (window.parent !== window) {
         window.parent.location.href = url;
     } else {
         window.location.href = url;
     }
-
 }
 buyItemBtn.onclick = () => {
-
     buyProduct(productId);
-
 };
 
 subscribeBtn.onclick = () => {
-
     subscribePremium();
-
 };
+
+firebase.auth().onAuthStateChanged(() => {
+    refreshPremiumUI();
+});
+    
 </script>
 
 </body>
