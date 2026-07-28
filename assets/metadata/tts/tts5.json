@@ -1,0 +1,52 @@
+{
+  "id": "tts4",
+  "productId": "tts4",
+  "title": "TTS #4",
+  "premium": true,
+  "price": 5000,
+  "next": "tts5",
+  "words": [
+    {
+      "answer": "DIASTEMA",
+      "clue": "Celah atau ruang di antara dua gigi yang berdekatan.",
+      "row": 1,
+      "col": 4,
+      "direction": "across"
+    },
+    {
+      "answer": "ANKILOSIS",
+      "clue": "Perlekatan patologis antara akar gigi dan tulang alveolar sehingga gigi kehilangan mobilitas fisiologis.",
+      "row": 4,
+      "col": 1,
+      "direction": "across"
+    },
+    {
+      "answer": "ANODONSIA",
+      "clue": "Kelainan bawaan berupa tidak terbentuknya satu atau lebih gigi",
+      "row": 6,
+      "col": 4,
+      "direction": "across"
+    },
+    {
+      "answer": "KONKRESENSI",
+      "clue": "Perlekatan dua gigi yang terjadi melalui jaringan sementum.",
+      "row": 10,
+      "col": 6,
+      "direction": "across"
+    },
+    {
+      "answer": "FENESTRASI",
+      "clue": "Defek tulang alveolar yang menyebabkan sebagian akar gigi terbuka tetapi puncak tulang tetap utuh.",
+      "row": 12,
+      "col": 3,
+      "direction": "across"
+    },
+    {
+      "answer": "DILASERASI",
+      "clue": "Kelengkungan tajam pada akar atau mahkota gigi akibat gangguan perkembangan.",
+      "row": 3,
+      "col": 12,
+      "direction": "down"
+    }
+  ]
+}
