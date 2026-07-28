@@ -84,6 +84,7 @@ const params = new URLSearchParams(location.search);
 const productId = params.get("product");
 const buyItemBtn = document.getElementById("buyItemBtn");
 const subscribeBtn = document.getElementById("subscribeBtn");
+    
 const loginSection = document.getElementById("loginSection");
 const purchaseSection = document.getElementById("purchaseSection");
 const loginGoogleBtn = document.getElementById("loginGoogleBtn");
@@ -100,7 +101,7 @@ function refreshPremiumUI() {
 }
 
 loginGoogleBtn.onclick = () => {
-    login();
+    signInWithGoogle();
 };
     
 if (!productId) {
