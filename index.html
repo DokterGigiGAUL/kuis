@@ -118,7 +118,24 @@
 
     </article>
   </template>
-    
+
+  <!-- Premium Popup -->
+<div id="premiumModal" class="premium-modal">
+  <div class="premium-modal-content">
+
+    <button id="closePremiumModal" class="premium-modal-close">
+      ✕
+    </button>
+
+    <iframe
+      id="premiumFrame"
+      src=""
+      loading="lazy"
+      frameborder="0">
+    </iframe>
+
+  </div>
+</div>
 <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
