@@ -62,7 +62,7 @@ if (premium) {
     if (premium) {
     //badge.textContent = "👑 Premium";
         badge.textContent =
-        PurchaseManager.hasAccess(heroItem)
+        PurchaseManager.hasAccess(item)
             ? "🟢 Akses permanen"
             : "👑 Premium";
 } else {
