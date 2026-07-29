@@ -1,79 +1,110 @@
 const PurchaseManager = (() => {
-    const STORAGE_KEY = "wonderapp_purchases";
+const STORAGE_KEY = "wonderapp_purchases";
 
-    function getPurchasedProducts() {
-        return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-    }
+function getPurchasedProducts() {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+}
 
-    function savePurchasedProducts(products) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
-    }
+function savePurchasedProducts(products) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+}
 
-    function sync(products = []) {
+function sync(products = []) {
     savePurchasedProducts(products);
 }
-    
-    function hasAccess(item) {
-        // Konten gratis
-        if (!item.premium) return true;
-if (Premium.isPremium()) {
+/*    
+function hasAccess(item) {
+    // Konten gratis
+    if (!item.premium) return true;
+    if (Premium.isPremium()) {
     return true;
 }
-        const products = getPurchasedProducts();
 
-        // Produk individual
-        if (item.productId && products.includes(item.productId)) {
-            return true;
-        }
-
-        // Bundle berdasarkan tipe konten
-        if (item.bundleId && products.includes(item.bundleId)) {
-            return true;
-        }
-
-        // Akses seluruh premium
-        if (products.includes("premium_all")) {
-            return true;
-        }
-
-        return false;
-    }
-
-    function hasTTSPremium() {
-
-        if (Premium.isPremium()) {
+    const products = getPurchasedProducts();
+    // Produk individual
+    if (item.productId && products.includes(item.productId)) {
         return true;
     }
-        
+
+    // Bundle berdasarkan tipe konten
+    if (item.bundleId && products.includes(item.bundleId)) {
+    return true;
+    }
+
+    // Akses seluruh premium
+    if (products.includes("premium_all")) {
+        return true;
+    }
+        return false;
+}
+*/
+
+function hasAccess(item) {
+    // Konten gratis
+    if (!item.premium) return true;
+
+    // Premium aktif
+    if (Premium.isPremium()) {
+        return true;
+    }
+
     const products = getPurchasedProducts();
 
-    return (
-        products.includes("premium_all") ||
-        products.includes("bundle_tts") ||
-        products.some(id => id.startsWith("tts"))
+    // Produk individual
+    if (item.productId && products.includes(item.productId)) {
+        return true;
+    }
+
+    return false;
+}
+/*
+function hasTTSPremium() {
+
+    if (Premium.isPremium()) {
+    return true;
+}
+        
+const products = getPurchasedProducts();
+
+return (
+    products.includes("premium_all") ||
+    products.includes("bundle_tts") ||
+    products.some(id => id.startsWith("tts"))
     );
 }
+    */
+
+function hasTTSPremium() {
+
+    if (Premium.isPremium()) {
+        return true;
+    }
+
+    const products = getPurchasedProducts();
+
+    return products.some(id => id.startsWith("tts"));
+}   
     
-    function purchase(productId) {
-        const products = getPurchasedProducts();
+function purchase(productId) {
+    const products = getPurchasedProducts();
 
-        if (!products.includes(productId)) {
-            products.push(productId);
-            savePurchasedProducts(products);
-        }
+    if (!products.includes(productId)) {
+        products.push(productId);
+        savePurchasedProducts(products);
     }
+}
 
-    function revoke(productId) {
-        savePurchasedProducts(
-            getPurchasedProducts().filter(id => id !== productId)
-        );
-    }
+function revoke(productId) {
+    savePurchasedProducts(
+        getPurchasedProducts().filter(id => id !== productId)
+    );
+}
 
-    function clear() {
-        localStorage.removeItem(STORAGE_KEY);
-    }
+function clear() {
+    localStorage.removeItem(STORAGE_KEY);
+}
 
-    return {
+return {
     hasAccess,
     hasTTSPremium,
     purchase,
