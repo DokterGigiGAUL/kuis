@@ -3,43 +3,36 @@
     margin:0 auto;
     padding:16px 16px 24px;
 }
-
 #comic-title{
     margin-bottom:0px;
     text-align:center;
 }
-
 .comic-title{
     font-size:16px;
     line-height:1.15;
     margin-bottom:6px;
 }
-
 .comic-episode{
     color:#000;
     font-size:20px;
     font-weight:700;
     margin-bottom:12px;
 }
-
 .comic-image{
     display:block;
     width:100%;
     height:auto;
     border-radius:12px;
 }
-
 #comic-image {
     display: flex;
     flex-direction: column;
 }
-
 #comic-image .comic-image {
     width: 100%;
     height: auto;
     display: block;
 }
-
 .comic-navigation,
 .comic-actions{
     display:flex;
@@ -48,7 +41,6 @@
     gap:12px;
     margin-top:24px;
 }
-
 .comic-nav-btn{
     padding:15px;
     border:1px solid var(--primary);
@@ -58,7 +50,6 @@
     font-size:15px;
     cursor:pointer;
 }
-
 .comic-action-btn{
     padding:15px;
     border:1px solid var(--primary);
@@ -69,7 +60,6 @@
     font-weight:700;
     cursor:pointer;
 }
-
 .comic-modal{
     position:fixed;
     inset:0;
@@ -79,67 +69,48 @@
     background:rgba(0,0,0,.5);
     z-index:1000;
 }
-
 .comic-modal.show{
     display:flex;
 }
-
 .comic-modal-content{
     width:min(420px,90%);
     padding:20px;
     background:var(--card);
     border-radius:12px;
 }
-
 #comic-list{
     display:flex;
     flex-direction:column;
     gap:10px;
     margin:20px 0;
 }
-
 #comic-list a{
     text-decoration:none;
 }
-
-/* ==========================
-   HEADER
-========================== */
-
 .komik-header{
     position:sticky;
     top:0;
     z-index:100;
-
     background:var(--primary);
     color:#fff;
-
-    padding:0 16px;
-
+    padding:16px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
-
 .komik-back-btn{
     border:none;
     background:transparent;
-
     color:#fff;
-
     width:40px;
     height:40px;
-
     font-size:22px;
-
     cursor:pointer;
 }
-
 .komik-title-box{
     flex:1;
     text-align:center;
 }
-
 .komik-title-box h2{
     margin:0;
     padding:16px 0;
