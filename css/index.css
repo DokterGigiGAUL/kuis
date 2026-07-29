@@ -670,7 +670,7 @@ body {
         margin-bottom:160px!important;
     }
     .featured-overlay{
-        top:120px;
+        top:90px;
         padding:32px;
     }
     .featured-item{
@@ -685,7 +685,7 @@ body {
     scroll-snap-align: start;
     }
     .featured-latest{
-        top: calc((100vw / 2) - 75px)!important;
+        top: calc((100vw / 2) - 90px)!important;
     }
 
     /*======*/
