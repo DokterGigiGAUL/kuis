@@ -13,18 +13,22 @@ function signOutUser() {
     return firebase.auth().signOut();
 
 }
+
 const loginBtn = document.getElementById("loginBtn");
 const logoutBtn = document.getElementById("logoutBtn");
+
 if (loginBtn) {
     loginBtn.addEventListener("click", () => {
         signInWithGoogle().catch(console.error);
     });
 }
+
 if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
         signOutUser().catch(console.error);
     });
 }
+
 firebase.auth().onAuthStateChanged(async user => {
     if (loginBtn && logoutBtn) {
         if (user) {
@@ -35,6 +39,7 @@ firebase.auth().onAuthStateChanged(async user => {
             logoutBtn.style.display = "none";
         }
     }
+    
     if (!user) {
 
     Premium.disable();
@@ -44,7 +49,8 @@ firebase.auth().onAuthStateChanged(async user => {
     console.log("Belum login");
 
     return;
-}
+    }
+    
     console.log("Login:", user.displayName);
     const userRef = db.collection("users").doc(user.uid);
     await userRef.set({
@@ -54,20 +60,39 @@ firebase.auth().onAuthStateChanged(async user => {
     photoURL: user.photoURL || "",
     createdAt: firebase.firestore.FieldValue.serverTimestamp(),
     lastLogin: firebase.firestore.FieldValue.serverTimestamp()
-}, { merge: true });
+    }, 
+    { merge: true });
+    
 const snap = await userRef.get();
 
 if (snap.exists) {
-
     const data = snap.data();
 
-    if (data.premium === true) {
-        Premium.enable();
-    } else {
-        Premium.disable();
-    }
+const now = new Date();
 
-    PurchaseManager.sync(data.ownedProducts || []);
+let premiumActive = false;
+
+if (data.premium === true && data.premiumUntil) {
+
+    const expired = data.premiumUntil.toDate();
+
+    premiumActive = expired > now;
+
+}
+
+if (premiumActive) {
+    Premium.enable();
+} else {
+    Premium.disable();
+
+    if (data.premium === true) {
+        userRef.update({
+            premium: false
+        });
+    }
+}
+
+PurchaseManager.sync(data.ownedProducts || []);
 
 } else {
 
@@ -75,14 +100,16 @@ if (snap.exists) {
     PurchaseManager.sync([]);
 
 }
-    console.log("Firestore premium:", snap.data().premium);
+
+console.log("Firestore premium:", snap.data().premium);
 console.log("LocalStorage premium:", localStorage.getItem("premium"));
-    const action = sessionStorage.getItem("pendingAction");
-    if (!action) return;
+
+const action = sessionStorage.getItem("pendingAction");
+if (!action) return;
     sessionStorage.removeItem("pendingAction");
-    const raw = sessionStorage.getItem("pendingActionData");
+const raw = sessionStorage.getItem("pendingActionData");
     sessionStorage.removeItem("pendingActionData");
-    const data = raw ? JSON.parse(raw) : null;
+const data = raw ? JSON.parse(raw) : null;
     switch (action) {
         case "buyProduct":
             buyProduct(data.productId);
@@ -92,6 +119,7 @@ console.log("LocalStorage premium:", localStorage.getItem("premium"));
             break;
     }
 });
+
 function requireLogin(action, data = null) {
     if (firebase.auth().currentUser) {
         return Promise.resolve(true);
