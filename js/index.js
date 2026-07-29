@@ -382,7 +382,7 @@ const badge = clone.querySelector(".featured-badge");
 if (item.premium) {
     //badge.textContent = `👑 Premium`;
     badge.textContent =
-        PurchaseManager.hasAccess(heroItem)
+        PurchaseManager.hasAccess(item)
             ? "🟢 Akses permanen"
             : "👑 Premium";
 }
