@@ -74,9 +74,17 @@ let premiumActive = false;
 
 if (data.premium === true && data.premiumUntil) {
 
-    const expired = data.premiumUntil.toDate();
+    let expired;
 
-    premiumActive = expired > now;
+    if (typeof data.premiumUntil === "string") {
+        expired = new Date(data.premiumUntil);
+    } else if (typeof data.premiumUntil.toDate === "function") {
+        expired = data.premiumUntil.toDate();
+    }
+
+    premiumActive = expired instanceof Date &&
+                    !isNaN(expired) &&
+                    expired > now;
 
 }
 
