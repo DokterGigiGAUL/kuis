@@ -111,18 +111,15 @@ async function buyProduct(productId) {
     const user = firebase.auth().currentUser;
     if (!user) return;
 
-const returnUrl = encodeURIComponent(window.location.href);    const params = new URLSearchParams({
-
+    const params = new URLSearchParams({
         action: "checkout",
         uid: user.uid,
         name: user.displayName || "",
         email: user.email || "",
         mobile: "",
         productId: productId,
-/* redirectUrl: window.location.origin +
-"/kuis/payment-success.html?returnUrl=" +
-returnUrl    }); */
-    redirectUrl: window.location.origin + "/kuis/payment-success.html"
+        redirectUrl: window.location.origin + "/kuis/payment-success.html"
+    });
 
     const checkoutUrl =
         `${BACKEND_URL}?${params.toString()}`;
