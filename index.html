@@ -136,6 +136,20 @@
 
   </div>
 </div>
+
+<div id="loginModal" class="login-modal">
+    <div class="login-box">
+        <button class="login-close" onclick="closeLogin()">&times;</button>
+        <h2>Login</h2>
+        <input id="loginEmail" type="email" placeholder="Email">
+        <input id="loginPassword" type="password" placeholder="Password">
+        <button onclick="loginEmail()">Login</button>
+        <button onclick="registerEmail()">Daftar</button>
+        <hr>
+        <button onclick="loginGoogle()">Login dengan Google</button>
+    </div>
+</div>
+    
 <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
