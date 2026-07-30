@@ -12,32 +12,6 @@ function savePurchasedProducts(products) {
 function sync(products = []) {
     savePurchasedProducts(products);
 }
-/*    
-function hasAccess(item) {
-    // Konten gratis
-    if (!item.premium) return true;
-    if (Premium.isPremium()) {
-    return true;
-}
-
-    const products = getPurchasedProducts();
-    // Produk individual
-    if (item.productId && products.includes(item.productId)) {
-        return true;
-    }
-
-    // Bundle berdasarkan tipe konten
-    if (item.bundleId && products.includes(item.bundleId)) {
-    return true;
-    }
-
-    // Akses seluruh premium
-    if (products.includes("premium_all")) {
-        return true;
-    }
-        return false;
-}
-*/
 
 function hasAccess(item) {
     // Konten gratis
@@ -57,23 +31,7 @@ function hasAccess(item) {
 
     return false;
 }
-/*
-function hasTTSPremium() {
-
-    if (Premium.isPremium()) {
-    return true;
-}
-        
-const products = getPurchasedProducts();
-
-return (
-    products.includes("premium_all") ||
-    products.includes("bundle_tts") ||
-    products.some(id => id.startsWith("tts"))
-    );
-}
-    */
-
+    
 function hasTTSPremium() {
 
     if (Premium.isPremium()) {
