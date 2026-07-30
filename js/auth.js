@@ -38,6 +38,22 @@ async function logout() {
     await auth.signOut();
 }
 
+function updateAuthUI(user) {
+
+    const loginBtn = document.getElementById("loginBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (!loginBtn || !logoutBtn) return;
+
+    if (user) {
+        loginBtn.style.display = "none";
+        logoutBtn.style.display = "";
+    } else {
+        loginBtn.style.display = "";
+        logoutBtn.style.display = "none";
+    }
+
+}
 function currentUser() {
     return auth.currentUser;
 }
