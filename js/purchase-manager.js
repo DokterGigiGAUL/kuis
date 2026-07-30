@@ -9,8 +9,24 @@ function savePurchasedProducts(products) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
 }
 
-function sync(products = []) {
+function sync(data = {}) {
+
+    const products = Array.isArray(data)
+        ? data
+        : (data.ownedProducts || []);
+
     savePurchasedProducts(products);
+
+    if (typeof data.premiumUntil !== "undefined") {
+
+        if (data.premiumUntil) {
+            Premium.enable(data.premiumUntil);
+        } else {
+            Premium.disable();
+        }
+
+    }
+
 }
 
 function hasAccess(item) {
