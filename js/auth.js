@@ -29,6 +29,9 @@ async function register(email, password) {
             user: result.user
         };
     } catch (err) {
+        console.error(err);
+        alert(err.code + "\n" + err.message);
+
         return {
             success: false,
             message: err.message
