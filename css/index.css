@@ -932,3 +932,52 @@ body {
     flex: 1;
     text-align: center;
 }
+
+
+.login-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.login-modal.show{
+    display:flex;
+}
+
+.login-box{
+    width:90%;
+    max-width:360px;
+    background:#fff;
+    border-radius:18px;
+    padding:24px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.login-box input{
+    width:100%;
+    padding:12px;
+    box-sizing:border-box;
+}
+
+.login-box button{
+    padding:12px;
+    cursor:pointer;
+}
+
+.login-close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:36px;
+    height:36px;
+    border:none;
+    background:none;
+    font-size:24px;
+}
