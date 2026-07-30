@@ -981,3 +981,27 @@ body {
     background:none;
     font-size:24px;
 }
+
+    .divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #888; /* Warna teks */
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid #ccc; /* Warna garis */
+}
+
+.divider::before {
+  margin-right: 15px; /* Jarak garis ke teks */
+}
+
+.divider::after {
+  margin-left: 15px; /* Jarak garis ke teks */
+}
