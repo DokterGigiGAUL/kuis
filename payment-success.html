@@ -11,13 +11,48 @@
 <p>Mohon tunggu sebentar.</p>
 
 <script>
+const params = new URLSearchParams(window.location.search);
+
 const returnUrl =
-    sessionStorage.getItem("returnUrl") ||
+    params.get("returnUrl") ||
     "index.html";
 
-setTimeout(() => {
-    window.location.replace(returnUrl);
-}, 2000);
+async function verifyPayment() {
+
+    const user = firebase.auth().currentUser;
+
+    if (!user) {
+        window.location.replace(returnUrl);
+        return;
+    }
+
+    try {
+
+        const response = await fetch(
+            BACKEND_URL +
+            "?action=verifyPurchase&uid=" +
+            encodeURIComponent(user.uid)
+        );
+
+        const result = await response.json();
+
+        if (
+            result.success &&
+            String(result.data.status).toLowerCase() === "paid"
+        ) {
+            window.location.replace(returnUrl);
+            return;
+        }
+
+    } catch (e) {}
+
+    setTimeout(verifyPayment, 2000);
+
+}
+
+firebase.auth().onAuthStateChanged(() => {
+    verifyPayment();
+});
 </script>
 
 </body>
