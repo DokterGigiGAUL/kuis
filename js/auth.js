@@ -19,16 +19,21 @@ async function login(email, password) {
 
 async function register(email, password) {
     try {
+
         const result = await auth.createUserWithEmailAndPassword(
             email,
             password
         );
 
+        await syncUser(result.user);
+
         return {
             success: true,
             user: result.user
         };
+
     } catch (err) {
+
         console.error(err);
         alert(err.code + "\n" + err.message);
 
@@ -36,6 +41,7 @@ async function register(email, password) {
             success: false,
             message: err.message
         };
+
     }
 }
 
@@ -66,7 +72,12 @@ async function loginWithGoogle() {
 }
 
 async function logout() {
+
+    PurchaseManager.clear();
+    Premium.disable();
+
     await auth.signOut();
+
 }
 
 function updateAuthUI(user) {
@@ -94,9 +105,20 @@ function onUserChanged(callback) {
 }
 
 auth.onAuthStateChanged(async (user) => {
+
     updateAuthUI(user);
-    if (!user) return;
+
+    if (!user) {
+
+        PurchaseManager.clear();
+        Premium.disable();
+
+        return;
+
+    }
+
     await syncUser(user);
+
 });
 
 const loginModal = document.getElementById("loginModal");
