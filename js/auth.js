@@ -18,20 +18,29 @@ async function login(email, password) {
 }
 
 async function loginWithGoogle() {
+
     try {
+
+        await auth.signOut();
+
         const result = await auth.signInWithPopup(
             googleProvider
         );
+
         return {
             success: true,
             user: result.user
         };
+
     } catch (err) {
+
         return {
             success: false,
             message: err.message
         };
+
     }
+
 }
 
 async function logout() {
