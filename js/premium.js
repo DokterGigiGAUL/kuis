@@ -6,7 +6,7 @@ function openPremiumModal(productId = null) {
 
     const modal = document.getElementById("premiumModal");
     const frame = document.getElementById("premiumFrame");
-
+sessionStorage.setItem("returnPage", window.location.href);
     frame.src = productId
         ? `premium.html?product=${encodeURIComponent(productId)}`
         : "premium.html";
@@ -119,8 +119,7 @@ async function buyProduct(productId) {
         mobile: "",
         productId: productId,
         //redirectUrl: window.location.origin + "/kuis/payment-success.html"
-        redirectUrl: window.location.href
-    });
+redirectUrl: sessionStorage.getItem("returnPage")    });
 
     const checkoutUrl =
         `${BACKEND_URL}?${params.toString()}`;
@@ -154,8 +153,7 @@ async function subscribePremium() {
         amount: "49000",
         description: "Wonder App Premium",
         //redirectUrl: window.location.origin + "/kuis/payment-success.html"
-        redirectUrl: window.location.href
-    });
+redirectUrl: sessionStorage.getItem("returnPage")    });
 
     const checkoutUrl =
         `${BACKEND_URL}?${params.toString()}`;
