@@ -119,9 +119,10 @@ const returnUrl = encodeURIComponent(window.location.href);    const params = ne
         email: user.email || "",
         mobile: "",
         productId: productId,
-redirectUrl: window.location.origin +
+/* redirectUrl: window.location.origin +
 "/kuis/payment-success.html?returnUrl=" +
-returnUrl    });
+returnUrl    }); */
+    redirectUrl: window.location.origin + "/kuis/payment-success.html"
 
     const checkoutUrl =
         `${BACKEND_URL}?${params.toString()}`;
@@ -158,11 +159,11 @@ const params = new URLSearchParams({
         amount: "49000",
         description: "Wonder App Premium",
 //        redirectUrl: window.location.origin + window.location.pathname
-redirectUrl:
+/*redirectUrl:
     window.location.origin +
     "/kuis/payment-success.html?returnUrl=" +
-    returnUrl    });
-
+    returnUrl    });*/
+redirectUrl: window.location.origin + "/kuis/payment-success.html"
     const checkoutUrl =
     `${BACKEND_URL}?${params.toString()}`;
 
