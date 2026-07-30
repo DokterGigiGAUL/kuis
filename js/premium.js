@@ -43,44 +43,35 @@ function showPremiumDialog(productId = null) {
 
 const Premium = {
 
+    data: null,
+
+    async load() {
+
+        const user = firebase.auth().currentUser;
+
+        if (!user) {
+            this.data = null;
+            return;
+        }
+
+        const doc = await db.collection("users")
+            .doc(user.uid)
+            .get();
+
+        this.data = doc.exists ? doc.data() : {};
+
+    },
+
     isPremium() {
-        return localStorage.getItem("premium") === "true";
-    },
 
-    enable() {
-        localStorage.setItem("premium", "true");
-    },
+        return this.data?.premium === true;
 
-    disable() {
-        localStorage.removeItem("premium");
     },
 
     ownsProduct(productId) {
 
-        const products = JSON.parse(
-            localStorage.getItem("ownedProducts") || "[]"
-        );
-
-        return products.includes(productId);
-
-    },
-
-    addProduct(productId) {
-
-        const products = JSON.parse(
-            localStorage.getItem("ownedProducts") || "[]"
-        );
-
-        if (!products.includes(productId)) {
-
-            products.push(productId);
-
-            localStorage.setItem(
-                "ownedProducts",
-                JSON.stringify(products)
-            );
-
-        }
+        return (this.data?.ownedProducts || [])
+            .includes(productId);
 
     }
 
@@ -110,7 +101,7 @@ async function buyProduct(productId) {
 
     const user = firebase.auth().currentUser;
     if (!user) return;
-
+await Premium.load();
     const params = new URLSearchParams({
         action: "checkout",
         uid: user.uid,
@@ -141,7 +132,7 @@ async function subscribePremium() {
     const user = firebase.auth().currentUser;
 
     if (!user) return;
-
+await Premium.load();
     const params = new URLSearchParams({
         action: "checkout",
         uid: user.uid,
