@@ -133,7 +133,7 @@ async function buyProduct(productId) {
 }
 
 async function subscribePremium() {
-    
+
     if (!firebase.auth().currentUser) {
         await signInWithGoogle();
     }
@@ -142,10 +142,7 @@ async function subscribePremium() {
 
     if (!user) return;
 
-const returnUrl = encodeURIComponent(window.location.href);
-
-const params = new URLSearchParams({
-
+    const params = new URLSearchParams({
         action: "checkout",
         uid: user.uid,
         name: user.displayName || "",
@@ -155,23 +152,19 @@ const params = new URLSearchParams({
         productName: "Wonder App Premium",
         amount: "49000",
         description: "Wonder App Premium",
-//        redirectUrl: window.location.origin + window.location.pathname
-/*redirectUrl:
-    window.location.origin +
-    "/kuis/payment-success.html?returnUrl=" +
-    returnUrl    });*/
-redirectUrl: window.location.origin + "/kuis/payment-success.html"
+        redirectUrl: window.location.origin + "/kuis/payment-success.html"
+    });
+
     const checkoutUrl =
-    `${BACKEND_URL}?${params.toString()}`;
+        `${BACKEND_URL}?${params.toString()}`;
 
-if (typeof openCheckout === "function") {
-    openCheckout(checkoutUrl);
-} else {
-    window.location.href = checkoutUrl;
+    if (typeof openCheckout === "function") {
+        openCheckout(checkoutUrl);
+    } else {
+        window.location.href = checkoutUrl;
+    }
+
 }
-
-}
-
 function openPremiumPage(productId = null) {
     openPremiumModal(productId);
 }
