@@ -47,6 +47,7 @@ function onUserChanged(callback) {
 }
 
 auth.onAuthStateChanged(async (user) => {
+    updateAuthUI(user);
     if (!user) return;
     await syncUser(user);
 });
