@@ -111,10 +111,10 @@ function closeLogin() {
 
 async function loginEmail() {
 
-    const result = await login(
-        loginEmail.value,
-        loginPassword.value
-    );
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    const result = await login(email, password);
 
     if(result.success){
         closeLogin();
@@ -124,10 +124,10 @@ async function loginEmail() {
 
 async function registerEmail() {
 
-    const result = await register(
-        loginEmail.value,
-        loginPassword.value
-    );
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    const result = await register(email, password);
 
     if(result.success){
         closeLogin();
