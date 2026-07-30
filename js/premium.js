@@ -102,25 +102,6 @@ function deactivatePremium() {
     location.reload();
 }
 
-/*function buyProduct(productId) {
-
-    if (!firebase.auth().currentUser) {
-
-        requireLogin("buyProduct", {
-            productId: productId
-        });
-
-        return;
-    }
-
-    alert(
-        "Produk yang dipilih:\n\n" +
-        productId +
-        "\n\nFitur pembayaran akan segera tersedia."
-    );
-
-}*/
-
 async function buyProduct(productId) {
 
     if (!firebase.auth().currentUser) {
@@ -133,19 +114,12 @@ async function buyProduct(productId) {
     const params = new URLSearchParams({
 
         action: "checkout",
-
         uid: user.uid,
-
         name: user.displayName || "",
-
         email: user.email || "",
-
         mobile: "",
-
         productId: productId,
-
-        redirectUrl: location.origin + "/kuis/index.html"
-
+        redirectUrl: window.location.origin + window.location.pathname
     });
 
     const checkoutUrl =
@@ -167,32 +141,19 @@ async function subscribePremium() {
 
     const user = firebase.auth().currentUser;
 
-  //  if (!user) {
-
-   //     requireLogin("subscribePremium");
     if (!user) return;
-
     const params = new URLSearchParams({
 
         action: "checkout",
-
         uid: user.uid,
-
         name: user.displayName || "",
-
         email: user.email || "",
-
         mobile: "",
-
         productId: "premium-monthly",
-
         productName: "Wonder App Premium",
-
         amount: "49000",
-
         description: "Wonder App Premium",
-
-        redirectUrl: location.origin + "/kuis/index.html"
+        redirectUrl: window.location.origin + window.location.pathname
 
     });
 
