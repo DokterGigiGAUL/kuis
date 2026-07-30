@@ -166,6 +166,6 @@ async function subscribePremium() {
 
 }
 
-function showPremiumDialog(productId = null) {
-    openPremiumPage(productId);
+function openPremiumPage(productId = null) {
+    openPremiumModal(productId);
 }
