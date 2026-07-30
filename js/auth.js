@@ -17,6 +17,25 @@ async function login(email, password) {
     }
 }
 
+async function register(email, password) {
+    try {
+        const result = await auth.createUserWithEmailAndPassword(
+            email,
+            password
+        );
+
+        return {
+            success: true,
+            user: result.user
+        };
+    } catch (err) {
+        return {
+            success: false,
+            message: err.message
+        };
+    }
+}
+
 async function loginWithGoogle() {
 
     try {
