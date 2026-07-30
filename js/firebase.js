@@ -23,12 +23,13 @@ async function syncUser(user) {
     if (!snapshot.exists) {
 
         await userRef.set({
-            email: user.email,
-            displayName: user.displayName || "",
-            photoURL: user.photoURL || "",
-            ownedProducts: [],
-            premiumUntil: null,
-            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+    email: user.email,
+    displayName: user.displayName || "",
+    photoURL: user.photoURL || "",
+    ownedProducts: [],
+    premiumUntil: null,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+    updatedAt: firebase.firestore.FieldValue.serverTimestamp()
         });
 
         PurchaseManager.sync({
@@ -40,11 +41,18 @@ async function syncUser(user) {
 
     }
 
-    const data = snapshot.data();
+    const data = snapshot.data() || {};
 
-    PurchaseManager.sync({
-        ownedProducts: data.ownedProducts || [],
-        premiumUntil: data.premiumUntil || null
-    });
+await userRef.update({
+    email: user.email,
+    displayName: user.displayName || "",
+    photoURL: user.photoURL || "",
+    updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+});
+
+PurchaseManager.sync({
+    ownedProducts: data.ownedProducts || [],
+    premiumUntil: data.premiumUntil || null
+});
 
 }
