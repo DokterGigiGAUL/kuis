@@ -13,3 +13,38 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 console.log("Firebase berhasil diinisialisasi.");
+
+async function syncUser(user) {
+
+    const userRef = db.collection("users").doc(user.uid);
+
+    const snapshot = await userRef.get();
+
+    if (!snapshot.exists) {
+
+        await userRef.set({
+            email: user.email,
+            displayName: user.displayName || "",
+            photoURL: user.photoURL || "",
+            ownedProducts: [],
+            premiumUntil: null,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        });
+
+        PurchaseManager.sync({
+            ownedProducts: [],
+            premiumUntil: null
+        });
+
+        return;
+
+    }
+
+    const data = snapshot.data();
+
+    PurchaseManager.sync({
+        ownedProducts: data.ownedProducts || [],
+        premiumUntil: data.premiumUntil || null
+    });
+
+}
