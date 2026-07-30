@@ -165,6 +165,7 @@ async function subscribePremium() {
     }
 
 }
-function openPremiumPage(productId = null) {
-    openPremiumModal(productId);
+function showPremiumDialog(productId = null) {
+    window.location.href =
+        `premium.html?product=${encodeURIComponent(productId)}`;
 }
