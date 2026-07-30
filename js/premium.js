@@ -111,8 +111,7 @@ async function buyProduct(productId) {
     const user = firebase.auth().currentUser;
     if (!user) return;
 
-    sessionStorage.setItem("returnUrl", window.location.href);
-    const params = new URLSearchParams({
+const returnUrl = encodeURIComponent(window.location.href);    const params = new URLSearchParams({
 
         action: "checkout",
         uid: user.uid,
@@ -120,8 +119,9 @@ async function buyProduct(productId) {
         email: user.email || "",
         mobile: "",
         productId: productId,
-redirectUrl: window.location.origin + "/kuis/payment-success.html"
-    });
+redirectUrl: window.location.origin +
+"/kuis/payment-success.html?returnUrl=" +
+returnUrl    });
 
     const checkoutUrl =
         `${BACKEND_URL}?${params.toString()}`;
@@ -143,7 +143,10 @@ async function subscribePremium() {
     const user = firebase.auth().currentUser;
 
     if (!user) return;
-    const params = new URLSearchParams({
+
+const returnUrl = encodeURIComponent(window.location.href);
+
+const params = new URLSearchParams({
 
         action: "checkout",
         uid: user.uid,
@@ -155,8 +158,10 @@ async function subscribePremium() {
         amount: "49000",
         description: "Wonder App Premium",
 //        redirectUrl: window.location.origin + window.location.pathname
-redirectUrl: window.location.origin + "/kuis/payment-success.html"
-    });
+redirectUrl:
+    window.location.origin +
+    "/kuis/payment-success.html?returnUrl=" +
+    returnUrl    });
 
     const checkoutUrl =
     `${BACKEND_URL}?${params.toString()}`;
