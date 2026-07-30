@@ -111,6 +111,7 @@ async function buyProduct(productId) {
     const user = firebase.auth().currentUser;
     if (!user) return;
 
+    sessionStorage.setItem("returnUrl", window.location.href);
     const params = new URLSearchParams({
 
         action: "checkout",
@@ -119,7 +120,7 @@ async function buyProduct(productId) {
         email: user.email || "",
         mobile: "",
         productId: productId,
-        redirectUrl: window.location.origin + window.location.pathname
+redirectUrl: window.location.origin + "/kuis/payment-success.html"
     });
 
     const checkoutUrl =
@@ -153,8 +154,8 @@ async function subscribePremium() {
         productName: "Wonder App Premium",
         amount: "49000",
         description: "Wonder App Premium",
-        redirectUrl: window.location.origin + window.location.pathname
-
+//        redirectUrl: window.location.origin + window.location.pathname
+redirectUrl: window.location.origin + "/kuis/payment-success.html"
     });
 
     const checkoutUrl =
