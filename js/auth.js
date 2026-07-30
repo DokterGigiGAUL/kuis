@@ -50,3 +50,49 @@ auth.onAuthStateChanged(async (user) => {
     if (!user) return;
     await syncUser(user);
 });
+
+const loginModal = document.getElementById("loginModal");
+
+function openLogin() {
+    loginModal.classList.add("show");
+}
+
+function closeLogin() {
+    loginModal.classList.remove("show");
+}
+
+async function loginEmail() {
+
+    const result = await login(
+        loginEmail.value,
+        loginPassword.value
+    );
+
+    if(result.success){
+        closeLogin();
+    }
+
+}
+
+async function registerEmail() {
+
+    const result = await register(
+        loginEmail.value,
+        loginPassword.value
+    );
+
+    if(result.success){
+        closeLogin();
+    }
+
+}
+
+async function loginGoogle() {
+
+    const result = await loginWithGoogle();
+
+    if(result.success){
+        closeLogin();
+    }
+
+}
