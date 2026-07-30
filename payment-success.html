@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memproses Pembayaran...</title>
+</head>
+<body>
+
+<h3>Sedang memproses pembayaran...</h3>
+<p>Mohon tunggu sebentar.</p>
+
+<script>
+const returnUrl =
+    sessionStorage.getItem("returnUrl") ||
+    "index.html";
+
+setTimeout(() => {
+    window.location.replace(returnUrl);
+}, 2000);
+</script>
+
+</body>
+</html>
