@@ -964,6 +964,8 @@ body {
     width:100%;
     padding:12px;
     box-sizing:border-box;
+    border-radius: 12px;
+    border: 1px solid #999999;
 }
 
 .login-box button{
