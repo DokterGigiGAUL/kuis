@@ -4,6 +4,11 @@
 |--------------------------------------------------------------------------
 */
 const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+googleProvider.setCustomParameters({
+    prompt: "select_account"
+});
+
 async function login(email, password) {
     try {
         const result = await auth.signInWithEmailAndPassword(
@@ -53,8 +58,6 @@ async function register(email, password) {
 async function loginWithGoogle() {
 
     try {
-
-        await auth.signOut();
 
         const result = await auth.signInWithPopup(
             googleProvider
