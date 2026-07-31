@@ -1,15 +1,9 @@
 /*
-
 |--------------------------------------------------------------------------
-
 | auth.js
-
 |--------------------------------------------------------------------------
-
-
-|--------------------------------------------------------------------------
-
-*/const googleProvider = new firebase.auth.GoogleAuthProvider();
+*/
+const googleProvider = new firebase.auth.GoogleAuthProvider();
 async function login(email, password) {
     try {
         const result = await auth.signInWithEmailAndPassword(
@@ -85,7 +79,6 @@ async function loginWithGoogle() {
 async function logout() {
 
     PurchaseManager.clear();
-    Premium.disable();
 
     await auth.signOut();
 
@@ -122,8 +115,6 @@ auth.onAuthStateChanged(async (user) => {
     if (!user) {
 
         PurchaseManager.clear();
-        Premium.disable();
-
         return;
 
     }
