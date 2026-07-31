@@ -1,4 +1,15 @@
-const googleProvider = new firebase.auth.GoogleAuthProvider();
+/*
+
+|--------------------------------------------------------------------------
+
+| auth.js
+
+|--------------------------------------------------------------------------
+
+
+|--------------------------------------------------------------------------
+
+*/const googleProvider = new firebase.auth.GoogleAuthProvider();
 async function login(email, password) {
     try {
         const result = await auth.signInWithEmailAndPassword(
