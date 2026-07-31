@@ -468,7 +468,7 @@ body {
         top: calc((100vw / 2) - 90px)!important;
     }
 
-    /*======*/
+
     .content-card.premium::before,
 .list-card.premium::before,
 .featured-card.premium::before{
@@ -623,34 +623,6 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-}
-/* =========================
-   EXPLORE
-========================= */
-
-.explore-header{
-   /* position:sticky;
-    top:0;
-    z-index:100;*/
-    justify-content:space-between;
-    display:flex;
-    align-items:center;
-    gap:16px;
-    padding:16px;
-    background:var(--primary);}
-
-.explore-back-btn{
-    width:24px;
-    height:24px;
-    border:none;
-    border-radius:50%;
-    background:transparent;
-    color:#eef4ff;
-    font-size:15px;
-    font-weight:700;
-    cursor:pointer;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
-    flex-shrink:0;
 }
 
 /* ===== Premium Modal ===== */
