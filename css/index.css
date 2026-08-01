@@ -740,6 +740,10 @@ body {
     gap:12px;
 }
 
+.login-box h2{
+margin-bottom:6px;
+}
+
 .login-box input{
     width:100%;
     padding:12px;
