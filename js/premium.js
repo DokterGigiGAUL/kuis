@@ -53,7 +53,17 @@ const Premium = {
   ownsProduct(productId) {
     return (this.data?.ownedProducts || [])
       .includes(productId);
-    }
+    },
+  enable(until = null) {
+    this.data = this.data || {};
+    this.data.premium = true;
+    this.data.premiumUntil = until;
+  },
+  disable() {
+    this.data = this.data || {};
+    this.data.premium = false;
+    this.data.premiumUntil = null;
+  },
 };
 
 function userHasPremium() {
