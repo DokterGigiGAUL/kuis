@@ -21,19 +21,23 @@
     --section-gap: 32px;
     --button-radius: 14px;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--bg);
     color: var(--text);
 }
+
 .container {
     margin: 0;
     padding:0;
 }
+
 .container-explore {
     margin: 0;
     padding:16px;
 }
+
 .header {
     background: var(--primary);
     color: white;
@@ -42,13 +46,14 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .header h1 {
     font-size: 20px;
     margin-bottom: 0px;
-    text-align: center;
     flex: 1;
-    text-align: center;
+    text-align: left;
 }
+
 .horizontal-scroll {
     display: flex;
     gap: var(--home-card-gap);;
@@ -60,9 +65,11 @@ body {
     scrollbar-width: none;
     margin-left: 16px;
 }
+
 .horizontal-scroll::-webkit-scrollbar {
     display: none;
 }
+
 .content-card {
     position:relative;
     flex: 0 0 calc(
@@ -79,6 +86,7 @@ body {
     color: inherit;
     box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
 }
+
 .content-title {
     margin: 0;
     font-size: 16px;
@@ -88,12 +96,14 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .content-thumb {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     display: block;
 }
+
 .content-description {
     font-size: 14px;
     color: #999;
@@ -121,9 +131,11 @@ body {
 .content-btn {
     margin-top: auto;
 }
+
 .home-section {
     margin-bottom: 15px;
 }
+
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -132,9 +144,11 @@ body {
     padding: 0 16px;
     margin-bottom:0px!important;
 }
+
 .section-header h2 {
     margin: 0;
 }
+
 .section-header a {
     text-decoration: none;
     color:var(--primary);
@@ -144,14 +158,16 @@ body {
     :root {
         --home-card-per-view: 3.25;
     }
+    
     .header h1 {
-        font-size: 24px;
-        margin-bottom: 6px;
+        font-size: 28px;
     }
+    
     .container {
         margin: 0;
         padding:0;
     }
+    
     .container-explore {
     margin: 0;
     padding:16px;
@@ -162,14 +178,16 @@ body {
     :root {
         --home-card-per-view: 4.25;
     }
+    
     .header h1 {
-        font-size: 28px;
-        margin-bottom: 0px;
+        font-size: 32px;
     }
+    
     .container {
         margin: 0;
         padding:0;
     }
+    
     .container-explore {
     margin: 0;
     padding:16px;
@@ -180,14 +198,17 @@ body {
     :root {
         --home-card-per-view: 5.25;
     }
+    
     .header h1 {
-        font-size: 32px;
+        font-size: 36px;
         margin-bottom: 0px;
     }    
+    
     .container {
         margin: 0;
         padding:0;
     }
+    
     .container-explore {
     margin: 0;
     padding:16px;
@@ -203,6 +224,7 @@ body {
     color: var(--primary);
     border: 1px solid #ffffff;
 }
+
 .btn{
     display:inline-flex;
     align-items:center;
@@ -218,28 +240,34 @@ body {
     cursor:pointer;
     transition:.2s;
 }
+
 .btn-primary{
     background:var(--primary);
     color:#fff;
 }
+
 .btn-primary:hover{
     background:var(--primary-dark);
 }
+
 .btn-outline{
     background:var(--card);
     color:var(--primary);
     border:1px solid var(--primary);
 }
+
 .btn-outline:hover{
     background:var(--primary);
     color:#fff;
 }
+
 .btn:disabled{
     background:#ccc;
     color:#666;
     border:none;
     cursor:not-allowed;
 }
+
 .w-100{width:100%;}
 
 .quiz-btn,
@@ -250,9 +278,7 @@ body {
     width:100%;
 }
 
-/* ==========================
-   FEATURED HERO
-========================== */
+/* ============= FEATURED HERO =========== */
 
 .featured-hero{
     position:relative;
@@ -268,6 +294,7 @@ body {
     background-repeat:no-repeat;
     box-shadow:var(--shadow);
 }
+
 .featured-hero::before{
     content:"";
     position:absolute;
@@ -279,12 +306,14 @@ body {
         rgba(0,0,0,.15) 100%
     );
 }
+
 .featured-overlay{
     position:absolute;
     left:0;
     right:0;
+    top:45px;
     z-index:2;
-    padding:24px;
+    padding:24px 48px 0;
     display:flex;
     flex-direction:column;
     gap:12px;
@@ -298,6 +327,7 @@ body {
     display:flex;
     flex-direction:column;
 }
+
 .featured-badge{
     display: inline-flex;
     align-items: center;
@@ -311,16 +341,19 @@ body {
     backdrop-filter: blur(6px);
     width: max-content;
 }
+
 .featured-item{
     align-self: flex-start;
     font-size: 16px;
     font-weight: 700;
 }
+
 .featured-title{
     margin:0;
     font-size:28px;
     line-height:1.2;
 }
+
 .featured-description{
     margin:0;
     max-width:400px;
@@ -332,9 +365,11 @@ body {
 .featured-title{
     font-size:24px;
 }
+
 .featured-description{
     font-size:14px;
 }
+
 .featured-btn{
     width:max-content;
     padding: 12px 24px!important;
@@ -342,9 +377,7 @@ body {
     margin-top:auto;
 }
 
-/* ==========================
-   FEATURED LATEST
-========================== */
+/* =============== FEATURED LATEST ============= */
 
 .featured-latest{
     position:absolute;
@@ -353,7 +386,8 @@ body {
     top:calc(100vw / 2);
     display:flex;
     gap:16px;
-    padding:20px;
+    padding: 24px 0;
+    margin-left: 16px;
     overflow-x:auto;
     overflow-y:visible;
     z-index:3;
@@ -375,6 +409,7 @@ body {
     cursor:pointer;
     transition:.2s;
 }
+
 .featured-card-thumb{
     width:100%;
     aspect-ratio:4/3;
@@ -382,6 +417,7 @@ body {
     display:block;
     margin-bottom:3px;
 }
+
 .featured-card-info{
     display:flex;
     flex-direction:column;
@@ -389,6 +425,7 @@ body {
     padding:12px;
     min-height:110px;
 }
+
 .featured-card-type{
     display:inline-block;
     margin-bottom:6px;
@@ -399,6 +436,7 @@ body {
     font-size:12px;
     font-weight:600;
 }
+
 .featured-card-title{
     margin:0;
     font-size:14px;
@@ -406,21 +444,8 @@ body {
     color:var(--text);
     flex:1;
 }
+
 .featured-card-description{
-/*    margin:0;
-    max-width:400px;
-    line-height:1.25;
-    padding-bottom:6px;
-    color: #999;
-    font-size: 13px;
-    width: 120px;
-    overflow: hidden;
-    white-space: nowrap;
-    min-height: calc(1.25em * 2);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis; */
     font-size: 14px;
     color: #999;
     line-height: 1.25;
@@ -432,6 +457,7 @@ body {
     -webkit-box-orient: vertical;
     margin-bottom: 3px;
 }
+
 .featured-items{
     width: max-content;
     max-height: fit-content;
@@ -449,27 +475,29 @@ body {
         border-radius:0px;
         margin-bottom:160px!important;
     }
+    
     .featured-overlay{
         top:90px;
-        padding:32px;
     }
+    
     .featured-item{
     align-self: flex-start;
     font-size: 17px;
     font-weight: 700;
     }
+    
     .featured-card{
         flex: 0 0 calc((100% - (var(--home-card-gap) * (var(--home-card-per-view) - 1))) / var(--home-card-per-view));
     display: flex;
     flex-direction: column;
     scroll-snap-align: start;
     }
+    
     .featured-latest{
         top: calc((100vw / 2) - 90px)!important;
     }
 
-
-    .content-card.premium::before,
+.content-card.premium::before,
 .list-card.premium::before,
 .featured-card.premium::before{
     content:"";
@@ -497,11 +525,11 @@ body {
     z-index:11;
     transform:rotate(0deg);
 }
-    .ebook-title{
+
+.ebook-title{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-
     overflow: hidden;
 }
 
@@ -510,7 +538,6 @@ body {
      display: -webkit-box!important;
     -webkit-line-clamp: 2!important;
     -webkit-box-orient: vertical!important;
-
     overflow: hidden;
 }
 
@@ -529,29 +556,30 @@ body {
     flex-direction: column;
     scroll-snap-align: start;
     }
+    
     .featured-hero{
         width:100%;
         aspect-ratio:2/1;
         border-radius:0px;
         margin-bottom:180px!important;
     }
+    
     .featured-latest{
         top: calc((100vw / 2) - 220px)!important;
     }
+    
     .ebook-title{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-
     overflow: hidden;
-}
+    }
 
  .content-title .ebook-title, .ebook-card .content-title{
     min-height: calc(1.25em * 2);
      display: -webkit-box!important;
     -webkit-line-clamp: 2!important;
     -webkit-box-orient: vertical!important;
-
     overflow: hidden;
 }
 
