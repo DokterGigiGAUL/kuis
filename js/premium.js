@@ -102,6 +102,7 @@ async function buyProduct(productId) {
     const user = firebase.auth().currentUser;
     if (!user) return;
 await Premium.load();
+await PurchaseManager.refreshPurchases();
     const params = new URLSearchParams({
         action: "createCheckout",
         uid: user.uid,
@@ -133,6 +134,7 @@ async function subscribePremium() {
 
     if (!user) return;
 await Premium.load();
+await PurchaseManager.refreshPurchases();
     const params = new URLSearchParams({
         action: "createCheckout",
         uid: user.uid,
