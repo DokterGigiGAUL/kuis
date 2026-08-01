@@ -92,7 +92,11 @@ async function buyProduct(productId) {
   }
   const user = firebase.auth().currentUser;
   if (!user) return;
-  await Premium.load();
+  const doc = await db.collection("users")
+    .doc(user.uid)
+    .get();
+
+Premium.data = doc.exists ? doc.data() : {};
   const item =
     quizzes.find(q => q.productId === productId) ||
     comics.find(c => c.productId === productId) ||
@@ -148,7 +152,11 @@ async function subscribePremium() {
   }
   const user = firebase.auth().currentUser;
   if (!user) return;
-  await Premium.load();
+  const doc = await db.collection("users")
+    .doc(user.uid)
+    .get();
+
+Premium.data = doc.exists ? doc.data() : {};
   const params = new URLSearchParams({
     action: "createCheckout",
     uid: user.uid,
