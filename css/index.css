@@ -746,6 +746,7 @@ body {
     box-sizing:border-box;
     border-radius: 12px;
     border: 1px solid #999999;
+    font-size:17px;
 }
 
 .login-box button{
@@ -786,4 +787,8 @@ body {
 
 .divider::after {
   margin-left: 15px; /* Jarak garis ke teks */
+}
+
+.login-email {
+margin-top:16px;
 }
