@@ -96,13 +96,26 @@ async function buyProduct(productId) {
     mobile: "",
     redirectUrl: sessionStorage.getItem("returnPage")
 });
-  const checkoutUrl =
-    `${BACKEND_URL}?${params.toString()}`;
-  if (typeof openCheckout === "function") {
-    openCheckout(checkoutUrl);
-  } else {
-    window.location.href = checkoutUrl;
-  }
+  const response = await fetch(BACKEND_URL, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: params.toString()
+});
+
+const result = await response.json();
+
+if (!result.success) {
+    alert(result.message || "Gagal membuat checkout.");
+    return;
+}
+
+if (typeof openCheckout === "function") {
+    openCheckout(result.paymentUrl);
+} else {
+    window.location.href = result.paymentUrl;
+}
 }
 
 async function subscribePremium() {
@@ -124,13 +137,26 @@ async function subscribePremium() {
     description: "Wonder App Premium",
     //redirectUrl: window.location.origin + "/kuis/payment-success.html"
     redirectUrl: sessionStorage.getItem("returnPage")    });
-  const checkoutUrl =
-    `${BACKEND_URL}?${params.toString()}`;
-  if (typeof openCheckout === "function") {
-    openCheckout(checkoutUrl);
-  } else {
-    window.location.href = checkoutUrl;
-  }
+  const response = await fetch(BACKEND_URL, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: params.toString()
+});
+
+const result = await response.json();
+
+if (!result.success) {
+    alert(result.message || "Gagal membuat checkout.");
+    return;
+}
+
+if (typeof openCheckout === "function") {
+    openCheckout(result.paymentUrl);
+} else {
+    window.location.href = result.paymentUrl;
+}
 }
 
 function openPremiumPage(productId = null) {
