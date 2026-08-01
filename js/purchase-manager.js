@@ -95,7 +95,7 @@ async function refreshPurchases() {
     const user = firebase.auth().currentUser;
 
     if (!user) {
-        clear();
+        localStorage.removeItem(STORAGE_KEY);
         return;
     }
 
@@ -113,7 +113,7 @@ async function refreshPurchases() {
     const result = await response.json();
 
     if (result.success) {
-        sync(result);
+        PurchaseManager.sync(result);
     }
 
 }
