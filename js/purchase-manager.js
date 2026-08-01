@@ -85,6 +85,36 @@ return {
     revoke,
     clear,
     getPurchasedProducts,
-    sync
-    };
+    sync,
+    refreshPurchases
+};
 })();
+
+async function refreshPurchases() {
+
+    const user = firebase.auth().currentUser;
+
+    if (!user) {
+        clear();
+        return;
+    }
+
+    const response = await fetch(BACKEND_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            action: "getPurchases",
+            uid: user.uid
+        })
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        sync(result);
+    }
+
+}
+
