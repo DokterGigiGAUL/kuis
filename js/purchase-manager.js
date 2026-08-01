@@ -102,12 +102,12 @@ async function refreshPurchases() {
     const response = await fetch(BACKEND_URL, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            action: "getPurchases",
-            uid: user.uid
-        })
+    "Content-Type": "application/x-www-form-urlencoded"
+},
+body: new URLSearchParams({
+    action: "getPurchases",
+    uid: user.uid
+})
     });
 
     const result = await response.json();
