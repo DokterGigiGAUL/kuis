@@ -96,24 +96,31 @@ function deactivatePremium() {
 }
 
 async function buyProduct(productId) {
-
     if (!firebase.auth().currentUser) {
         await signInWithGoogle();
     }
 
     const user = firebase.auth().currentUser;
+    
     if (!user) return;
-await Premium.load();
-await PurchaseManager.refreshPurchases();
+    await Premium.load();
+    await PurchaseManager.refreshPurchases();
+    const item =
+        quizzes.find(q => q.productId === productId) ||
+        comics.find(c => c.productId === productId) ||
+        ttsList.find(t => t.productId === productId) ||
+        cases.find(c => c.productId === productId);
+
     const params = new URLSearchParams({
         action: "createCheckout",
         uid: user.uid,
+        productId: productId,
+        productName: item.title,
+        amount: item.price,
         name: user.displayName || "",
         email: user.email || "",
-        mobile: "",
-        productId: productId,
-        //redirectUrl: window.location.origin + "/kuis/payment-success.html"
-redirectUrl: sessionStorage.getItem("returnPage")    });
+        mobile: ""
+    });
 
     const checkoutUrl =
         `${BACKEND_URL}?${params.toString()}`;
@@ -123,11 +130,9 @@ redirectUrl: sessionStorage.getItem("returnPage")    });
     } else {
         window.location.href = checkoutUrl;
     }
-
 }
 
 async function subscribePremium() {
-
     if (!firebase.auth().currentUser) {
         await signInWithGoogle();
     }
@@ -135,8 +140,8 @@ async function subscribePremium() {
     const user = firebase.auth().currentUser;
 
     if (!user) return;
-await Premium.load();
-await PurchaseManager.refreshPurchases();
+    await Premium.load();
+    await PurchaseManager.refreshPurchases();
     const params = new URLSearchParams({
         action: "createCheckout",
         uid: user.uid,
@@ -148,7 +153,7 @@ await PurchaseManager.refreshPurchases();
         amount: "49000",
         description: "Wonder App Premium",
         //redirectUrl: window.location.origin + "/kuis/payment-success.html"
-redirectUrl: sessionStorage.getItem("returnPage")    });
+        redirectUrl: sessionStorage.getItem("returnPage")    });
 
     const checkoutUrl =
         `${BACKEND_URL}?${params.toString()}`;
@@ -158,7 +163,6 @@ redirectUrl: sessionStorage.getItem("returnPage")    });
     } else {
         window.location.href = checkoutUrl;
     }
-
 }
 
 function openPremiumPage(productId = null) {
