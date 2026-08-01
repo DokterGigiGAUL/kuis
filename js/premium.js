@@ -103,7 +103,7 @@ async function buyProduct(productId) {
     if (!user) return;
 await Premium.load();
     const params = new URLSearchParams({
-        action: "checkout",
+        action: "createCheckout",
         uid: user.uid,
         name: user.displayName || "",
         email: user.email || "",
@@ -134,7 +134,7 @@ async function subscribePremium() {
     if (!user) return;
 await Premium.load();
     const params = new URLSearchParams({
-        action: "checkout",
+        action: "createCheckout",
         uid: user.uid,
         name: user.displayName || "",
         email: user.email || "",
@@ -159,4 +159,28 @@ redirectUrl: sessionStorage.getItem("returnPage")    });
 
 function openPremiumPage(productId = null) {
     openPremiumModal(productId);
+}
+
+async function refreshPurchases() {
+
+    const user = firebase.auth().currentUser;
+
+    if (!user) return;
+
+    const response = await fetch(BACKEND_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            action: "hasPurchase",
+            uid: user.uid,
+            productId: window.currentProductId
+        })
+    });
+
+    const result = await response.json();
+
+    return result.purchased === true;
+
 }
