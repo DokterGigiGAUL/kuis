@@ -117,7 +117,7 @@ const params = new URLSearchParams({
     amount: item.price,
     name: user.displayName || "",
     email: user.email || "",
-    mobile: "",
+    mobile: "081234567890",
     redirectUrl: sessionStorage.getItem("returnPage")
 });
   const response = await fetch(BACKEND_URL, {
@@ -130,15 +130,15 @@ const params = new URLSearchParams({
 
 const result = await response.json();
 
-if (!result.success) {
-    alert(result.message || "Gagal membuat checkout.");
+if (result.statusCode !== 200) {
+    alert(result.messages || "Gagal membuat checkout.");
     return;
 }
 
 if (typeof openCheckout === "function") {
-    openCheckout(result.paymentUrl);
+    openCheckout(result.data.link);
 } else {
-    window.location.href = result.paymentUrl;
+    window.location.href = result.data.link;
 }
 }
 
@@ -162,7 +162,7 @@ Premium.data = doc.exists ? doc.data() : {};
     uid: user.uid,
     name: user.displayName || "",
     email: user.email || "",
-    mobile: "",
+    mobile: "081234567890",
     productId: "premium-monthly",
     productName: "Wonder App Premium",
     amount: "49000",
@@ -179,15 +179,15 @@ Premium.data = doc.exists ? doc.data() : {};
 
 const result = await response.json();
 
-if (!result.success) {
-    alert(result.message || "Gagal membuat checkout.");
+if (result.statusCode !== 200) {
+    alert(result.messages || "Gagal membuat checkout.");
     return;
 }
 
 if (typeof openCheckout === "function") {
-    openCheckout(result.paymentUrl);
+    openCheckout(result.data.link);
 } else {
-    window.location.href = result.paymentUrl;
+    window.location.href = result.data.link;
 }
 }
 
