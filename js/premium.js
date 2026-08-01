@@ -60,6 +60,8 @@ const Premium = {
 
         this.data = doc.exists ? doc.data() : {};
 
+        await PurchaseManager.refreshPurchases();
+
     },
 
     isPremium() {
