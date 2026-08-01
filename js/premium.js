@@ -74,7 +74,11 @@ function deactivatePremium() {
 
 async function buyProduct(productId) {
   if (!firebase.auth().currentUser) {
-    await signInWithGoogle();
+    const result = await loginWithGoogle();
+
+    if (!result.success) {
+        return;
+    }
   }
   const user = firebase.auth().currentUser;
   if (!user) return;
@@ -126,7 +130,11 @@ if (typeof openCheckout === "function") {
 
 async function subscribePremium() {
   if (!firebase.auth().currentUser) {
-    await signInWithGoogle();
+    const result = await loginWithGoogle();
+
+    if (!result.success) {
+        return;
+    }
   }
   const user = firebase.auth().currentUser;
   if (!user) return;
