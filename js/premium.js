@@ -45,7 +45,7 @@ const Premium = {
             .doc(user.uid)
             .get();
     this.data = doc.exists ? doc.data() : {};
-    await PurchaseManager.refreshPurchases();
+    await refreshPurchases();
   },
   isPremium() {
     return this.data?.premium === true;
@@ -84,7 +84,13 @@ async function buyProduct(productId) {
     comics.find(c => c.productId === productId) ||
     ttsList.find(t => t.productId === productId) ||
     cases.find(c => c.productId === productId);
-  const params = new URLSearchParams({
+
+if (!item) {
+    alert("Produk tidak ditemukan.");
+    return;
+}
+
+const params = new URLSearchParams({
     action: "createCheckout",
     uid: user.uid,
     productId: productId,
