@@ -85,15 +85,17 @@ async function buyProduct(productId) {
     ttsList.find(t => t.productId === productId) ||
     cases.find(c => c.productId === productId);
   const params = new URLSearchParams({
-        action: "createCheckout",
-        uid: user.uid,
-        productId: productId,
-        productName: item.title,
-        amount: item.price,
-        name: user.displayName || "",
-        email: user.email || "",
-        mobile: ""
-  });
+    action: "createCheckout",
+    uid: user.uid,
+    productId: productId,
+    productName: item.title,
+    description: item.description || item.title,
+    amount: item.price,
+    name: user.displayName || "",
+    email: user.email || "",
+    mobile: "",
+    redirectUrl: sessionStorage.getItem("returnPage")
+});
   const checkoutUrl =
     `${BACKEND_URL}?${params.toString()}`;
   if (typeof openCheckout === "function") {
