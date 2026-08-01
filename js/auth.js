@@ -3,8 +3,6 @@
 | auth.js
 |--------------------------------------------------------------------------
 */
-const auth = firebase.auth();
-
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 googleProvider.setCustomParameters({
