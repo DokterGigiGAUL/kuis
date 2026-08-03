@@ -7,6 +7,28 @@
 section{
     margin-bottom:0px;
 }
+
+.ebook-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:var(--primary);
+    color:#fff;
+    padding:16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.ebook-back-btn{
+    border:none;
+    background:transparent;
+    color:#fff;
+    width:40px;
+    height:40px;
+    font-size:22px;
+    cursor:pointer;
+}
+
 .ebook-preview{
     margin-top:0px;
 }
