@@ -155,7 +155,7 @@ body {
     color:var(--primary);
 }
 
-@media (min-width:768px) {
+@media (min-width:384px) {
     :root {
         --home-card-per-view: 4.25;
     }
