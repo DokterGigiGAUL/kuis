@@ -176,14 +176,15 @@ auth.onAuthStateChanged(async (user) => {
 /* LOGIN MODAL */
 /* -------------------------------------------------------------------------- */
 
-const loginModal = document.getElementById("loginModal");
-
+function getLoginModal() {
+    return document.getElementById("loginModal");
+}
 function openLogin() {
-    loginModal.classList.add("show");
+    getLoginModal().classList.add("show");
 }
 
 function closeLogin() {
-    loginModal.classList.remove("show");
+    getLoginModal().classList.remove("show");
 }
 
 /* -------------------------------------------------------------------------- */
