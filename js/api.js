@@ -1,22 +1,64 @@
-const API = {
+/*
+|--------------------------------------------------------------------------
+| api.js
+|--------------------------------------------------------------------------
+*/
 
-  BASE_URL: "https://script.google.com/macros/s/AKfycbwzkcz2seD-3OCb2uWYhC2Oon_swZV4SYpOh6JUZXgg04Lx6UbCf1DlaHTmUWrwXWhr/exec",
+const WonderAPI = {
 
-  async post(action, data = {}) {
+    BASE_URL: "https://script.google.com/macros/s/AKfycbwzkcz2seD-3OCb2uWYhC2Oon_swZV4SYpOh6JUZXgg04Lx6UbCf1DlaHTmUWrwXWhr/exec",
 
-    const response = await fetch(this.BASE_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        action,
-        ...data
-      })
-    });
+    async post(action, data = {}) {
 
-    return await response.json();
+        const response = await fetch(this.BASE_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                action,
+                ...data
+            })
+        });
 
-  }
+        const json = await response.json();
+
+        if (!json.success) {
+            throw new Error(json.message || "Unknown Error");
+        }
+
+        return json;
+
+    },
+
+    async syncUser(data) {
+
+        return await this.post("syncUser", data);
+
+    },
+
+    async getProducts() {
+
+        return await this.post("getProducts");
+
+    },
+
+    async createCheckout(data) {
+
+        return await this.post("createCheckout", data);
+
+    },
+
+    async verifyAccess(data) {
+
+        return await this.post("verifyAccess", data);
+
+    },
+
+    async getProfile(data) {
+
+        return await this.post("getProfile", data);
+
+    }
 
 };
