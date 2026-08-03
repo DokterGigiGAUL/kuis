@@ -1,120 +1,115 @@
+/*
+|--------------------------------------------------------------------------
+| purchase-manager.js
+|--------------------------------------------------------------------------
+*/
+
 const PurchaseManager = (() => {
-const STORAGE_KEY = "wonderapp_purchases";
 
-function getPurchasedProducts() {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-}
+    const STORAGE_KEY = "wonderapp_purchases";
 
-function savePurchasedProducts(products) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
-}
+    function getPurchasedProducts() {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    }
 
-function sync(data = {}) {
+    function savePurchasedProducts(products) {
+        localStorage.setItem(
+            STORAGE_KEY,
+            JSON.stringify(products)
+        );
+    }
 
-    const products = Array.isArray(data)
-        ? data
-        : (data.ownedProducts || []);
+    function sync(profile = {}) {
 
-    savePurchasedProducts(products);
+        const products = profile.ownedProducts || [];
 
-    if (typeof data.premiumUntil !== "undefined") {
+        savePurchasedProducts(products);
 
-        if (data.premiumUntil) {
-            Premium.enable(data.premiumUntil);
+        if (profile.premiumUntil) {
+            Premium.enable(profile.premiumUntil);
         } else {
             Premium.disable();
         }
 
     }
 
-}
+    function hasAccess(item) {
 
-function hasAccess(item) {
-    // Konten gratis
-    if (!item.premium) return true;
+        if (!item.premium) {
+            return true;
+        }
 
-    // Premium aktif
-    if (Premium.isPremium()) {
-        return true;
+        if (Premium.isPremium()) {
+            return true;
+        }
+
+        const products = getPurchasedProducts();
+
+        return (
+            item.productId &&
+            products.includes(item.productId)
+        );
+
     }
 
-    const products = getPurchasedProducts();
+    function hasTTSPremium() {
 
-    // Produk individual
-    if (item.productId && products.includes(item.productId)) {
-        return true;
+        if (Premium.isPremium()) {
+            return true;
+        }
+
+        return getPurchasedProducts().some(id =>
+            id.startsWith("tts")
+        );
+
     }
 
-    return false;
-}
-    
-function hasTTSPremium() {
-
-    if (Premium.isPremium()) {
-        return true;
+    function purchase() {
+        // Backend only
     }
 
-    const products = getPurchasedProducts();
-
-    return products.some(id => id.startsWith("tts"));
-}   
-    
-function purchase(productId) {
-    const products = getPurchasedProducts();
-
-    if (!products.includes(productId)) {
-        products.push(productId);
-        savePurchasedProducts(products);
+    function revoke() {
+        // Backend only
     }
-}
 
-function revoke(productId) {
-    savePurchasedProducts(
-        getPurchasedProducts().filter(id => id !== productId)
-    );
-}
+    function clear() {
 
-function clear() {
-    localStorage.removeItem(STORAGE_KEY);
-}
-
-return {
-    hasAccess,
-    hasTTSPremium,
-    purchase,
-    revoke,
-    clear,
-    getPurchasedProducts,
-    sync,
-    refreshPurchases
-};
-})();
-
-async function refreshPurchases() {
-
-    const user = firebase.auth().currentUser;
-
-    if (!user) {
         localStorage.removeItem(STORAGE_KEY);
-        return;
+
+        Premium.disable();
+
     }
 
-    const response = await fetch(BACKEND_URL, {
-        method: "POST",
-        headers: {
-    "Content-Type": "application/x-www-form-urlencoded"
-},
-body: new URLSearchParams({
-    action: "getPurchases",
-    uid: user.uid
-})
-    });
+    async function refreshPurchases() {
 
-    const result = await response.json();
+        const user = auth.currentUser;
 
-    if (result.success) {
-        PurchaseManager.sync(result);
+        if (!user) {
+
+            clear();
+            return;
+
+        }
+
+        const response = await WonderAPI.getProfile({
+            uid: user.uid
+        });
+
+        sync(response.data);
+
     }
 
-}
+    return {
 
+        sync,
+        refreshPurchases,
+        hasAccess,
+        hasTTSPremium,
+        clear,
+        getPurchasedProducts,
+        purchase,
+        revoke
+
+    };
+
+})();
