@@ -113,7 +113,7 @@ function loadQuiz() {
             premium: quiz.premium,
             buttonText: finished
                 ? "Sudah Selesai"
-                : "Mulai",
+                : "Mulai →",
 
             disabled: finished,
 
@@ -150,7 +150,7 @@ function loadComics() {
             //description: `Episode #${comic.id}`,
             description: comic.description,
             premium: comic.premium,
-            buttonText: "Baca",
+            buttonText: "Baca →",
 
             onClick() {
 
@@ -186,7 +186,7 @@ function loadTTS() {
             premium: tts.premium,
             soal: `${tts.soal} Soal`,
 
-            buttonText: "Main",
+            buttonText: "Main →",
 
             onClick() {
 
@@ -221,7 +221,7 @@ function loadCases() {
             description: caseData.description,
             premium: caseData.premium,
 
-            buttonText: "Lihat",
+            buttonText: "Lihat →",
             onClick() {
 /*
                 if (!PurchaseManager.hasAccess(caseData)) {
