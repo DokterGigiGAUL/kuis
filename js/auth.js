@@ -3,31 +3,48 @@
 | auth.js
 |--------------------------------------------------------------------------
 */
+
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 googleProvider.setCustomParameters({
     prompt: "select_account"
 });
 
+/* -------------------------------------------------------------------------- */
+/* LOGIN EMAIL */
+/* -------------------------------------------------------------------------- */
+
 async function login(email, password) {
+
     try {
+
         const result = await auth.signInWithEmailAndPassword(
             email,
             password
         );
+
         return {
             success: true,
             user: result.user
         };
+
     } catch (err) {
+
         return {
             success: false,
             message: err.message
         };
+
     }
+
 }
 
+/* -------------------------------------------------------------------------- */
+/* REGISTER */
+/* -------------------------------------------------------------------------- */
+
 async function register(email, password) {
+
     try {
 
         const result = await auth.createUserWithEmailAndPassword(
@@ -35,8 +52,6 @@ async function register(email, password) {
             password
         );
 
-        await syncUser(result.user);
-
         return {
             success: true,
             user: result.user
@@ -44,16 +59,18 @@ async function register(email, password) {
 
     } catch (err) {
 
-        console.error(err);
-        alert(err.code + "\n" + err.message);
-
         return {
             success: false,
             message: err.message
         };
 
     }
+
 }
+
+/* -------------------------------------------------------------------------- */
+/* GOOGLE LOGIN */
+/* -------------------------------------------------------------------------- */
 
 async function loginWithGoogle() {
 
@@ -79,6 +96,10 @@ async function loginWithGoogle() {
 
 }
 
+/* -------------------------------------------------------------------------- */
+/* LOGOUT */
+/* -------------------------------------------------------------------------- */
+
 async function logout() {
 
     PurchaseManager.clear();
@@ -86,6 +107,10 @@ async function logout() {
     await auth.signOut();
 
 }
+
+/* -------------------------------------------------------------------------- */
+/* UI */
+/* -------------------------------------------------------------------------- */
 
 function updateAuthUI(user) {
 
@@ -103,6 +128,11 @@ function updateAuthUI(user) {
     }
 
 }
+
+/* -------------------------------------------------------------------------- */
+/* HELPERS */
+/* -------------------------------------------------------------------------- */
+
 function currentUser() {
     return auth.currentUser;
 }
@@ -110,6 +140,10 @@ function currentUser() {
 function onUserChanged(callback) {
     auth.onAuthStateChanged(callback);
 }
+
+/* -------------------------------------------------------------------------- */
+/* APP START */
+/* -------------------------------------------------------------------------- */
 
 auth.onAuthStateChanged(async (user) => {
 
@@ -122,9 +156,25 @@ auth.onAuthStateChanged(async (user) => {
 
     }
 
-    await syncUser(user);
+    try {
+
+        await syncUser(user);
+
+        const response = await loadProfile();
+
+        PurchaseManager.sync(response.data);
+
+    } catch (err) {
+
+        console.error(err);
+
+    }
 
 });
+
+/* -------------------------------------------------------------------------- */
+/* LOGIN MODAL */
+/* -------------------------------------------------------------------------- */
 
 const loginModal = document.getElementById("loginModal");
 
@@ -136,6 +186,10 @@ function closeLogin() {
     loginModal.classList.remove("show");
 }
 
+/* -------------------------------------------------------------------------- */
+/* LOGIN EMAIL BUTTON */
+/* -------------------------------------------------------------------------- */
+
 async function loginEmail() {
 
     const email = document.getElementById("loginEmail").value;
@@ -143,11 +197,15 @@ async function loginEmail() {
 
     const result = await login(email, password);
 
-    if(result.success){
+    if (result.success) {
         closeLogin();
     }
 
 }
+
+/* -------------------------------------------------------------------------- */
+/* REGISTER BUTTON */
+/* -------------------------------------------------------------------------- */
 
 async function registerEmail() {
 
@@ -156,17 +214,21 @@ async function registerEmail() {
 
     const result = await register(email, password);
 
-    if(result.success){
+    if (result.success) {
         closeLogin();
     }
 
 }
 
+/* -------------------------------------------------------------------------- */
+/* GOOGLE BUTTON */
+/* -------------------------------------------------------------------------- */
+
 async function loginGoogle() {
 
     const result = await loginWithGoogle();
 
-    if(result.success){
+    if (result.success) {
         closeLogin();
     }
 
