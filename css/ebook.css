@@ -35,8 +35,8 @@ section{
     margin:12px 0 24px;
 }
 .preview-dot{
-    width:9px;
-    height:9px;
+    width:6px;
+    height:6px;
     border-radius:50%;
     background:#d0d0d0;
 }
