@@ -253,7 +253,7 @@ function loadEbooks() {
                 /*titleClass: "ebook-title",*/
                 description: ebook.description,
                 price: ebook.price,
-                buttonText: "Detail",
+                buttonText: "Detail →",
                 onClick() {
 
                     location.href =
@@ -294,10 +294,10 @@ if (!heroItem) return;
     };
 
     const buttonLabel = {
-        quiz: "Mulai",
-        comic: "Baca",
-        tts: "Main",
-        case: "Lihat"
+        quiz: "Mulai →",
+        comic: "Baca →",
+        tts: "Main →",
+        case: "Lihat →"
     };
 
     //badge.textContent = typeLabel[heroItem.type] ?? "";
@@ -313,7 +313,7 @@ if (!heroItem) return;
 }
     title.textContent = heroItem.title;
     description.textContent = heroItem.description;
-    button.textContent = buttonLabel[heroItem.type] ?? "Buka";
+    button.textContent = buttonLabel[heroItem.type] ?? "Buka →";
     button.onclick = () => {
 /*
 if (!PurchaseManager.hasAccess(heroItem)) {
@@ -361,11 +361,11 @@ latestCards.forEach(item => {
 //console.log(clone.firstElementChild.outerHTML);
     const featuredButton = clone.querySelector("button");
 featuredButton.textContent = ({
-    quiz: "Mulai",
-    comic: "Baca",
-    tts: "Main",
-    case: "Lihat"
-})[item.type] ?? "Buka";
+    quiz: "Mulai →",
+    comic: "Baca →",
+    tts: "Main →",
+    case: "Lihat →"
+})[item.type] ?? "Buka →";
     
     clone.querySelector(".featured-card-type").textContent = ({
         quiz: "Kuis",
