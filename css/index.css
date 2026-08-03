@@ -157,7 +157,7 @@ body {
 
 @media (min-width:384px) {
     :root {
-        --home-card-per-view: 4.25;
+        --home-card-per-view: 3.25;
     }
     
     .header h1 {
@@ -177,7 +177,7 @@ body {
 
 @media (min-width:1024px) {
     :root {
-        --home-card-per-view: 5.25;
+        --home-card-per-view: 4.25;
     }
     
     .header h1 {
