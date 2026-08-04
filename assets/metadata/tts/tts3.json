@@ -61,7 +61,7 @@
       "row": 0,
       "col": 7,
       "direction": "down"
-    },
+    },   
     {
       "answer": "FLUORIDE",
       "clue": "Jaringan lunak yang membentuk dinding samping rongga mulut.",
@@ -69,6 +69,13 @@
       "col": 9,
       "direction": "down"
     },   
+    {
+      "answer": "DENTIN",
+      "clue": "Bagian gigi berwarna kekuningan di bawah enamel",
+      "row": 3,
+      "col": 12,
+      "direction": "down"
+    },
     {
       "answer": "LIPOMA",
       "clue": "Jaringan lunak yang membentuk dinding samping rongga mulut.",
