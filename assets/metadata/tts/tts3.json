@@ -37,8 +37,8 @@
     {
       "answer": "ORTODONTI",
       "clue": "*Tumor jinak yang berasal dari jaringan ikat.",
-      "row": 3,
-      "col": 3,
+      "row": 10,
+      "col": 5,
       "direction": "across"
     },
      {
@@ -58,8 +58,8 @@
     {
       "answer": "HALITOSIS",
       "clue": "Penyangga gigi yang tertanam di dalam tulang rahang",
-      "row": 0,
-      "col": 7,
+      "row": 1,
+      "col": 1#,
       "direction": "down"
     },
     {
