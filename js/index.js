@@ -55,7 +55,9 @@ if (premium) {
     badge.remove();
 }
     
-    clone.querySelector(".content-thumb").src = thumbnail;
+    //clone.querySelector(".content-thumb").src = thumbnail;
+    clone.querySelector(".content-thumb").src = "https://doktergigigaul.github.io/kuis/assets/images/premium-bg.jpeg";
+
     clone.querySelector(".content-thumb").alt = title;
 
     clone.querySelector(".content-title").textContent = title;
