@@ -70,11 +70,18 @@
       "direction": "down"
     },   
     {
-      "answer": "DENTIN",
+      "answer": "LIPOMA",
+      "clue": "Jaringan lunak yang membentuk dinding samping rongga mulut.",
+      "row": 4,
+      "col": 1,
+      "direction": "down"
+    },   
+    {
+      "answer": "SINISTRA",
       "clue": "Hubungan kontak antara gigi rahang atas dan bawah.",
       "row": 8,
-      "col": 4,
-      "direction": "down"
+      "col": 3,
+      "direction": "across"
     }
   ]
 }
