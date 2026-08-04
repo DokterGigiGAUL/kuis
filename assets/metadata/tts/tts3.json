@@ -44,8 +44,8 @@
      {
       "answer": "KALKULUS",
       "clue": "*Lipatan jaringan gusi yang menutupi sebagian mahkota gigi yang belum erupsi sempurna.",
-      "row": 3,
-      "col": 7,
+      "row": 1,
+      "col": 3,
       "direction": "down"
     },
     {
@@ -58,8 +58,8 @@
     {
       "answer": "HALITOSIS",
       "clue": "Penyangga gigi yang tertanam di dalam tulang rahang",
-      "row": 1,
-      "col": 1,
+      "row": 0,
+      "col": 7,
       "direction": "down"
     },
     {
