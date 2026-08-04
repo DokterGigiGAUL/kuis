@@ -159,3 +159,68 @@
     width: auto;
     padding: 4px 10px;
 }
+
+.explore-tabs{
+    display:flex;
+    gap:15px;
+    margin:0 0 24px 0;
+}
+
+.tab-btn{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:#ececec;
+    cursor:pointer;
+    font-weight:600;
+    font-size: 15px;
+    color: var(--text-light);
+}
+
+.tab-btn.active{
+    background:#2563eb;
+    color:#fff;
+}
+
+.section-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:8px 14px;
+    background:#fff;
+    /*color:var(--primary);
+    border:0px solid var(--primary);*/
+    border-radius:999px;
+    text-decoration:none;
+    font-size:.95rem;
+    font-weight:400;
+    transition:.2s;
+}
+
+.section-link:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:14px;
+    margin-top:24px;
+}
+
+.card-grid .quiz-card,
+.card-grid .comic-card,
+.card-grid .tts-card,
+.card-grid .case-card{
+    width:100%;
+    margin:0;
+}
+
+.case-list-description{
+    margin-top:4px;
+    font-size:15px;
+    line-height:1.4;
+    color:#666;
+}
