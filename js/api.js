@@ -6,10 +6,8 @@
 
 const WonderAPI = {
 
-    BASE_URL: "https://script.google.com/macros/s/AKfycbwzkcz2seD-3OCb2uWYhC2Oon_swZV4SYpOh6JUZXgg04Lx6UbCf1DlaHTmUWrwXWhr/exec",
-
+    BASE_URL: " https://script.google.com/macros/s/AKfycbwzkcz2seD-3OCb2uWYhC2Oon_swZV4SYpOh6JUZXgg04Lx6UbCf1DlaHTmUWrwXWhr/exec",
     async post(action, data = {}) {
-
         const response = await fetch(this.BASE_URL, {
             method: "POST",
             headers: {
