@@ -7,32 +7,32 @@
   "next": "tts4",
   "words": [
     {
-      "answer": "KAVITAS",
-      "clue": "Lubang pada gigi akibat penyakit karies",
-      "row": 0,
-      "col": 4,
-      "direction": "down"
+      "answer": "MALOKLUSI",
+      "clue": "Kondisi susunan atau hubungan gigi atas dan bawah yang tidak normal.",
+      "row": 2,
+      "col": 2,
+      "direction": "across"
     },
     {
-      "answer": "STOMATOGNATI",
-      "clue": "Sistem yang terdiri dari gigi, rahang, dan jaringan rongga mulut.",
-      "row": 1,
+      "answer": "PLAK",
+      "clue": "Lapisan lengket berisi bakteri yang menempel pada permukaan gigi.",
+      "row": 4,
       "col": 0,
       "direction": "across"
     },
     {
-      "answer": "TONSILITIS",
-      "clue": "Peradangan jaringan limfoid yang berada di bagian belakang rongga mulut.",
-      "row": 1,
-      "col": 1,
-      "direction": "down"
+      "answer": "OKLUSI",
+      "clue": "Hubungan kontak antara gigi rahang atas dan bawah saat menggigit.",
+      "row": 5,
+      "col": 7,
+      "direction": "across"
     },
      {
-      "answer": "IDIOPATIK",
+      "answer": "PULPA",
       "clue": "Terjadi tanpa penyebab yang diketahui.",
-      "row": 1,
-      "col": 11,
-      "direction": "down"
+      "row": 6,
+      "col": 1,
+      "direction": "across"
     },
     {
       "answer": "FIBROMA",
