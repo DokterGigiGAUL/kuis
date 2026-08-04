@@ -29,59 +29,52 @@
     },
      {
       "answer": "PULPA",
-      "clue": "Terjadi tanpa penyebab yang diketahui.",
+      "clue": "*Terjadi tanpa penyebab yang diketahui.",
       "row": 6,
       "col": 1,
       "direction": "across"
     },
     {
-      "answer": "FIBROMA",
-      "clue": "Tumor jinak yang berasal dari jaringan ikat.",
+      "answer": "ORTODONTI",
+      "clue": "*Tumor jinak yang berasal dari jaringan ikat.",
       "row": 3,
       "col": 3,
       "direction": "across"
     },
      {
-      "answer": "OPERKULUM",
-      "clue": "Lipatan jaringan gusi yang menutupi sebagian mahkota gigi yang belum erupsi sempurna.",
+      "answer": "KALKULUS",
+      "clue": "*Lipatan jaringan gusi yang menutupi sebagian mahkota gigi yang belum erupsi sempurna.",
       "row": 3,
       "col": 7,
       "direction": "down"
     },
     {
-      "answer": "KARIES",
+      "answer": "PROTESA",
       "clue": "Penyakit bersumber bakteri yang menyebabkan kerusakan jaringan keras gigi.",
-      "row": 5,
-      "col": 3,
-      "direction": "across"
-    },
-    {
-      "answer": "AKAR",
-      "clue": "Penyangga gigi yang tertanam di dalam tulang rahang",
-      "row": 7,
+      "row": 0,
       "col": 5,
       "direction": "down"
     },
     {
-      "answer": "PIPI",
+      "answer": "HALITOSIS",
+      "clue": "Penyangga gigi yang tertanam di dalam tulang rahang",
+      "row": 0,
+      "col": 7,
+      "direction": "down"
+    },
+    {
+      "answer": "FLUORIDE",
       "clue": "Jaringan lunak yang membentuk dinding samping rongga mulut.",
-      "row": 7,
+      "row": 4,
       "col": 9,
       "direction": "down"
     },   
     {
-      "answer": "OKLUSI",
+      "answer": "DENTIN",
       "clue": "Hubungan kontak antara gigi rahang atas dan bawah.",
       "row": 8,
       "col": 4,
-      "direction": "across"
-    },
-    {
-      "answer": "PERKUSI",
-      "clue": "Teknik mengetuk gigi sebagai bagian dari pemeriksaan klinis.",
-      "row": 10,
-      "col": 3,
-      "direction": "across"
+      "direction": "down"
     }
   ]
 }
