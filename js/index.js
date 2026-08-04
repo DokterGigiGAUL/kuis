@@ -55,9 +55,7 @@ if (premium) {
     badge.remove();
 }
     
-    //clone.querySelector(".content-thumb").src = thumbnail;
-    clone.querySelector(".content-thumb").src = "https://doktergigigaul.github.io/kuis/assets/images/premium-bg.jpeg";
-
+    clone.querySelector(".content-thumb").src = thumbnail;
     clone.querySelector(".content-thumb").alt = title;
 
     clone.querySelector(".content-title").textContent = title;
@@ -278,10 +276,12 @@ function renderFeaturedHero() {
 
 const heroItem = latestItems[0];
 const latestCards = latestItems.slice(1, 5);
+const urlBg = "https://doktergigigaul.github.io/kuis/assets/images/premium-bg.jpeg";
 
 if (!heroItem) return;
 
-    featuredHero.style.backgroundImage = `url(${heroItem.thumbnail})`;
+    //featuredHero.style.backgroundImage = `url(${heroItem.thumbnail})`;
+    featuredHero.style.backgroundImage = `url(${urlBg})`;
 
     const badge = featuredHero.querySelector(".featured-badge");
     const title = featuredHero.querySelector(".featured-title");
