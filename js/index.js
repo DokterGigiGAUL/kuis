@@ -84,8 +84,13 @@ if (price !== null) {
 }
     const button = clone.querySelector(".content-btn");
 
-    button.textContent = buttonText;
-    button.disabled = disabled;
+    button.textContent = premium
+    ? "🔒 Buka"
+    : buttonText;
+
+    button.disabled = premium
+    ? false
+    : disabled;
 
     if (!disabled) {
         button.onclick = onClick;
@@ -315,8 +320,9 @@ if (!heroItem) return;
 }
     title.textContent = heroItem.title;
     description.textContent = heroItem.description;
-    button.textContent = buttonLabel[heroItem.type] ?? "Buka →";
-    button.onclick = () => {
+    button.textContent = heroItem.premium
+    ? "🔓 Buka"
+    : (buttonLabel[heroItem.type] ?? "Buka →");    button.onclick = () => {
 /*
 if (!PurchaseManager.hasAccess(heroItem)) {
     showPremiumDialog(heroItem.productId);
@@ -362,12 +368,14 @@ latestCards.forEach(item => {
 
 //console.log(clone.firstElementChild.outerHTML);
     const featuredButton = clone.querySelector("button");
-featuredButton.textContent = ({
-    quiz: "Mulai →",
-    comic: "Baca →",
-    tts: "Main →",
-    case: "Lihat →"
-})[item.type] ?? "Buka →";
+    featuredButton.textContent = item.premium
+    ? "🔓 Buka"
+    : (({
+        quiz: "Mulai →",
+        comic: "Baca →",
+        tts: "Main →",
+        case: "Lihat →"
+    })[item.type] ?? "Buka →");
     
     clone.querySelector(".featured-card-type").textContent = ({
         quiz: "Kuis",
