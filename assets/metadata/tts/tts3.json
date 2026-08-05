@@ -29,42 +29,42 @@
     },
      {
       "answer": "PULPA",
-      "clue": "*Terjadi tanpa penyebab yang diketahui.",
+      "clue": "Jaringan lunak di dalam gigi",
       "row": 6,
       "col": 1,
       "direction": "across"
     },
     {
       "answer": "ORTODONTI",
-      "clue": "*Tumor jinak yang berasal dari jaringan ikat.",
+      "clue": "Cabang kedokteran gigi yang mempelajari pencegahan, diagnosis, dan perawatan kelainan susunan gigi serta rahang.",
       "row": 10,
       "col": 5,
       "direction": "across"
     },
      {
       "answer": "KALKULUS",
-      "clue": "*Lipatan jaringan gusi yang menutupi sebagian mahkota gigi yang belum erupsi sempurna.",
+      "clue": "Plak gigi yang telah mengeras akibat pengendapan mineral.",
       "row": 1,
       "col": 3,
       "direction": "down"
     },
     {
       "answer": "PROTESA",
-      "clue": "Penyakit bersumber bakteri yang menyebabkan kerusakan jaringan keras gigi.",
+      "clue": "Gigi tiruan yang digunakan untuk menggantikan satu atau lebih gigi yang hilang.",
       "row": 0,
       "col": 5,
       "direction": "down"
     },
     {
       "answer": "HALITOSIS",
-      "clue": "Penyangga gigi yang tertanam di dalam tulang rahang",
+      "clue": "Bau mulut yang menetap akibat berbagai penyebab lokal maupun sistemik.",
       "row": 0,
       "col": 7,
       "direction": "down"
     },   
     {
       "answer": "FLUORIDE",
-      "clue": "Jaringan lunak yang membentuk dinding samping rongga mulut.",
+      "clue": "Mineral yang membantu memperkuat enamel gigi dan mencegah terjadinya karies.",
       "row": 4,
       "col": 9,
       "direction": "down"
@@ -78,14 +78,14 @@
     },
     {
       "answer": "LIPOMA",
-      "clue": "Jaringan lunak yang membentuk dinding samping rongga mulut.",
+      "clue": "Tumor jinak yang berasal dari jaringan lemak.",
       "row": 4,
       "col": 1,
       "direction": "down"
     },   
     {
       "answer": "SINISTRA",
-      "clue": "Hubungan kontak antara gigi rahang atas dan bawah.",
+      "clue": "Istilah anatomi yang menunjukkan sisi kiri tubuh.",
       "row": 8,
       "col": 3,
       "direction": "across"
