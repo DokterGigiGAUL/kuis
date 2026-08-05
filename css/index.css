@@ -39,7 +39,7 @@ body {
 }
 
 .header {
-    background:#ffffff; 
+    background: var(--bg); 
     color: var(--hitam);
     padding: 16px 24px;
     gap:16px;
@@ -326,9 +326,9 @@ body {
     position:relative;
     width:100%;
     /*aspect-ratio:16 / 9;*/
-    aspect-ratio:4 / 3;
-    margin:16px 16px 24px;
-    border-radius:0;
+    aspect-ratio:3 / 2;
+    margin:16px 16px 24px 16px!important;
+    border-radius:12px;
     overflow:visible;
     display:block;
     background-color:#d1d5db;
