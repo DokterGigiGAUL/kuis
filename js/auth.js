@@ -162,8 +162,9 @@ auth.onAuthStateChanged(async (user) => {
 
         const response = await loadProfile();
 
-        PurchaseManager.sync(response.data);
+console.log(response.data);
 
+PurchaseManager.sync(response.data);
     } catch (err) {
 
         console.error(err);
