@@ -327,7 +327,7 @@ body {
     width:auto;
     /*aspect-ratio:16 / 9;*/
     aspect-ratio:3 / 2;
-    margin:16px 16px 24px 16px!important;
+    margin:8px 16px 24px 16px!important;
     border-radius:16px;
     overflow:visible;
     display:block;
