@@ -70,9 +70,10 @@ function createContentCard({
     clone.querySelector(".content-description").textContent =
         description;
 
-
-    // Harga
-    if (price !== null) {
+    /*
+     * Harga hanya ditampilkan untuk konten premium
+     */
+    if (premium && item.price != null) {
 
         const info =
             clone.querySelector(".content-info");
@@ -84,15 +85,13 @@ function createContentCard({
             "content-price";
 
         priceEl.textContent =
-            `Rp ${price.toLocaleString("id-ID")}`;
+            `Rp ${item.price.toLocaleString("id-ID")}`;
 
         info.insertBefore(
             priceEl,
             clone.querySelector(".content-btn")
         );
     }
-
-
     const button =
         clone.querySelector(".content-btn");
 
