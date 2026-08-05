@@ -39,8 +39,8 @@ body {
 }
 
 .header {
-    background: var(--primary);
-    color: white;
+    background:#ffffff; 
+    color: var(--hitam);
     padding: 16px 24px;
     gap:16px;
     display: flex;
@@ -269,6 +269,11 @@ body {
     color:#fff;
 }
 
+.btn-secondary{
+    background:var(--hitam);
+    color:#fff;
+}
+
 .btn-primary:hover{
     background:var(--primary-dark);
 }
@@ -297,7 +302,7 @@ body {
     border:none;
     border-radius:50%;
     background:transparent;
-    color:#eef4ff;
+    color:#111111;
     font-size:15px;
     font-weight:700;
     cursor:pointer;
@@ -321,8 +326,8 @@ body {
     position:relative;
     width:100%;
     /*aspect-ratio:16 / 9;*/
-    aspect-ratio:2 / 1;
-    margin:0 0 200px;
+    aspect-ratio:4 / 3;
+    margin:16px 16px 24px;
     border-radius:0;
     overflow:visible;
     display:block;
