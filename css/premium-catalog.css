@@ -69,3 +69,34 @@
     }
 
 }
+
+.premium-header {
+    background: #2563eb; 
+    color: #ffffff;
+    padding: 16px 24px;
+    gap:16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.premium-header h1 {
+    font-size: 20px;
+    margin-bottom: 0px;
+    flex: 1;
+    text-align: left;
+}
+
+.premium-back-btn{
+    width:24px;
+    height:24px;
+    border:none;
+    border-radius:50%;
+    background:transparent;
+    color:#ffffff;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    flex-shrink:0;
+}
