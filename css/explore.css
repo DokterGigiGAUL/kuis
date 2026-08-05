@@ -203,28 +203,6 @@
     color:#fff;
 }
 
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:14px;
-    margin-top:24px;
-}
-
-.card-grid .quiz-card,
-.card-grid .comic-card,
-.card-grid .tts-card,
-.card-grid .case-card{
-    width:100%;
-    margin:0;
-}
-
-.case-list-description{
-    margin-top:4px;
-    font-size:15px;
-    line-height:1.4;
-    color:#666;
-}
-
 /* ==========================
    EXPLORE - LIST TTS
 ========================== */
