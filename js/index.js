@@ -91,6 +91,6 @@ function renderFeaturedHero() {
 
     catalogButton.onclick = () => {
         location.href =
-            "premium-catalogue.html";
+            "premium-catalog.html";
     };
 }
