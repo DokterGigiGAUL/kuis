@@ -593,7 +593,7 @@ body {
     
     .featured-hero{
         width:100%;
-        aspect-ratio:2/1;
+        aspect-ratio:4/3;
         border-radius:0px;
         margin-bottom:180px!important;
     }
