@@ -243,9 +243,9 @@ body {
 ========================== */
 #loginBtn, #logoutBtn {
     padding: 6px 12px;
-    background: #ffffff;
-    color: var(--primary);
-    border: 1px solid #ffffff;
+    background: var(--hitam);
+    color: #f0f0f0;
+    border: 1px solid var(--hitam);
 }
 
 .btn{
@@ -324,7 +324,7 @@ body {
 
 .featured-hero{
     position:relative;
-    width:100%;
+    width:auto;
     /*aspect-ratio:16 / 9;*/
     aspect-ratio:3 / 2;
     margin:16px 16px 24px 16px!important;
@@ -348,6 +348,7 @@ body {
         rgba(0,0,0,.45) 45%,
         rgba(0,0,0,.15) 100%
     );
+    border-radius: 16px;
 }
 
 .featured-overlay{
@@ -528,7 +529,7 @@ body {
 
 @media (min-width:480px){
     .featured-hero{
-        width:100%;
+        width:auto;
         aspect-ratio:2/1;
         border-radius:16px;
         margin-bottom:24px!important;
@@ -616,7 +617,7 @@ body {
     }
     
     .featured-hero{
-        width:100%;
+        width:auto;
         aspect-ratio:2/1;
         border-radius:16px;
         margin-bottom:24px!important;
