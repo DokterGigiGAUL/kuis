@@ -322,7 +322,7 @@ if (!heroItem) return;
     title.textContent = heroItem.title;
     description.textContent = heroItem.description;
     button.textContent = heroItem.premium
-    ? "🔓 Buka"
+    ? "🔒 Buka"
     : (buttonLabel[heroItem.type] ?? "Buka →");    button.onclick = () => {
 /*
 if (!PurchaseManager.hasAccess(heroItem)) {
@@ -370,7 +370,7 @@ latestCards.forEach(item => {
 //console.log(clone.firstElementChild.outerHTML);
     const featuredButton = clone.querySelector("button");
     featuredButton.textContent = item.premium
-    ? "🔓 Buka"
+    ? "🔒 Buka"
     : (({
         quiz: "Mulai →",
         comic: "Baca →",
