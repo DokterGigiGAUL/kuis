@@ -67,14 +67,15 @@ if (titleClass) {
 
 titleEl.textContent = title;*/
     clone.querySelector(".content-description").textContent = description;
-if (price !== null) {
+    if (premium && item.price != null) {
 
     const info = clone.querySelector(".content-info");
 
     const priceEl = document.createElement("p");
 
     priceEl.className = "content-price";
-    priceEl.textContent = `Rp ${price.toLocaleString("id-ID")}`;
+    priceEl.textContent =
+    `Rp ${item.price.toLocaleString("id-ID")}`;
 
     info.insertBefore(
         priceEl,
