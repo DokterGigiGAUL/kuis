@@ -49,7 +49,7 @@ body {
 }
 
 .header h1 {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 0px;
     flex: 1;
     text-align: left;
@@ -148,6 +148,7 @@ body {
 
 .section-header h2 {
     margin: 0;
+    font-size:20px;
 }
 
 .section-header a {
@@ -243,9 +244,9 @@ body {
 ========================== */
 #loginBtn, #logoutBtn {
     padding: 6px 12px;
-    background: var(--hitam);
-    color: #f0f0f0;
-    border: 1px solid var(--hitam);
+    background: var(--bg);
+    color: var(--primary);
+    border: 1px solid var(--primary);
 }
 
 .btn{
