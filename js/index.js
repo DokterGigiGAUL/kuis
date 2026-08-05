@@ -1,360 +1,96 @@
-const quizList = document.getElementById("quiz-list");
-const comicsContainer = document.getElementById("comics-container");
-const ttsContainer = document.getElementById("tts-container");
-const caseContainer = document.getElementById("case-container");
-const ebookContainer = document.getElementById("ebook-container");
-const featuredHero = document.getElementById("featured-hero");
-const featuredLatest = document.getElementById("featured-latest");
-const featuredCardTemplate = document.getElementById("featured-card-template");
-const cardTemplate = document.getElementById("content-card-template");
-
-loadQuiz();
-loadComics();
-loadTTS();
-loadCases();
-loadEbooks();
-renderFeaturedHero();
-
-function loadQuiz() {
-
-    if (!quizList) return;
-
-    quizzes.slice(0, 6).forEach(quiz => {
-
-        const finished =
-            Storage.isFinished(quiz.productId);
-
-        createContentCard({
-
-            container: quizList,
-            item: quiz,
-            thumbnail: quiz.thumbnail,
-            title: quiz.title,
-            description: quiz.description,
-            premium: quiz.premium,
-            buttonText: finished
-                ? "Sudah Selesai"
-                : "Mulai →",
-
-            disabled: finished,
-
-            onClick() {
-
-                if (!PurchaseManager.hasAccess(quiz)) {
-    showPremiumDialog(quiz.productId);
-    return;
-}
-
-                location.href =
-                    `quiz.html?id=${quiz.file}`;
-
-            }
-
-        });
-
-    });
-
-}
-
-function loadComics() {
-
-    if (!comicsContainer) return;
-
-    comics.slice(0, 6).forEach(comic => {
-
-        createContentCard({
-
-            container: comicsContainer,
-            item: comic,
-            thumbnail: comic.thumbnail,
-            title: comic.title,
-            //description: `Episode #${comic.id}`,
-            description: comic.description,
-            premium: comic.premium,
-            buttonText: "Baca →",
-
-            onClick() {
-
-                if (!PurchaseManager.hasAccess(comic)) {
-    showPremiumDialog(comic.productId);
-    return;
-}
-
-                location.href =
-                    `komik.html?id=${comic.id}`;
-
-            }
-
-        });
-
-    });
-
-}
-
-function loadTTS() {
-
-    if (!ttsContainer) return;
-
-    ttsList.slice(0, 6).forEach(tts => {
-
-        createContentCard({
-
-            container: ttsContainer,
-            item: tts,
-            thumbnail: tts.thumbnail,
-            title: tts.title,
-            description: tts.description,
-            premium: tts.premium,
-            soal: `${tts.soal} Soal`,
-
-            buttonText: "Main →",
-
-            onClick() {
-
-                if (!PurchaseManager.hasAccess(tts)) {
-    showPremiumDialog(tts.productId);
-    return;
-}
-
-                location.href =
-                    `tts.html?puzzle=tts${tts.id}`;
-
-            }
-
-        });
-
-    });
-
-}
-
-
-function loadCases() {
-
-    if (!caseContainer) return;
-
-    cases.slice(0, 6).forEach(caseData => {
-
-        createContentCard({
-            container: caseContainer,
-            item: caseData,
-            thumbnail: caseData.thumbnail,
-            title: caseData.title,
-            description: caseData.description,
-            premium: caseData.premium,
-
-            buttonText: "Lihat →",
-            onClick() {
-/*
-                if (!PurchaseManager.hasAccess(caseData)) {
-                    showPremiumDialog(caseData.productId);
-                    return;
-                }
-*/
-                location.href =
-                    `case.html?case=${caseData.file}`;
-            }
-        });
-    });
-}
-
-function loadEbooks() {
-    if (!ebookContainer) return;
-
-    ebooks
-        .slice()
-        .sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
-        .slice(0, 6)
-        .forEach(ebook => {
-
-            createContentCard({
-                container: ebookContainer,
-                thumbnail: ebook.thumbnail,
-                title: ebook.title,
-                extraClass: "ebook-card",
-                /*titleClass: "ebook-title",*/
-                description: ebook.description,
-                price: ebook.price,
-                buttonText: "Detail →",
-                onClick() {
-
-                    location.href =
-                        `ebook.html?ebook=${ebook.file}`;
-                }
-            });
-        });
-}
-
 function renderFeaturedHero() {
 
     if (!featuredHero) return;
 
-    const latestItems = [
-    ...quizzes,
-    ...comics,
-    ...ttsList,
-    ...cases
-].sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+    const latestPremiumItems = [
+        ...quizzes,
+        ...comics,
+        ...ttsList,
+        ...cases
+    ]
+    .filter(item => item.premium)
+    .sort(
+        (a, b) =>
+            new Date(b.releaseDate) -
+            new Date(a.releaseDate)
+    );
 
-const heroItem = latestItems[0];
-const latestCards = latestItems.slice(1, 5);
-const urlBg = "https://doktergigigaul.github.io/kuis/assets/images/premium-bg.jpeg";
+    const heroItem = latestPremiumItems[0];
 
-if (!heroItem) return;
+    if (!heroItem) return;
 
-    //featuredHero.style.backgroundImage = `url(${heroItem.thumbnail})`;
-    featuredHero.style.backgroundImage = `url(${urlBg})`;
+    const urlBg =
+        "https://doktergigigaul.github.io/kuis/assets/images/premium-bg.jpeg";
 
-    const badge = featuredHero.querySelector(".featured-badge");
-    const title = featuredHero.querySelector(".featured-title");
-    const description = featuredHero.querySelector(".featured-description");
-    const button = featuredHero.querySelector(".featured-btn");
+    featuredHero.style.backgroundImage =
+        `url(${urlBg})`;
 
-    const typeLabel = {
-        quiz: "Kuis",
-        comic: "Komik",
-        tts: "TTS",
-        case: "Kartu Kasus"
-    };
+    const badge =
+        featuredHero.querySelector(".featured-badge");
 
-    const buttonLabel = {
-        quiz: "Mulai →",
-        comic: "Baca →",
-        tts: "Main →",
-        case: "Lihat →"
-    };
+    const title =
+        featuredHero.querySelector(".featured-title");
 
-    //badge.textContent = typeLabel[heroItem.type] ?? "";
-    if (heroItem.premium) {
-    //badge.textContent = `👑 Premium • ${typeLabel[heroItem.type] ?? ""}`;
-    //badge.textContent = `👑 Premium`;
-        badge.textContent =
+    const description =
+        featuredHero.querySelector(".featured-description");
+
+    const button =
+        featuredHero.querySelector(".featured-btn");
+
+    const catalogButton =
+        featuredHero.querySelector(
+            ".featured-catalog-btn"
+        );
+
+    badge.textContent =
         PurchaseManager.hasAccess(heroItem)
             ? "🟢 Akses permanen"
             : "👑 Premium";
-} else {
-    badge.textContent = typeLabel[heroItem.type] ?? "";
-}
-    title.textContent = heroItem.title;
-    description.textContent = heroItem.description;
-    button.textContent = heroItem.premium
-    ? "🔒 Buka"
-    : (buttonLabel[heroItem.type] ?? "Buka →");    button.onclick = () => {
-/*
-if (!PurchaseManager.hasAccess(heroItem)) {
-    showPremiumDialog(heroItem.productId);
-    return;
-}
-*/
 
-if (heroItem.type !== "case" && !PurchaseManager.hasAccess(heroItem)) {
-    showPremiumDialog(heroItem.productId);
-    return;
-}
-        
-switch (heroItem.type) {
+    title.textContent =
+        heroItem.title;
+
+    description.textContent =
+        heroItem.description;
+
+    button.textContent =
+        "🔒 Buka";
+
+    button.onclick = () => {
+
+        if (!PurchaseManager.hasAccess(heroItem)) {
+            showPremiumDialog(
+                heroItem.productId
+            );
+            return;
+        }
+
+        switch (heroItem.type) {
 
             case "quiz":
-                location.href = `quiz.html?id=${heroItem.file}`;
+                location.href =
+                    `quiz.html?id=${heroItem.file}`;
                 break;
 
             case "comic":
-                location.href = `komik.html?id=${heroItem.id}`;
+                location.href =
+                    `komik.html?id=${heroItem.id}`;
                 break;
 
             case "tts":
-                location.href = `tts.html?puzzle=tts${heroItem.id}`;
+                location.href =
+                    `tts.html?puzzle=tts${heroItem.id}`;
                 break;
 
             case "case":
-                location.href = `case.html?case=${heroItem.file}`;
+                location.href =
+                    `case.html?case=${heroItem.file}`;
                 break;
         }
-
     };
-featuredLatest.innerHTML = "";
 
-latestCards.forEach(item => {
-
-    const clone = featuredCardTemplate.content.cloneNode(true);
-
-    clone.querySelector(".featured-card-thumb").src = item.thumbnail;
-    clone.querySelector(".featured-card-thumb").alt = item.title;
-    clone.querySelector(".featured-card-title").textContent = item.title;
-    clone.querySelector(".featured-card-description").textContent = item.description;
-
-//console.log(clone.firstElementChild.outerHTML);
-    const featuredButton = clone.querySelector("button");
-    featuredButton.textContent = item.premium
-    ? "🔒 Buka"
-    : (({
-        quiz: "Mulai →",
-        comic: "Baca →",
-        tts: "Main →",
-        case: "Lihat →"
-    })[item.type] ?? "Buka →");
-    
-    clone.querySelector(".featured-card-type").textContent = ({
-        quiz: "Kuis",
-        comic: "Komik",
-        tts: "TTS",
-        case: "Kartu Kasus"
-    })[item.type];
-
-const card = clone.querySelector(".featured-card");
-/*if (item.premium) {
-    card.classList.add("premium");
-}*/
-const badge = clone.querySelector(".featured-badge");
-if (item.premium) {
-    //badge.textContent = `👑 Premium`;
-    badge.textContent =
-        PurchaseManager.hasAccess(item)
-            ? "🟢 Akses permanen"
-            : "👑 Premium";
-}
-    
-const openContent = () => {
-/*
-    if (!PurchaseManager.hasAccess(item)) {
-        showPremiumDialog(item.productId);
-        return;
-    }
-*/
-
-if (item.type !== "case" && !PurchaseManager.hasAccess(item)) {
-    showPremiumDialog(item.productId);
-    return;
-}
-    
-    switch (item.type) {
-
-        case "quiz":
-            location.href = `quiz.html?id=${item.file}`;
-            break;
-
-        case "comic":
-            location.href = `komik.html?id=${item.id}`;
-            break;
-
-        case "tts":
-            location.href = `tts.html?puzzle=tts${item.id}`;
-            break;
-
-        case "case":
-            location.href = `case.html?case=${item.file}`;
-            break;
-
-    }
-
-};
-
-card.onclick = openContent;
-featuredButton.onclick = (e) => {
-    e.stopPropagation();
-    openContent();
-};
-
-    featuredLatest.appendChild(clone);
-
-});
+    catalogButton.onclick = () => {
+        location.href =
+            "premium-catalogue.html";
+    };
 }
