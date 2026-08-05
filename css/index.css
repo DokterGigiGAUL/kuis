@@ -349,7 +349,7 @@ body {
     position:absolute;
     left:0;
     right:0;
-    top:15px;
+    top:0px;
     z-index:2;
     padding:24px 24px 0;
     display:flex;
@@ -410,7 +410,7 @@ body {
 
 .featured-btn{
     width:max-content;
-    padding: 12px 24px!important;
+    padding: 6px 18px 9px!important;
     padding-inline:24px;
     margin-top:auto;
 }
