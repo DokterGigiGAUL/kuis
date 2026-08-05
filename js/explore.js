@@ -227,7 +227,7 @@ function showTTS() {
     title: tts.title,
 
     description: tts.description,
-    item: comic,
+    item: tts,
     premium: tts.premium,
     buttonText: "Mainkan",
 
