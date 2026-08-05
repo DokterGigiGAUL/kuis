@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Katalog Premium - Wonder App</title>
+
+    <link
+        rel="icon"
+        href="assets/images/favicon.ico"
+        sizes="any">
+
+    <link
+        rel="stylesheet"
+        href="css/index.css">
+
+    <link
+        rel="stylesheet"
+        href="css/premium.css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <h1>
+        Katalog Premium
+    </h1>
+
+    <div class="header-actions">
+
+        <button
+            onclick="openLogin()"
+            id="loginBtn"
+            class="btn btn-outline"
+            type="button">
+
+            Login
+
+        </button>
+
+        <button
+            onclick="logout()"
+            id="logoutBtn"
+            class="btn btn-outline"
+            type="button"
+            style="display:none;">
+
+            Logout
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="premium-page">
+
+    <div class="premium-page-header">
+
+        <div>
+
+            <h2>
+                Katalog Premium Terbaru
+            </h2>
+
+            <p>
+                Temukan konten premium terbaru
+                untuk memperluas pembelajaran Anda.
+            </p>
+
+        </div>
+
+        <a
+            href="index.html"
+            class="premium-back">
+
+            ← Kembali ke Beranda
+
+        </a>
+
+    </div>
+
+
+    <div
+        id="premium-catalog-container"
+        class="premium-grid">
+    </div>
+
+</main>
+
+
+<!-- Template Card -->
+
+<template id="content-card-template">
+
+    <article class="content-card">
+
+        <div class="featured-card-overlay">
+
+            <span class="featured-badge"></span>
+
+        </div>
+
+        <img
+            class="content-thumb"
+            loading="lazy"
+            alt="">
+
+        <div class="content-info">
+
+            <h3 class="content-title"></h3>
+
+            <p class="content-description"></p>
+
+            <button
+                class="btn btn-primary content-btn">
+
+                🔓 Buka
+
+            </button>
+
+        </div>
+
+    </article>
+
+</template>
+
+
+<!-- Premium Popup -->
+
+<div
+    id="premiumModal"
+    class="premium-modal">
+
+    <div class="premium-modal-content">
+
+        <button
+            id="closePremiumModal"
+            class="premium-modal-close">
+
+            ✕
+
+        </button>
+
+        <iframe
+            id="premiumFrame"
+            src=""
+            loading="lazy"
+            frameborder="0">
+        </iframe>
+
+    </div>
+
+</div>
+
+
+<!-- Login Modal -->
+
+<div
+    id="loginModal"
+    class="login-modal">
+
+    <div class="login-box">
+
+        <button
+            class="login-close"
+            onclick="closeLogin()">
+
+            &times;
+
+        </button>
+
+        <h2>Login</h2>
+
+        <input
+            id="loginEmail"
+            type="email"
+            placeholder="Email">
+
+        <input
+            id="loginPassword"
+            type="password"
+            placeholder="Password">
+
+        <button
+            onclick="loginEmail()"
+            class="btn btn-primary login-email">
+
+            Login
+
+        </button>
+
+        <button
+            onclick="registerEmail()"
+            class="btn btn-outline register-email">
+
+            Daftar
+
+        </button>
+
+        <div class="divider">
+            ATAU
+        </div>
+
+        <button
+            onclick="loginGoogle()"
+            class="btn btn-primary login-google">
+
+            Login/ Daftar dengan Google
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="js/firebase.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/premium.js"></script>
+<script src="js/purchase-manager.js"></script>
+
+<script src="js/quiz-data.js"></script>
+<script src="js/comics-data.js"></script>
+<script src="js/tts-data.js"></script>
+<script src="js/case-data.js"></script>
+
+<script src="js/content-card.js"></script>
+<script src="js/premium-catalog.js"></script>
+
+<script src="https://mayarembed.r2.mayar.id/mayar-new-min.js"></script>
+
+</body>
+
+</html>
