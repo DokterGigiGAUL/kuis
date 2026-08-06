@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Explore</title>
+    <title>Katalog Konten Wonder App</title>
+    <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+    <!--<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/explore.css" 
+    <link rel="stylesheet" href="css/explore.css" />
 
       <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -19,7 +22,7 @@
 
   <body>
     <header class="explore-header">
-      <button class="explore-back-btn" onclick="history.back()">←</button>
+      <button class="explore-back-btn" onclick="history.back()"> ← </button>
 
       <h1 id="pageTitle">Semua Kuis</h1>
     </header>
@@ -49,14 +52,14 @@
 </div>
         <img
             class="list-thumb"
-            loading=""
+            loading="lazy"
             alt="">
         <div class="list-detail">
             <h3 class="list-title"></h3>
             <p class="list-description"></p>
           <div class="list-info">
             <div class="list-price"></div>
-            <button class="btn btn-outline list-btn"></button>
+            <button class="btn btn-outline list-btn" type="button"></button>
           </div>
         </div>
 
