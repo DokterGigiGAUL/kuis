@@ -73,7 +73,7 @@ function createContentCard({
     /*
      * Harga hanya ditampilkan untuk konten premium
      */
-    if (item.price != null) {
+    if (premium && item.price != null) {
 
         const info =
             clone.querySelector(".content-info");
@@ -92,25 +92,7 @@ function createContentCard({
             clone.querySelector(".content-btn")
         );
     }
-    if (premium) {
-
-        const info =
-            clone.querySelector(".content-info");
-
-        const priceEl =
-            document.createElement("p");
-
-        priceEl.className =
-            "content-price";
-
-        priceEl.textContent =
-            `Rp ${item.price.toLocaleString("id-ID")}`;
-
-        info.insertBefore(
-            priceEl,
-            clone.querySelector(".content-btn")
-        );
-    }
+    
     const button =
         clone.querySelector(".content-btn");
 
