@@ -405,11 +405,9 @@ body {
     line-height:1.2;
     padding-bottom:8px;
     color:rgba(255,255,255,.9);
-}
-
-.featured-description{
     font-size:16px;
 }
+
 
 .featured-btn{
     width:max-content;
@@ -535,7 +533,10 @@ body {
         border-radius:16px;
         margin-bottom:24px!important;
     }
-    
+
+    .featured-description{
+    font-size:20px;
+}
     .featured-overlay{
         top:90px;
     }
@@ -616,18 +617,26 @@ body {
     flex-direction: column;
     scroll-snap-align: start;
     }
+    .btn {font-size:18px;}
     
+    .featured-actions {gap:16px!important;}
     .featured-hero{
         width:auto;
-        aspect-ratio:2/1;
+        aspect-ratio:3/1;
         border-radius:16px;
         margin-bottom:24px!important;
     }
-    
+
+    .featured-description{
+    font-size:16px;
+}
     .featured-latest{
         top: calc((100vw / 2) - 220px)!important;
     }
-    
+    .section-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
     .ebook-title{
     display: -webkit-box;
     -webkit-line-clamp: 2;
