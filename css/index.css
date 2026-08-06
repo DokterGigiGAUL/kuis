@@ -182,7 +182,7 @@ body {
     }
     
     .header h1 {
-        font-size: 32px;
+        font-size: 36px;
     }
     
     .container {
@@ -635,7 +635,10 @@ body {
     }
     .section-header h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
+}
+    .section-header a {
+    font-size: 18px;
 }
     .ebook-title{
     display: -webkit-box;
@@ -877,24 +880,17 @@ margin-top:16px;
 }
 
 .category-card{
-
     aspect-ratio:2 / 1;
-
     background:#fff;
     border:1px solid #e7e7e7;
     border-radius:18px;
-
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     gap:12px;
-
     cursor:pointer;
-
-    box-shadow:
-        0 4px 14px rgba(0,0,0,.08);
-
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
     transition:.2s;
 }
 
@@ -993,8 +989,7 @@ margin-top:16px;
     background:#fff;
     border:none;
     border-radius:8px;
-    box-shadow:
-        0 4px 14px rgba(0,0,0,.08);
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
     cursor:pointer;
     transition:.2s;
 }
@@ -1045,4 +1040,30 @@ margin-top:16px;
     text-align:left;
     line-height:1.3;
 
+}
+
+@media (min-width:1024px) {
+.category-card{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:24px;
+    background:#fff;
+    border:none;
+    border-radius:16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    cursor:pointer;
+    transition:.2s;
+}
+
+    .category-card span{
+
+    font-size:18px;
+    font-weight:600;
+    color:#222;
+
+    text-align:left;
+    line-height:1.3;
+
+}
 }
