@@ -58,38 +58,33 @@ function createListCard({
     const card = clone.querySelector(".list-card");
     if (extraClass) {
     card.classList.add(extraClass);
-}
-    const badge = clone.querySelector(".featured-badge");
-/*
-if (premium) {
-    card.classList.add("premium");
-}
-*/
-    if (premium) {
-
-    if (PurchaseManager.hasAccess(item)) {
-        badge.textContent = "🟢 Akses permanen";
-    } else {
-        badge.textContent = "👑 Premium";
     }
-
-} else {
+    
+    const badge = clone.querySelector(".featured-badge");
+    if (premium) {
+        if (PurchaseManager.hasAccess(item)) {
+            badge.textContent = "🟢 Akses permanen";
+        } else {
+            badge.textContent = "👑 Premium";
+        }
+    } else {
     badge.remove();
-}
+    }
+    
     clone.querySelector(".list-thumb").src = thumbnail;
     clone.querySelector(".list-thumb").alt = title;
 
     clone.querySelector(".list-title").textContent = title;
     clone.querySelector(".list-description").textContent = description;
-     const priceEl = clone.querySelector(".list-price");
+    const priceEl = clone.querySelector(".list-price");
 
-if (price > 0) {
+    if (price > 0) {
     priceEl.textContent =
         `Rp ${price.toLocaleString("id-ID")}`;
-} else {
+    } else {
     priceEl.remove();
-}
-
+    }
+    
     const button = clone.querySelector(".list-btn");
 
     button.textContent = buttonText;
@@ -98,7 +93,6 @@ if (price > 0) {
     if (!disabled && onClick) {
         button.onclick = onClick;
     }
-
     container.appendChild(clone);
 }
 
@@ -117,19 +111,13 @@ function showQuiz() {
     ttsTab.classList.remove("active");
     caseTab.classList.remove("active");
     ebookTab.classList.remove("active");
-
+    
     quizSection.innerHTML = "";
-
     quizzes.forEach(quiz => {
-
         createListCard({
-
     container: quizSection,
-
     thumbnail: quiz.thumbnail,
-
     title: quiz.title,
-
     description: quiz.description,
     item: quiz,
     premium: quiz.premium,
@@ -172,42 +160,28 @@ function showComic() {
     caseTab.classList.remove("active");
     ebookTab.classList.remove("active");
 
-
     comicSection.innerHTML = "";
-
     comics.forEach(comic => {
 
         createListCard({
-
     container: comicSection,
-
     thumbnail: comic.thumbnail,
-
     title: comic.title,
-
     description: comic.description,
     item: comic,
     premium: comic.premium,
     price: comic.price,
-
     buttonText: "Baca",
-
     onClick() {
-
-        if (!PurchaseManager.hasAccess(comic)) {
+    if (!PurchaseManager.hasAccess(comic)) {
     showPremiumDialog(comic.productId);
     return;
 }
-
         location.href =
             `komik.html?id=${comic.id}`;
-
     }
-
 });
-
     });
-
 }
 function showTTS() {
 
@@ -226,34 +200,24 @@ function showTTS() {
     ebookTab.classList.remove("active");
 
     ttsSection.innerHTML = "";
-
     ttsList.forEach(tts => {
-
         createListCard({
-
     container: ttsSection,
-
     thumbnail: tts.thumbnail,
-
     title: tts.title,
-
     description: tts.description,
     item: tts,
     premium: tts.premium,
                 price: tts.price,
 
     buttonText: "Mainkan",
-
     onClick() {
-
         if (!PurchaseManager.hasAccess(tts)) {
     showPremiumDialog(tts.productId);
     return;
 }
-
         location.href =
             `tts.html?puzzle=tts${tts.id}`;
-
     }
 
 });
@@ -276,19 +240,14 @@ function showCase() {
     ttsTab.classList.remove("active");
     caseTab.classList.add("active");
     ebookTab.classList.remove("active");
-
+    
     caseSection.innerHTML = "";
-
     cases.forEach(caseData => {
 
         createListCard({
-
     container: caseSection,
-
     thumbnail: caseData.thumbnail,
-
     title: caseData.title,
-
     description: caseData.description,
     item: caseData,
     premium: caseData.premium,
@@ -297,21 +256,15 @@ function showCase() {
     buttonText: "Lihat",
 
     onClick() {
-
         if (!PurchaseManager.hasAccess(caseData)) {
     showPremiumDialog(caseData.productId);
     return;
 }
-
 location.href =
     `case.html?case=${caseData.file}`;
-
     }
-
 });
-
     });
-
 }
 
 function showEbook() {
@@ -331,36 +284,24 @@ function showEbook() {
     ebookTab.classList.add("active");
 
     ebookSection.innerHTML = "";
-
     ebooks
         .slice()
         .sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
         .forEach(ebook => {
 
             createListCard({
-
                 container: ebookSection,
-
                 thumbnail: ebook.thumbnail,
-
                 title: ebook.title,
-
                 description: ebook.description,
                 item: ebook,
-
                 buttonText: "Detail",
-
                 onClick() {
-
                     location.href =
                         `ebook.html?ebook=${ebook.file}`;
-
                 }
-
             });
-
         });
-
 }
 
 quizTab.onclick = () => {
