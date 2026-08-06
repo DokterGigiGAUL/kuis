@@ -90,7 +90,7 @@ if (premium) {
             document.createElement("p");
 
         priceEl.className =
-            "list-price";
+            "list-price flex-item-left";
 
         priceEl.textContent =
             `Rp ${item.price.toLocaleString("id-ID")}`;
