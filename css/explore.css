@@ -59,11 +59,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 .list-info {
     min-width:0;
     display:flex;
     flex-direction:column;
+    gap: 6px;
+    padding: 6px 12px 6px 6px;
+    flex: 1;
+    align-self:start;
+}
+.list-detail {
+    min-width:0;
+    display:flex;
+    flex-direction:row;
     gap: 6px;
     padding: 6px 12px 6px 6px;
     flex: 1;
