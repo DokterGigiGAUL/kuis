@@ -60,11 +60,6 @@ function createListCard({
     card.classList.add(extraClass);
 }
     const badge = clone.querySelector(".featured-badge");
-/*
-if (premium) {
-    card.classList.add("premium");
-}
-*/
     if (premium) {
 
     if (PurchaseManager.hasAccess(item)) {
