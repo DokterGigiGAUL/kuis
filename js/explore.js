@@ -81,7 +81,7 @@ if (premium) {
 
     clone.querySelector(".list-title").textContent = title;
     clone.querySelector(".list-description").textContent = description;
-     if (premium && item.price != null) {
+     if (price > 0) {
 
         const info =
             clone.querySelector(".list-info");
