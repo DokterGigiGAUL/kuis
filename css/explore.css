@@ -75,7 +75,17 @@
     align-self:start;
     justify-content:space-between;
 }
+.flex-item-left {
+  padding: 6px;
+  flex: 50%;
+  text-align:left;
+}
 
+.flex-item-right {
+  padding: 6px;
+  flex: 50%;
+  text-align:right;
+}
 .list-btn { align-self:end;
 }
 /* ==========================
