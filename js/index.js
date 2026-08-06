@@ -269,59 +269,38 @@ function loadTTS() {
         });
 }
 
-
 function loadCases() {
-
     if (!caseContainer) return;
-
     cases
         .slice(0, 6)
         .forEach(caseData => {
-
             createContentCard({
-
                 container: caseContainer,
-
                 item: caseData,
-
                 thumbnail: caseData.thumbnail,
-
                 title: caseData.title,
-
                 description: caseData.description,
-
                 premium: caseData.premium,
-
                 buttonText: "Lihat →",
-
                 onClick() {
-
                     if (
                         caseData.premium &&
                         !PurchaseManager.hasAccess(caseData)
                     ) {
-
                         showPremiumDialog(
                             caseData.productId
                         );
-
                         return;
                     }
-
                     location.href =
                         `case.html?case=${caseData.file}`;
                 }
-
             });
-
         });
 }
 
-
 function loadEbooks() {
-
     if (!ebookContainer) return;
-
     ebooks
         .slice()
         .sort(
@@ -331,43 +310,26 @@ function loadEbooks() {
         )
         .slice(0, 6)
         .forEach(ebook => {
-
             createContentCard({
-
                 container: ebookContainer,
-
                 item: ebook,
-
                 thumbnail: ebook.thumbnail,
-
                 title: ebook.title,
-
                 description: ebook.description,
-
                 price: ebook.price,
-
                 premium: ebook.premium,
-
                 buttonText: "Detail →",
-
                 extraClass: "ebook-card",
-
                 onClick() {
-
                     location.href =
                         `ebook.html?ebook=${ebook.file}`;
                 }
-
             });
-
         });
 }
 
-
 function renderFeaturedHero() {
-
     if (!featuredHero) return;
-
 
     const latestPremiumItems = [
         ...quizzes,
@@ -382,126 +344,99 @@ function renderFeaturedHero() {
             new Date(a.releaseDate)
     );
 
-
     const heroItem =
         latestPremiumItems[0];
 
-
     if (!heroItem) return;
-
 
     const urlBg =
         "https://doktergigigaul.github.io/kuis/assets/images/premium-bg.jpeg";
 
-
     featuredHero.style.backgroundImage =
         `url(${urlBg})`;
-
 
     const badge =
         featuredHero.querySelector(
             ".featured-badge"
         );
-
     const title =
         featuredHero.querySelector(
             ".featured-title"
         );
-
     const description =
         featuredHero.querySelector(
             ".featured-description"
         );
-
     const button =
         featuredHero.querySelector(
             ".featured-btn"
         );
-
     const catalogButton =
         featuredHero.querySelector(
             ".featured-catalog-btn"
         );
-
 
     badge.textContent =
         PurchaseManager.hasAccess(heroItem)
             ? "🟢 Akses permanen"
             : "👑 Premium";
 
-
     title.textContent =
         heroItem.title;
 
-
     description.textContent =
         heroItem.description;
-
 
     button.textContent =
         "🔒 Buka";
 
 
     button.onclick = () => {
-
         if (
             !PurchaseManager.hasAccess(heroItem)
         ) {
-
             showPremiumDialog(
                 heroItem.productId
             );
-
             return;
         }
 
-
         switch (heroItem.type) {
-
             case "quiz":
-
                 location.href =
                     `quiz.html?id=${heroItem.file}`;
-
                 break;
-
 
             case "comic":
-
                 location.href =
                     `komik.html?id=${heroItem.id}`;
-
                 break;
-
 
             case "tts":
-
                 location.href =
                     `tts.html?puzzle=tts${heroItem.id}`;
-
                 break;
-
-
+                
             case "case":
-
                 location.href =
                     `case.html?case=${heroItem.file}`;
-
                 break;
         }
-
     };
 
-
     if (catalogButton) {
-
         catalogButton.onclick = () => {
-
             location.href =
                 "premium-catalog.html";
-
         };
-
     }
+}
 
+function goToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+    section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 }
