@@ -84,20 +84,20 @@ if (premium) {
      if (premium && item.price != null) {
 
         const info =
-            clone.querySelector(".content-info");
+            clone.querySelector(".list-info");
 
         const priceEl =
             document.createElement("p");
 
         priceEl.className =
-            "content-price";
+            "list-price";
 
         priceEl.textContent =
             `Rp ${item.price.toLocaleString("id-ID")}`;
 
         info.insertBefore(
             priceEl,
-            clone.querySelector(".content-btn")
+            clone.querySelector(".list-btn")
         );
     }
 
