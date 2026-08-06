@@ -19,6 +19,7 @@ const quizzes = [
         description: "Level: Mudah",
         thumbnail: "assets/images/kuis/thumbnail-kuis2.jpeg",
         premium: false,
+        price: null,
         releaseDate: "2026-06-20",
         type: "quiz"
     },
@@ -30,7 +31,7 @@ const quizzes = [
         description: "Level: Sedang",
         thumbnail: "assets/images/kuis/thumbnail-kuis3.jpeg",
         premium: false,
-        price: 0,
+        price: null,
         releaseDate: "2026-06-20",
         type: "quiz"
     },
@@ -42,7 +43,7 @@ const quizzes = [
         description: "Level: Sedang",
         thumbnail: "assets/images/kuis/thumbnail-kuis4.jpeg",
         premium: false,
-        price: 0,
+        price: null,        
         releaseDate: "2026-06-20",
         type: "quiz"
     },
