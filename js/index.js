@@ -73,7 +73,7 @@ function createContentCard({
     /*
      * Harga hanya ditampilkan untuk konten premium
      */
-    if (premium && item.price != null) {
+    if (item.price != null) {
 
         const info =
             clone.querySelector(".content-info");
