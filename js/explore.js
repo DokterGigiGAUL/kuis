@@ -95,7 +95,7 @@ function createListCard({
     }
     
     const button = clone.querySelector(".list-btn");*/
-    clone.querySelector(".content-description").textContent = description;
+    clone.querySelector(".list-description").textContent = description;
 
     /*
      * Harga hanya ditampilkan untuk konten premium
