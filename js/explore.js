@@ -81,25 +81,14 @@ if (premium) {
 
     clone.querySelector(".list-title").textContent = title;
     clone.querySelector(".list-description").textContent = description;
-     if (price > 0) {
+     const priceEl = clone.querySelector(".list-price");
 
-        const info =
-            clone.querySelector(".list-info");
-
-        const priceEl =
-            document.createElement("p");
-
-        priceEl.className =
-            "list-price flex-item-left";
-
-        priceEl.textContent =
-            `Rp ${item.price.toLocaleString("id-ID")}`;
-
-        info.insertBefore(
-            priceEl,
-            clone.querySelector(".list-btn")
-        );
-    }
+if (price > 0) {
+    priceEl.textContent =
+        `Rp ${price.toLocaleString("id-ID")}`;
+} else {
+    priceEl.remove();
+}
 
     const button = clone.querySelector(".list-btn");
 
