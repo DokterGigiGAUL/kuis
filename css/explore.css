@@ -168,9 +168,9 @@
 
 .tab-btn{
     flex:1;
-    padding:15px;
+    padding:8px;
     border:none;
-    border-radius:15px;
+    border-radius:8px;
     background:#ececec;
     cursor:pointer;
     font-weight:600;
