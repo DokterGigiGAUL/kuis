@@ -441,3 +441,35 @@ function goToSection(sectionId) {
         block: "start"
     });
 }
+
+document.querySelectorAll(".category-card").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        switch (card.dataset.category) {
+
+            case "quiz":
+                goToSection("quiz-list");
+                break;
+
+            case "case":
+                goToSection("case-section");
+                break;
+
+            case "tts":
+                goToSection("tts-section");
+                break;
+
+            case "comic":
+                goToSection("comic-section");
+                break;
+
+            case "ebook":
+                goToSection("ebook-section");
+                break;
+
+        }
+
+    });
+
+});
