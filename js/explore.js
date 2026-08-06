@@ -81,6 +81,25 @@ if (premium) {
 
     clone.querySelector(".list-title").textContent = title;
     clone.querySelector(".list-description").textContent = description;
+     if (premium && item.price != null) {
+
+        const info =
+            clone.querySelector(".content-info");
+
+        const priceEl =
+            document.createElement("p");
+
+        priceEl.className =
+            "content-price";
+
+        priceEl.textContent =
+            `Rp ${item.price.toLocaleString("id-ID")}`;
+
+        info.insertBefore(
+            priceEl,
+            clone.querySelector(".content-btn")
+        );
+    }
 
     const button = clone.querySelector(".list-btn");
 
@@ -125,6 +144,7 @@ function showQuiz() {
     description: quiz.description,
     item: quiz,
     premium: quiz.premium,
+    price: quiz.price,
 
     buttonText: Storage.isFinished(quiz.productId)
         ? "Sudah Selesai"
@@ -179,6 +199,8 @@ function showComic() {
     description: comic.description,
     item: comic,
     premium: comic.premium,
+    price: comic.price,
+
     buttonText: "Baca",
 
     onClick() {
@@ -229,6 +251,8 @@ function showTTS() {
     description: tts.description,
     item: tts,
     premium: tts.premium,
+                price: tts.price,
+
     buttonText: "Mainkan",
 
     onClick() {
@@ -279,6 +303,8 @@ function showCase() {
     description: caseData.description,
     item: caseData,
     premium: caseData.premium,
+                price: caseData.price,
+
     buttonText: "Lihat",
 
     onClick() {
