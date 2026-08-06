@@ -193,7 +193,7 @@ section{
     text-align: center;
 }
 
-.ebook-title-box h2{
+.ebook-title-box h2, #ebook-judul{
     font-size: 20px;
 }
 /* ===========================
