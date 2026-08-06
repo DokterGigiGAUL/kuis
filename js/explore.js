@@ -27,6 +27,15 @@ const ebookTab =
 const listTemplate =
     document.getElementById("list-card-template");
 
+if (!listTemplate) {
+    console.error(
+        "Template #list-card-template tidak ditemukan."
+    );
+    throw new Error(
+        "Explore gagal dimuat karena template card tidak tersedia."
+    );
+}
+
 
 if (tab === "ebook") {
     showEbook();
