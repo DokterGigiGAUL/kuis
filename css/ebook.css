@@ -188,6 +188,14 @@ section{
    z-index:10;
 }
 
+.ebook-title-box {
+    flex: 1;
+    text-align: center;
+}
+
+.ebook-title-box h2{
+    font-size: 20px;
+}
 /* ===========================
    MOBILE
 =========================== */
