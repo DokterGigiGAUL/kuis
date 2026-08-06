@@ -449,7 +449,7 @@ document.querySelectorAll(".category-card").forEach(card => {
         switch (card.dataset.category) {
 
             case "quiz":
-                goToSection("quiz-list");
+                goToSection("quiz-section");
                 break;
 
             case "case":
