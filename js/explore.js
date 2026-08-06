@@ -84,7 +84,7 @@ function createListCard({
     clone.querySelector(".list-thumb").alt = title;
 
     clone.querySelector(".list-title").textContent = title;
-    clone.querySelector(".list-description").textContent = description;
+/*    clone.querySelector(".list-description").textContent = description;
     const priceEl = clone.querySelector(".list-price");
 
     if (price > 0) {
@@ -94,8 +94,35 @@ function createListCard({
     priceEl.remove();
     }
     
-    const button = clone.querySelector(".list-btn");
+    const button = clone.querySelector(".list-btn");*/
+clone.querySelector(".content-description").textContent =
+        description;
 
+    /*
+     * Harga hanya ditampilkan untuk konten premium
+     */
+    if (premium && item.price != null) {
+
+        const info =
+            clone.querySelector(".list-info");
+
+        const priceEl =
+            document.createElement("p");
+
+        priceEl.className =
+            "list-price";
+
+        priceEl.textContent =
+            `Rp ${item.price.toLocaleString("id-ID")}`;
+
+        info.insertBefore(
+            priceEl,
+            clone.querySelector(".list-btn")
+        );
+    }
+    
+    const button =
+        clone.querySelector(".list-btn");
     button.textContent = buttonText;
     button.disabled = disabled;
 
