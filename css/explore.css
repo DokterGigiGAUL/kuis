@@ -75,18 +75,13 @@
     align-self:start;
     justify-content:space-between;
 }
-.flex-item-left {
-  padding: 6px;
-  flex: 50%;
-  text-align:left;
+.list-price{
+    font-size:15px;
+    font-weight:700;
+    color:#222;
 }
-
-.flex-item-right {
-  padding: 6px;
-  flex: 50%;
-  text-align:right;
-}
-.list-btn { align-self:end;
+.list-btn { 
+    margin-left:auto;
 }
 /* ==========================
    BUTTON
