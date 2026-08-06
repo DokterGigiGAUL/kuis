@@ -9,7 +9,7 @@ const ttsList = [
         description: "Level: ★☆☆☆☆",
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
         premium: false,
-        price: 0, 
+        price: null, 
         releaseDate: "2026-06-20",
         type: "tts"
     },
@@ -23,7 +23,7 @@ const ttsList = [
         description: "Level: ★☆☆☆☆",
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
         premium: false,
-        price: 0, 
+        price: null, 
         releaseDate: "2026-06-20",
         type: "tts"
     },
@@ -37,7 +37,7 @@ const ttsList = [
         description: "Level: ★★☆☆☆",
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
         premium: false,
-        price: 0, 
+        price: null, 
         releaseDate: "2026-06-20",
         type: "tts"
     },
