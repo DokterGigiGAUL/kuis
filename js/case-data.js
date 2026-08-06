@@ -7,7 +7,7 @@ const cases = [
         description: "Level: Basic",
         thumbnail: "assets/images/cases/case1.jpg",
         premium: false,
-        price: 0,
+        price: null,
         releaseDate: "2026-06-20",
         type: "case"
     },
@@ -19,7 +19,7 @@ const cases = [
         description: "Level: Basic",
         thumbnail: "assets/images/cases/case2.jpg",
         premium: false,
-        price: 0,
+        price: null,
         releaseDate: "2026-06-20",
         type: "case"
     },
@@ -31,7 +31,7 @@ const cases = [
         description: "Level: Intermediate",
         thumbnail: "assets/images/cases/case3.jpg",
         premium: false,
-        price: 0,
+        price: null,
         releaseDate: "2026-06-20",
         type: "case"
     },
