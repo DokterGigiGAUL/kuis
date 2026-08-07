@@ -120,7 +120,7 @@ body {
 .content-description {
     font-size: 14px;
     color: #999;
-    margin-bottom: 3px;
+    margin-bottom: 0px;
     line-height: 1.25;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -135,12 +135,15 @@ body {
 }
 
 .content-price{
-    margin: 0 0 3px 0;
-    font-size:13px;
+    margin: 0 0 6px 0;
+    font-size:15px;
     font-weight:600;
     color:#008000;
 }
 
+.content-title, .content-description, .content-price {
+padding-left:3px;
+}
 .content-btn {
     margin-top: auto;
 }
