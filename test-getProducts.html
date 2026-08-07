@@ -8,57 +8,66 @@
 
 <body>
 
-    <h2>Test getProducts()</h2>
+<h2>Test getProducts()</h2>
 
-    <button id="testButton">Test getProducts</button>
+<button id="testButton" type="button">
+    Test getProducts
+</button>
 
-    <pre id="result">Belum ada hasil...</pre>
+<pre id="result">Klik tombol untuk test...</pre>
 
-    <script>
+<script>
 
-        const API_URL =
-            "GANTI_DENGAN_URL_WEB_APP_GAS_KAMU";
+const API_URL = "GANTI_DENGAN_URL_WEB_APP_GAS_KAMU";
 
-        const button = document.getElementById("testButton");
-        const result = document.getElementById("result");
+document
+    .getElementById("testButton")
+    .addEventListener("click", testGetProducts);
 
-        button.addEventListener("click", async () => {
+async function testGetProducts() {
 
-            result.textContent = "Loading...";
+    const result = document.getElementById("result");
 
-            try {
+    result.textContent = "Menghubungi backend...";
 
-                const url =
-                    API_URL + "?action=getProducts";
+    try {
 
-                const response = await fetch(url, {
-                    method: "GET"
-                });
-
-                if (!response.ok) {
-                    throw new Error(
-                        "HTTP Error: " + response.status
-                    );
-                }
-
-                const data = await response.json();
-
-                console.log("getProducts response:", data);
-
-                result.textContent =
-                    JSON.stringify(data, null, 2);
-
-            } catch (error) {
-
-                console.error("getProducts error:", error);
-
-                result.textContent =
-                    "ERROR:\n\n" + error.message;
-            }
-
+        const response = await fetch(API_URL, {
+            method: "POST",
+            body: JSON.stringify({
+                action: "getProducts"
+            })
         });
 
-    </script>
+        console.log("HTTP status:", response.status);
+
+        const text = await response.text();
+
+        console.log("Raw response:", text);
+
+        let data;
+
+        try {
+            data = JSON.parse(text);
+        } catch (e) {
+            throw new Error(
+                "Response bukan JSON:\n\n" + text
+            );
+        }
+
+        result.textContent =
+            JSON.stringify(data, null, 2);
+
+    } catch (error) {
+
+        console.error("getProducts ERROR:", error);
+
+        result.textContent =
+            "ERROR:\n\n" + error.message;
+    }
+}
+
+</script>
 
 </body>
 </html>
