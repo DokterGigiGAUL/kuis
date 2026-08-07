@@ -81,22 +81,72 @@ function createContentCard({
         card.classList.add(extraClass);
     }
 
+    /*
+     * =====================================================
+     * BACKEND PRODUCT
+     * =====================================================
+     *
+     * Hanya konten premium yang mencari productId
+     * ke backendProducts.
+     *
+     * Ebook tidak disentuh.
+     */
+
+    let backendProduct = null;
+
+    if (premium && item?.productId) {
+
+        backendProduct =
+            backendProducts.find(
+                product =>
+                    product.productId === item.productId
+            );
+    }
+
+
+    /*
+     * =====================================================
+     * STATUS PRODUK
+     * =====================================================
+     */
+
+    const backendActive =
+        backendProduct?.status === "active";
+
+
+    /*
+     * =====================================================
+     * BADGE
+     * =====================================================
+     */
+
     const badge =
         clone.querySelector(".featured-badge");
 
     if (premium) {
 
-        if (PurchaseManager.hasAccess(item)) {
+        if (backendActive) {
+
             badge.textContent =
-                "🟢 Akses permanen";
+                "🟢 Dimiliki";
+
         } else {
+
             badge.textContent =
                 "👑 Premium";
         }
 
     } else {
+
         badge.remove();
     }
+
+
+    /*
+     * =====================================================
+     * CONTENT
+     * =====================================================
+     */
 
     clone.querySelector(".content-thumb").src =
         thumbnail;
@@ -110,10 +160,28 @@ function createContentCard({
     clone.querySelector(".content-description").textContent =
         description;
 
+
     /*
-     * Harga hanya ditampilkan untuk konten premium
+     * =====================================================
+     * PRICE
+     * =====================================================
+     *
+     * Premium:
+     *   gunakan harga backend.
+     *
+     * Non-premium:
+     *   gunakan price lokal.
+     *
+     * Ebook tetap menggunakan price lokal.
      */
-    if (item.price != null) {
+
+    const displayPrice =
+        premium
+            ? backendProduct?.price
+            : price;
+
+
+    if (displayPrice != null) {
 
         const info =
             clone.querySelector(".content-info");
@@ -125,36 +193,60 @@ function createContentCard({
             "content-price";
 
         priceEl.textContent =
-            `Rp ${item.price.toLocaleString("id-ID")}`;
+            `Rp ${Number(displayPrice).toLocaleString("id-ID")}`;
 
         info.insertBefore(
             priceEl,
             clone.querySelector(".content-btn")
         );
     }
-    
+
+
+    /*
+     * =====================================================
+     * BUTTON
+     * =====================================================
+     *
+     * Premium + backend active
+     *     → 🟢 Dimiliki
+     *
+     * Premium + backend inactive
+     *     → 👑 Premium
+     *
+     * Gratis
+     *     → buttonText
+     *
+     * Ebook
+     *     → buttonText
+     */
+
     const button =
         clone.querySelector(".content-btn");
 
 
-    // Semua konten premium menggunakan tombol 🔒 Buka
+    if (premium) {
     button.textContent =
-        premium
-            ? "🔒 Buka"
-            : buttonText;
+        backendActive
+            ? buttonText
+            : "🔒 Buka";
+} else {
+    button.textContent = buttonText;
+}
+
 
     button.disabled =
         disabled;
 
 
     if (!disabled) {
-        button.onclick = onClick;
+
+        button.onclick =
+            onClick;
     }
 
 
     container.appendChild(clone);
 }
-
 
 function loadQuiz() {
 
