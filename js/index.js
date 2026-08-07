@@ -178,7 +178,7 @@ function createContentCard({
             : price;
 
 
-    if (displayPrice != null) {
+    if (displayPrice != null && !backendActive) {
 
         const info =
             clone.querySelector(".content-info");
