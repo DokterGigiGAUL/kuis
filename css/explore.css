@@ -1,5 +1,5 @@
 :root{
-    --list-thumb-size:96px;
+    --list-thumb-size:144px;
     --list-gap:12px;
     --list-padding:12px;
     --list-radius:12px;
@@ -14,7 +14,7 @@
         auto;
     gap:var(--list-gap);
     align-items:center;
-    padding:var(--list-padding);
+    /*padding:var(--list-padding);*/
     background:#fff;
     border-radius:var(--list-radius);
     box-shadow:0 4px 16px rgba(0,0,0,.08);
@@ -57,15 +57,6 @@
     text-overflow: ellipsis;
 }
 
-.list-detail {
-    min-width:0;
-    display:flex;
-    flex-direction:column;
-    gap: 6px;
-    padding: 6px 12px 6px 6px;
-    flex: 1;
-    align-self:start;
-}
 .list-detail{
     min-width: 0;
     display: flex;
@@ -79,7 +70,7 @@
     display:flex;
     flex-direction:row;
     gap: 6px;
-    padding: 6px 12px 6px 6px;
+    padding: 6px 0px;
     align-items:center;
     justify-content:space-between;
 }
@@ -90,6 +81,7 @@
 }
 .list-btn { 
     margin-left:auto;
+    font-size:13px!important;
 }
 /* ==========================
    BUTTON
