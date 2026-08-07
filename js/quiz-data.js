@@ -42,8 +42,8 @@ const quizzes = [
         title: "Kuis #4",
         description: "Level: Sedang",
         thumbnail: "assets/images/kuis/thumbnail-kuis4.jpeg",
-        premium: false,
-        price: null,        
+        premium: true,
+        price: 5000,        
         releaseDate: "2026-06-20",
         type: "quiz"
     },
