@@ -10,8 +10,10 @@ const ttsSection =
     document.getElementById("tts-container");
 const caseSection =
     document.getElementById("case-container");
+/*
 const ebookSection =
     document.getElementById("ebook-container");
+*/
 const quizTab =
     document.getElementById("quizTab");
 const comicTab =
@@ -22,8 +24,10 @@ const pageTitle =
     document.getElementById("pageTitle");
 const caseTab =
     document.getElementById("caseTab");
+/*
 const ebookTab =
     document.getElementById("ebookTab");
+*/
 const listTemplate =
     document.getElementById("list-card-template");
 
@@ -37,9 +41,10 @@ if (!listTemplate) {
 }
 
 
-if (tab === "ebook") {
+/*if (tab === "ebook") {
     showEbook();
-} else if (tab === "comic") {
+} else */
+    if (tab === "comic") {
     showComic();
 } else if (tab === "tts") {
     showTTS();
@@ -84,7 +89,8 @@ function createListCard({
     clone.querySelector(".list-thumb").alt = title;
 
     clone.querySelector(".list-title").textContent = title;
-/*    clone.querySelector(".list-description").textContent = description;
+/*    
+    clone.querySelector(".list-description").textContent = description;
     const priceEl = clone.querySelector(".list-price");
 
     if (price > 0) {
@@ -95,11 +101,11 @@ function createListCard({
     }
     
     const button = clone.querySelector(".list-btn");*/
+    
     clone.querySelector(".list-description").textContent = description;
 
-    /*
-     * Harga hanya ditampilkan untuk konten premium
-     */
+    /* Harga hanya ditampilkan untuk konten premium */ 
+    
     if (premium && item.price != null) {
 
         const info =
@@ -139,37 +145,38 @@ function showQuiz() {
     comicSection.style.display = "none";
     ttsSection.style.display = "none";
     caseSection.style.display = "none";
-    ebookSection.style.display = "none";
+    //ebookSection.style.display = "none";
 
     quizTab.classList.add("active");
     comicTab.classList.remove("active");
     ttsTab.classList.remove("active");
     caseTab.classList.remove("active");
-    ebookTab.classList.remove("active");
+    //ebookTab.classList.remove("active");
     
     quizSection.innerHTML = "";
     quizzes.forEach(quiz => {
-        createListCard({
-    container: quizSection,
-    thumbnail: quiz.thumbnail,
-    title: quiz.title,
-    description: quiz.description,
-    item: quiz,
-    premium: quiz.premium,
-    price: quiz.price,
-
-    buttonText: Storage.isFinished(quiz.productId)
-        ? "Sudah Selesai"
-        : "Mulai",
-
-    disabled: Storage.isFinished(quiz.productId),
-
-    onClick() {
-
-        if (!PurchaseManager.hasAccess(quiz)) {
-    showPremiumDialog(quiz.productId);
-    return;
-}
+        
+    createListCard({
+        container: quizSection,
+        thumbnail: quiz.thumbnail,
+        title: quiz.title,
+        description: quiz.description,
+        item: quiz,
+        premium: quiz.premium,
+        price: quiz.price,
+    
+        buttonText: Storage.isFinished(quiz.productId)
+            ? "Sudah Selesai"
+            : "Mulai",
+    
+        disabled: Storage.isFinished(quiz.productId),
+    
+        onClick() {
+    
+            if (!PurchaseManager.hasAccess(quiz)) {
+                showPremiumDialog(quiz.productId);
+                return;
+            }
 
         location.href =
             `quiz.html?id=${quiz.file}`;
@@ -187,37 +194,37 @@ function showComic() {
     comicSection.style.display = "block";
     ttsSection.style.display = "none";
     caseSection.style.display = "none";
-    ebookSection.style.display = "none";
+    //ebookSection.style.display = "none";
 
     quizTab.classList.remove("active");
     comicTab.classList.add("active");
     ttsTab.classList.remove("active");
     caseTab.classList.remove("active");
-    ebookTab.classList.remove("active");
+    //ebookTab.classList.remove("active");
 
     comicSection.innerHTML = "";
     comics.forEach(comic => {
 
-        createListCard({
-    container: comicSection,
-    thumbnail: comic.thumbnail,
-    title: comic.title,
-    description: comic.description,
-    item: comic,
-    premium: comic.premium,
-    price: comic.price,
-    buttonText: "Baca",
-    onClick() {
-    if (!PurchaseManager.hasAccess(comic)) {
-    showPremiumDialog(comic.productId);
-    return;
-}
+    createListCard({
+        container: comicSection,
+        thumbnail: comic.thumbnail,
+        title: comic.title,
+        description: comic.description,
+        item: comic,
+        premium: comic.premium,
+        price: comic.price,
+        buttonText: "Baca",
+        onClick() {
+        if (!PurchaseManager.hasAccess(comic)) {
+        showPremiumDialog(comic.productId);
+        return;
+    }
         location.href =
             `komik.html?id=${comic.id}`;
-    }
-});
+        }
     });
-}
+        });
+    }
 function showTTS() {
 
     pageTitle.textContent = "Semua TTS";
@@ -226,39 +233,38 @@ function showTTS() {
     comicSection.style.display = "none";
     ttsSection.style.display = "block";
     caseSection.style.display = "none";
-    ebookSection.style.display = "none";
+    //ebookSection.style.display = "none";
 
     quizTab.classList.remove("active");
     comicTab.classList.remove("active");
     ttsTab.classList.add("active");
     caseTab.classList.remove("active");
-    ebookTab.classList.remove("active");
+    //ebookTab.classList.remove("active");
 
     ttsSection.innerHTML = "";
     ttsList.forEach(tts => {
-        createListCard({
-    container: ttsSection,
-    thumbnail: tts.thumbnail,
-    title: tts.title,
-    description: tts.description,
-    item: tts,
-    premium: tts.premium,
-                price: tts.price,
-
-    buttonText: "Mainkan",
-    onClick() {
-        if (!PurchaseManager.hasAccess(tts)) {
-    showPremiumDialog(tts.productId);
-    return;
-}
-        location.href =
-            `tts.html?puzzle=tts${tts.id}`;
+    createListCard({
+        container: ttsSection,
+        thumbnail: tts.thumbnail,
+        title: tts.title,
+        description: tts.description,
+        item: tts,
+        premium: tts.premium,
+                    price: tts.price,
+    
+        buttonText: "Mainkan",
+        onClick() {
+            if (!PurchaseManager.hasAccess(tts)) {
+        showPremiumDialog(tts.productId);
+        return;
     }
-
-});
+            location.href =
+                `tts.html?puzzle=tts${tts.id}`;
+        }
     });
+        });
 
-}
+    }
 
 function showCase() {
 
@@ -268,42 +274,41 @@ function showCase() {
     comicSection.style.display = "none";
     ttsSection.style.display = "none";
     caseSection.style.display = "block";
-    ebookSection.style.display = "none";
+    //ebookSection.style.display = "none";
 
     quizTab.classList.remove("active");
     comicTab.classList.remove("active");
     ttsTab.classList.remove("active");
     caseTab.classList.add("active");
-    ebookTab.classList.remove("active");
+    //ebookTab.classList.remove("active");
     
     caseSection.innerHTML = "";
     cases.forEach(caseData => {
 
-        createListCard({
-    container: caseSection,
-    thumbnail: caseData.thumbnail,
-    title: caseData.title,
-    description: caseData.description,
-    item: caseData,
-    premium: caseData.premium,
-                price: caseData.price,
-
-    buttonText: "Lihat",
-
-    onClick() {
-        if (!PurchaseManager.hasAccess(caseData)) {
-    showPremiumDialog(caseData.productId);
-    return;
-}
-location.href =
-    `case.html?case=${caseData.file}`;
+    createListCard({
+        container: caseSection,
+        thumbnail: caseData.thumbnail,
+        title: caseData.title,
+        description: caseData.description,
+        item: caseData,
+        premium: caseData.premium,
+                    price: caseData.price,
+    
+        buttonText: "Lihat",
+    
+        onClick() {
+            if (!PurchaseManager.hasAccess(caseData)) {
+        showPremiumDialog(caseData.productId);
+        return;
     }
-});
+    location.href =
+        `case.html?case=${caseData.file}`;
+        }
     });
-}
-
+        });
+    }
+/*
 function showEbook() {
-
     pageTitle.textContent = "Semua Ebook";
 
     quizSection.style.display = "none";
@@ -338,7 +343,7 @@ function showEbook() {
             });
         });
 }
-
+*/
 quizTab.onclick = () => {
     history.replaceState(
         {},
@@ -374,7 +379,7 @@ caseTab.onclick = () => {
     );
     showCase();
 };
-
+/*
 ebookTab.onclick = () => {
 
     history.replaceState(
@@ -386,3 +391,4 @@ ebookTab.onclick = () => {
     showEbook();
 
 };
+*/
