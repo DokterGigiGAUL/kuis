@@ -97,10 +97,7 @@ function createContentCard({
     if (premium && item?.productId) {
 
         backendProduct =
-            backendProducts.find(
-                product =>
-                    product.productId === item.productId
-            );
+            backendProducts.get(item.productId);
     }
 
 
