@@ -2,41 +2,63 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test getProducts</title>
 </head>
+
 <body>
 
-<button onclick="test()">Test getProducts</button>
+    <h2>Test getProducts()</h2>
 
-<pre id="result"></pre>
+    <button id="testButton">Test getProducts</button>
 
-<script>
-const API_URL = "https://script.google.com/macros/s/AKfycbwzkcz2seD-3OCb2uWYhC2Oon_swZV4SYpOh6JUZXgg04Lx6UbCf1DlaHTmUWrwXWhr/exec";
+    <pre id="result">Belum ada hasil...</pre>
 
-async function test() {
-    try {
-        const response = await fetch(API_URL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                action: "getProducts"
-            })
+    <script>
+
+        const API_URL =
+            "GANTI_DENGAN_URL_WEB_APP_GAS_KAMU";
+
+        const button = document.getElementById("testButton");
+        const result = document.getElementById("result");
+
+        button.addEventListener("click", async () => {
+
+            result.textContent = "Loading...";
+
+            try {
+
+                const url =
+                    API_URL + "?action=getProducts";
+
+                const response = await fetch(url, {
+                    method: "GET"
+                });
+
+                if (!response.ok) {
+                    throw new Error(
+                        "HTTP Error: " + response.status
+                    );
+                }
+
+                const data = await response.json();
+
+                console.log("getProducts response:", data);
+
+                result.textContent =
+                    JSON.stringify(data, null, 2);
+
+            } catch (error) {
+
+                console.error("getProducts error:", error);
+
+                result.textContent =
+                    "ERROR:\n\n" + error.message;
+            }
+
         });
 
-        const data = await response.json();
-
-        document.getElementById("result").textContent =
-            JSON.stringify(data, null, 2);
-
-        console.log(data);
-
-    } catch (err) {
-        console.error(err);
-    }
-}
-</script>
+    </script>
 
 </body>
 </html>
