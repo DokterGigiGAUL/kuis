@@ -351,7 +351,7 @@ function renderFeaturedHero() {
     if (!heroItem) return;
 
     const urlBg =
-        "https://doktergigigaul.github.io/kuis/assets/images/premium-bg.jpeg";
+        "https://doktergigigaul.github.io/wonder-app/assets/images/premium-bg.jpeg";
 
     featuredHero.style.backgroundImage =
         `url(${urlBg})`;
