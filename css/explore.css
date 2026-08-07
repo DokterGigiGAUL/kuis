@@ -66,19 +66,27 @@
     flex: 1;
     align-self:start;
 }
+.list-detail{
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px 12px 6px 6px;
+    align-self: start;
+}
 .list-info {
     min-width:0;
     display:flex;
     flex-direction:row;
     gap: 6px;
     padding: 6px 12px 6px 6px;
-    align-self:start;
+    align-items:center;
     justify-content:space-between;
 }
 .list-price{
-    font-size:15px;
+    font-size:13px;
     font-weight:700;
-    color:#222;
+    color:#008000;
 }
 .list-btn { 
     margin-left:auto;
