@@ -1,13 +1,15 @@
 /*
-|--------------------------------------------------------------------------
-| api.js
-|--------------------------------------------------------------------------
-*/
+ * --------------------------------------------------------------------------
+ * api.js
+ * --------------------------------------------------------------------------
+ */
 
 const WonderAPI = {
 
-    BASE_URL: " https://script.google.com/macros/s/AKfycbwzkcz2seD-3OCb2uWYhC2Oon_swZV4SYpOh6JUZXgg04Lx6UbCf1DlaHTmUWrwXWhr/exec",
+    BASE_URL: "https://script.google.com/macros/s/AKfycbwzkcz2seD-3OCb2uWYhC2Oon_swZV4SYpOh6JUZXgg04Lx6UbCf1DlaHTmUWrwXWhr/exec",
+
     async post(action, data = {}) {
+
         const response = await fetch(this.BASE_URL, {
             method: "POST",
             headers: {
@@ -22,19 +24,36 @@ const WonderAPI = {
         const json = await response.json();
 
         if (!json.success) {
-            throw new Error(json.message || "Unknown Error");
+            throw new Error(
+                json.message || "Unknown Error"
+            );
         }
 
         return json;
+    },
 
+    async getProducts() {
+
+        const response = await fetch(
+            this.BASE_URL + "?action=getProducts",
+            {
+                method: "GET"
+            }
+        );
+
+        const json = await response.json();
+
+        if (!json.success) {
+            throw new Error(
+                json.message || "Unknown Error"
+            );
+        }
+
+        return json;
     },
 
     async syncUser(data) {
         return await this.post("syncUser", data);
-    },
-
-    async getProducts() {
-        return await this.post("getProducts");
     },
 
     async createCheckout(data) {
@@ -48,5 +67,4 @@ const WonderAPI = {
     async getProfile(data) {
         return await this.post("getProfile", data);
     }
-
 };
