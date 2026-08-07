@@ -368,7 +368,7 @@ body {
     position:absolute;
     left:0;
     right:0;
-    top:0px;
+    top:0px!important;
     z-index:2;
     padding:24px 24px 0;
     display:flex;
@@ -541,14 +541,14 @@ body {
 @media (min-width:480px){
     .featured-hero{
         width:auto;
-        aspect-ratio:2/1;
+        aspect-ratio:2/1!important;
         border-radius:16px;
         margin-bottom:24px!important;
     }
 
     .featured-description{
     font-size:20px;
-}
+    }
     .featured-overlay{
         top:90px;
     }
@@ -560,7 +560,7 @@ body {
     }
     
     .featured-card{
-        flex: 0 0 calc((100% - (var(--home-card-gap) * (var(--home-card-per-view) - 1))) / var(--home-card-per-view));
+    flex: 0 0 calc((100% - (var(--home-card-gap) * (var(--home-card-per-view) - 1))) / var(--home-card-per-view));
     display: flex;
     flex-direction: column;
     scroll-snap-align: start;
