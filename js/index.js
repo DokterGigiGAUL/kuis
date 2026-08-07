@@ -9,12 +9,52 @@ const featuredHero = document.getElementById("featured-hero");
 const cardTemplate =
     document.getElementById("content-card-template");
 
-loadQuiz();
-loadComics();
-loadTTS();
-loadCases();
-loadEbooks();
-renderFeaturedHero();
+let backendProducts = new Map();
+
+async function syncBackendProducts() {
+    try {
+        const response = await WonderAPI.getProducts();
+
+        backendProducts = new Map(
+            response.data.map(product => [
+                product.productId,
+                product
+            ])
+        );
+
+        console.log(
+            "Backend products synced:",
+            backendProducts
+        );
+
+    } catch (error) {
+
+        console.error(
+            "Gagal mengambil products dari backend:",
+            error
+        );
+
+        backendProducts.clear();
+    }
+}
+
+function getBackendProduct(productId) {
+    return backendProducts.get(productId) || null;
+}
+
+async function initializeHome() {
+
+    await syncBackendProducts();
+
+    loadQuiz();
+    loadComics();
+    loadTTS();
+    loadCases();
+    loadEbooks();
+    renderFeaturedHero();
+}
+
+initializeHome();
 
 
 function createContentCard({
