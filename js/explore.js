@@ -165,9 +165,13 @@ function showQuiz() {
         premium: quiz.premium,
         price: quiz.price,
     
-        buttonText: Storage.isFinished(quiz.productId)
+        buttonText: quiz.premium
+    ? "🔒 Buka"
+    : (
+        Storage.isFinished(quiz.productId)
             ? "Sudah Selesai"
-            : "Mulai",
+            : "Mulai"
+      ),
     
         disabled: Storage.isFinished(quiz.productId),
     
@@ -213,7 +217,9 @@ function showComic() {
         item: comic,
         premium: comic.premium,
         price: comic.price,
-        buttonText: "Baca",
+        buttonText: comic.premium
+    ? "🔒 Buka"
+    : "Baca",
         onClick() {
         if (!PurchaseManager.hasAccess(comic)) {
         showPremiumDialog(comic.productId);
@@ -252,7 +258,9 @@ function showTTS() {
         premium: tts.premium,
                     price: tts.price,
     
-        buttonText: "Mainkan",
+        buttonText: tts.premium
+    ? "🔒 Buka"
+    : "Main",
         onClick() {
             if (!PurchaseManager.hasAccess(tts)) {
         showPremiumDialog(tts.productId);
@@ -294,7 +302,9 @@ function showCase() {
         premium: caseData.premium,
                     price: caseData.price,
     
-        buttonText: "Lihat",
+        buttonText: caseData.premium
+    ? "🔒 Buka"
+    : "Lihat",
     
         onClick() {
             if (!PurchaseManager.hasAccess(caseData)) {
