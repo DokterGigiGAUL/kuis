@@ -378,21 +378,24 @@ function loadTTS() {
 
                 onClick() {
 
-                    if (
-                        tts.premium &&
-                        !PurchaseManager.hasAccess(tts)
-                    ) {
+    const backendProduct =
+        backendProducts.get(tts.productId);
 
-                        showPremiumDialog(
-                            tts.productId
-                        );
+    const owned =
+        backendProduct?.status === "active";
 
-                        return;
-                    }
+    if (tts.premium && !owned) {
 
-                    location.href =
-                        `tts.html?puzzle=tts${tts.id}`;
-                }
+        showPremiumDialog(
+            tts.productId
+        );
+
+        return;
+    }
+
+    location.href =
+        `tts.html?puzzle=tts${tts.id}`;
+}
 
             });
 
