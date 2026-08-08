@@ -1,6 +1,5 @@
-/* ==========================================
-   1. CSS VARIABLES (LIST CONFIG)
-   ========================================== */
+/* ===   1. CSS VARIABLES (LIST CONFIG)   === */
+
 :root {
     --list-thumb-size: 128px;
     --list-gap: 12px;
@@ -17,9 +16,8 @@
     --success: #008000;
 }
 
-/* ==========================================
-   2. LIST CARD COMPONENT
-   ========================================== */
+/* ===   2. LIST CARD COMPONENT   === */
+
 .list-card {
     position: relative;
     display: grid;
@@ -87,9 +85,8 @@
     font-size: 13px;
 }
 
-/* ==========================================
-   3. BUTTONS
-   ========================================== */
+/* ===   3. BUTTONS   === */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -133,9 +130,8 @@
     cursor: not-allowed;
 }
 
-/* ==========================================
-   4. EXPLORE COMPONENTS
-   ========================================== */
+/* ===   4. EXPLORE COMPONENTS   === */
+
 .explore-header {
     display: flex;
     align-items: center;
@@ -213,59 +209,8 @@
     color: #fff;
 }
 
-/* ==========================================
-   5. TTS LIST COMPONENT
-   ========================================== */
-.tts-grid {
-    gap: 14px;
-}
+/* ===   5. RESPONSIVE MEDIA QUERIES   === */
 
-.tts-list-card {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    background: var(--card);
-    border-radius: 16px;
-    padding: 12px;
-    margin-bottom: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
-}
-
-.tts-list-thumb {
-    width: 84px;
-    height: 84px;
-    border-radius: 12px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.tts-list-info {
-    flex: 1;
-    min-width: 0;
-}
-
-.tts-list-title {
-    font-size: 17px;
-    line-height: 1.35;
-    font-weight: 700;
-}
-
-.tts-list-soal {
-    margin-top: 6px;
-    font-size: 15px;
-    opacity: .8;
-}
-
-.tts-list-btn {
-    width: 88px;
-    margin: 0;
-    padding: 10px 0;
-    flex-shrink: 0;
-}
-
-/* ==========================================
-   6. RESPONSIVE MEDIA QUERIES
-   ========================================== */
 @media (min-width: 480px) {
     .tts-grid {
         display: flex;
