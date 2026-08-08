@@ -62,7 +62,20 @@ prevButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
-  if (currentIndex < comics.length - 1) {
-    window.location.href = `komik.html?id=${comics[currentIndex + 1].id}`;
-  }
+
+    if (currentIndex < comics.length - 1) {
+
+        const nextComic = comics[currentIndex + 1];
+
+        if (
+            nextComic.premium &&
+            !PurchaseManager.getPurchasedProducts().includes(nextComic.productId)
+        ) {
+            showPremiumDialog(nextComic.productId);
+            return;
+        }
+
+        window.location.href = `komik.html?id=${nextComic.id}`;
+    }
+
 });
