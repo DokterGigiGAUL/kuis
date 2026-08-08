@@ -15,7 +15,7 @@ constructor(){
     this.originalProgressHTML="";
 }
 
-async load(){async load(){
+{async load(){
     try{
         const params = new URLSearchParams(location.search);
         const file = params.get("puzzle") || "tts1";
