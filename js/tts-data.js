@@ -20,7 +20,7 @@ const ttsList = [
         file: "tts2",
         productId: "tts2",
         soal: 11,
-        description: "Level: ★☆☆☆☆",
+        description: "Level: ★★☆☆☆",
         thumbnail: "assets/images/tts/D64390B9-FFB2-4D60-8BA0-9F714360822E.png",
         premium: false,
         price: null, 
