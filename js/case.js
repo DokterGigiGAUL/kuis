@@ -45,9 +45,11 @@ const hasAccess =
     userHasPremium() ||
     (caseMeta && Premium.ownsProduct(caseMeta.productId));
 */
-const hasAccess = caseMeta
-  ? PurchaseManager.hasAccess(caseMeta)
-  : !data.premium;
+const hasAccess =
+    !data.premium ||
+    PurchaseManager.getPurchasedProducts().includes(
+        caseMeta?.productId
+    );
     
 if (hasAccess) {
       // Kasus gratis: tampilkan konten premium apa adanya
