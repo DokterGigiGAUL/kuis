@@ -15,46 +15,72 @@ constructor(){
     this.originalProgressHTML="";
 }
 
-async load(){
+async load(){async load(){
     try{
-        const params=new URLSearchParams(location.search);
-        const file=params.get("puzzle")||"tts1";
-        const metadata = ttsList.find(t => `tts${t.id}` === file);
+        const params = new URLSearchParams(location.search);
+        const file = params.get("puzzle") || "tts1";
 
-if (!metadata) {
-    throw new Error("Puzzle tidak ditemukan");
-}
+        const metadata = ttsList.find(
+            t => `tts${t.id}` === file
+        );
 
-if (!PurchaseManager.hasAccess(metadata)) {
-        const res = await fetch(`assets/metadata/tts/${file}.json`);
-        if(!res.ok){
-            throw new Error("Tidak ada lagi teka-teki silang gratis");
-    }
+        if (!metadata) {
+            throw new Error("Puzzle tidak ditemukan");
+        }
 
-    this.puzzle=await res.json();
-        document.getElementById("puzzle-title").textContent=this.puzzle.title;
-    this.buildGrid();
-    this.resizeGrid();
-    this.numberCells();
-    this.renderGrid();
-    this.renderClues();
-    this.createHiddenInput();
-    this.bindEvents();
-    this.selectWord(this.puzzle.words[0]);
-        document.getElementById("loader").style.display="none";
-        document.getElementById("crossword-app").style.display="block";
-    this.originalProgressHTML =
-        document.querySelector(".progress-wrapper").innerHTML;
-    }catch(err){
-    document.getElementById("loader").innerHTML=`
-    <div class="loader-error">
-        <h2>Puzzle tidak dapat dimuat</h2>
-        <p>${err.message}</p>
-        <button onclick="location.href='index.html'">
-            Kembali ke Beranda
-        </button>
-    </div>
-    `;
+        const backendProduct =
+            backendProducts.get(metadata.productId);
+
+        const hasBackendAccess =
+            backendProduct?.status === "active";
+
+        if (metadata.premium && !hasBackendAccess) {
+            showPremiumDialog(metadata.productId);
+            location.href = "index.html";
+            return;
+        }
+
+        const res = await fetch(
+            `assets/metadata/tts/${file}.json`
+        );
+
+        if (!res.ok) {
+            throw new Error(
+                "Tidak ada lagi teka-teki silang gratis"
+            );
+        }
+
+        this.puzzle = await res.json();
+
+        document.getElementById("puzzle-title").textContent =
+            this.puzzle.title;
+
+        this.buildGrid();
+        this.resizeGrid();
+        this.numberCells();
+        this.renderGrid();
+        this.renderClues();
+        this.createHiddenInput();
+        this.bindEvents();
+        this.selectWord(this.puzzle.words[0]);
+
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("crossword-app").style.display = "block";
+
+        this.originalProgressHTML =
+            document.querySelector(".progress-wrapper").innerHTML;
+
+    } catch(err) {
+
+        document.getElementById("loader").innerHTML = `
+            <div class="loader-error">
+                <h2>Puzzle tidak dapat dimuat</h2>
+                <p>${err.message}</p>
+                <button onclick="location.href='index.html'">
+                    Kembali ke Beranda
+                </button>
+            </div>
+        `;
     }
 }
 
