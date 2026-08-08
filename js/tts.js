@@ -19,7 +19,6 @@ async load(){
     try{
         const params = new URLSearchParams(location.search);
         const file = params.get("puzzle") || "tts1";
-
         const metadata = ttsList.find(
             t => `tts${t.id}` === file
         );
@@ -28,13 +27,7 @@ async load(){
             throw new Error("Puzzle tidak ditemukan");
         }
 
-        const backendProduct =
-            backendProducts.get(metadata.productId);
-
-        const hasBackendAccess =
-            backendProduct?.status === "active";
-
-        if (metadata.premium && !hasBackendAccess) {
+        if (!PurchaseManager.hasAccess(metadata)) {
             showPremiumDialog(metadata.productId);
             location.href = "index.html";
             return;
@@ -44,7 +37,7 @@ async load(){
             `assets/metadata/tts/${file}.json`
         );
 
-        if (!res.ok) {
+        if(!res.ok){
             throw new Error(
                 "Tidak ada lagi teka-teki silang gratis"
             );
@@ -70,8 +63,7 @@ async load(){
         this.originalProgressHTML =
             document.querySelector(".progress-wrapper").innerHTML;
 
-    } catch(err) {
-
+    }catch(err){
         document.getElementById("loader").innerHTML = `
             <div class="loader-error">
                 <h2>Puzzle tidak dapat dimuat</h2>
