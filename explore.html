@@ -20,6 +20,10 @@
       <button class="explore-back-btn" onclick="history.back()"><img src="https://img.icons8.com/?size=16&id=bb5otgOrCxAR&format=png&color=FFFFFF"></button>
 
       <h1 id="pageTitle">Semua Kuis</h1>
+      <div class="header-actions"> 
+      <button onclick="openLogin()" id="loginBtn" class="btn btn-secondary" type="button"> Login </button> 
+      <button onclick="logout()" id="logoutBtn" class="btn btn-secondary" type="button" style="display:none;"> Logout </button> 
+    </div> 
     </header>
 
     <main class="container-explore">
@@ -79,6 +83,19 @@
       frameborder="0">
     </iframe>
 
+    <div id="loginModal" class="login-modal">
+    <div class="login-box">
+        <button class="login-close" onclick="closeLogin()">&times;</button>
+        <h2>Login</h2>
+        <input id="loginEmail" type="email" placeholder="Email">
+        <input id="loginPassword" type="password" placeholder="Password">
+        <button onclick="loginEmail()" class="btn btn-primary login-email">Login</button>
+        <button onclick="registerEmail()" class="btn btn-outline register-email">Daftar</button>
+        <div class="divider">ATAU</div>
+        <button onclick="loginGoogle()" class="btn btn-primary login-google">Login/ Daftar dengan Google</button>
+    </div>
+</div>
+    
   </div>
 </div>
     <script src="js/firebase.js"></script>
