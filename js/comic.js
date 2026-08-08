@@ -8,11 +8,21 @@ if (currentIndex === -1) {
     throw new Error("Komik tidak ditemukan.");
 }
 
-if (!PurchaseManager.hasAccess(currentComic)) {
+const backendProduct =
+    typeof backendProducts !== "undefined"
+        ? backendProducts.get(currentComic.productId)
+        : null;
+
+const hasAccess =
+    backendProduct?.status === "active" ||
+    PurchaseManager.hasAccess(currentComic);
+
+if (!hasAccess) {
     showPremiumDialog(currentComic.productId);
     window.location.href = "index.html";
     throw new Error("Akses ditolak.");
 }
+
 const title = document.getElementById("comic-title");
 const imageContainer = document.getElementById("comic-image");
 
