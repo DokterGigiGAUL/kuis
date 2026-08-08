@@ -328,7 +328,7 @@ function loadComics() {
 
                 buttonText: "Baca →",
 
-                onClick() {
+               onClick() {
 
     const backendProduct =
         backendProducts.get(comic.productId);
