@@ -58,9 +58,34 @@
   line-height: 1.15;
 }
 
-.quiz-info {
-  display: flex;
-  justify-content: space-between;
+.case-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:var(--primary);
+    color:#fff;
+    padding:16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.case-back-btn{
+    border:none;
+    background:transparent;
+    color:#fff;
+    width:40px;
+    height:40px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.case-title-box {
+    flex: 1;
+    text-align: center;
+}
+
+.case-title-box h2, #caseTitle{
+    font-size: 20px;
 }
 
 .case-image {
