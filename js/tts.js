@@ -37,7 +37,7 @@ async load(){
             `assets/metadata/tts/${file}.json`
         );
 
-        if(!res.ok){
+            if (!res.ok) {
             throw new Error(
                 "Tidak ada lagi teka-teki silang gratis"
             );
