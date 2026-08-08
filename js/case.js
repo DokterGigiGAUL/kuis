@@ -84,9 +84,12 @@ if (hasAccess) {
         <button id="premium-btn" class="btn btn-primary">Buka Premium</button>
       `;
 
-document.getElementById("premium-btn").onclick = () => {
+document.getElementById("premium-btn").onclick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     showPremiumDialog(caseMeta.productId);
 };
+  
       document.getElementById("pathophysiology").parentElement.style.display = "none";
       document.getElementById("supporting-examination").parentElement.style.display = "none";
       document.getElementById("treatment-plan").parentElement.style.display = "none";
@@ -133,9 +136,12 @@ nextBtns.forEach(btn => {
 // Perbaikan: fungsi & event listener flip dipindah keluar dari promise chain,
 // karena sebelumnya diselipkan di antara .then() dan .catch() sehingga merusak chain
 function showDiagnosis(e) {
-  e.stopPropagation();
-  imageFlip.classList.toggle("flipped");
-  infoFlip.classList.toggle("flipped");
+    e.stopPropagation();
+
+    if (e.target.closest("#premium-btn")) {
+        return;
+    }
+
+    imageFlip.classList.toggle("flipped");
+    infoFlip.classList.toggle("flipped");
 }
-imageFlip.onclick = showDiagnosis;
-infoFlip.onclick = showDiagnosis;
