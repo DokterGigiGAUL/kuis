@@ -45,9 +45,13 @@ const hasAccess =
     userHasPremium() ||
     (caseMeta && Premium.ownsProduct(caseMeta.productId));
 */
-const hasAccess = caseMeta
-    ? PurchaseManager.hasAccess(caseMeta)
-    : !data.premium;
+const backendProduct =
+  caseMeta ? backendProducts.get(caseMeta.productId) : null;
+
+const hasAccess =
+  !data.premium ||
+  backendProduct?.status === "active" ||
+  PurchaseManager.hasAccess(caseMeta);
 if (hasAccess) {
       // Kasus gratis: tampilkan konten premium apa adanya
       document.getElementById("pathophysiology").textContent = premium.pathophysiology;
