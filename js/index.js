@@ -417,21 +417,6 @@ function loadCases() {
                 buttonText: "Lihat →",
                 onClick() {
 
-    const backendProduct =
-        backendProducts.get(caseData.productId);
-
-    const owned =
-        backendProduct?.status === "active";
-
-    if (caseData.premium && !owned) {
-
-        showPremiumDialog(
-            caseData.productId
-        );
-
-        return;
-    }
-
     location.href =
         `case.html?case=${caseData.file}`;
 }
