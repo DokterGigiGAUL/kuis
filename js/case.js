@@ -138,10 +138,9 @@ nextBtns.forEach(btn => {
 function showDiagnosis(e) {
     e.stopPropagation();
 
-    if (e.target.closest("#premium-btn")) {
-        return;
-    }
-
     imageFlip.classList.toggle("flipped");
     infoFlip.classList.toggle("flipped");
 }
+
+imageFlip.onclick = showDiagnosis;
+infoFlip.onclick = showDiagnosis;
