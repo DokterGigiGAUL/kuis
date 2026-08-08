@@ -26,10 +26,6 @@ if (!metadata) {
 }
 
 if (!PurchaseManager.hasAccess(metadata)) {
-    showPremiumDialog(metadata.productId);
-    location.href = "index.html";
-    return;
-}
         const res = await fetch(`assets/metadata/tts/${file}.json`);
         if(!res.ok){
             throw new Error("Tidak ada lagi teka-teki silang gratis");
