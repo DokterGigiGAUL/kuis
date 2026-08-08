@@ -26,7 +26,13 @@ if (!hasAccess) {
 const title = document.getElementById("comic-title");
 const imageContainer = document.getElementById("comic-image");
 
-document.getElementById("home-btn").onclick = () => history.back();
+//document.getElementById("home-btn").onclick = () => history.back();
+const backBtn = document.getElementById("backBtn");
+    if (backBtn) {
+      backBtn.onclick = () => {
+        window.location.href = "index.html";
+      };
+    }
 
 title.textContent = currentComic.title;
 
