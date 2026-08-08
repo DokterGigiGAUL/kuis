@@ -12,8 +12,7 @@ const comics = [{
   releaseDate: "2026-06-20",
   type: "comic",
   images: [
-    "assets/images/komik/komik1/panel.jpeg",
-    "assets/images/komik/komik1/panel1.webp"
+    "assets/images/komik/komik1/panel.jpeg"
   ]
   },
   {
@@ -29,9 +28,7 @@ const comics = [{
   releaseDate: "2026-06-20",
         type: "comic",
   images: [
- //   "assets/images/komik/komik2/panel.png",
-    "assets/images/komik/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png",
-    "assets/images/komik/komik2/panel1.webp"
+    "assets/images/komik/komik2/panel.png"
   ]
   },
   {
@@ -42,13 +39,12 @@ const comics = [{
   premium: false,
   price: null,
   title: "Episode #3",
-  description: "Hubungan Merokok dan Kanker Mulut",
+  description: "Kenapa Gigi Bungsu Perlu Dioperasi (Odontektomi)?",
   thumbnail: "assets/images/komik/komik3/thumbnail3.png",
   releaseDate: "2026-06-20",
         type: "comic",
   images: [
-    "assets/images/komik/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png",
-    "assets/images/komik/komik2/panel1.webp"
+    "assets/images/komik/komik3/panel.jpg"
   ]
   },
   {
@@ -59,13 +55,12 @@ file: "komik4",
   premium: true,
   price: 5000,
   title: "Episode #4",
-  description: "Gusi Berdarah Berbahaya Gak?",
+  description: "Sariawan Karena Kekurangan Vitamin C?",
   thumbnail: "assets/images/komik/komik4/thumbnail4.jpeg",
   releaseDate: "2026-07-20",
         type: "comic",
   images: [
-    "assets/images/komik/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png",
-    "assets/images/komik/komik2/panel1.webp"
+    "assets/images/komik/komik4/panel.jpg"
   ]
   },
   {
@@ -76,14 +71,12 @@ file: "komik4",
   premium: true,
   price: 5000,
   title: "Episode #5",
-  description: "Kenapa Gigi Hilang Perlu Diganti?",
+  description: "Masalah Gusi Bisa Menyebabkan Kelahiran Prematur?",
   thumbnail: "assets/images/komik/komik5/thumbnail5.webp",
   releaseDate: "2026-06-20",
         type: "comic",
   images: [
- //   "assets/images/komik/komik2/panel.png",
-    "assets/images/komik/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png",
-    "assets/images/komik/komik2/panel1.webp"
+    "assets/images/komik/komik5/panel.jpg"
   ]
   },
   {
@@ -94,14 +87,12 @@ file: "komik4",
   premium: true,
   price: 5000,
   title: "Episode #6",
-  description: "Kenapa Gigi Hilang Perlu Diganti?",
+  description: "Ibu Hamil Boleh Cabut Gigi, Gak?",
   thumbnail: "assets/images/komik/komik6/thumbnail6.jpeg",
-  releaseDate: "2026-06-20",
+  releaseDate: "2026-06-21",
         type: "comic",
   images: [
- //   "assets/images/komik/komik2/panel.png",
-    "assets/images/komik/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png",
-    "assets/images/komik/komik2/panel1.webp"
+    "assets/images/komik/komik6/panel.jpg"
   ]
   }
 ];
