@@ -330,21 +330,24 @@ function loadComics() {
 
                 onClick() {
 
-                    if (
-                        comic.premium &&
-                        !PurchaseManager.hasAccess(comic)
-                    ) {
+    const backendProduct =
+        backendProducts.get(comic.productId);
 
-                        showPremiumDialog(
-                            comic.productId
-                        );
+    const owned =
+        backendProduct?.status === "active";
 
-                        return;
-                    }
+    if (comic.premium && !owned) {
 
-                    location.href =
-                        `komik.html?id=${comic.id}`;
-                }
+        showPremiumDialog(
+            comic.productId
+        );
+
+        return;
+    }
+
+    location.href =
+        `komik.html?id=${comic.id}`;
+}
 
             });
 
