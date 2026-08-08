@@ -168,18 +168,22 @@ body {
     gap: 20px;
   }
 
-  .premium-option {
-    width: 100%;
-  }
+.premium-options {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: stretch;
 }
-  .premium-options {
-    flex-direction: column;
-    gap: 20px;
-  }
 
-  .premium-option {
-    width: 100%;
-  }
+.premium-option {
+  flex: 1;
+  min-width: 0;
+}
+
+.premium-option {
+  flex: 1;
+  min-width: 0;
+}
 }
   .premium-page{width : 90%;
   padding-top :24px;
