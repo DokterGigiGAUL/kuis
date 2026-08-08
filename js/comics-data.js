@@ -67,5 +67,41 @@ file: "komik4",
     "assets/images/komik/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png",
     "assets/images/komik/komik2/panel1.webp"
   ]
+  },
+  {
+  id: 5,
+  productId: "comic5",
+  file: "komik5",
+  episode: 5,
+  premium: true,
+  price: 5000,
+  title: "Episode #5",
+  description: "Kenapa Gigi Hilang Perlu Diganti?",
+  thumbnail: "assets/images/komik/komik5/thumbnail5.webp",
+  releaseDate: "2026-06-20",
+        type: "comic",
+  images: [
+ //   "assets/images/komik/komik2/panel.png",
+    "assets/images/komik/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png",
+    "assets/images/komik/komik2/panel1.webp"
+  ]
+  },
+  {
+  id: 6,
+  productId: "comic6",
+  file: "komik6",
+  episode: 6,
+  premium: true,
+  price: 5000,
+  title: "Episode #6",
+  description: "Kenapa Gigi Hilang Perlu Diganti?",
+  thumbnail: "assets/images/komik/komik6/thumbnail6.jpeg",
+  releaseDate: "2026-06-20",
+        type: "comic",
+  images: [
+ //   "assets/images/komik/komik2/panel.png",
+    "assets/images/komik/komik2/DB727B23-FAAD-45B5-A560-2A20DEBDFE27.png",
+    "assets/images/komik/komik2/panel1.webp"
+  ]
   }
 ];
